@@ -1,0 +1,968 @@
+[
+  {
+    "objectID": "files/schedule.html",
+    "href": "files/schedule.html",
+    "title": "Tentative Schedule",
+    "section": "",
+    "text": "Week 1: August 25-29, 2025\n\n\n\n\n\n\nMeeting 1:\n\nTopic(s):\n\nReview of estimation\n\nSlides:\n\n.html:\n.qmd:\n\n\nMeeting 2:\n\nR Lab: Introduction to R\n\n.html:\n.qmd:\n\nQuiz: Get to Know You\n\n\n\n\n\n\n\n\n\n\n\nWeek 2: September 1-5, 2025\n\n\n\n\n\n\nMeeting 1:\n\nLabor Day holiday - campus closed.\n\nMeeting 2:\n\nTopic(s):\n\nReview of statistical inference\n\nSlides:\n\n.html:\n.qmd:\n\nQuiz: Estimation\n\n\n\n\n\n\n\n\n\n\n\nWeek 3: September 8-12, 2025\n\n\n\n\n\n\nMeeting 1:\n\nTopic(s):\n\nTwo-sample t-test (independent)\nPaired t-test (dependent)\n\nSlides:\n\n.html:\n.qmd:\n\n\nMeeting 2:\n\nR Lab: Two-sample t-tests\n\n.html:\n.qmd:\n\nQuiz: Two-sample t-tests\n\n\n\n\n\n\n\n\n\n\n\nWeek 4: September 15-19, 2025\n\n\n\n\n\n\nMeeting 1:\n\nTopic(s):\n\nt-test assumptions\nWilcoxon rank sum (independent)\nWilcoxon signed rank (dependent)\n\nSlides:\n\n.html:\n.qmd:\n\n\nMeeting 2:\n\nR Lab: Wilcoxons\n\n.html:\n.qmd:\n\nQuiz: Wilcoxons\n\n\n\n\n\n\n\n\n\n\n\nWeek 5: September 22-26, 2025\n\n\n\n\n\n\nMeeting 1:\n\nProject 1\n\nMeeting 2:\n\nProject 1\nQuiz: Module 1\n\n\n\n\n\n\n\n\n\n\n\nWeek 6: September 29-October 3, 2025\n\n\n\n\n\n\nMeeting 1:\n\nTopic(s):\n\none-way ANOVA\nANOVA assumptions\nKruskal-Wallis\npost-hoc testing\n\nSlides:\n\n.html:\n.qmd:\n\n\nMeeting 2:\n\nR Lab: One-way ANOVA and Kruskal-Wallis\n\n.html:\n.qmd:\n\nQuiz: One-way ANOVA and Kruskal-Wallis\n\n\n\n\n\n\n\n\n\n\n\nWeek 7: October 6-10, 2025\n\n\n\n\n\n\nMeeting 1:\n\nTopic(s):\n\ntwo-way ANOVA\ninteraction terms\nprofile plots\n\nSlides:\n\n.html:\n.qmd:\n\n\nMeeting 2:\n\nR Lab: Two-way ANOVA\n\n.html:\n.qmd:\n\nQuiz: Two-way ANOVA\n\n\n\n\n\n\n\n\n\n\n\nWeek 8: October 13-17, 2025\n\n\n\n\n\n\nMeeting 1:\n\nColumbus Day holiday - campus closed.\n\nMeeting 2:\n\nProject 2\nQuiz: Module 2\n\n\n\n\n\n\n\n\n\n\n\nWeek 9: October 20-24, 2025\n\n\n\n\n\n\nMeeting 1:\n\nTopic(s):\n\ncorrelation\nscatterplots\nsimple linear regression\n\nSlides:\n\n.html:\n.qmd:\n\n\nMeeting 2:\n\nR Lab: Bivariate relationships\n\n.html:\n.qmd:\n\nQuiz: Correlation and scatterplots\n\n\n\n\n\n\n\n\n\n\n\nWeek 10: October 27-31, 2025\n\n\n\n\n\n\nMeeting 1:\n\nTopic(s):\n\nmultiple linear regression\n\nSlides:\n\n.html:\n.qmd:\n\n\nMeeting 2:\n\nR Lab: Regression\n\n.html:\n.qmd:\n\nQuiz: Regression\n\n\n\n\n\n\n\n\n\n\n\nWeek 11: November 3-7, 2025\n\n\n\n\n\n\nMeeting 1:\n\nProject 3\n\nMeeting 2:\n\nProject 3\nQuiz: Module 3\n\n\n\n\n\n\n\n\n\n\n\nWeek 12: November 10-14, 2025\n\n\n\n\n\n\nMeeting 1:\n\nVeteran’s Day - campus closed.\n\nMeeting 2:\n\nTopic(s):\n\none-sample proportions\ntwo-sample proportions\n\nSlides:\n\n.html:\n.qmd:\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 13: November 17-21, 2025\n\n\n\n\n\n\nMeeting 1:\n\nTopic(s):\n\ngoodness-of-fit\ntest for independence\n\nSlides:\n\n.html:\n.qmd:\n\n\nMeeting 2:\n\nR Lab: Proportions\n\n.html:\n.qmd:\n\nQuiz: Proportions\n\n\n\n\n\n\n\n\n\n\n\nWeek 14: November 24-28, 2025\n\n\n\n\n\n\nMeeting 1:\n\nTopic(s):\n\nlogistic regression\n\nSlides:\n\n.html:\n.qmd:\n\nR Lab: Logistic regression\n\n.html:\n.qmd:\n\n\nMeeting 2:\n\nThanksgiving holiday - campus closed.\n\n\n\n\n\n\n\n\n\n\n\nWeek 15: December 1-5, 2025\n\n\n\n\n\n\nMeeting 1:\n\nProject 4\nQuiz: Logistic regression\n\nMeeting 2:\n\nProject 4\nQuiz: Module 4\n\n\n\n\n\n\n\n\n\n\n\nWeek 16: Exam Week!\n\n\n\n\n\n\nMW section: Wednesday, December 10, 11:00 am–1:30 pm\nTR section: Thursday, December 11, 8:00 am–10:30 am"
+  },
+  {
+    "objectID": "files/practice/07-29-practice.html",
+    "href": "files/practice/07-29-practice.html",
+    "title": "Practice: 07/29/2025",
+    "section": "",
+    "text": "# use this code chunk to call in all packages the document will need\nlibrary(tidyverse)\nlibrary(ssstats)\n\n1. The Tower of Terror is one of the most thrilling rides at Hollywood Studios, often a guest favorite. Park management believes that at least 80% of riders exit the attraction with a smile on their face. To assess this claim, the park analytics team conducts a quick observation (tower_data), recording whether or not each of 100 randomly selected guests is smiling (smiling) as they exit the attraction.\n1a. Find the appropriate frequency table for this dataset.\n1b. Construct the 95% confidence interval for the true proportion of guests that are smiling as they exit the attraction.\nRemember to state the resulting confidence interval.\n1c. Is there evidence to believe that the true proportion of smiling guests is lower than what management believes? Assume \\alpha = 0.05.\nTypeset the results here\n2. Hollywood Studios offers two iconic snacks throughout the park: Mickey Bars and fresh popcorn. The snack team lead wonders if age influences snack choice. They collect data from 120 guests (snack_data) asking each guest to identify their age group (age_group) and then choose between a Mickey Bar or popcorn (snack_choice).\n2a. Find the appropriate frequency table for this dataset.\n2b. Construct the 95% confidence interval for the difference between the two age groups in the true proportion of guests that prefer Mickey Bars.\nRemember to state the resulting confidence interval.\n2c. The team wants to test whether younger guests are more likely to choose Mickey Bars as compared to older guests. Could age be a factor in what guests crave at snack time?\n3. Hollywood Studios is home to a variety of live performances. Historically, guest attendance has followed a pattern: 35% prefer Musical shows, 25% prefer Stunt shows, and both Character Meet-and-Greets and Interactive Games attract about 20% of guests. However, a recent marketing campaign may have shifted those preferences. To evaluate this, 200 guests are surveyed (shows_data)about their favorite type of show in the park (favorite_show).\n3a. Find the appropriate frequency table for this dataset.\n3b. Do current guest preferences match the historical expectations, or have things changed? Test at the \\alpha = 0.05 level.\nRemember to typeset the results.\n4. Guest behavior at Hollywood Studios may shift throughout the day. The park’s operations team is interested in whether ride type is associated with time of day. Attractions are categorized into three types (ride_type): Thrill, Family, and Dark Rides. Staff record (ride_data) the time of day (time_of_day; Morning, Afternoon, or Evening) at which 300 guests enter their first ride, along with the ride type chosen. The goal is to determine if certain types of rides are more or less popular at different times, helping the team optimize staffing and operations across the day.\n4a. Find the appropriate frequency table for this dataset.\n4b. Are certain types of rides are more or less popular at different times? Test at the \\alpha = 0.05 level.\nRemember to typeset your results.\n4c. Challenge & bonus points: write a summary paragraph of this analysis that hypothesizes what differences may exist. You should include results from both Q4a and Q4b for this.\nReplace with your answer."
+  },
+  {
+    "objectID": "files/practice/07-15-practice.html",
+    "href": "files/practice/07-15-practice.html",
+    "title": "Practice: 07/15/2025",
+    "section": "",
+    "text": "# use this code chunk to call in all packages the document will need\nlibrary(tidyverse)\nlibrary(ssstats)"
+  },
+  {
+    "objectID": "files/practice/07-15-practice.html#part-1",
+    "href": "files/practice/07-15-practice.html#part-1",
+    "title": "Practice: 07/15/2025",
+    "section": "Part 1",
+    "text": "Part 1\nPongo and Perdita have convinced Roger and Anita to run a small Puppy Wellness Study (wellness) to see how different diet types and daily play schedules affect the average weekly weight gain (in grams) of their rapidly growing pups.\n\nFactor A (Diet Type; Diet): High-Protein Kibble vs. Balanced Kibble\nFactor B (Play Schedule Play): Short (1 hour/day in the park) vs. Long (3 hours/day in the park).\n\n1. Find the appropriate summary statistics for this dataset. You will want to look at means in multiple ways: overall, by factor, and by treatment group.\n2. Construct the appropriate two-way ANOVA table.\n3. Is there an interaction between diet type and play schedule? Test at the \\alpha=0.05 level. Remember to typeset your results.\nInsert your typesetting here.\n4. Construct the profile plot for this analysis.\n5. Write a brief paragraph to describe your analysis results. You have enough information to discuss the ANOVA results (Q3) using the means you computed in Q1 and the profile plot constructed in Q4.\nReplace with your answer.\n6. Graphically assess the ANOVA assumptions.\n7. Using the graphs in Q6, determine if our analysis is valid. Explain why it is valid or why it is not valid.\nReplace with your answer."
+  },
+  {
+    "objectID": "files/practice/07-15-practice.html#part-2",
+    "href": "files/practice/07-15-practice.html#part-2",
+    "title": "Practice: 07/15/2025",
+    "section": "Part 2",
+    "text": "Part 2\nAfter the puppies grew a bit older, Pongo and Perdita partnered with a local dog academy to evaluate different obedience training approaches and trainer experience levels (obedience). They want to know how these factors affect the number of obedient responses per session (out of 10 cues). Each pup is randomly assigned to one of the following combinations for their obedience sessions:\n\nFactor A (Training Method; Method): Clicker Training vs. Voice Commands\nFactor B (Trainer Experience; Trainer): New Trainer vs. Experienced Trainer\n\n8. Find the appropriate summary statistics for this dataset. You will want to look at means in multiple ways: overall, by factor, and by treatment group.\n9. Construct the appropriate two-way ANOVA table.\n10. Use the appropriate hypothesis test to show that there is not an interaction between training method and experience of training. Test at the \\alpha=0.05 level. Remember to typeset your results.\nInsert your typesetting here.\n11. Reconstruct the two-way ANOVA table without the interaction.\n12. Is there a main effect of training method? Test at the \\alpha=0.05 level. Remember to typeset your results.\nInsert your typesetting here.\n13. Is there a main effect of trainer experience? Test at the \\alpha=0.05 level. Remember to typeset your results.\nInsert your typesetting here.\n14. Construct the profile plot for this analysis.\n15. Write a brief paragraph to describe your analysis results. You have enough information to discuss the ANOVA results (Q10, Q12, Q13) using the means you computed in Q8 and the profile plot constructed in Q14.\nReplace with your answer.\n16. Graphically assess the ANOVA assumptions.\n17. Using the graphs in Q16, determine if our analysis is valid. Explain why it is valid or why it is not valid.\nReplace with your answer."
+  },
+  {
+    "objectID": "files/practice/07-01-practice.html",
+    "href": "files/practice/07-01-practice.html",
+    "title": "Practice: 07/01/2025",
+    "section": "",
+    "text": "# use this code chunk to call in all packages the document will need\nlibrary(tidyverse)\nlibrary(ssstats)"
+  },
+  {
+    "objectID": "files/practice/07-01-practice.html#part-1",
+    "href": "files/practice/07-01-practice.html#part-1",
+    "title": "Practice: 07/01/2025",
+    "section": "Part 1",
+    "text": "Part 1\nTwilight Sparkle has been working tirelessly on developing a new memory-enhancing spell that she believes could help ponies improve their ability to recall important information. She designs a controlled experiment where each participating pony will complete the same memory test both before and after the spell is cast. By comparing each pony’s performance before and after the treatment, Twilight hopes to determine whether her spell truly boosts memory or if any observed changes are simply due to chance. Twilight records the number of items each pony can remember in both sessions and she is particularly interested in whether the differences in memory scores after the spell show consistent improvement across her group of test subjects.\n1. Is this independent or dependent data? Why?\nReplace with your answer\n2. Find the appropriate summary statistics for the data.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n3. What is the appropriate t-test?\nReplace with your answer\n4. Find the 99% confidence interval for \\boldsymbol{\\mu}_1-\\boldsymbol{\\mu}_2.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\nThe 95% CI for \\mu_1-\\mu_2 is (lower bound, upper bound).\n4. Use the appropriate t-test, as identified in Q3, to determine if the data imply an improvement in the memory scores. Test at the \\alpha=0.01 level.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nt_0 =, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n5. What is the appropriate nonparametric test?\nReplace with your answer\n6. Use the appropriate nonparametric test, as identified in Q5, to determine if the data imply an improvement in the memory scores. Test at the \\alpha=0.01 level.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nT_0 =, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n7. Construct the appropriate QQ plot for this dataset and research question.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n8. Determine which test is appropriate. Provide commentary on the graph in Q7 supporting your answer.\nReplace with your answer"
+  },
+  {
+    "objectID": "files/practice/07-01-practice.html#part-2",
+    "href": "files/practice/07-01-practice.html#part-2",
+    "title": "Practice: 07/01/2025",
+    "section": "Part 2",
+    "text": "Part 2\nTwilight Sparkle’s new memory-enhancing spell has quickly gained attention across Equestria, and now she wants to conduct a larger study to compare ponies who receive the spell to those who do not. This time, she recruits two groups of ponies: one group will receive the memory-enhancing spell and the other group will not receive any magical intervention, serving as the control group. By comparing the memory scores between these two groups, Twilight hopes to determine whether the spell leads to a meaningful improvement in memory performance when compared to ponies who did not receive the spell.\n9. Is this independent or dependent data? Why?\nReplace with your answer\n10. Find the appropriate summary statistics for the data.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n11. What is the appropriate t-test?\nReplace with your answer\n12. Find the 95% confidence interval for \\boldsymbol{\\mu}_1-\\boldsymbol{\\mu}_2.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\nThe 95% CI for \\mu_1-\\mu_2 is (lower bound, upper bound).\n13. Use the appropriate t-test, as identified in Q11, to determine if the data imply an improvement in the memory scores. Test at the \\alpha=0.05 level.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nt_0 =, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n14. What is the appropriate nonparametric test?\nReplace with your answer\n15. Use the appropriate nonparametric test, as identified in Q14, to determine if the data imply an improvement in the memory scores. Test at the \\alpha=0.05 level.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nT_0 =, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n16. Construct the appropriate QQ plot for this dataset and research question.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n17. Determine which test is appropriate. Provide commentary on the graph in Q16 supporting your answer.\nReplace with your answer"
+  },
+  {
+    "objectID": "files/practice/key/07-29-practice-KEY.html",
+    "href": "files/practice/key/07-29-practice-KEY.html",
+    "title": "Practice: 07/29/2025",
+    "section": "",
+    "text": "# use this code chunk to call in all packages the document will need\nlibrary(tidyverse)\nlibrary(ssstats)\n\n1. The Tower of Terror is one of the most thrilling rides at Hollywood Studios, often a guest favorite. Park management believes that at least 80% of riders exit the attraction with a smile on their face. To assess this claim, the park analytics team conducts a quick observation (tower_data), recording whether or not each of 100 randomly selected guests is smiling (smiling) as they exit the attraction.\n1a. Find the appropriate frequency table for this dataset.\n\ntower_data %&gt;% n_pct(smiling)\n\n smiling    n (pct)\n      No 25 (25.0%)\n     Yes 75 (75.0%)\n\n\n1b. Construct the 95% confidence interval for the true proportion of guests that are smiling as they exit the attraction.\n\ntower_data %&gt;% one_prop_CI(binary = smiling,\n                           event = \"Yes\")\n\n\n  \n\n\n\nRemember to state the resulting confidence interval.\n1c. Is there evidence to believe that the true proportion of smiling guests is lower than what management believes? Assume \\alpha = 0.05.\n\ntower_data %&gt;% one_prop_HT(binary = smiling,\n                           event = \"Yes\",\n                           p = 0.8,\n                           alternative = \"less\")\n\nOne-sample z-test for the population proportion:\nNull: H0: π = 0.8\nAlternative: H1: π &lt; 0.8\nTest statistic: z = 1.25\np-value: p = 0.106\nConclusion: Fail to reject the null hypothesis (p = 0.1056 ≥ α = 0.05)\n\n\nTypeset the results here\n2. Hollywood Studios offers two iconic snacks throughout the park: Mickey Bars and fresh popcorn. The snack team lead wonders if age influences snack choice. They collect data from 120 guests (snack_data) asking each guest to identify their age group (age_group) and then choose between a Mickey Bar or popcorn (snack_choice).\n2a. Find the appropriate frequency table for this dataset.\n\nsnack_data %&gt;% n_pct(row_var = age_group,\n                     col_var = snack_choice)\n\n# A tibble: 2 × 3\n  age_group `Mickey Bar` Popcorn   \n  &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;     \n1 18 and up 19 (33.3%)   41 (65.1%)\n2 Under 18  38 (66.7%)   22 (34.9%)\n\nsnack_data %&gt;% n_pct(row_var = snack_choice,\n                     col_var = age_group)\n\n# A tibble: 2 × 3\n  snack_choice `18 and up` `Under 18`\n  &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;     \n1 Mickey Bar   19 (31.7%)  38 (63.3%)\n2 Popcorn      41 (68.3%)  22 (36.7%)\n\n\n2b. Construct the 95% confidence interval for the difference between the two age groups in the true proportion of guests that prefer Mickey Bars.\n\nsnack_data %&gt;% two_prop_CI(binary = snack_choice,\n                           grouping = age_group,\n                           event = \"Mickey Bar\")\n\n\n  \n\n\n\nRemember to state the resulting confidence interval.\n2c. The team wants to test whether younger guests are more likely to choose Mickey Bars as compared to older guests. Could age be a factor in what guests crave at snack time?\n\nsnack_data %&gt;% two_prop_HT(binary = snack_choice,\n                           grouping = age_group,\n                           event = \"Mickey Bar\",\n                           alternative = \"greater\")\n\nTwo-sample z-test for difference in proportions:\nGroup 1: Under 18, Group 2: 18 and up\nObserved difference: 0.3167\nNull: H₀: π₁ - π₂ = 0\nAlternative: H₁: π₁ - π₂ &gt; 0\nTest statistic: z = 3.66\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n\n3. Hollywood Studios is home to a variety of live performances. Historically, guest attendance has followed a pattern: 35% prefer Musical shows, 25% prefer Stunt shows, and both Character Meet-and-Greets and Interactive Games attract about 20% of guests. However, a recent marketing campaign may have shifted those preferences. To evaluate this, 200 guests are surveyed (shows_data)about their favorite type of show in the park (favorite_show).\n3a. Find the appropriate frequency table for this dataset.\n\nshows_data %&gt;% n_pct(favorite_show, rows = 4)\n\n favorite_show    n (pct)\n     Character 42 (21.0%)\n   Interactive 34 (17.0%)\n       Musical 70 (35.0%)\n         Stunt 54 (27.0%)\n\n\n3b. Do current guest preferences match the historical expectations, or have things changed? Test at the \\alpha = 0.05 level.\n\nshows_data %&gt;% goodness_of_fit(categorical = favorite_show,\n                               expected= (c(\"Musical\" = 0.35,\n                                            \"Stunt\" = 0.25,\n                                            \"Character\" = 0.20,\n                                            \"Interactive\" = 0.20)))\n\nChi-square goodness-of-fit test:\nNull: H₀: Observed frequencies match expected proportions\nAlternative: H₁: Observed frequencies do not match expected proportions\nTest statistic: χ²(3) = 1.32\np-value: p = 0.724\nConclusion: Fail to reject the null hypothesis (p = 0.7244 ≥ α = 0.05)\n\n\nRemember to typeset the results.\n4. Guest behavior at Hollywood Studios may shift throughout the day. The park’s operations team is interested in whether ride type is associated with time of day. Attractions are categorized into three types (ride_type): Thrill, Family, and Dark Rides. Staff record (ride_data) the time of day (time_of_day; Morning, Afternoon, or Evening) at which 300 guests enter their first ride, along with the ride type chosen. The goal is to determine if certain types of rides are more or less popular at different times, helping the team optimize staffing and operations across the day.\n4a. Find the appropriate frequency table for this dataset.\n\nride_data %&gt;% n_pct(row_var = ride_type,\n                    col_var = time_of_day)\n\n# A tibble: 3 × 4\n  ride_type Afternoon  Evening    Morning   \n  &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;     \n1 Dark      34 (33.7%) 26 (29.9%) 32 (28.6%)\n2 Family    31 (30.7%) 18 (20.7%) 59 (52.7%)\n3 Thrill    36 (35.6%) 43 (49.4%) 21 (18.8%)\n\nride_data %&gt;% n_pct(row_var = time_of_day,\n                    col_var = ride_type)\n\n# A tibble: 3 × 4\n  time_of_day Dark       Family     Thrill    \n  &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;     \n1 Afternoon   34 (37.0%) 31 (28.7%) 36 (36.0%)\n2 Evening     26 (28.3%) 18 (16.7%) 43 (43.0%)\n3 Morning     32 (34.8%) 59 (54.6%) 21 (21.0%)\n\n\n4b. Are certain types of rides are more or less popular at different times? Test at the \\alpha = 0.05 level.\n\ndataset_name %&gt;% independence_test(var1 = first_variable,\n                                   var2 = second_variable,\n                                   alpha = specified_alpha)\n\nError: object 'dataset_name' not found\n\n\nRemember to typeset your results.\n4c. Challenge & bonus points: write a summary paragraph of this analysis that hypothesizes what differences may exist. You should include results from both Q4a and Q4b for this.\nReplace with your answer."
+  },
+  {
+    "objectID": "files/practice/key/06-24-inference-practice-KEY.html",
+    "href": "files/practice/key/06-24-inference-practice-KEY.html",
+    "title": "STA2023 ReviewConfidence IntervalsHypothesis Testing",
+    "section": "",
+    "text": "Let’s find a 95% confidence interval for wing-flap rates.\n\n\nwing_flap %&gt;% one_mean_CI(wing_flap_rate)\n\n\n  \n\n\n\n\nThe 95% CI for \\mu is (lower_bound, upper_bound).\n\n\nPerform the appropriate hypothesis test to determine if the wing-flap rate has changed. Test at the \\alpha=0.10 level.\n\n\nwing_flap %&gt;% one_mean_HT(wing_flap_rate,\n                          mu = 50,\n                          alternative = \"two\",\n                          alpha = 0.1) \n\nOne-sample t-test for the population mean:\nNull: H0: μ = 50\nAlternative: H1: μ ≠ 50\nTest statistic: t(24) = 1.497\np-value: p = 0.147\nConclusion: Fail to reject the null hypothesis (p = 0.1473 ≥ α = 0.1)\n\n\n\nHypotheses:\n\nH_0: \\ \\mu = 50\nH_1: \\ \\mu \\ne 50\n\nTest Statistic and p-Value\n\nt_0 = 1.497, p = 0.147\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha = 0.10\n\nConclusion and interpretation\n\nFail to reject H_0 (p \\text{ vs } \\alpha \\to 0.147 &gt; 0.10). There is not sufficient evidence to suggest that the average wing-flap rate has changed from the historical value of 50 flaps/min."
+  },
+  {
+    "objectID": "files/practice/key/06-24-inference-practice-KEY.html#one-sample-mean",
+    "href": "files/practice/key/06-24-inference-practice-KEY.html#one-sample-mean",
+    "title": "STA2023 ReviewConfidence IntervalsHypothesis Testing",
+    "section": "",
+    "text": "Let’s find a 95% confidence interval for wing-flap rates.\n\n\nwing_flap %&gt;% one_mean_CI(wing_flap_rate)\n\n\n  \n\n\n\n\nThe 95% CI for \\mu is (lower_bound, upper_bound).\n\n\nPerform the appropriate hypothesis test to determine if the wing-flap rate has changed. Test at the \\alpha=0.10 level.\n\n\nwing_flap %&gt;% one_mean_HT(wing_flap_rate,\n                          mu = 50,\n                          alternative = \"two\",\n                          alpha = 0.1) \n\nOne-sample t-test for the population mean:\nNull: H0: μ = 50\nAlternative: H1: μ ≠ 50\nTest statistic: t(24) = 1.497\np-value: p = 0.147\nConclusion: Fail to reject the null hypothesis (p = 0.1473 ≥ α = 0.1)\n\n\n\nHypotheses:\n\nH_0: \\ \\mu = 50\nH_1: \\ \\mu \\ne 50\n\nTest Statistic and p-Value\n\nt_0 = 1.497, p = 0.147\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha = 0.10\n\nConclusion and interpretation\n\nFail to reject H_0 (p \\text{ vs } \\alpha \\to 0.147 &gt; 0.10). There is not sufficient evidence to suggest that the average wing-flap rate has changed from the historical value of 50 flaps/min."
+  },
+  {
+    "objectID": "files/practice/key/06-24-inference-practice-KEY.html#two-independent-means",
+    "href": "files/practice/key/06-24-inference-practice-KEY.html#two-independent-means",
+    "title": "STA2023 ReviewConfidence IntervalsHypothesis Testing",
+    "section": "Two Independent Means",
+    "text": "Two Independent Means\n\nUse the wing-flap data to estimate the difference in apple consumption (apples) betwen those that are above or below the target rate (target). Estimate using a 95% confidence interval.\n\n\nwing_flap %&gt;% independent_mean_CI(grouping = target,\n                                  continuous = apples, \n                                  confidence = 0.95)\n\nThe point estimate for the difference in means is x̄₁ − x̄₂ = 10.0556\nThe 95% confidence interval for μ₁ − μ₂ is (8.1347, 11.9764)\n\n\n\nThus, the 95% CI for \\mu_{\\text{above}} - \\mu_{\\text{below}} is (lower_bound, upper_bound).\n\n\nPerform the appropriate hypothesis test to determine if the above target pegasi are eating 5 or more apples than the below target pegasi. Test at the \\alpha=0.05 level.\n\n\nwing_flap %&gt;% independent_mean_HT(grouping = target,\n                                  continuous = apples, \n                                  mu = 5, \n                                  alternative = \"greater\", \n                                  alpha = 0.05)\n\nTwo-sample t-test for two independent means and equal variance:\nNull: H₀: μ₁ − μ₂ ≤ 5\nAlternative: H₁: μ₁ − μ₂ &gt; 5\nTest statistic: t(23) = 5.445\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n\n\nHypotheses:\n\nH_0: \\ \\mu_{\\text{above}} - \\mu_{\\text{below}} \\le 5\nH_1: \\ \\mu_{\\text{above}} - \\mu_{\\text{below}} &gt; 5\n\nTest Statistic and p-Value\n\nt_0 = 5.445, p &lt; 0.001\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha = 0.05\n\nConclusion and interpretation\n\nReject H_0 (p \\text{ vs } \\alpha \\to p &lt; 0.001 &lt; 0.05). There is sufficient evidence to suggest that ponies above target, on average, eat 5 more apples than those below target."
+  },
+  {
+    "objectID": "files/practice/key/06-24-inference-practice-KEY.html#two-dependent-means",
+    "href": "files/practice/key/06-24-inference-practice-KEY.html#two-dependent-means",
+    "title": "STA2023 ReviewConfidence IntervalsHypothesis Testing",
+    "section": "Two Dependent Means",
+    "text": "Two Dependent Means\n\nWe now want to find the 99% CI for the average improvement in wing-flap rate.\n\nHint: improvement can be measured with post - pre.\nHint 2: post measurement: post_training_wfr, pre measurement: pre_training_wfr.\n\n\n\nwing_flap %&gt;% dependent_mean_CI(col1 = post_training_wfr,\n                                col2 = pre_training_wfr,\n                                confidence = 0.99)\n\nThe point estimate for the mean difference is x̄ = -1.712.\nThe point estimate for the standard deviation of differences is s = 9.9701.\nThe 99% confidence interval for the mean difference μ_d is (-7.2891, 3.8651).\n\n\n\nThe 99% confidence interval for \\mu_d is (lower_bound, upper_bound).\n\n\nWhat happens if we flip the order of col1 and col2?\n\n\nwing_flap %&gt;% dependent_mean_CI(col1 = pre_training_wfr,\n                                col2 = post_training_wfr,\n                                confidence = 0.99)\n\nThe point estimate for the mean difference is x̄ = 1.712.\nThe point estimate for the standard deviation of differences is s = 9.9701.\nThe 99% confidence interval for the mean difference μ_d is (-3.8651, 7.2891).\n\n\n\nThe 99% confidence interval for \\mu_d is (lower_bound, upper_bound).\n\n\nPerform the appropriate hypothesis test to determine if there is a difference in wing-flap rate pre- and post-training. Test at the \\alpha=0.01 level.\n\n\nwing_flap %&gt;% dependent_mean_HT(col1 = post_training_wfr,\n                                col2 = pre_training_wfr,\n                                alpha = 0.01)\n\nPaired t-test for the mean of differences:\nNull: H₀: μ_d = 0\nAlternative: H₁: μ_d ≠ 0\nTest statistic: t(24) = -0.859\np-value: p = 0.399\nConclusion: Fail to reject the null hypothesis (p = 0.3991 ≥ α = 0.01)\n\n\n\nHypotheses:\n\nH_0: \\ \\mu_{d} = 0, where \\mu_d = \\mu_{\\text{pre}} - \\mu_{\\text{post}}\nH_1: \\ \\mu_d \\ne 0\n\nTest Statistic and p-Value\n\nt_0 = -0.859, p = 0.399\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha = 0.01\n\nConclusion and interpretation\n\nFail to reject H_0 (p \\text{ vs } \\alpha \\to p = 0.399 &gt; 0.05). There is not sufficient evidence to suggest that training changed wing-flap rates."
+  },
+  {
+    "objectID": "files/practice/07-10-practice.html",
+    "href": "files/practice/07-10-practice.html",
+    "title": "Practice: 07/10/2025",
+    "section": "",
+    "text": "# use this code chunk to call in all packages the document will need\nlibrary(tidyverse)\nlibrary(ssstats)\n## DO NOT EDIT THIS CHUNK ##\nset.seed(917689)\nsinging_data &lt;- tibble(performer = rep(c(\"Mermaids\", \"Fish\", \"Crustaceans\"), each = 50),\n                       volume_db = c(rnorm(50, mean = 88.5, sd = 4.2),\n                                     rnorm(50, mean = 83.1, sd = 2.1),\n                                     rnorm(50, mean = 91.2, sd = 3.7)))\n\ntrill_data &lt;- tibble(performer = c(rep(\"Mermaids\", 60), \n                                   rep(\"Fish Chorus\", 60),\n                                   rep(\"Crustaceans\", 60)),\n                     trills = c(rnorm(60, mean = 6,  sd = 3),\n                                rnorm(60, mean = 9,  sd = 3),\n                                rnorm(60, mean = 14, sd = 3)))\n## DO NOT EDIT THIS CHUNK ##"
+  },
+  {
+    "objectID": "files/practice/07-10-practice.html#part-1",
+    "href": "files/practice/07-10-practice.html#part-1",
+    "title": "Practice: 07/10/2025",
+    "section": "Part 1",
+    "text": "Part 1\nKing Triton is concerned that the different sea creatures in Atlantica are not equally loud during musical rehearsals, which might be affecting the harmony of their performances. To investigate, Sebastian conducts a study (singing_data) measuring the average decibel level (volume) of singing during rehearsals from three types of performers: mermaids, fish chorus, and crustaceans.\nEach group (performer) includes 25 randomly selected performers, and their peak singing volumes (volume_db) are recorded during a standard song.\n1. Check the ANOVA assumptions graphically.\n\n\n2. If necessary, formally test for the variance assumption. Test at the \\alpha=0.05 level.\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nt_0 =, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n3. Draw conclusions based on your observations. (Do we meet the assumption?)\nReplace with your answer\n4. Which test should we use to look for differences among the performer groups? Why?\nReplace with your answer\n5. Perform the appropriate hypothesis test to determine if the average peak singing volume (volume_db) differs between performance groups (performer).\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nF_0 = OR \\chi_0^2=, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n6. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the \\alpha=0.05 level. Assume that this is an exploratory study; do not adjust for \\alpha.\nPairwise differences:\n\nList\nThem\nHere\n\n7. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the \\alpha=0.05 level. Assume that this is a confirmatory study; adjust for \\alpha.\nPairwise differences:\n\nList\nThem\nHere"
+  },
+  {
+    "objectID": "files/practice/07-10-practice.html#part-2",
+    "href": "files/practice/07-10-practice.html#part-2",
+    "title": "Practice: 07/10/2025",
+    "section": "Part 2",
+    "text": "Part 2\nSebastian is preparing for Atlantica’s annual musical showcase, where different sections of the underwater ensemble show off their vocal prowess. One feature he’s especially interested in is the number of high-note “trills” performers can hit during a 90-second rehearsal segment.\nTo investigate whether certain performer groups are more impressive than others, Sebastian records (trill_data) the number of trills (trills) performed by randomly selected individuals from each of the following sections (performer): mermaids, fish chorus, and crustaceans.\n1. Check the ANOVA assumptions graphically.\n\n\n2. If necessary, formally test for the variance assumption. Test at the \\alpha=0.05 level.\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nt_0 =, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n3. Draw conclusions based on your observations. (Do we meet the assumption?)\nReplace with your answer\n4. Which test should we use to look for differences among the performer groups? Why?\nReplace with your answer\n5. Perform the appropriate hypothesis test to determine if the average peak singing volume (volume_db) differs between performance groups (performer).\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nF_0 = OR \\chi_0^2=, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n6. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the \\alpha=0.05 level. Assume that this is an exploratory study; do not adjust for \\alpha.\nPairwise differences:\n\nList\nThem\nHere\n\n7. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the \\alpha=0.05 level. Assume that this is a confirmatory study; adjust for \\alpha.\nPairwise differences:\n\nList\nThem\nHere"
+  },
+  {
+    "objectID": "files/syllabus.html",
+    "href": "files/syllabus.html",
+    "title": "Abbreviated Syllabus",
+    "section": "",
+    "text": "Note: this is an abbreviated syllabus. The full syllabus is available through Classmate and/or Canvas.\n\nInstructor Information\n\nDr. Samantha Seals\nOffice: 4/344\n\n\n\nMeeting Times and Location\n\nMW 1:00 pm-2:15 pm in 79/171\nTR 9:30 am-10:45 am in 4/305\n\n\n\nOffice Hours\n\nMonday: 9:00 am-11:00 am\nTuesday: 2:00 pm-4:00 pm\nWednesday: 9:00 am-11:00 am\nOther times by appointment\n\n\n\nGrading and Evaluation\nThe course grade will be determined as follows:\n\nR labs (25%): Students will complete in-class activities using Quarto and R. The resulting .html file should be submitted to the designated Assignment on Canvas by 11:59 pm on the specified date (see Canvas calendar).\nWeekly quizzes (10%): Once a week, students will complete a brief quiz at the end of class. Quizzes cannot be taken early and missed quizzes cannot be made up. Of the 13 planned quizzes, the lowest 2 grades will be dropped.\nProjects (40%): Every module will finish with a project to demonstrate the knowledge gained. These will be like the R Labs, but putting everything in the module together. The resulting .html file should be submitted to the designated Assignment on Canvas by 11:59 pm on the specified date (see Canvas).\nFinal Exam (25%): The final exam will be a concepts-based written exam. While there may be some basic calculations needed, you will not be processing raw data.\n\nIt is expected that all work submitted is the student’s own work. Evidence of academic dishonesty, including use of “homework help” websites (e.g., Chegg) and copying other students’ work, will be submitted to the Dean of Students. A grade of 0 will automatically be assigned for the assignment and there will be no opportunities to change that grade. If there are repeated incidents, the sanctions attached will increase in severity, including an F in the course and suspension from the university.\nWhat about AI? Absolutely okay when it’s used as a learning tool. It can be helpful when you are stuck, when you want to check your own work, asking for additional examples, or alternative explanations to concepts. However, it is not okay to let AI complete assignments for you.\nHere’s how you can use AI responsibly:\n\nAsk it to explain concepts you don’t fully understand.\nHave it help debug your code and ask for help understanding R error messages.\nAsk it to provide additional examples, perhaps in an area you are interested in.\n\n\n\nLate Policy\nAll projects have due dates, however, the Assignments on Canvas will not close until the end of the semester. All students are automatically granted “extensions” without question.\nNote that if there is not a submission when I go to grade (after the initial deadline), I will assign a zero (0) and request that you submit the assignment when you are able to. This is only for record keeping purposes. There is no penalty for submitting late and a full grade will be given upon review of your submission.\nExtensions are not available for quizzes or the final exam. All work must be submitted by 8 am on December 14, 2025."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#introduction-to-r",
+    "href": "files/slides/01-2-estimation-in-R.html#introduction-to-r",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Introduction to R",
+    "text": "Introduction to R\n\nIn this course, we will review formulas, but we will use R for computational purposes.\n\nRemember to refer to the lecture notes for specific code needed.\nCode is also available on this course’s GitHub repository.\n\nYou can install R and RStudio if you wish; both are free.\n\nR from CRAN.\nRStudio from Posit.\n\nWe also have access to the Posit Workbench (“the server”) through HMCSE.\nI know that this is probably the first time you are seeing R (or any sort of programming).\n\nThat is why we have “R lab” time built in to our course.\nRemember that I am not looking for perfection, but for competency."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#introduction-to-r-1",
+    "href": "files/slides/01-2-estimation-in-R.html#introduction-to-r-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Introduction to R",
+    "text": "Introduction to R\n\nPlease download today’s activity from Canvas and log into the server.\n\nClick on “New session”\nClick on “Create session”\n\nUpload today’s activity to the server:\n\nIn the bottom right pane, click on the white square with a golden up arrow on in\nClick on “Choose file”\nSelect the downloaded file\nClick “Open”\nClick “OK”\n\nOpen today’s activity on the server:\n\nIn the bottom right pane, scroll to the bottom\nClick on the name of the .qmd file for today’s activity"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#introduction-to-r-.r-scripts",
+    "href": "files/slides/01-2-estimation-in-R.html#introduction-to-r-.r-scripts",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Introduction to R: .R scripts",
+    "text": "Introduction to R: .R scripts\n\n.R scripts:\n\nOnly allows code\n\nCan comment out code using pound sign\n\nCan run code line-by-line\n\nCan run multiple lines of code at a time\nResults output to Console window pane (bottom left)\n\nI use .R scripts for my day-to-day analyses"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#introduction-to-r-.qmd-file",
+    "href": "files/slides/01-2-estimation-in-R.html#introduction-to-r-.qmd-file",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Introduction to R: .qmd file",
+    "text": "Introduction to R: .qmd file\n\n.qmd files:\n\nAllow both text and code\n\nCan comment out text using html code\nCan comment out code in chunk using pound sign\n\nUses “code chunks” to evaluate code\n\nButton: run all chunks before\nButton: run this chunk\nCtrl+enter / cmd+return: line-by-line\n\nRendering results in .html file\n\nI use .qmd files to create sharable documents\n\nReproducible research forever and always"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#introduction-to-r-disclaimer",
+    "href": "files/slides/01-2-estimation-in-R.html#introduction-to-r-disclaimer",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Introduction to R: Disclaimer!",
+    "text": "Introduction to R: Disclaimer!\n\nMy major disclaimer as a biostatistician: I am a statistician first, programmer second.\n\nMy expertise is in statistics, not programming.\nI do not know everything about R.\nI do not claim to write the most efficient code.\nOur goal is to correctly apply statistics to answer research questions using data.\n\nR is a tool for us to apply statistics.\n\n\nMy major disclaimer as a professor: yes, I know this is likely the first time you are seeing R or programming in general.\n\nWe have “R lab” time built into the course.\nCode you need to answer questions will be provided in lecture.\n\nThis means you must revisit lecture slides to find the code you need."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#introduction-to-r-dr.-sealss-expectations",
+    "href": "files/slides/01-2-estimation-in-R.html#introduction-to-r-dr.-sealss-expectations",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Introduction to R: Dr. Seals’s Expectations",
+    "text": "Introduction to R: Dr. Seals’s Expectations\n\nI expect students to try their best. This includes:\n\nreferring back to lectures as needed.\nasking when you have a question.\nusing the resources provided to learn.\n\nYou must know how to answer questions using R.\nYou will not be expected to write code beyond what is shown in class.\n\nNote: Sometimes I include bonus questions…\n\nWhen grading, I am looking for competency.\n\nWhat is the appropriate analysis for the question at hand?\nWhat are the assumptions of the analysis? Do we meet them?\nAre the correct conclusions drawn given the information provided?"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-base-r-vs.-packages",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-base-r-vs.-packages",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: base R vs. packages",
+    "text": "Functions in R: base R vs. packages\n\nR functions are like baking recipes. They:\n\nTake input (ingredients, or data),\nDoes something with it (follow recipe, or perform calculations),\nGives back a result (baked good, or statistics).\n\nSome functions in R are available as soon as you open RStudio (this is “base R”).\n\ne.g., mean(), sd()\n\nOther functions are not available and must be called in after you start RStudio (these are “packages”).\n\ne.g., after I call in library(tidyverse), I can use summarize(mean(), sd())\nWe will always need library(tidyverse) because of %&gt;% (pipe operator)."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-tidyverse",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-tidyverse",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: tidyverse",
+    "text": "Functions in R: tidyverse\n\nlibrary(tidyverse) is a collection of R packages designed for data science.\n\nAll packages share a common philosophy and are meant to work together.\nThis is ideal for using the “same syntax” - I promise it’s better than base R!\n\nCore library(tidyverse) packages we will use:\n\nlibrary(readr): read in data files\nlibrary(dplyr): manipulate and summarize data\nlibrary(ggplot2): create data visualizations\n\nIf you are interested, there are resources:\n\nlibrary(tidyverse) website: https://www.tidyverse.org/\nR for Data Science (free textbook): https://r4ds.hadley.nz/"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-continuous-data",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-continuous-data",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: Summarizing Continuous Data",
+    "text": "Functions in R: Summarizing Continuous Data\n\nWe will use mean_median() from library(ssstats) to summarize continuous variables.\n\nIt will return both the mean (standard deviation) and median (IQR).\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\ndataset_name %&gt;% \n  mean_median(var1, var2, ...)\n:::\n\nWe can add group_by() from library(tidyverse) to split the summaries by categories.\n\n\ndataset_name %&gt;% \n  group_by(grouping_var1, grouping_var2, ...) %&gt;% \n  mean_median(var1, var2, ...)"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-continuous-data-1",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-continuous-data-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: Summarizing Continuous Data",
+    "text": "Functions in R: Summarizing Continuous Data\n\nLet’s use mean_median() to summarize the MLP dataset.\n\n\nmlp_data %&gt;% \n  mean_median(friendship, tail_shimmer, magical_energy)"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-continuous-data-2",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-continuous-data-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: Summarizing Continuous Data",
+    "text": "Functions in R: Summarizing Continuous Data\n\nLet’s use mean_median() to summarize the MLP dataset.\n\n\nmlp_data %&gt;% \n  mean_median(friendship, tail_shimmer, magical_energy)\n\n# A tibble: 3 × 3\n  variable       mean_sd      median_iqr   \n  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;        \n1 friendship     7.6 (1.6)    8.0 (2.0)    \n2 magical_energy 9.9 (9.6)    7.0 (11.1)   \n3 tail_shimmer   256.6 (65.7) 253.0 (103.0)"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-continuous-data-3",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-continuous-data-3",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: Summarizing Continuous Data",
+    "text": "Functions in R: Summarizing Continuous Data\n\nLet’s use mean_median() to summarize the MLP dataset by pony type.\n\n\nmlp_data %&gt;% \n  group_by(type) %&gt;%\n  mean_median(friendship, tail_shimmer, magical_energy)"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-continuous-data-4",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-continuous-data-4",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: Summarizing Continuous Data",
+    "text": "Functions in R: Summarizing Continuous Data\n\nLet’s use mean_median() to summarize the MLP dataset by pony type.\n\n\nmlp_data %&gt;% \n  group_by(type) %&gt;%\n  mean_median(friendship, tail_shimmer, magical_energy)\n\n# A tibble: 12 × 4\n   type    variable       mean_sd      median_iqr   \n   &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;        \n 1 Alicorn friendship     7.8 (1.3)    8.0 (2.0)    \n 2 Earth   friendship     7.6 (1.6)    8.0 (2.0)    \n 3 Pegasus friendship     7.6 (1.6)    8.0 (2.0)    \n 4 Unicorn friendship     7.5 (1.6)    8.0 (2.0)    \n 5 Alicorn magical_energy 9.0 (8.0)    6.2 (10.9)   \n 6 Earth   magical_energy NaN (NA)     NA (NA)      \n 7 Pegasus magical_energy NaN (NA)     NA (NA)      \n 8 Unicorn magical_energy 9.9 (9.6)    7.0 (11.1)   \n 9 Alicorn tail_shimmer   280.1 (64.5) 297.0 (104.0)\n10 Earth   tail_shimmer   252.2 (65.2) 246.0 (100.0)\n11 Pegasus tail_shimmer   263.5 (67.0) 265.0 (110.0)\n12 Unicorn tail_shimmer   261.2 (65.0) 260.0 (100.0)"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-categorical-data",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-categorical-data",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: Summarizing Categorical Data",
+    "text": "Functions in R: Summarizing Categorical Data\n\nWe will use n_pct() from library(ssstats) to summarize categorical variables.\nFor one variable – this returns n_i \\ (\\%_i):\n\n\ndataset_name %&gt;% \n  n_pct(var1)\n\n\nFor two variables – this returns n_{ij} \\ (\\%_{\\text{col}}):\n\n\ndataset_name %&gt;% \n  n_pct(var1, var2)"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-categorical-data-1",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-categorical-data-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: Summarizing Categorical Data",
+    "text": "Functions in R: Summarizing Categorical Data\n\nLet’s use n_pct() to summarize the MLP dataset.\n\n\nmlp_data %&gt;% \n  n_pct(type, rows = 4)"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-categorical-data-2",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-categorical-data-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: Summarizing Categorical Data",
+    "text": "Functions in R: Summarizing Categorical Data\n\nLet’s use n_pct() to summarize the MLP dataset.\n\n\nmlp_data %&gt;% \n  n_pct(type, rows = 4)\n\n    type      n (pct)\n Alicorn    41 (1.4%)\n   Earth 1678 (58.4%)\n Pegasus  487 (17.0%)\n Unicorn  665 (23.2%)"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-categorical-data-3",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-categorical-data-3",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: Summarizing Categorical Data",
+    "text": "Functions in R: Summarizing Categorical Data\n\nLet’s use n_pct() to summarize the MLP dataset.\n\n\nmlp_data %&gt;% \n  n_pct(friendship, type, rows = 4)"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-categorical-data-4",
+    "href": "files/slides/01-2-estimation-in-R.html#functions-in-r-summarizing-categorical-data-4",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Functions in R: Summarizing Categorical Data",
+    "text": "Functions in R: Summarizing Categorical Data\n\nLet’s use n_pct() to summarize the MLP dataset.\n\n\nmlp_data %&gt;% \n  n_pct(friendship, type, rows = 4)\n\n# A tibble: 4 × 5\n  friendship Alicorn  Earth     Pegasus   Unicorn  \n       &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;    \n1          1 0 (0.0%) 0 (0.0%)  0 (0.0%)  1 (0.2%) \n2          2 0 (0.0%) 5 (0.3%)  1 (0.2%)  1 (0.2%) \n3          3 0 (0.0%) 14 (0.8%) 6 (1.2%)  13 (2.0%)\n4          4 2 (4.9%) 54 (3.2%) 14 (2.9%) 16 (2.4%)"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-using-ggplot",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-using-ggplot",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Using ggplot()",
+    "text": "Graphs in R: Using ggplot()\n\nWe will construct data visualizations using library(ggplot2), which loads in when we load library(tidyverse).\nThis package allows us to create a layered visualization.\n\nggplot() creates the base layer.\ngeom_X() creates the individual pieces.\n\ngeom_point() creates a scatterplot.\ngeom_line() creates connected lines.\ngeom_bar() creates a bar chart.\ngeom_histogram() creates a histogram."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-using-ggplot-1",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-using-ggplot-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Using ggplot()",
+    "text": "Graphs in R: Using ggplot()\n\nWe use ggplot() because it is very flexible - it allows us to customize every part of the graph.\n\nNote that customization is less important in this course, but incredibly important in real life.\n\nThe R Graphics Cookbook is a great place to get basic code for graphs.\nRemember that I do not expect you to memorize code. I do not have the code memorized.\n\nThings I regularly ask Google for help with:\n\nHow to suppress the legend.\nHow to specify the tickmarks on the axis.\nHow to change the font size."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-the-ggplot-layer",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-the-ggplot-layer",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: The ggplot() Layer",
+    "text": "Graphs in R: The ggplot() Layer\n\nCalling ggplot() creates the initial layer the graph lasagna.\n\n\n\nmlp_data %&gt;% ggplot()"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-the-ggplot-layer-1",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-the-ggplot-layer-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: The ggplot() Layer",
+    "text": "Graphs in R: The ggplot() Layer\n\nWe specify the aesthetics through aes() in ggplot().\n\n\n\nmlp_data %&gt;% ggplot(aes(x = tail_shimmer, y = flying_speed))"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-overriding-defaults",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-overriding-defaults",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Overriding Defaults",
+    "text": "Graphs in R: Overriding Defaults\n\nWe can override plot defaults using additional layers.\n\n\n\nmlp_data %&gt;% \n  ggplot(aes(x = tail_shimmer, y = flying_speed)) +\n  labs(x = \"Tail Shimmer\",\n       y = \"Flying Speed\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-box-plots",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-box-plots",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Box Plots",
+    "text": "Graphs in R: Box Plots\n\nConstruct a box plot for the tail shimmer of the ponies (tail_shimmer).\n\n\n\nmlp_data %&gt;% ggplot(aes(x = tail_shimmer)) +\n  geom_boxplot() +\n  labs(x = \"Tail Shimmer\") +\n  theme_bw() +\n  theme(axis.ticks.y = element_blank(),\n        axis.text.y = element_blank())"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-box-plots-1",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-box-plots-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Box Plots",
+    "text": "Graphs in R: Box Plots\n\nConstruct a box plot for the tail shimmer of the ponies (tail_shimmer)."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-box-plots-2",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-box-plots-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Box Plots",
+    "text": "Graphs in R: Box Plots\n\nConstruct a box plot for the tail shimmer of the ponies (tail_shimmer).\n\n\n\nmlp_data %&gt;% ggplot(aes(y = tail_shimmer)) +\n  geom_boxplot() +\n  labs(y = \"Tail Shimmer\") +\n  theme_bw() +\n  theme(axis.ticks.x = element_blank(),\n        axis.text.x = element_blank())"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-box-plots-3",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-box-plots-3",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Box Plots",
+    "text": "Graphs in R: Box Plots\n\nConstruct a box plot for the tail shimmer of the ponies (tail_shimmer)."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-histograms",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-histograms",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Histograms",
+    "text": "Graphs in R: Histograms\n\nConstruct a histogram for the flying speed of ponies (flying_speed).\n\n\n\nmlp_data %&gt;% ggplot(aes(x = flying_speed)) +\n  geom_histogram(bins = 15, \n                 color = \"#2E7D32\", \n                 fill = \"#4CAF50\") +\n  labs(x = \"Flying Speed\", \n       y = \"Number of Ponies\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-histograms-1",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-histograms-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Histograms",
+    "text": "Graphs in R: Histograms\n\nDescribe the histogram of the flying speed of ponies (flying_speed):"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-histograms-2",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-histograms-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Histograms",
+    "text": "Graphs in R: Histograms\n\nConstruct a histogram for the magical energy of ponies (magical_energy).\n\n\n\nmlp_data %&gt;% ggplot(aes(x = magical_energy)) +\n  geom_histogram(bins = 15, \n                 color = \"#8B6C42\", \n                 fill = \"#F0E9DD\") +\n  labs(x = \"Magical Energy\",\n       y = \"Number of Ponies\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-histograms-3",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-histograms-3",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Histograms",
+    "text": "Graphs in R: Histograms\n\nDescribe the histogram of the magical energy of ponies (magical_energy):"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-bar-graphs",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-bar-graphs",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Bar Graphs",
+    "text": "Graphs in R: Bar Graphs\n\nConstruct a bar graph for the combined age and sex of ponies.\n\n\n\nmlp_data %&gt;%\n  count(sex) %&gt;%\n  ggplot(aes(x = sex, y = n)) +\n  geom_col() +\n  labs(x = \"Age and Sex of Pony\",\n       y = \"Number of Ponies\")+\n  theme_bw()"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-bar-graphs-1",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-bar-graphs-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Bar Graphs",
+    "text": "Graphs in R: Bar Graphs\n\nConstruct a bar graph for the combined age and sex of ponies."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-bar-graphs-2",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-bar-graphs-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Bar Graphs",
+    "text": "Graphs in R: Bar Graphs\n\nConstruct a bar graph for the type of pony.\n\n\n\nmlp_data %&gt;%\n  count(type) %&gt;%\n  ggplot(aes(x = type, y = n)) +\n  geom_col() +\n  labs(x = \"Type of Pony\",\n       y = \"Number of Ponies\")+\n  theme_bw()"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-bar-graphs-3",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-bar-graphs-3",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Bar Graphs",
+    "text": "Graphs in R: Bar Graphs\n\nConstruct a bar graph for the type of pony."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-scatterplots",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-scatterplots",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Scatterplots",
+    "text": "Graphs in R: Scatterplots\n\nConstruct a scatterplot with magical energy (magical_energy) on the x-axis and tail shimmer (tail_shimmer) on the y-axis.\n\n\n\nmlp_data %&gt;% ggplot(aes(y = tail_shimmer, x = magical_energy)) +\n  geom_point(size = 2) +\n  labs(x = \"Magical Energy\",\n       y = \"Tail Shimmer\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-scatterplots-1",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-scatterplots-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Scatterplots",
+    "text": "Graphs in R: Scatterplots\n\nConstruct a scatterplot with magical energy (magical_energy) on the x-axis and tail shimmer (tail_shimmer) on the y-axis."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-scatterplots-2",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-scatterplots-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Scatterplots",
+    "text": "Graphs in R: Scatterplots\n\nConstruct a scatterplot with magical energy (magical_energy) on the x-axis and flying speed (flying_speed) on the y-axis.\n\n\n\nmlp_data %&gt;% ggplot(aes(x = magical_energy, y = flying_speed)) +\n  geom_point(size = 2) +\n  labs(y = \"Tail Shimmer\",\n       x = \"Flying Speed (km/h)\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#graphs-in-r-scatterplots-3",
+    "href": "files/slides/01-2-estimation-in-R.html#graphs-in-r-scatterplots-3",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs in R: Scatterplots",
+    "text": "Graphs in R: Scatterplots\n\nConstruct a scatterplot with magical energy (magical_energy) on the x-axis and flying speed (flying_speed) on the y-axis."
+  },
+  {
+    "objectID": "files/slides/01-2-estimation-in-R.html#wrap-up",
+    "href": "files/slides/01-2-estimation-in-R.html#wrap-up",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Wrap Up",
+    "text": "Wrap Up\n\nAlways remember that I do not expect you to:\n\nMemorize code.\nProduce code in a timed environment.\nAutomatically know how to do these things.\n\nI do expect you to:\n\nUse your resources (lecture slides, GitHub website, Discord).\nTry your best."
+  },
+  {
+    "objectID": "files/assignments/key/Assignment3key.html",
+    "href": "files/assignments/key/Assignment3key.html",
+    "title": "Assignment 3 - Summer 2025",
+    "section": "",
+    "text": "Satriale Freight Solutions, a small logistics company headquartered in North Jersey, was founded by Corrado “Junior” Soprano and is now managed day-to-day by his nephew, Tony. In an effort to modernize the business and make it more competitive with regional carriers, Tony hires a data analyst (you) to optimize delivery performance and improve budgeting.\nYour first task is to estimate the revenue (Revenue; in thousands of dollars) generated by each of the company’s 22 rural delivery zones. To do this, you will build a model using two variables: the distance from each zone to the central warehouse in Newark (Distance; miles) and the local population (Population; hundreds of people) in the communities each zone serves. Tony wants the model to help guide decisions on where to invest in new trucks or consolidate underperforming routes.\n\n# DO NOT EDIT THIS CHUNK\nlibrary(tidyverse)\nlibrary(gsheet)\nlibrary(ssstats)\nairline_data &lt;- gsheet2tbl('https://docs.google.com/spreadsheets/d/10ZN0jMYdVsG2ucIJFSTquVRW916Jj-JmZIGQuqSQhy0/edit?usp=sharing')\n# DO NOT EDIT THIS CHUNK\n\n1. Model the revenue (Revenue) as a function of distance (Distance) and population (Population). Remember to state the resulting model.\n\nairline_data %&gt;% linear_regression(outcome = Revenue,\n                                   function_of = Distance + Population)\n\n# A tibble: 3 × 7\n  term        estimate std_error statistic lower_bound upper_bound p_value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  \n1 (Intercept)  144.       39.5        3.65      61.6       227.    0.002  \n2 Distance       0.169     0.152      1.11      -0.149       0.487 0.279  \n3 Population     1.09      0.202      5.41       0.671       1.52  &lt; 0.001\n\n\nState your model here.\n2. Provide formal interpretations for the slopes in the model.\n\n2a: distance - Replace with your answer\n2b: population - Replace with your answer\n\n3a. Use the appropriate hypothesis test to determine if distance is a significant predictor of revenue. Test at the \\(\\alpha=0.05\\) level. Remember to typeset your results.\n\nairline_data %&gt;% linear_regression(outcome = Revenue,\n                                   function_of = Distance + Population)\n\n# A tibble: 3 × 7\n  term        estimate std_error statistic lower_bound upper_bound p_value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  \n1 (Intercept)  144.       39.5        3.65      61.6       227.    0.002  \n2 Distance       0.169     0.152      1.11      -0.149       0.487 0.279  \n3 Population     1.09      0.202      5.41       0.671       1.52  &lt; 0.001\n\n\nInsert your typesetting here\n3b. Use the appropriate hypothesis test to determine if population is a significant predictor of revenue. Test at the \\(\\alpha=0.05\\) level. Remember to typeset your results.\n\nairline_data %&gt;% linear_regression(outcome = Revenue,\n                                   function_of = Distance + Population)\n\n# A tibble: 3 × 7\n  term        estimate std_error statistic lower_bound upper_bound p_value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  \n1 (Intercept)  144.       39.5        3.65      61.6       227.    0.002  \n2 Distance       0.169     0.152      1.11      -0.149       0.487 0.279  \n3 Population     1.09      0.202      5.41       0.671       1.52  &lt; 0.001\n\n\nInsert your typesetting here\n4. Use the appropriate hypothesis test to determine if this is a significant regression line. Test at the \\(\\alpha=0.05\\) level.\n\nairline_data %&gt;% significant_line(outcome = Revenue,\n                                  function_of = Distance + Population)\n\nLikelihood Ratio Test for Significant Regression Line:\nNull: H₀: β₁ = β₂ = ... = βₖ = 0\nAlternative: H₁: At least one βᵢ ≠ 0\nTest statistic: χ²(2) = 35285.625\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n\nInsert your typesetting here\n5. How well does the data fit the line? Find the adjusted \\(R^2\\) value and comment on it.\n\nairline_data %&gt;% r_squared(outcome = Revenue,\n                           function_of = Distance + Population)\n\n[1] 0.5653\n\n\nReplace with your answer\n6a. Create a scatterplot with revenue (Revenue) on the y-axis and distance (Distance) on the x-axis.\n\nairline_data %&gt;% \n  ggplot(aes(y = Revenue, x = Distance)) +\n  geom_point(size = 2) +\n  theme_bw()\n\n\n\n\n\n\n\n\n6b. Create a scatterplot with revenue (Revenue) on the y-axis and distance (Population) on the x-axis.\n\nairline_data %&gt;% \n  ggplot(aes(y = Revenue, x = Population)) +\n  geom_point(size = 2) +\n  theme_bw()\n\n\n\n\n\n\n\n\n6c. Do you see anything strange in either of the scatterplots?\nReplace with your answer\nLet’s update the dataset and rerun the analysis.\n\nairline_data &lt;- airline_data %&gt;% filter(Airport != 20)\n\n7. Using this updated dataset, model revenue (Revenue) as a function of distance (Distance) and population (Population). Remember to state the resulting model.\n\nairline_data %&gt;% linear_regression(outcome = Revenue,\n                                   function_of = Distance + Population)\n\n# A tibble: 3 × 7\n  term        estimate std_error statistic lower_bound upper_bound p_value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  \n1 (Intercept)  185.       54.9       3.36       69.2       300.    0.003  \n2 Distance       0.144     0.153     0.941      -0.178       0.466 0.359  \n3 Population     0.617     0.497     1.24       -0.428       1.66  0.231  \n\n\nState your model here\n8. Provide brief interpretations for the slopes in the model.\n\n8a: distance - Replace with your answer\n8b: population - Replace with your answer\n\n9. How different are the interpretations from those in Q2?\nReplace with your answer\n10a. Use the appropriate hypothesis test to determine if distance is a significant predictor of revenue. Test at the \\(\\alpha=0.05\\) level. Remember to typeset your results.\n\nairline_data %&gt;% linear_regression(outcome = Revenue,\n                                   function_of = Distance + Population)\n\n# A tibble: 3 × 7\n  term        estimate std_error statistic lower_bound upper_bound p_value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  \n1 (Intercept)  185.       54.9       3.36       69.2       300.    0.003  \n2 Distance       0.144     0.153     0.941      -0.178       0.466 0.359  \n3 Population     0.617     0.497     1.24       -0.428       1.66  0.231  \n\n\nInsert your typesetting here\n10b. Use the appropriate hypothesis test to determine if population is a significant predictor of revenue. Test at the \\(\\alpha=0.05\\) level. Remember to typeset your results.\n\nairline_data %&gt;% linear_regression(outcome = Revenue,\n                                   function_of = Distance + Population)\n\n# A tibble: 3 × 7\n  term        estimate std_error statistic lower_bound upper_bound p_value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt; &lt;chr&gt;  \n1 (Intercept)  185.       54.9       3.36       69.2       300.    0.003  \n2 Distance       0.144     0.153     0.941      -0.178       0.466 0.359  \n3 Population     0.617     0.497     1.24       -0.428       1.66  0.231  \n\n\nInsert your typesetting here\n11. How different are the results for Q10 as compared to the full dataset’s analysis in Q3?\nReplace with your answer\n12. Use the appropriate hypothesis test to determine if this is a significant regression line. Test at the \\(\\alpha=0.05\\) level.\n\nairline_data %&gt;% significant_line(outcome = Revenue,\n                                  function_of = Distance + Population)\n\nLikelihood Ratio Test for Significant Regression Line:\nNull: H₀: β₁ = β₂ = ... = βₖ = 0\nAlternative: H₁: At least one βᵢ ≠ 0\nTest statistic: χ²(2) = 2373.117\np-value: p = 0.371\nConclusion: Fail to reject the null hypothesis (p = 0.3712 ≥ α = 0.05)\n\n\nInsert your typesetting here\n13. How different are the results for Q12 as compared to the full dataset’s analysis in Q4?\nReplace with your answer\n14. How well does the data fit the line? Find the adjusted \\(R^2\\) value and comment on it.\n\nairline_data %&gt;% r_squared(outcome = Revenue,\n                           function_of = Distance + Population)\n\n[1] -9e-04\n\n\n15. How different are the results for Q14 as compared to the full dataset’s analysis in Q5?\nReplace with your answer\n16. What are you taking away from this assignment? Why do you think I chose this particular dataset for you?\nReplace with your answer"
+  },
+  {
+    "objectID": "files/assignments/key/Assignment4key.html",
+    "href": "files/assignments/key/Assignment4key.html",
+    "title": "Assignment 4 - Summer 2025",
+    "section": "",
+    "text": "1. In the mid-1990s alternative music scene, some bands were signed to major record labels with expansive marketing budgets, while others remained independent (“indie”) and relied more on grassroots promotion. One key promotional strategy was touring; this allowed bands to build a fanbase and support album sales.\nWe now want to determine if touring decisions are different between the label types. That is, were indie bands and major-label bands equally likely to tour following an album release?\n1a. What analysis method do you think is appropriate? Why?\nState the method and explain your rationale.\n\n\n1b. Construct the appropriate frequency table (using n_pct()) associated with the analysis you would like to perform.\n\ntours96 %&gt;% n_pct(row_var = toured,\n                  col_var = label_type)\n\n# A tibble: 2 × 3\n  toured Indie      Major      \n  &lt;chr&gt;  &lt;chr&gt;      &lt;chr&gt;      \n1 No     31 (44.9%) 22 (16.8%) \n2 Yes    38 (55.1%) 109 (83.2%)\n\n\n1c. Construct the 95% confidence interval associated with your chosen analysis method. If we did not learn a corresponding confidence interval, state that.\n\ntours96 %&gt;% two_prop_CI(binary = label_type,\n                        grouping = toured,\n                        event = \"Indie\")\n\n# A tibble: 1 × 8\n  group1 group2    p1    p2   diff conf_level ci_lower ci_upper\n  &lt;chr&gt;  &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;\n1 Yes    No     0.258 0.585 -0.326 95%          -0.477   -0.176\n\ntours96 %&gt;% two_prop_CI(binary = label_type,\n                        grouping = toured,\n                        event = \"Major\")\n\n# A tibble: 1 × 8\n  group1 group2    p1    p2  diff conf_level ci_lower ci_upper\n  &lt;chr&gt;  &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;\n1 Yes    No     0.742 0.415 0.326 95%           0.176    0.477\n\ntours96 %&gt;% two_prop_CI(binary = toured,\n                        grouping = label_type,\n                        event = \"Yes\")\n\n# A tibble: 1 × 8\n  group1 group2    p1    p2   diff conf_level ci_lower ci_upper\n  &lt;chr&gt;  &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;\n1 Indie  Major  0.551 0.832 -0.281 95%          -0.415   -0.148\n\ntours96 %&gt;% two_prop_CI(binary = toured,\n                        grouping = label_type,\n                        event = \"No\")\n\n# A tibble: 1 × 8\n  group1 group2    p1    p2  diff conf_level ci_lower ci_upper\n  &lt;chr&gt;  &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;\n1 Indie  Major  0.449 0.168 0.281 95%           0.148    0.415\n\n\n\nPlease award full credit if they chose the chi-square test for independence and stated that they do not have a corresponding CI\nIf they chose the two-sample test for proportions, please mark it as “missing” if they did not include any CI\n\n\n1d. Use the appropriate hypothesis test to answer the posed research question. Test at the \\(\\alpha = 0.05\\) level. Remember to typeset your results.\n\n# two-sample p\ntours96 %&gt;% two_prop_HT(binary = label_type,\n                        grouping = toured,\n                        event = \"Indie\")\n\nTwo-sample z-test for difference in proportions:\nGroup 1: Yes, Group 2: No\nObserved difference: -0.3264\nNull: H₀: π₁ - π₂ = 0\nAlternative: H₁: π₁ - π₂ ≠ 0\nTest statistic: z = -4.25\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\ntours96 %&gt;% two_prop_HT(binary = label_type,\n                        grouping = toured,\n                        event = \"Major\")\n\nTwo-sample z-test for difference in proportions:\nGroup 1: Yes, Group 2: No\nObserved difference: 0.3264\nNull: H₀: π₁ - π₂ = 0\nAlternative: H₁: π₁ - π₂ ≠ 0\nTest statistic: z = 4.25\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\ntours96 %&gt;% two_prop_HT(binary = toured,\n                        grouping = label_type,\n                        event = \"Yes\")\n\nTwo-sample z-test for difference in proportions:\nGroup 1: Indie, Group 2: Major\nObserved difference: -0.2813\nNull: H₀: π₁ - π₂ = 0\nAlternative: H₁: π₁ - π₂ ≠ 0\nTest statistic: z = -4.12\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\ntours96 %&gt;% two_prop_HT(binary = toured,\n                        grouping = label_type,\n                        event = \"No\")\n\nTwo-sample z-test for difference in proportions:\nGroup 1: Indie, Group 2: Major\nObserved difference: 0.2813\nNull: H₀: π₁ - π₂ = 0\nAlternative: H₁: π₁ - π₂ ≠ 0\nTest statistic: z = 4.12\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n# chi-squared test for independence\ntours96 %&gt;% independence_test(var1 = toured,\n                              var2 = label_type)\n\nChi-square test for independence:\nNull: H₀: toured and label_type are independent\nAlternative: H₁: toured and label_type depend on one another\nTest statistic: χ²(1) = 18.37\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n\nRemember to typeset your results.\n2. After finding that label type is associated with whether a band tours at all, you decide to explore where these bands are touring. Among bands that did tour, you determined the primary region where each band played the most shows during the album promotion cycle.\nWe now want to determine if there is a relationship between a band’s label type and the region they tour most heavily.\n2a. What analysis method do you think is appropriate? Why?\nState the method and explain your rationale.\n\n2b. Construct the appropriate frequency table (using n_pct()) associated with the analysis you would like to perform.\n\nregions96 %&gt;% n_pct(row_var = region, \n                    col_var = label_type)\n\n# A tibble: 3 × 3\n  region    Indie      Major     \n  &lt;chr&gt;     &lt;chr&gt;      &lt;chr&gt;     \n1 Midwest   11 (28.9%) 25 (22.9%)\n2 Northeast 6 (15.8%)  21 (19.3%)\n3 South     9 (23.7%)  24 (22.0%)\n\nregions96 %&gt;% n_pct(row_var = label_type, \n                    col_var = region)\n\n# A tibble: 2 × 5\n  label_type Midwest    Northeast  South      West      \n  &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;     \n1 Indie      11 (30.6%) 6 (22.2%)  9 (27.3%)  12 (23.5%)\n2 Major      25 (69.4%) 21 (77.8%) 24 (72.7%) 39 (76.5%)\n\n\n2c. Construct the 95% confidence interval associated with your chosen analysis method. If we did not learn a corresponding confidence interval, state that.\n\nThey should tell you that they are not able to construct a confidence interval here.\nPlease tell me if anyone attempts this problem and it looks logical.\n\n\n2d. Use the appropriate hypothesis test to answer the posed research question. Test at the \\(\\alpha = 0.05\\) level. Remember to typeset your results.\n\nregions96 %&gt;% independence_test(var1 = region,\n                                var2 = label_type)\n\nChi-square test for independence:\nNull: H₀: region and label_type are independent\nAlternative: H₁: region and label_type depend on one another\nTest statistic: χ²(3) = 0.78\np-value: p = 0.854\nConclusion: Fail to reject the null hypothesis (p = 0.8544 ≥ α = 0.05)\n\nregions96 %&gt;% independence_test(var1 = label_type,\n                                var2 = region)\n\nChi-square test for independence:\nNull: H₀: label_type and region are independent\nAlternative: H₁: label_type and region depend on one another\nTest statistic: χ²(3) = 0.78\np-value: p = 0.854\nConclusion: Fail to reject the null hypothesis (p = 0.8544 ≥ α = 0.05)\n\n\nRemember to typeset your results.\n3. After analyzing where major and indie bands toured, you find industry reports from 1995 that estimate the expected share of U.S. tour stops based on population, venue availability, and historical demand:\n\nWest: 30%\nMidwest: 25%\nSouth: 25%\nNortheast: 20%\n\nDo tour patterns for indie bands in our sample match the expected distribution of tour stops?\n3a. What analysis method do you think is appropriate? Why?\nState the method and explain your rationale.\n\n3b. Construct the appropriate frequency table (using n_pct()) associated with the analysis you would like to perform.\n\nindie96 %&gt;% n_pct(region)\n\n    region    n (pct)\n   Midwest 11 (28.9%)\n Northeast  6 (15.8%)\n     South  9 (23.7%)\n\n\n3c. Construct the 95% confidence interval associated with your chosen analysis method. If we did not learn a corresponding confidence interval, state that.\n\nThey should tell you that they are not able to construct a confidence interval here.\nPlease tell me if anyone attempts this problem and it looks logical.\n\n\n3d. Use the appropriate hypothesis test to answer the posed research question. Test at the \\(\\alpha = 0.05\\) level. Remember to typeset your results.\n\nindie96 %&gt;% goodness_of_fit(categorical = region,\n                              expected = c(\"Midwest\" = 0.25,\n                                           \"Northeast\" = 0.20,\n                                           \"South\" = 0.25,\n                                           \"West\" = 0.30))\n\nChi-square goodness-of-fit test:\nNull: H₀: Observed frequencies match expected proportions\nAlternative: H₁: Observed frequencies do not match expected proportions\nTest statistic: χ²(3) = 0.63\np-value: p = 0.889\nConclusion: Fail to reject the null hypothesis (p = 0.8892 ≥ α = 0.05)\n\n\nRemember to typeset your results.\n4. At the 2001 MTV Video Music Awards, Britney Spears performed her hit “I’m a Slave 4 U” with a live albino Burmese python draped across her shoulders. The moment was instantly iconic… but also controversial. Animal rights groups and some viewers expressed outrage over the use of a live snake on stage.\nA 1990s/2000s pop culture survey in which a random sample of respondents were asked if they felt uncomfortable or upset watching the 2001 VMA snake performance. An entertainment reporter claims that no more than 20% of viewers were genuinely upset, but we’re not so sure.\nYou want to test whether the proportion of upset viewers exceeds 20%.\n4a. What analysis method do you think is appropriate? Why?\nState the method and explain your rationale.\n\n4b. Construct the appropriate frequency table (using n_pct()) associated with the analysis you would like to perform.\n\nrespondents %&gt;% n_pct(upset)\n\n upset     n (pct)\n    No 146 (73.0%)\n   Yes  54 (27.0%)\n\n\n4c. Construct the 95% confidence interval associated with your chosen analysis method. If we did not learn a corresponding confidence interval, state that.\n\nrespondents %&gt;% one_prop_CI(binary = upset,\n                            event = \"Yes\")\n\n# A tibble: 1 × 6\n  proportion successes sample_size conf_level ci_lower ci_upper\n       &lt;dbl&gt;     &lt;int&gt;       &lt;int&gt; &lt;chr&gt;         &lt;dbl&gt;    &lt;dbl&gt;\n1       0.27        54         200 95%           0.213    0.335\n\n\n\nDo not give credit for incorrect event argument.\n\n\n4d. Use the appropriate hypothesis test to answer the posed research question. Test at the \\(\\alpha = 0.05\\) level. Remember to typeset your results.\n\nrespondents %&gt;% one_prop_HT(binary = upset,\n                            event = \"Yes\")\n\nOne-sample z-test for the population proportion:\nNull: H0: π = 0.5\nAlternative: H1: π ≠ 0.5\nTest statistic: z = 6.51\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)"
+  },
+  {
+    "objectID": "files/assignments/Assignment2.html",
+    "href": "files/assignments/Assignment2.html",
+    "title": "Assignment 2 - Summer 2025",
+    "section": "",
+    "text": "1. Consider a sample of data from the Jackson Heart Study. In this problem, we will be examining body mass index (BMI; kg/m2) as a function of health as categorized by physical activity (PA3cat: Ideal Health, Intermediate Health, and Poor Health).\n1a. Find the summary statistics for BMI across the categories of physical activity (PA3cat).\n1b. Construct the appropriate one-way ANOVA table to model BMI (BMI) as a function of physical activity (PA3cat).\n1c. Use ANOVA to determine if there is a difference in BMI (BMI) among the levels of physical activity (PA3cat). Test at the \\(\\alpha=0.01\\) level.\nRemember to typeset your results!\n1d. Use the Kruskal-Wallis to determine if there is a difference in BMI (BMI) between the three levels of health as categorized by physical activity (PA3cat). Test at the \\(\\alpha=0.01\\) level.\nRemember to typeset your results!\n1e. Check the ANOVA assumptions graphically.\n\n\n1f. If necessary, formally test for the variance assumption. Test at the \\(\\alpha=0.01\\) level. If you do not feel this step necessary, explain why. (Please don’t overthink the explanation - think of it as a note to us. :))\nRemember to typeset your results!\n1g. Draw conclusions based on your observations. (Do we meet the assumption?)\nReplace with your answer.\n1h. Based on your responses in (1g), which test’s result are you going to present to the lead scientist at the JHS? (Hint: you will pick either the analysis (1c) or (1d)).\nReplace with your answer.\n1i. Perform the appropriate (based on your response in (1h)) posthoc test to determine which pairwise differences exist between the three groups. Test at the \\(\\alpha=0.01\\) level; because this is a large cohort study, we should treat this as a confirmatory analysis. \nMake sure that you state the resulting pairwise differences.\n1j. Write a brief paragraph to describe your analysis results. You have enough information to discuss the results of analysis (1c or 1d) using the summary statistics you computed in (1a) and the posthoc test results in (1i).\nReplace with your answer.\n2. Again, consider the sample of data from the JHS. In this problem, we will be examining systolic blood pressure (sbp; mmHg) as a function of health as categorized by body mass index (BMI3cat), smoking status (everSmoker), and the interaction between health as categorized by body mass index and smoking status.\n2a. Find the summary statistics for systolic blood pressure (sbp) across the categories of body mass index (BMI3cat).\n\n2b. Find the summary statistics for systolic blood pressure (sbp) across the categories of smoking status (everSmoker).\n\n2c. Find the summary statistics for systolic blood pressure (sbp) across the categories of body mass index (BMI3cat) and the categories of smoking status (everSmoker).\n\n2d. Construct the appropriate two-way ANOVA table to model systolic blood pressure (sbp; mmHg) as a function of health as categorized by body mass index (BMI3cat), smoking status (everSmoker), and the interaction between health as categorized by body mass index and smoking status.\n2e. Use the appropriate hypothesis test to show that there is not a significant interaction between body mass index category (BMI3cat) and smoking status (everSmoker) at the \\(\\alpha=0.01\\) level.\nRemember to typeset your results!\n2f. Reconstruct the two-way ANOVA table without the interaction.\n2g. Use the appropriate hypothesis test to determine if there a main effect of smoking status (everSmoker). Test at the \\(\\alpha=0.01\\) level.\nRemember to typeset your results!\n2h. Use the appropriate hypothesis test to determine if there a main effect of body mass index categorization (BMI3cat). Test at the \\(\\alpha=0.01\\) level.\nRemember to typeset your results!\n2i. Construct the appropriate profile plot for this analysis.\n2j. Write a brief paragraph to describe your analysis results. You have enough information to discuss the ANOVA results (Q10, Q12, Q13) using the means you computed in Q8 and the profile plot constructed in Q14.\nReplace with your answer.\n2k. Graphically assess the ANOVA assumptions.\n2l. Using the graphs in (2k), determine if our analysis is valid. Explain why it is valid or why it is not valid.\nReplace with your answer."
+  },
+  {
+    "objectID": "files/assignments/Assignment1.html",
+    "href": "files/assignments/Assignment1.html",
+    "title": "Assignment 1 - Summer 2025",
+    "section": "",
+    "text": "In this project, we will be analyzing the state-by-state spending on kids, as generously provided by the Urban Institute. Specifically, we will be investigating library spending that has been adjusted for inflation. To get started, see the starter code available on Canvas.\n1a. Find the summary statistics for library spending in all regions for the following years: 2000, 2005, 2010, and 2015.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n1b. Find the summary statistics for library spending by region for the Northeast and Midwest regions for the following years: 2000, 2005, 2010, and 2015.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n2a. Suppose we are interested in comparing the 2010 spending between the Northeast and Midwest regions. Construct the appropriate QQ plot to check assumptions.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n2b. Suppose we are interested in comparing the 2010 spending between the Northeast and Midwest regions. If appropriate, examine the variance assumption. Do we violate the variance assumption? Remember to draw your final conclusion about the assumption (did we violate the assumption?). Note: If we do not care about the variance assumption here, leave this problem blank.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\nRemember to typeset your results (only if you need this test)!\n3. Use the appropriate t-test to determine if there is a difference in library spending between the Northeast and Midwest regions in 2010. Test at the \\alpha=0.05 level. Remember to typeset the results.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\nRemember to typeset your results!\n4. Use the appropriate nonparametric test to determine if there is a difference in library spending between the Northeast and Midwest regions in 2010. Test at the \\alpha=0.05 level. Remember to typeset the results.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\nRemember to typeset your results!\n5. Based on your graph in Q2a, which test should be reported (the t-test or the Wilcoxon)? Explain why you’re choosing the test you’re choosing.\nReplace with your answer\n6a. Suppose we are interested in comparing the 2010 and 2015 spending for all states. Construct the appropriate QQ plot to check assumptions.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\n6b. Suppose we are interested in comparing the 2010 and 2015 spending for all states. If appropriate, examine the variance assumption. Do we violate the variance assumption? Remember to draw your final conclusion about the assumption (did we violate the assumption?). Note: If we do not care about the variance assumption here, leave this problem blank.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\nRemember to typeset your results (only if you need this test)!\n7. Use the appropriate t-test to determine if there is a difference in library spending between 2010 and 2015 for all states. Test at the \\alpha=0.05 level. Remember to typeset the results.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\nRemember to typeset your results!\n8. Use the appropriate nonparametric test to determine if there is a difference in library spending between 2010 and 2015 for all states. Test at the \\alpha=0.05 level. Remember to typeset the results.\n\n# replace with necessary code\n# make sure that any corresponding package has been called in in the setup chunk; if not, please add the package to that chunk\n\nRemember to typeset your results!\n9. Based on your graph in Q6a, which test should be reported (the t-test or the Wilcoxon)? Explain why you’re choosing the test you’re choosing.\nReplace with your answer"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA4173 Biostatistics Fall 2025",
+    "section": "",
+    "text": "STA4173 Biostatistics Fall 2025\nWelcome to STA4173 - Biostatistics for the Fall 2025 semester! This course\n\nis a senior-level second course in applied statistics.\nhas been designed for STEM majors, not solely those majoring in mathematics and/or minoring in statistics.\n\nHousekeeping:\n\nPlease join the Discord server (link on Canvas and in syllabus).\n\nIt is expected that students will engage on Discord while learning the course material.\n\nPlease enter class with an open mind and willingness to learn.\nYou may join Zoom for office hours by scheduling an appointment with me on Navigate.\nThere are no formal tests during the semester. Instead, you will complete projects to demonstrate your understanding.\nThere is a final exam at the end of the semester.\n\nI will not ask you to provide code in a timed environment.\nI will have all code/output relevant to questions as part of the exam. (i.e., you will interpret the output.)\n\n\nContacting Dr. Seals: The optimal ways to contact me are either\n\nemail through UWF Gmail (sseals at uwf dot edu)\ndirect message on Discord\n\nNote that I try to respond within 24 hours, however, it doesn’t always happen. If your matter is urgent, please feel free to snag me before or after class."
+  },
+  {
+    "objectID": "files/assignments/Assignment3.html",
+    "href": "files/assignments/Assignment3.html",
+    "title": "Assignment 3 - Summer 2025",
+    "section": "",
+    "text": "Satriale Freight Solutions, a small logistics company headquartered in North Jersey, was founded by Corrado “Junior” Soprano and is now managed day-to-day by his nephew, Tony. In an effort to modernize the business and make it more competitive with regional carriers, Tony hires a data analyst (you) to optimize delivery performance and improve budgeting.\nYour first task is to estimate the revenue (Revenue; in thousands of dollars) generated by each of the company’s 22 rural delivery zones. To do this, you will build a model using two variables: the distance from each zone to the central warehouse in Newark (Distance; miles) and the local population (Population; hundreds of people) in the communities each zone serves. Tony wants the model to help guide decisions on where to invest in new trucks or consolidate underperforming routes.\n\n# DO NOT EDIT THIS CHUNK\nlibrary(tidyverse)\nlibrary(gsheet)\nlibrary(ssstats)\nairline_data &lt;- gsheet2tbl('https://docs.google.com/spreadsheets/d/10ZN0jMYdVsG2ucIJFSTquVRW916Jj-JmZIGQuqSQhy0/edit?usp=sharing')\n# DO NOT EDIT THIS CHUNK\n\n1. Model the revenue (Revenue) as a function of distance (Distance) and population (Population). Remember to state the resulting model.\nState your model here.\n2. Provide formal interpretations for the slopes in the model.\n\n2a: distance - Replace with your answer\n2b: population - Replace with your answer\n\n3a. Use the appropriate hypothesis test to determine if distance is a significant predictor of revenue. Test at the \\(\\alpha=0.05\\) level. Remember to typeset your results.\nInsert your typesetting here\n3b. Use the appropriate hypothesis test to determine if population is a significant predictor of revenue. Test at the \\(\\alpha=0.05\\) level. Remember to typeset your results.\nInsert your typesetting here\n4. Use the appropriate hypothesis test to determine if this is a significant regression line. Test at the \\(\\alpha=0.05\\) level.\nInsert your typesetting here\n5. How well does the data fit the line? Find the adjusted \\(R^2\\) value and comment on it.\nReplace with your answer\n6a. Create a scatterplot with revenue (Revenue) on the y-axis and distance (Distance) on the x-axis.\n6b. Create a scatterplot with revenue (Revenue) on the y-axis and distance (Population) on the x-axis.\n6c. Do you see anything strange in either of the scatterplots?\nReplace with your answer\nLet’s update the dataset and rerun the analysis.\n\nairline_data &lt;- airline_data %&gt;% filter(Airport != 20)\n\n7. Using this updated dataset, model revenue (Revenue) as a function of distance (Distance) and population (Population). Remember to state the resulting model.\nState your model here\n8. Provide brief interpretations for the slopes in the model.\n\n8a: distance - Replace with your answer\n8b: population - Replace with your answer\n\n9. How different are the interpretations from those in Q2?\nReplace with your answer\n10a. Use the appropriate hypothesis test to determine if distance is a significant predictor of revenue. Test at the \\(\\alpha=0.05\\) level. Remember to typeset your results.\nInsert your typesetting here\n10b. Use the appropriate hypothesis test to determine if population is a significant predictor of revenue. Test at the \\(\\alpha=0.05\\) level. Remember to typeset your results.\nInsert your typesetting here\n11. How different are the results for Q10 as compared to the full dataset’s analysis in Q3?\nReplace with your answer\n12. Use the appropriate hypothesis test to determine if this is a significant regression line. Test at the \\(\\alpha=0.05\\) level.\nInsert your typesetting here\n13. How different are the results for Q12 as compared to the full dataset’s analysis in Q4?\nReplace with your answer\n14. How well does the data fit the line? Find the adjusted \\(R^2\\) value and comment on it.\nReplace with you answer\n15. How different are the results for Q14 as compared to the full dataset’s analysis in Q5?\nReplace with your answer\n16. What are you taking away from this assignment? Why do you think I chose this particular dataset for you?\nReplace with your answer"
+  },
+  {
+    "objectID": "files/assignments/key/Assignment2key.html",
+    "href": "files/assignments/key/Assignment2key.html",
+    "title": "Assignment 2 - Summer 2025",
+    "section": "",
+    "text": "1. Consider a sample of data from the Jackson Heart Study. In this problem, we will be examining body mass index (BMI; kg/m2) as a function of health as categorized by physical activity (PA3cat: Ideal Health, Intermediate Health, and Poor Health).\n1a. Find the summary statistics for BMI across the categories of physical activity (PA3cat).\n\njackson_heart %&gt;% group_by(PA3cat) %&gt;% mean_median(BMI)\n\n# A tibble: 3 × 4\n  PA3cat              variable mean_sd    median_iqr\n  &lt;fct&gt;               &lt;chr&gt;    &lt;chr&gt;      &lt;chr&gt;     \n1 Ideal Health        BMI      30.9 (6.6) 29.8 (7.6)\n2 Intermediate Health BMI      31.7 (6.8) 30.7 (8.0)\n3 Poor Health         BMI      32.4 (7.2) 31.3 (9.3)\n\n\n1b. Construct the appropriate one-way ANOVA table to model BMI (BMI) as a function of physical activity (PA3cat).\n\njackson_heart %&gt;% one_way_ANOVA_table(continuous = BMI,\n                                      grouping = PA3cat)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOne-Way ANOVA Table\n\n\nSource\nSum of Squares\ndf\nMean Squares\nF\n\n\n\n\nTreatment\n809.36\n2\n404.68\n8.36\n\n\nError\n127,643.84\n2,638\n48.39\n\n\n\n\nTotal\n128,453.20\n2,640\n\n\n\n\n\n\n\n\n\n\n\n1c. Use ANOVA to determine if there is a difference in BMI (BMI) among the levels of physical activity (PA3cat). Test at the \\(\\alpha=0.01\\) level.\n\njackson_heart %&gt;% one_way_ANOVA(continuous = BMI,\n                                grouping = PA3cat,\n                                alpha = 0.01)\n\nOne-Way ANOVA: \nH₀: μ_Ideal Health = μ_Intermediate Health = μ_Poor Health\nH₁: At least one group mean is different\nTest Statistic: F(2, 2638) = 8.364\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.01)\n\n\nRemember to typeset your results!\n1d. Use the Kruskal-Wallis to determine if there is a difference in BMI (BMI) between the three levels of health as categorized by physical activity (PA3cat). Test at the \\(\\alpha=0.01\\) level.\n\njackson_heart %&gt;% kruskal_HT(continuous = BMI,\n                             grouping = PA3cat,\n                             alpha = 0.01)\n\nKruskal–Wallis Rank-Sum Test\n\nH₀: M_Ideal Health = M_Intermediate Health = M_Poor Health\nH₁: At least one group is different\n\nTest Statistic: X(2) = 18.943,\n p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.01)\n\n\nRemember to typeset your results!\n1e. Check the ANOVA assumptions graphically.\n\n\njackson_heart %&gt;% ANOVA_assumptions(continuous = BMI,\n                                    grouping = PA3cat)\n\nError in qq_plot/rvf_plot: non-numeric argument to binary operator\n\n\n\n1f. If necessary, formally test for the variance assumption. Test at the \\(\\alpha=0.01\\) level. If you do not feel this step necessary, explain why. (Please don’t overthink the explanation - think of it as a note to us. :))\n\njackson_heart %&gt;% variances_HT(continuous = BMI,\n                               grouping = PA3cat,\n                               alpha = 0.01)\n\nBrown-Forsythe-Levene test for equality of variances:\nNull: σ²_Poor Health = σ²_Intermediate Health = σ²_Ideal Health \nAlternative: At least one variance is different \nTest statistic: F(2,2638) = 4.695 \np-value: p = 0.009\nConclusion: Reject the null hypothesis (p = 0.0092 &lt; α = 0.01)\n\n\nRemember to typeset your results!\n1g. Draw conclusions based on your observations. (Do we meet the assumption?)\nReplace with your answer.\n1h. Based on your responses in (1g), which test’s result are you going to present to the lead scientist at the JHS? (Hint: you will pick either the analysis (1c) or (1d)).\nReplace with your answer.\n1i. Perform the appropriate (based on your response in (1h)) posthoc test to determine which pairwise differences exist between the three groups. Test at the \\(\\alpha=0.01\\) level; because this is a large cohort study, we should treat this as a confirmatory analysis. \n\nIf student says we should present ANOVA (regardless of correctness):\n\n\njackson_heart %&gt;% posthoc_tukey(continuous = BMI,\n                                grouping = PA3cat)\n\n                        comparison Mean Diff. p-value\n1 Intermediate Health-Ideal Health       0.76   0.108\n2         Poor Health-Ideal Health       1.44 &lt; 0.001\n3  Poor Health-Intermediate Health       0.67   0.074\n\n\n\nIf student says we should present Kruskal-Wallis (regardless of correctness):\n\n\njackson_heart %&gt;% posthoc_dunn(continuous = BMI,\n                               grouping = PA3cat,\n                               adjust = TRUE)\n\n                          Comparison         Z     p\n1 Ideal Health - Intermediate Health -2.198475 0.084\n2         Ideal Health - Poor Health -4.282431 0.000\n3  Intermediate Health - Poor Health -2.276284 0.068\n\n\nMake sure that you state the resulting pairwise differences.\n1j. Write a brief paragraph to describe your analysis results. You have enough information to discuss the results of analysis (1c or 1d) using the summary statistics you computed in (1a) and the posthoc test results in (1i).\nReplace with your answer.\n2. Again, consider the sample of data from the JHS. In this problem, we will be examining systolic blood pressure (sbp; mmHg) as a function of health as categorized by body mass index (BMI3cat), smoking status (everSmoker), and the interaction between health as categorized by body mass index and smoking status.\n2a. Find the summary statistics for systolic blood pressure (sbp) across the categories of body mass index (BMI3cat).\n\n\njackson_heart %&gt;% group_by(BMI3cat) %&gt;% mean_median(sbp)\n\n# A tibble: 3 × 4\n  BMI3cat             variable mean_sd      median_iqr  \n  &lt;fct&gt;               &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;       \n1 Ideal Health        sbp      123.6 (16.6) 121.1 (21.1)\n2 Intermediate Health sbp      125.6 (15.4) 123.8 (20.2)\n3 Poor Health         sbp      127.0 (15.3) 125.7 (18.3)\n\n\n2b. Find the summary statistics for systolic blood pressure (sbp) across the categories of smoking status (everSmoker).\n\n\njackson_heart %&gt;% group_by(everSmoker) %&gt;% mean_median(sbp)\n\n# A tibble: 2 × 4\n  everSmoker variable mean_sd      median_iqr  \n  &lt;fct&gt;      &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;       \n1 No         sbp      125.7 (15.3) 123.8 (19.3)\n2 Yes        sbp      127.0 (16.1) 124.8 (19.3)\n\n\n2c. Find the summary statistics for systolic blood pressure (sbp) across the categories of body mass index (BMI3cat) and the categories of smoking status (everSmoker).\n\n\njackson_heart %&gt;% group_by(BMI3cat, everSmoker) %&gt;% mean_median(sbp)\n\n# A tibble: 6 × 5\n  BMI3cat             everSmoker variable mean_sd      median_iqr  \n  &lt;fct&gt;               &lt;fct&gt;      &lt;chr&gt;    &lt;chr&gt;        &lt;chr&gt;       \n1 Ideal Health        No         sbp      121.4 (15.0) 119.2 (19.5)\n2 Ideal Health        Yes        sbp      127.0 (18.5) 124.8 (24.3)\n3 Intermediate Health No         sbp      125.0 (14.8) 122.9 (20.2)\n4 Intermediate Health Yes        sbp      126.8 (16.6) 123.8 (21.5)\n5 Poor Health         No         sbp      127.0 (15.5) 125.7 (18.3)\n6 Poor Health         Yes        sbp      127.1 (14.9) 125.2 (17.4)\n\n\n2d. Construct the appropriate two-way ANOVA table to model systolic blood pressure (sbp; mmHg) as a function of health as categorized by body mass index (BMI3cat), smoking status (everSmoker), and the interaction between health as categorized by body mass index and smoking status.\n\njackson_heart %&gt;% two_way_ANOVA_table(continuous = sbp,\n                                      A = BMI3cat,\n                                      B = everSmoker,\n                                      interaction = TRUE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTwo-Way ANOVA Table\n\n\nSource\nSum of Squares\ndf\nMean Squares\nF\np\n\n\n\n\nRegression\n6839.53\n5\n\n\n\n\n\n\n\n•BMI3cat\n3619.33\n2\n1809.67\n7.55\n&lt; 0.001\n\n\n•everSmoker\n1300.07\n1\n1300.07\n5.42\n0.020\n\n\n•Interaction\n1920.13\n2\n960.06\n4.00\n0.018\n\n\nError\n631911.65\n2635\n239.81\n\n\n\n\n\nTotal\n638751.18\n2640\n\n\n\n\n\n\n\n\n\n\n\n\n2e. Use the appropriate hypothesis test to show that there is not a significant interaction between body mass index category (BMI3cat) and smoking status (everSmoker) at the \\(\\alpha=0.01\\) level.\n\njackson_heart %&gt;% two_way_ANOVA(continuous = sbp,\n                                A = BMI3cat,\n                                B = everSmoker,\n                                interaction = TRUE,\n                                alpha = 0.01)\n\nTest for Interaction (BMI3cat × everSmoker):\n\nH₀: The relationship between sbp and BMI3cat does not depend on everSmoker.\nH₁: The relationship between sbp and BMI3cat depends on everSmoker.\nTest Statistic: F(2, 2635) = 4\np-value: p = 0.018\nConclusion: Fail to reject the null hypothesis (p = 0.0184 ≥ α = 0.01)\n\n\nRemember to typeset your results!\n2f. Reconstruct the two-way ANOVA table without the interaction.\n\njackson_heart %&gt;% two_way_ANOVA_table(continuous = sbp,\n                                      A = BMI3cat,\n                                      B = everSmoker,\n                                      interaction = FALSE)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTwo-Way ANOVA Table\n\n\nSource\nSum of Squares\ndf\nMean Squares\nF\np\n\n\n\n\nRegression\n4919.40\n3\n\n\n\n\n\n\n\n•BMI3cat\n3619.33\n2\n1809.67\n7.53\n&lt; 0.001\n\n\n•everSmoker\n1300.07\n1\n1300.07\n5.41\n0.020\n\n\nError\n633831.78\n2637\n240.36\n\n\n\n\n\nTotal\n638751.18\n2640\n\n\n\n\n\n\n\n\n\n\n\n\n2g. Use the appropriate hypothesis test to determine if there a main effect of smoking status (everSmoker). Test at the \\(\\alpha=0.01\\) level.\n\njackson_heart %&gt;% two_way_ANOVA(continuous = sbp,\n                                A = BMI3cat,\n                                B = everSmoker,\n                                interaction = FALSE,\n                                alpha = 0.01)\n\nTest for Main Effect BMI3cat:\n\nH₀: μ_Ideal Health = μ_Intermediate Health = μ_Poor Health\nH₁: At least one mean is different.\nTest Statistic: F(2, 2637) = 7.53\np-value: p = &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.01)\n\nTest for Main Effect everSmoker:\n\nH₀: μ_No = μ_Yes\nH₁: At least one mean is different.\nTest Statistic: F(1, 2637) = 5.41\np-value: p = 0.020\nConclusion: Fail to reject the null hypothesis (p = 0.0201 ≥ α = 0.01)\n\n\nRemember to typeset your results!\n2h. Use the appropriate hypothesis test to determine if there a main effect of body mass index categorization (BMI3cat). Test at the \\(\\alpha=0.01\\) level.\n\njackson_heart %&gt;% two_way_ANOVA(continuous = sbp,\n                                A = BMI3cat,\n                                B = everSmoker,\n                                interaction = FALSE,\n                                alpha = 0.01)\n\nTest for Main Effect BMI3cat:\n\nH₀: μ_Ideal Health = μ_Intermediate Health = μ_Poor Health\nH₁: At least one mean is different.\nTest Statistic: F(2, 2637) = 7.53\np-value: p = &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.01)\n\nTest for Main Effect everSmoker:\n\nH₀: μ_No = μ_Yes\nH₁: At least one mean is different.\nTest Statistic: F(1, 2637) = 5.41\np-value: p = 0.020\nConclusion: Fail to reject the null hypothesis (p = 0.0201 ≥ α = 0.01)\n\n\nRemember to typeset your results!\n2i. Construct the appropriate profile plot for this analysis.\n\njackson_heart %&gt;% profile_plot(continuous = sbp,\n                               xaxis = BMI3cat,\n                               lines = everSmoker)\n\n\n\n\n\n\n\n\n\njackson_heart %&gt;% profile_plot(continuous = sbp,\n                               xaxis = everSmoker,\n                               lines = BMI3cat)\n\n\n\n\n\n\n\n\n2j. Write a brief paragraph to describe your analysis results. You have enough information to discuss the ANOVA results (Q10, Q12, Q13) using the means you computed in Q8 and the profile plot constructed in Q14.\nReplace with your answer.\n2k. Graphically assess the ANOVA assumptions.\n\njackson_heart %&gt;% ANOVA2_assumptions(continuous = sbp,\n                                     A = BMI3cat,\n                                     B = everSmoker,\n                                     interaction = FALSE)\n\n\n\n\n\n\n\n\n2l. Using the graphs in (2k), determine if our analysis is valid. Explain why it is valid or why it is not valid.\nReplace with your answer."
+  },
+  {
+    "objectID": "files/assignments/key/Assignment1key.html",
+    "href": "files/assignments/key/Assignment1key.html",
+    "title": "Assignment 1 - Summer 2025",
+    "section": "",
+    "text": "In this project, we will be analyzing the state-by-state spending on kids, as generously provided by the Urban Institute. Specifically, we will be investigating library spending that has been adjusted for inflation. To get started, see the starter code available on Canvas.\n\n\n\n1a. Find the summary statistics for library spending in all regions for the following years: 2000, 2005, 2010, and 2015.\n\nall_regions %&gt;% mean_median(y2000, y2005, y2010, y2015)\n\n# A tibble: 4 × 3\n  variable mean_sd             median_iqr         \n  &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;              \n1 y2000    170365.3 (210403.4) 94284.0 (197973.0) \n2 y2005    203254.1 (244136.0) 121970.0 (220287.5)\n3 y2010    205501.7 (234078.5) 124954.0 (209843.5)\n4 y2015    206475.8 (237210.8) 131088.0 (211980.5)\n\n\n1b. Find the summary statistics for library spending for the Northeast and Midwest regions for the following years: 2000, 2005, 2010, and 2015.\n\nne_mw_only %&gt;% group_by(Region) %&gt;% mean_median(y2000, y2005, y2010, y2015)\n\n# A tibble: 8 × 4\n  Region    variable mean_sd             median_iqr         \n  &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;               &lt;chr&gt;              \n1 Midwest   y2000    204973.1 (184965.1) 153986.0 (237771.5)\n2 Northeast y2000    225917.7 (308950.3) 144411.0 (240548.0)\n3 Midwest   y2005    253297.6 (217860.2) 256921.0 (311636.0)\n4 Northeast y2005    247108.9 (322143.8) 166699.0 (222950.0)\n5 Midwest   y2010    237745.3 (203980.9) 223638.0 (288909.5)\n6 Northeast y2010    240377.4 (271616.6) 168927.0 (239392.0)\n7 Midwest   y2015    237205.5 (198779.3) 209956.0 (273822.5)\n8 Northeast y2015    236386.0 (279866.3) 174435.0 (240292.0)\n\n\n2a. Suppose we are interested in comparing the 2010 spending between the Northeast and Midwest regions. Construct the appropriate QQ plot to check assumptions.\n\nne_mw_only %&gt;% independent_qq(continuous = y2010,\n                              grouping = Region)\n\n\n\n\n\n\n\n\n2b. Suppose we are interested in comparing the 2010 spending between the Northeast and Midwest regions. If appropriate, examine the variance assumption. Do we violate the variance assumption? Remember to draw your final conclusion about the assumption (did we violate the assumption?). Note: If we do not care about the variance assumption here, leave this problem blank.\n\nne_mw_only %&gt;% variances_HT(continuous = y2010,\n                              grouping = Region)\n\nBrown-Forsythe-Levene test for equality of variances:\nNull: σ²_Northeast = σ²_Midwest \nAlternative: At least one variance is different \nTest statistic: F(1,18) = 0.179 \np-value: p = 0.677\nConclusion: Fail to reject the null hypothesis (p = 0.677 ≥ α = 0.05)\n\n\n\nHypotheses:\n\nH_0: \\ \\sigma^2_{\\text{NE}} = \\sigma_{\\text{MW}}^2\nH_1: \\ \\sigma^2_{\\text{NE}} \\ne \\sigma_{\\text{MW}}^2\n\nTest Statistic and p-Value\n\nF_0 = 0.179, p = 0.677\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha = 0.05\n\nConclusion and interpretation\n\nFail to reject H_0 (p \\text{ vs } \\alpha \\to 0.677 &gt; 0.05). There is not sufficient evidence to suggest that the variances are different. That is, we do not break the variance assumption of the two-sample t-test.\n\n\n3. Use the appropriate t-test to determine if there is a difference in library spending between the Northeast and Midwest regions in 2010. Test at the \\alpha=0.05 level. Remember to typeset the results.\n\nne_mw_only %&gt;% independent_mean_HT(continuous = y2010,\n                                   grouping = Region)\n\nTwo-sample t-test for two independent means and equal variance:\nNull: H₀: μ₁ − μ₂ = 0\nAlternative: H₁: μ₁ − μ₂ ≠ 0\nTest statistic: t(18) = -0.025\np-value: p = 0.981\nConclusion: Fail to reject the null hypothesis (p = 0.9805 ≥ α = 0.05)\n\n\n\nHypotheses\n\nH_0: \\mu_{\\text{NE}}-\\mu_{\\text{MW}} = 0\nH_1: \\mu_{\\text{NE}}-\\mu_{\\text{MW}} \\ne 0\n\nTest Statistic and p-Value\n\nt_0 = -0.025, p = 0.981\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha=0.05.\n\nConclusion/Interpretation\n\nFail to reject H_0. There is not sufficient evidence to suggest that the spending in the northeast and midwest regions was different in 2010.\n\n\n4. Use the appropriate nonparametric test to determine if there is a difference in library spending between the Northeast and Midwest regions in 2010. Test at the \\alpha=0.05 level. Remember to typeset the results.\n\nne_mw_only %&gt;% independent_median_HT(continuous = y2010,\n                                     grouping = Region)\n\nWilcoxon Rank Sum Test for two independent medians\nNull: H₀: M₁ - M₂ = 0\nAlternative: H₁: M₁ - M₂ ≠ 0\nTest statistic: T = 53\np-value: p = 0.820\nConclusion: Fail to reject the null hypothesis (p = 0.8197 ≥ α = 0.05)\n\n\n\nHypotheses\n\nH_0: M_{\\text{NE}}-M_{\\text{MW}} = 0\nH_1: M_{\\text{NE}}-M_{\\text{MW}} \\ne 0\n\nTest Statistic and p-Value\n\nT_0 = 53, p = 0.820\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha=0.05.\n\nConclusion/Interpretation\n\nFail to reject H_0. There is not sufficient evidence to suggest that the spending in the northeast and midwest regions was different in 2010.\n\n\n5. Based on your graph in Q2a, which test should be reported (the t-test or the Wilcoxon)? Explain why you’re choosing the test you’re choosing.\n\nIf normality assumption holds \\to t-test.\nIf normality assumption does not hold \\to Wilcoxon.\n\n6a. Suppose we are interested in comparing the 2010 and 2015 spending for all states. Construct the appropriate QQ plot to check assumptions.\n\nall_regions %&gt;% dependent_qq(col1 = y2010, col2 = y2015)\n\n\n\n\n\n\n\n\n6b. Suppose we are interested in comparing the 2010 and 2015 spending for all states. If appropriate, examine the variance assumption. Do we violate the variance assumption? Remember to draw your final conclusion about the assumption (did we violate the assumption?). Note: If we do not care about the variance assumption here, leave this problem blank.\n7. Use the appropriate t-test to determine if there is a difference in library spending between 2010 and 2015 for all states. Test at the \\alpha=0.05 level. Remember to typeset the results.\n\nall_regions %&gt;% dependent_mean_HT(col1 = y2010,\n                                  col2 = y2015)\n\nPaired t-test for the mean of differences:\nNull: H₀: μ_d = 0\nAlternative: H₁: μ_d ≠ 0\nTest statistic: t(50) = -0.224\np-value: p = 0.823\nConclusion: Fail to reject the null hypothesis (p = 0.8235 ≥ α = 0.05)\n\n\n\nHypotheses\n\nH_0: \\mu_{\\text{2010}}-\\mu_{\\text{2015}} = 0\nH_1: \\mu_{\\text{2010}}-\\mu_{\\text{2015}} \\ne 0\n\nTest Statistic and p-Value\n\nt_0 = -0.224; p = 0.823\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha=0.05.\n\nConclusion/Interpretation\n\nFail to reject H_0. There is not sufficient evidence to suggest that the spending changed between 2010 and 2015.\n\n\n8. Use the appropriate nonparametric test to determine if there is a difference in library spending between 2010 and 2015 for all states. Test at the \\alpha=0.05 level. Remember to typeset the results.\n\nall_regions %&gt;% dependent_median_HT(col1 = y2010,\n                                    col2 = y2015)\n\nWilcoxon Signed-Rank Test for the median of differences:\nNull: H₀: M_d = 0\nAlternative: H₁: M_d ≠ 0\nTest statistic: T = 586\np-value: p = 0.473\nConclusion: Fail to reject the null hypothesis (p = 0.4733 ≥ α = 0.05)\n\n\n\nHypotheses\n\nH_0: M_{\\text{2010}}-M_{\\text{2015}} = 0\nH_1: M_{\\text{2010}}-M_{\\text{2015}} \\ne 0\n\nTest Statistic and p-Value\n\nT_0 = 586; p= 0.473\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha=0.05.\n\nConclusion/Interpretation\n\nFail to reject H_0. There is not sufficient evidence to suggest that the spending changed between 2000 and 2015.\n\n\n9. Based on your graph in Q6a, which test should be reported (the t-test or the Wilcoxon)? Explain why you’re choosing the test you’re choosing.\n\nIf normality assumption holds \\to t-test.\nIf normality assumption does not hold \\to Wilcoxon."
+  },
+  {
+    "objectID": "files/hyp_test_template.html",
+    "href": "files/hyp_test_template.html",
+    "title": "STA4173 - Biostatistics - Fall 2025",
+    "section": "",
+    "text": "Hypotheses:\n\n\\(H_0: \\ \\)\n\\(H_1: \\ \\)\n\nTest Statistic and p-Value\n\n$t_0 = $\n$p = $\n\n\n\n\nRejection Region\n\nReject \\(H_0\\) if \\(p &lt; \\alpha\\); $= $\n\nConclusion and interpretation\n\nReject (\\(p&lt;\\alpha\\)) or fail to reject (\\(p \\ge \\alpha\\)).\nThere is (reject) or is not (ftr) sufficient evidence to suggest the alternative hypothesis in words."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#introduction-topics",
+    "href": "files/slides/01-1-estimation.html#introduction-topics",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Introduction: Topics",
+    "text": "Introduction: Topics\n\nBasic descriptives:\n\nContinuous variables:\n\nMean\nMedian\nVariance and standard deviation\nRange and interquartile range\n\nCategorical variables:\n\nCount\nOverall percentage\nRow percentage\nColumn percentage"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#introduction-data",
+    "href": "files/slides/01-1-estimation.html#introduction-data",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Introduction: Data",
+    "text": "Introduction: Data\n\nWe will be using data from the kingdom of Equestria (yes, from My Little Pony).\nMane Six:\n\nTwilight Sparkle (Unicorn \\to Alicorn)\nApplejack (Earth Pony)\nFluttershy (Pegasus)\nPinkie Pie (Earth Pony)\nRainbow Dash (Pegasus)\nRarity (Unicorn)"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#introduction-data-1",
+    "href": "files/slides/01-1-estimation.html#introduction-data-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Introduction: Data",
+    "text": "Introduction: Data"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#introduction-data-2",
+    "href": "files/slides/01-1-estimation.html#introduction-data-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Introduction: Data",
+    "text": "Introduction: Data\n\n\n\n\n\n\n\nName: the pony’s name\nType: type of pony (Earth, Pegasus, Unicorn, Alicorn)\nSex: sex/age of pony (Coal, Filly, Stallion, Mare)\nFlying speed: average flying speed (km/hr) for winged ponies\nFriendship: a harmony index from friendship activities (0-10)\nMagical energy: measured magical energy output (sparkles) for magical ponies\nTail shimmer: how much light reflected by the pony’s tail (lux)"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#types-of-variables-qualitative",
+    "href": "files/slides/01-1-estimation.html#types-of-variables-qualitative",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Types of Variables: Qualitative",
+    "text": "Types of Variables: Qualitative\n\nA qualitative or categorical variable classifies an observation into one of two or more groups or categories.\n\nNominal: purely qualitative and unordered\nOrdinal: data can be ranked, but intervals between ranks may not be equivalent\n\nExamples:\n\nsatisfaction rating\nfavorite color\ntype of pet\neducation level\nblood type"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#types-of-variables-quantitative",
+    "href": "files/slides/01-1-estimation.html#types-of-variables-quantitative",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Types of Variables: Quantitative",
+    "text": "Types of Variables: Quantitative\n\nA quantitative or continuous variable takes numerical values for which arithmetic operations such as adding and averaging make sense; typically has a unit of measure.\n\nInterval: meaningful differences between values, but no true zero point\nRatio: meaningful differences and a true zero point\n\nExamples:\n\nage (years)\ntemperature (Celsius)\ndaily hours of sleep\nACT or SAT score\nheight (inches)"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#types-of-variables-example",
+    "href": "files/slides/01-1-estimation.html#types-of-variables-example",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Types of Variables: Example",
+    "text": "Types of Variables: Example\n\n\n\n\n\n\n\nName: the pony’s name\nType: type of pony (Earth, Pegasus, Unicorn, Alicorn)\nSex: sex/age of pony (Coal, Filly, Stallion, Mare)\nFlying speed: average flying speed (km/hr) for winged ponies\nFriendship: a harmony index from friendship activities (0-10)\nMagical energy: measured magical energy output (sparkles) for magical ponies\nTail shimmer: how much light reflected by the pony’s tail (lux)"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#describing-data-why",
+    "href": "files/slides/01-1-estimation.html#describing-data-why",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Describing Data: Why?",
+    "text": "Describing Data: Why?\n\nWhy do we describe data? We want to tell a story!\n\nSummarize n observations into a single description\nUnderstand what is in the data\nSpot patterns, missing data, or outliers\nCompare groups or spot differences or oddities"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#describing-data-how",
+    "href": "files/slides/01-1-estimation.html#describing-data-how",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Describing Data: How?",
+    "text": "Describing Data: How?\n\nHow do we describe data?\n\nNumbers\n\nFrequency table\nMean & standard deviation\nMedian & IQR\n\nGraphs\n\nBar charts\nBox plots\nHistograms"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-mean",
+    "href": "files/slides/01-1-estimation.html#point-estimation-mean",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Mean",
+    "text": "Point Estimation: Mean\n\nMean: the average of a set of values\n\n\n\\bar{y} = \\frac{\\sum_{i=1}^n y_i}{n}\n\n\nFind the mean for the flying speeds (km/hr) of 5 ponies: {10, 20, 30, 40, 100}\n\n\n\\bar{y} = \\frac{\\sum_{i=1}^n y_i}{n} = \\frac{10 + 20 + 30 + 40 + 100}{5} = 40\n\n\nThe average flying speed for winged ponies is 40 km/hr."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-median",
+    "href": "files/slides/01-1-estimation.html#point-estimation-median",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Median",
+    "text": "Point Estimation: Median\n\nMedian: The middle value in an ordered dataset.\n\nWhen we have an even number of observations, we average the two middle.\n\nFind the median for the flying speeds (km/hr) of 5 ponies: {10, 20, 30, 40, 100}\n\nFirst, we sort the data: {10, 20, 30, 40, 100}\nThen, find the middle number: 30\n\nThe median flying speed for winged ponies is 30 km/hr."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-variance",
+    "href": "files/slides/01-1-estimation.html#point-estimation-variance",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Variance",
+    "text": "Point Estimation: Variance\n\nVariance: A measure of spread; the average of squared differences from the mean.\n\nHigher variance = data has more spread.\nIn squared units of the data.\n\n\n\ns_y^2 = \\frac{\\sum_iy_i^2 - (\\sum_iy_i)^2/n}{n-1}\n\n\nFind the variance for the flying speeds (km/hr) of 5 ponies: {10, 20, 30, 40, 100}\n\n\ns_y^2 = \\frac{\\sum_iy_i^2 - (\\sum_iy_i)^2/n}{n-1} = \\frac{(10^2+...+100^2)-(10+...+100)^2/5}{4} = 1250\n\n\nThe variance is 1250 (km/hr)2"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-standard-deviation",
+    "href": "files/slides/01-1-estimation.html#point-estimation-standard-deviation",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Standard Deviation",
+    "text": "Point Estimation: Standard Deviation\n\nStandard Deviation: A measure of spread; the average distance from the mean.\n\nHigher standard deviation = data has more spread.\nSame units as the data.\n\n\n\ns_y = \\sqrt{s_y^2}\n\n\nFind the standard deviation for the flying speeds (km/hr) of 5 ponies: {10, 20, 30, 40, 100}\n\n\ns_y = \\sqrt{s^2_y} = \\sqrt{1250} \\approx 35.36\n\n\nThe standard deviation is 35.36 km/hr."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-range",
+    "href": "files/slides/01-1-estimation.html#point-estimation-range",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Range",
+    "text": "Point Estimation: Range\n\nRange: difference between the maximum and minimum values\n\n\n\\text{range} = \\text{max}(y) - \\text{min}(y)\n\n\nFind the range for the flying speeds (km/hr) of 5 ponies: {10, 20, 30, 40, 100}\n\n\n\\begin{align*}\n\\text{range} = \\text{max}(y) - \\text{min}(y) = 100 - 10 = 90\n\\end{align*}\n\n\nThe range of the flying speeds is 90 km/hr."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-interquartile-range",
+    "href": "files/slides/01-1-estimation.html#point-estimation-interquartile-range",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Interquartile Range",
+    "text": "Point Estimation: Interquartile Range\n\nInterquartile Range (IQR): range of the middle 50% of the data.\n\n\n\\text{IQR} = \\text{P}_{75} − \\text{P}_{25}\n\n\nFind the IQR for the flying speeds (km/hr) of 5 ponies: {10, 20, 30, 40, 100}\n\nRecall that the median is 30.\nWe then find P_{25} using {10, 20} and P_{75} using {40, 100}\nThus, P_{25} = 15 and P_{75} = 70.\n\n\n\n\\begin{align*}\n\\text{IQR} = \\text{P}_{75} − \\text{P}_{25} = 70 - 15 = 55\n\\end{align*}\n\n\nThe IQR of the flying speeds is 55 km/hr."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-proportion",
+    "href": "files/slides/01-1-estimation.html#point-estimation-proportion",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Proportion",
+    "text": "Point Estimation: Proportion\n\nProportion: a type of mean for categorical data\n\nOften expressed as a percentage\n\nUseful for categorical responses\n\n\n\n\\hat{p} = \\frac{\\sum_{i=1}^n y_i}{n},\n\n\nNote that in this case,\n\n\ny_i =\n\\begin{cases}\n  1 & \\text{if in category }i \\\\\n  0 & \\text{otherwise}\n\\end{cases}"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-proportion-1",
+    "href": "files/slides/01-1-estimation.html#point-estimation-proportion-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Proportion",
+    "text": "Point Estimation: Proportion\n\nFind the proportion of ponies that have wings in the following sample: {Y, N, Y, Y, N, Y}\nCount the number of “Y” responses and divide by total:\n\n\n\\hat{p} = \\frac{\\sum_{i=1}^n y_i}{n} = \\frac{4}{6} \\approx 0.67\n\n\nThe proportion of ponies with wings is 0.667 (or 66.7%)."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-frequency-table",
+    "href": "files/slides/01-1-estimation.html#point-estimation-frequency-table",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Frequency Table",
+    "text": "Point Estimation: Frequency Table\n\nFrequency table: A table showing how often each value appears in a dataset.\n\nUseful for categorical responses.\nFor each category, i, we report n_i (\\%_i)\n\nFind the freqency table for the following sample of 8 ponies: {Earth, Pegasus, Unicorn, Earth, Pegasus, Pegasus, Unicorn, Alicorn}\n\n\n\n\nFrequencies:\n\nAlicorn: n_{\\text{A}} = 1\nEarth: n_{\\text{E}} = 2\nPegasus: n_{\\text{P}} = 3\nUnicorn: n_{\\text{U}} = 2\n\n\n\n\nProportions:\n\nAlicorn: \\hat{p}_{\\text{A}} = 1/8 = 0.125\nEarth: \\hat{p}_{\\text{E}} = 2/8 = 0.250\nPegasus: \\hat{p}_{\\text{P}} = 3/8 = 0.375\nUnicorn: \\hat{p}_{\\text{U}} = 2/8 = 0.250"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-frequency-table-1",
+    "href": "files/slides/01-1-estimation.html#point-estimation-frequency-table-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Frequency Table",
+    "text": "Point Estimation: Frequency Table\n\nPutting this into a table,"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-contingency-table",
+    "href": "files/slides/01-1-estimation.html#point-estimation-contingency-table",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Contingency Table",
+    "text": "Point Estimation: Contingency Table\n\nContingency table: A table that summarizes two qualitative variables and their overlap.\nWe will not concern ourselves with the derivation, but will rely on R.\nConsider this data,"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#point-estimation-contingency-table-1",
+    "href": "files/slides/01-1-estimation.html#point-estimation-contingency-table-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Point Estimation: Contingency Table",
+    "text": "Point Estimation: Contingency Table\n\nThe resulting contingency table would look someting like this:\n\nWe are using column totals as our denominators.\n\n\n\n\n# A tibble: 4 × 3\n  pony_type No        Yes      \n  &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;    \n1 Alicorn   0 (0.0%)  1 (25.0%)\n2 Earth     2 (50.0%) 0 (0.0%) \n3 Pegasus   0 (0.0%)  3 (75.0%)\n4 Unicorn   2 (50.0%) 0 (0.0%)"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-box-plots",
+    "href": "files/slides/01-1-estimation.html#graphs-box-plots",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Box Plots",
+    "text": "Graphs: Box Plots\n\nBox plots display the distribution of a continuous variable using the five number summary:\n\nWhisker: Minimum\nBeginning of box: 25th percentile (first quartile; Q1, P25)\n“Middle” of box: Median (50th percentile, second quartile; Q2, P50)\nEnd of box: 75th percentile (third quartile; Q3, P75)\nWhisker: Maximum\n\nWe use box and whisker plots to get an idea of the spread and skewness of the data.\nNote: there are different ways to define the whiskers.\n\nI use the min/max as whiskers when sketching by hand.\nggplot() uses 1.75 \\times IQR."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-box-plots-1",
+    "href": "files/slides/01-1-estimation.html#graphs-box-plots-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Box Plots",
+    "text": "Graphs: Box Plots\n\nDescribe this box plot:"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-box-plots-2",
+    "href": "files/slides/01-1-estimation.html#graphs-box-plots-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Box Plots",
+    "text": "Graphs: Box Plots\n\nDescribe this box plot:"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-box-plots-3",
+    "href": "files/slides/01-1-estimation.html#graphs-box-plots-3",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Box Plots",
+    "text": "Graphs: Box Plots\n\nDescribe this box plot:"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-box-plots-4",
+    "href": "files/slides/01-1-estimation.html#graphs-box-plots-4",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Box Plots",
+    "text": "Graphs: Box Plots\n\nDescribe this box plot:"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-histograms",
+    "href": "files/slides/01-1-estimation.html#graphs-histograms",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Histograms",
+    "text": "Graphs: Histograms\n\nHistograms show the distribution of a continuous variable.\n\nWhat is the shape of the distribution?\nIs the distribution symmetric? Skewed? How skewed?\n\nValues are grouped into intervals (“bins”), then the bin height demonstrates how many values fall into that interval.\nThis allows us to quickly see if there are any oddities.\n\nIncreased proportion of a specific value/bin.\n\nZero inflation? Value used to indicate missing?\n\nAny values that are “out in the tail”.\n\nOutlier? Data entry error?"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-histograms-1",
+    "href": "files/slides/01-1-estimation.html#graphs-histograms-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Histograms",
+    "text": "Graphs: Histograms\n\nDescribe the histogram:"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-histograms-2",
+    "href": "files/slides/01-1-estimation.html#graphs-histograms-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Histograms",
+    "text": "Graphs: Histograms\n\nDescribe the histogram:"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-histograms-3",
+    "href": "files/slides/01-1-estimation.html#graphs-histograms-3",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Histograms",
+    "text": "Graphs: Histograms\n\nDescribe the histogram:"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-histograms-4",
+    "href": "files/slides/01-1-estimation.html#graphs-histograms-4",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Histograms",
+    "text": "Graphs: Histograms\n\nDescribe the histogram:"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-histograms-5",
+    "href": "files/slides/01-1-estimation.html#graphs-histograms-5",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Histograms",
+    "text": "Graphs: Histograms\n\nDescribe the histogram:"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-bar-graphs",
+    "href": "files/slides/01-1-estimation.html#graphs-bar-graphs",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Bar Graphs",
+    "text": "Graphs: Bar Graphs\n\nBar graphs display the distribution of categorical data.\n\nThe frequency or proportion of observations is displayed on the bar graph.\n\nBar graphs usually have categories on the x-axis and counts or proportions on the y-axis.\n\nNote that we could flip the axes to create a vertical bar graph.\n\nNote that the bars are separated on the x-axis to indicate the lack of continuity."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-bar-graphs-1",
+    "href": "files/slides/01-1-estimation.html#graphs-bar-graphs-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Bar Graphs",
+    "text": "Graphs: Bar Graphs\n\nConsider the bar graph, below."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-side-by-side-bar-graphs",
+    "href": "files/slides/01-1-estimation.html#graphs-side-by-side-bar-graphs",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Side-by-Side Bar Graphs",
+    "text": "Graphs: Side-by-Side Bar Graphs\n\nConsider the bar graph, below."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-stacked-bar-graphs",
+    "href": "files/slides/01-1-estimation.html#graphs-stacked-bar-graphs",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Stacked Bar Graphs",
+    "text": "Graphs: Stacked Bar Graphs\n\nConsider the bar graph, below."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-histograms-vs-bar-graphs",
+    "href": "files/slides/01-1-estimation.html#graphs-histograms-vs-bar-graphs",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Histograms vs Bar Graphs",
+    "text": "Graphs: Histograms vs Bar Graphs\n\nWe have now reviewed two “bar style” graphs that we see regularly: histograms and bar graphs.\nWe use histograms to see the distribution of continuous variables.\n\nThe x-axis represents numeric intervals.\nThe bars touch each other to represent continuity.\n\nWe use bar graphs to see the distribution of categorical variables.\n\nThe x-axis represents categories.\nThe bars do not touch each other, implying distinct categories."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-scatterplots",
+    "href": "files/slides/01-1-estimation.html#graphs-scatterplots",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Scatterplots",
+    "text": "Graphs: Scatterplots\n\nScatterplots allow us to look at the relationship between two continuous variables.\n\nEach point on the graph represents one observation.\n\nWhat statisticians use scatterplots for:\n\nExplore patterns (aka trends or relationships).\n\nLinear relationships.\nNon-linear relationships.\n\nDetect clusters of observations.\nFind oddities in the data (outliers).\n\nWhen we describe the relationship, we are really answering the question, “As x increases, what happens to y?”"
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-scatterplots-1",
+    "href": "files/slides/01-1-estimation.html#graphs-scatterplots-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Scatterplots",
+    "text": "Graphs: Scatterplots\n\nConsider the scatterplot, below."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-scatterplots-2",
+    "href": "files/slides/01-1-estimation.html#graphs-scatterplots-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Scatterplots",
+    "text": "Graphs: Scatterplots\n\nConsider the scatterplot, below."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-scatterplots-3",
+    "href": "files/slides/01-1-estimation.html#graphs-scatterplots-3",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Scatterplots",
+    "text": "Graphs: Scatterplots\n\nConsider the scatterplot, below."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-scatterplots-4",
+    "href": "files/slides/01-1-estimation.html#graphs-scatterplots-4",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Scatterplots",
+    "text": "Graphs: Scatterplots\n\nConsider the scatterplot, below."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#graphs-scatterplots-5",
+    "href": "files/slides/01-1-estimation.html#graphs-scatterplots-5",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Graphs: Scatterplots",
+    "text": "Graphs: Scatterplots\n\nConsider the scatterplot, below."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#wrap-up",
+    "href": "files/slides/01-1-estimation.html#wrap-up",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Wrap Up",
+    "text": "Wrap Up\n\nWe have covered (“reminded” ourselves of) a lot today!\n\nAlways remember that I do not expect you to:\n\nMemorize code.\nProduce code in a timed environment.\nAutomatically know how to do these things.\n\nI do expect you to:\n\nUse your resources (lecture slides, GitHub website, Discord).\nTry your best."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#wrap-up-1",
+    "href": "files/slides/01-1-estimation.html#wrap-up-1",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Wrap Up",
+    "text": "Wrap Up\n\nToday’s lecture:\n\nBasic summarization of data.\nBasic data visualization.\n\nThis week’s lab:\n\nSummarizing data\nVisualizing data\n\nNext week:\n\nReview of statistical inference.\nConfidence intervals and hypothesis tests.\n\nOne sample means.\nTwo sample means.\n\nIndependent data.\nDependent data."
+  },
+  {
+    "objectID": "files/slides/01-1-estimation.html#wrap-up-2",
+    "href": "files/slides/01-1-estimation.html#wrap-up-2",
+    "title": "STA2023 Review:Point Estimation",
+    "section": "Wrap Up",
+    "text": "Wrap Up\n\nDaily activity: the .qmd we worked on during class.\n\nDue date: Monday, June 23, 2025.\n\nYou will upload the resulting .html file on Canvas.\n\nPlease refer to the help guide on the Biostat website if you need help with submission."
+  },
+  {
+    "objectID": "files/practice/06-17-summary-practice.html",
+    "href": "files/practice/06-17-summary-practice.html",
+    "title": "Practice: 06/17/2025",
+    "section": "",
+    "text": "Let’s use mean_median() to summarize the continuous variables in the MLP dataset.\nLet’s use mean_median() to summarize the continuous variables in the MLP dataset by pony type."
+  },
+  {
+    "objectID": "files/practice/06-17-summary-practice.html#summaries-continuous-variables",
+    "href": "files/practice/06-17-summary-practice.html#summaries-continuous-variables",
+    "title": "Practice: 06/17/2025",
+    "section": "",
+    "text": "Let’s use mean_median() to summarize the continuous variables in the MLP dataset.\nLet’s use mean_median() to summarize the continuous variables in the MLP dataset by pony type."
+  },
+  {
+    "objectID": "files/practice/06-17-summary-practice.html#summaries-categorical-variables",
+    "href": "files/practice/06-17-summary-practice.html#summaries-categorical-variables",
+    "title": "Practice: 06/17/2025",
+    "section": "Summaries: Categorical Variables",
+    "text": "Summaries: Categorical Variables\nLet’s use n_pct() to summarize the types of ponies in the dataset.\nLet’s use n_pct() to describe friendship index by type."
+  },
+  {
+    "objectID": "files/practice/06-17-summary-practice.html#graphs-box-plots",
+    "href": "files/practice/06-17-summary-practice.html#graphs-box-plots",
+    "title": "Practice: 06/17/2025",
+    "section": "Graphs: Box Plots",
+    "text": "Graphs: Box Plots\nConstruct a box plot for the tail shimmer of the ponies (tail_shimmer)."
+  },
+  {
+    "objectID": "files/practice/06-17-summary-practice.html#graphs-histograms",
+    "href": "files/practice/06-17-summary-practice.html#graphs-histograms",
+    "title": "Practice: 06/17/2025",
+    "section": "Graphs: Histograms",
+    "text": "Graphs: Histograms\nConstruct a histogram for the flying speed of ponies (flying_speed).\n\n\nConstruct a histogram for the magical energy of ponies (magical_energy)."
+  },
+  {
+    "objectID": "files/practice/06-17-summary-practice.html#graphs-bar-graphs",
+    "href": "files/practice/06-17-summary-practice.html#graphs-bar-graphs",
+    "title": "Practice: 06/17/2025",
+    "section": "Graphs: Bar Graphs",
+    "text": "Graphs: Bar Graphs\nConstruct a bar graph for the combined age and sex of ponies.\n\n\nConstruct a bar graph for the type of pony."
+  },
+  {
+    "objectID": "files/practice/06-17-summary-practice.html#graphs-scatterplots",
+    "href": "files/practice/06-17-summary-practice.html#graphs-scatterplots",
+    "title": "Practice: 06/17/2025",
+    "section": "Graphs: Scatterplots",
+    "text": "Graphs: Scatterplots\nConstruct a scatterplot with magical energy (magical_energy) on the x-axis and tail shimmer (tail_shimmer) on the y-axis.\n\n\nConstruct a scatterplot with magical energy (magical_energy) on the x-axis and flying speed (flying_speed) on the y-axis."
+  },
+  {
+    "objectID": "files/practice/key/07-01-practice-KEY.html",
+    "href": "files/practice/key/07-01-practice-KEY.html",
+    "title": "Practice: 07/01/2025",
+    "section": "",
+    "text": "# use this code chunk to call in all packages the document will need\nlibrary(tidyverse)\nlibrary(ssstats)"
+  },
+  {
+    "objectID": "files/practice/key/07-01-practice-KEY.html#part-1",
+    "href": "files/practice/key/07-01-practice-KEY.html#part-1",
+    "title": "Practice: 07/01/2025",
+    "section": "Part 1",
+    "text": "Part 1\nTwilight Sparkle has been working tirelessly on developing a new memory-enhancing spell that she believes could help ponies improve their ability to recall important information. She designs a controlled experiment where each participating pony will complete the same memory test both before and after the spell is cast. By comparing each pony’s performance before and after the treatment, Twilight hopes to determine whether her spell truly boosts memory or if any observed changes are simply due to chance. Twilight records the number of items each pony can remember in both sessions and she is particularly interested in whether the differences in memory scores after the spell show consistent improvement across her group of test subjects.\n1. Is this independent or dependent data? Why?\nDependent - before and after on the same pony.\n2. Find the appropriate summary statistics for the data.\n\ntwilight_memory_pt1 %&gt;% dependent_mean_median(before, after)\n\n\n  \n\n\n\n3. What is the appropriate t-test?\nDependent t-test.\n4. Find the 99% confidence interval for \\boldsymbol{\\mu}_1-\\boldsymbol{\\mu}_2.\n\ntwilight_memory_pt1 %&gt;% dependent_mean_CI(after, before)\n\nThe point estimate for the mean difference is x̄ = 3.12.\nThe point estimate for the standard deviation of differences is s = 1.8786.\nThe 95% confidence interval for the mean difference μ_d is (2.8169, 3.4231).\n\n\nThe 95% CI for \\mu_1-\\mu_2 is (2.82, 3.42).\n5. Use the appropriate t-test, as identified in Q3, to determine if the data imply an improvement in the memory scores. Test at the \\alpha=0.01 level.\n\ntwilight_memory_pt1 %&gt;% dependent_mean_HT(after, before,\n                                          alternative = \"greater\",\n                                          alpha = 0.01)\n\nPaired t-test for the mean of differences:\nNull: H₀: μ_d ≤ 0\nAlternative: H₁: μ_d &gt; 0\nTest statistic: t(149) = 20.341\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.01)\n\n\n\nHypotheses:\n\nH_0: \\ \\mu_d \\le 0\nH_1: \\ \\mu_d &gt; 0\n\nTest Statistic and p-Value\n\nt_0 = 20.341, p &lt; 0.001\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha = 0.01\n\nConclusion and interpretation\n\nReject H_0 (p \\text{ vs } \\alpha \\to (&lt; 0.001) &lt; 0.01). There is sufficient evidence to suggest that there has been an improvement in memory scores.\n\n\n6. What is the appropriate nonparametric test?\nWilcoxon signed rank.\n7. Use the appropriate nonparametric test, as identified in Q6, to determine if the data imply an improvement in the memory scores. Test at the \\alpha=0.01 level.\n\ntwilight_memory_pt1 %&gt;% dependent_median_HT(after, before,\n                                            alternative = \"greater\",\n                                            alpha = 0.01)\n\nWilcoxon Signed-Rank Test for the median of differences:\nNull: H₀: M_d = 0\nAlternative: H₁: M_d &gt; 0\nTest statistic: T = 10425\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.01)\n\n\n\nHypotheses:\n\nH_0: \\ M_d \\le 0\nH_1: \\ M_d &gt;\n\nTest Statistic and p-Value\n\nT_0 = 10425, p &lt; 0.001\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject H_0 (p \\text{ vs } \\alpha \\to (&lt; 0.001) &lt; 0.01). There is sufficient evidence to suggest that there has been an improvement in memory scores.\n\n\n8. Construct the appropriate QQ plot for this dataset and research question.\n\ntwilight_memory_pt1 %&gt;% dependent_qq(after, before)\n\n\n\n\n\n\n\n\n9. Determine which test is appropriate. Provide commentary on the graph in Q8 supporting your answer.\nThe nonparametric test – the qq plot shows stair steps and not a 45o line."
+  },
+  {
+    "objectID": "files/practice/key/07-01-practice-KEY.html#part-2",
+    "href": "files/practice/key/07-01-practice-KEY.html#part-2",
+    "title": "Practice: 07/01/2025",
+    "section": "Part 2",
+    "text": "Part 2\nTwilight Sparkle’s new memory-enhancing spell has quickly gained attention across Equestria, and now she wants to conduct a larger study to compare ponies who receive the spell to those who do not. This time, she recruits two groups of ponies: one group will receive the memory-enhancing spell and the other group will not receive any magical intervention, serving as the control group. By comparing the memory scores between these two groups, Twilight hopes to determine whether the spell leads to a meaningful improvement in memory performance when compared to ponies who did not receive the spell.\n10. Is this independent or dependent data? Why?\nIndependent – the two groups are separate. One group received the spell while the other did not.\n11. Find the appropriate summary statistics for the data.\n\ntwilight_memory_pt2 %&gt;% mean_median(memory_score)\n\n# A tibble: 1 × 3\n  variable     mean_sd    median_iqr\n  &lt;chr&gt;        &lt;chr&gt;      &lt;chr&gt;     \n1 memory_score 13.9 (3.3) 13.9 (4.5)\n\ntwilight_memory_pt2 %&gt;% group_by(group) %&gt;% mean_median(memory_score)\n\n# A tibble: 2 × 4\n  group     variable     mean_sd    median_iqr\n  &lt;chr&gt;     &lt;chr&gt;        &lt;chr&gt;      &lt;chr&gt;     \n1 1-Spell   memory_score 15.7 (2.9) 15.5 (3.3)\n2 2-Control memory_score 12.2 (2.7) 12.0 (3.7)\n\n\n12. What is the appropriate t-test?\nTwo-sample t-test.\n13. Find the 95% confidence interval for \\boldsymbol{\\mu}_1-\\boldsymbol{\\mu}_2.\n\ntwilight_memory_pt2 %&gt;% independent_mean_CI(continuous = memory_score,\n                                            grouping = group)\n\nThe point estimate for the difference in means is x̄₁ − x̄₂ = 3.4847\nThe 95% confidence interval for μ₁ − μ₂ is (2.7027, 4.2668)\n\n\nThe 95% CI for \\mu_1-\\mu_2 is (2.70, 4.27).\n14. Use the appropriate t-test, as identified in Q11, to determine if the data imply an improvement in the memory scores. Test at the \\alpha=0.05 level.\n\ntwilight_memory_pt2 %&gt;% independent_mean_HT(continuous = memory_score,\n                                            grouping = group,\n                                            alternative = \"greater\")\n\nTwo-sample t-test for two independent means and equal variance:\nNull: H₀: μ₁ − μ₂ ≤ 0\nAlternative: H₁: μ₁ − μ₂ &gt; 0\nTest statistic: t(198) = 8.787\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n\n\nHypotheses:\n\nH_0: \\ \\mu_1 - \\mu_2 \\le 0\nH_1: \\ \\mu_1 - \\mu_2 &gt; 0\n\nTest Statistic and p-Value\n\nt_0 = 8.787, p &lt; 0.001\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha = 0.05\n\nConclusion and interpretation\n\nReject H_0 (p \\text{ vs } \\alpha \\to (&lt;0.001) &lt; 0.05). There is sufficient evidence to suggest an improvement in memory scores.\n\n\n15. What is the appropriate nonparametric test?\nReplace with your answer\n16. Use the appropriate nonparametric test, as identified in Q14, to determine if the data imply an improvement in the memory scores. Test at the \\alpha=0.05 level.\n\ntwilight_memory_pt2 %&gt;% independent_median_HT(continuous = memory_score,\n                                              grouping = group,\n                                              alternative = \"greater\")\n\nWilcoxon Rank Sum Test for two independent medians\nNull: H₀: M₁ - M₂ ≤ 0\nAlternative: H₁: M₁ - M₂ &gt; 0\nTest statistic: T = 8184\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n\n\nHypotheses:\n\nH_0: \\ M_1 - M_2 \\le 0\nH_1: \\ M_1 - M_2 &gt; 0\n\nTest Statistic and p-Value\n\nT_0 = 8184, p &lt; 0.001\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha = 0.05\n\nConclusion and interpretation\n\nReject H_0 (p \\text{ vs } \\alpha \\to (&lt;0.001) &lt; 0.05). There is sufficient evidence to suggest an improvement in memory scores.\n\n\n17. Construct the appropriate QQ plot for this dataset and research question.\n\ntwilight_memory_pt2 %&gt;% independent_qq(continuous = memory_score,\n                                       grouping = group)\n\n\n\n\n\n\n\n\n18. Determine which test is appropriate. Provide commentary on the graph in Q16 supporting your answer.\nThe two-sample t-test; the qq plots and histograms show normality."
+  },
+  {
+    "objectID": "files/practice/key/07-10-practice-KEY.html",
+    "href": "files/practice/key/07-10-practice-KEY.html",
+    "title": "Practice: 07/01/2025",
+    "section": "",
+    "text": "# use this code chunk to call in all packages the document will need\nlibrary(tidyverse)\nlibrary(ssstats)\n## DO NOT EDIT THIS CHUNK ##\nset.seed(917689)\nsinging_data &lt;- tibble(performer = rep(c(\"Mermaids\", \"Fish\", \"Crustaceans\"), each = 50),\n                       volume_db = c(rnorm(50, mean = 88.5, sd = 4.2),\n                                     rnorm(50, mean = 83.1, sd = 2.1),\n                                     rnorm(50, mean = 91.2, sd = 3.7)))\n\ntrill_data &lt;- tibble(performer = c(rep(\"Mermaids\", 60), \n                                   rep(\"Fish Chorus\", 60),\n                                   rep(\"Crustaceans\", 60)),\n                     trills = c(rnorm(60, mean = 6,  sd = 3),\n                                rnorm(60, mean = 9,  sd = 3),\n                                rnorm(60, mean = 14, sd = 3)))\n## DO NOT EDIT THIS CHUNK ##"
+  },
+  {
+    "objectID": "files/practice/key/07-10-practice-KEY.html#part-1",
+    "href": "files/practice/key/07-10-practice-KEY.html#part-1",
+    "title": "Practice: 07/01/2025",
+    "section": "Part 1",
+    "text": "Part 1\nKing Triton is concerned that the different sea creatures in Atlantica are not equally loud during musical rehearsals, which might be affecting the harmony of their performances. To investigate, Sebastian conducts a study (singing_data) measuring the average decibel level (volume) of singing during rehearsals from three types of performers: mermaids, fish chorus, and crustaceans.\nEach group (performer) includes 25 randomly selected performers, and their peak singing volumes (volume_db) are recorded during a standard song.\n1. Check the ANOVA assumptions graphically.\n\n\nsinging_data %&gt;% ANOVA_assumptions(continuous = volume_db,\n                                   grouping = performer)\n\nError in qq_plot/rvf_plot: non-numeric argument to binary operator\n\n\n\n2. If necessary, formally test for the variance assumption. Test at the \\alpha=0.05 level.\n\nsinging_data %&gt;% variances_HT(continuous = volume_db,\n                              grouping = performer)\n\nBrown-Forsythe-Levene test for equality of variances:\nNull: σ²_Mermaids = σ²_Fish = σ²_Crustaceans \nAlternative: At least one variance is different \nTest statistic: F(2,147) = 10.042 \np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nt_0 =, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n3. Draw conclusions based on your observations. (Do we meet the assumption?)\nReplace with your answer\n4. Which test should we use to look for differences among the performer groups? Why?\nReplace with your answer\n5. Perform the appropriate hypothesis test to determine if the average peak singing volume (volume_db) differs between performance groups (performer).\n\nsinging_data %&gt;% kruskal_HT(continuous = volume_db,\n                               grouping = performer)\n\nKruskal–Wallis Rank-Sum Test\n\nH₀: M_Crustaceans = M_Fish = M_Mermaids\nH₁: At least one group is different\n\nTest Statistic: X(2) = 81.261,\n p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nF_0 = OR \\chi_0^2=, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n6. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the \\alpha=0.05 level. Assume that this is an exploratory study; do not adjust for \\alpha.\n\nsinging_data %&gt;% posthoc_dunn(continuous = volume_db,\n                              grouping = performer,\n                              adjust = FALSE)\n\n              Comparison         Z     p\n1     Crustaceans - Fish  8.771936 0.000\n2 Crustaceans - Mermaids  2.587157 0.010\n3        Fish - Mermaids -6.184779 0.000\n\n\nPairwise differences: - List - Them - Here\n7. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the \\alpha=0.05 level. Assume that this is a confirmatory study; adjust for \\alpha.\n\nsinging_data %&gt;% posthoc_dunn(continuous = volume_db,\n                              grouping = performer,\n                              adjust = TRUE)\n\n              Comparison         Z     p\n1     Crustaceans - Fish  8.771936 0.000\n2 Crustaceans - Mermaids  2.587157 0.029\n3        Fish - Mermaids -6.184779 0.000\n\n\nPairwise differences: - List - Them - Here"
+  },
+  {
+    "objectID": "files/practice/key/07-10-practice-KEY.html#part-2",
+    "href": "files/practice/key/07-10-practice-KEY.html#part-2",
+    "title": "Practice: 07/01/2025",
+    "section": "Part 2",
+    "text": "Part 2\nSebastian is preparing for Atlantica’s annual musical showcase, where different sections of the underwater ensemble show off their vocal prowess. One feature he’s especially interested in is the number of high-note “trills” performers can hit during a 90-second rehearsal segment.\nTo investigate whether certain performer groups are more impressive than others, Sebastian records (trill_data) the number of trills performed by randomly selected individuals from each of the following sections: mermaids, fish chorus, and crustaceans.\n1. Check the ANOVA assumptions graphically.\n\n\ntrill_data %&gt;% ANOVA_assumptions(continuous = trills, \n                                 grouping = performer)\n\nError in qq_plot/rvf_plot: non-numeric argument to binary operator\n\n\n\n2. If necessary, formally test for the variance assumption. Test at the \\alpha=0.05 level.\n\ntrill_data %&gt;% variances_HT(continuous = trills, \n                            grouping = performer)\n\nBrown-Forsythe-Levene test for equality of variances:\nNull: σ²_Mermaids = σ²_Fish Chorus = σ²_Crustaceans \nAlternative: At least one variance is different \nTest statistic: F(2,177) = 0.111 \np-value: p = 0.895\nConclusion: Fail to reject the null hypothesis (p = 0.8952 ≥ α = 0.05)\n\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nt_0 =, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n3. Draw conclusions based on your observations. (Do we meet the assumption?)\nReplace with your answer\n4. Which test should we use to look for differences among the performer groups? Why?\nReplace with your answer\n5. Perform the appropriate hypothesis test to determine if the average peak singing volume (volume_db) differs between performance groups (performer).\n\ntrill_data %&gt;% one_way_ANOVA(continuous = trills, \n                             grouping = performer)\n\nOne-Way ANOVA: \nH₀: μ_Crustaceans = μ_Fish Chorus = μ_Mermaids\nH₁: At least one group mean is different\nTest Statistic: F(2, 177) = 116.073\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\nF_0 = OR \\chi_0^2=, p =\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; \\alpha =\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 (p \\text{ vs } \\alpha \\to). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).\n\n\n6. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the \\alpha=0.05 level. Assume that this is an exploratory study; do not adjust for \\alpha.\n\ntrill_data %&gt;% posthoc_fisher(continuous = trills, \n                              grouping = performer)\n\n\n  \n\n\n\nPairwise differences: - List - Them - Here\n7. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the \\alpha=0.05 level. Assume that this is a confirmatory study; adjust for \\alpha.\n\ntrill_data %&gt;% posthoc_tukey(continuous = trills, \n                             grouping = performer)\n\n\n  \n\n\n\nPairwise differences: - List - Them - Here"
+  },
+  {
+    "objectID": "files/practice/key/06-17-summary-practice-KEY.html",
+    "href": "files/practice/key/06-17-summary-practice-KEY.html",
+    "title": "Practice: Point Estimation & Data Visualization",
+    "section": "",
+    "text": "Let’s use mean_median() to summarize the continuous variables in the MLP dataset.\n\nmlp_data %&gt;% \n  mean_median(friendship, tail_shimmer, magical_energy)\n\n# A tibble: 3 × 3\n  variable       mean_sd      median_iqr   \n  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;        \n1 friendship     7.6 (1.6)    8.0 (2.0)    \n2 magical_energy 9.9 (9.6)    7.0 (11.1)   \n3 tail_shimmer   256.6 (65.7) 253.0 (103.0)\n\n\nLet’s use mean_median() to summarize the continuous variables in the MLP dataset by pony type.\n\nmlp_data %&gt;% \n  group_by(type) %&gt;%\n  mean_median(friendship, tail_shimmer, magical_energy)\n\n# A tibble: 12 × 4\n   type    variable       mean_sd      median_iqr   \n   &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;        \n 1 Alicorn friendship     7.8 (1.3)    8.0 (2.0)    \n 2 Earth   friendship     7.6 (1.6)    8.0 (2.0)    \n 3 Pegasus friendship     7.6 (1.6)    8.0 (2.0)    \n 4 Unicorn friendship     7.5 (1.6)    8.0 (2.0)    \n 5 Alicorn magical_energy 9.0 (8.0)    6.2 (10.9)   \n 6 Earth   magical_energy NaN (NA)     NA (NA)      \n 7 Pegasus magical_energy NaN (NA)     NA (NA)      \n 8 Unicorn magical_energy 9.9 (9.6)    7.0 (11.1)   \n 9 Alicorn tail_shimmer   280.1 (64.5) 297.0 (104.0)\n10 Earth   tail_shimmer   252.2 (65.2) 246.0 (100.0)\n11 Pegasus tail_shimmer   263.5 (67.0) 265.0 (110.0)\n12 Unicorn tail_shimmer   261.2 (65.0) 260.0 (100.0)"
+  },
+  {
+    "objectID": "files/practice/key/06-17-summary-practice-KEY.html#summaries-continuous-variables",
+    "href": "files/practice/key/06-17-summary-practice-KEY.html#summaries-continuous-variables",
+    "title": "Practice: Point Estimation & Data Visualization",
+    "section": "",
+    "text": "Let’s use mean_median() to summarize the continuous variables in the MLP dataset.\n\nmlp_data %&gt;% \n  mean_median(friendship, tail_shimmer, magical_energy)\n\n# A tibble: 3 × 3\n  variable       mean_sd      median_iqr   \n  &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;        \n1 friendship     7.6 (1.6)    8.0 (2.0)    \n2 magical_energy 9.9 (9.6)    7.0 (11.1)   \n3 tail_shimmer   256.6 (65.7) 253.0 (103.0)\n\n\nLet’s use mean_median() to summarize the continuous variables in the MLP dataset by pony type.\n\nmlp_data %&gt;% \n  group_by(type) %&gt;%\n  mean_median(friendship, tail_shimmer, magical_energy)\n\n# A tibble: 12 × 4\n   type    variable       mean_sd      median_iqr   \n   &lt;chr&gt;   &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;        \n 1 Alicorn friendship     7.8 (1.3)    8.0 (2.0)    \n 2 Earth   friendship     7.6 (1.6)    8.0 (2.0)    \n 3 Pegasus friendship     7.6 (1.6)    8.0 (2.0)    \n 4 Unicorn friendship     7.5 (1.6)    8.0 (2.0)    \n 5 Alicorn magical_energy 9.0 (8.0)    6.2 (10.9)   \n 6 Earth   magical_energy NaN (NA)     NA (NA)      \n 7 Pegasus magical_energy NaN (NA)     NA (NA)      \n 8 Unicorn magical_energy 9.9 (9.6)    7.0 (11.1)   \n 9 Alicorn tail_shimmer   280.1 (64.5) 297.0 (104.0)\n10 Earth   tail_shimmer   252.2 (65.2) 246.0 (100.0)\n11 Pegasus tail_shimmer   263.5 (67.0) 265.0 (110.0)\n12 Unicorn tail_shimmer   261.2 (65.0) 260.0 (100.0)"
+  },
+  {
+    "objectID": "files/practice/key/06-17-summary-practice-KEY.html#summaries-categorical-variables",
+    "href": "files/practice/key/06-17-summary-practice-KEY.html#summaries-categorical-variables",
+    "title": "Practice: Point Estimation & Data Visualization",
+    "section": "Summaries: Categorical Variables",
+    "text": "Summaries: Categorical Variables\nLet’s use n_pct() to summarize the types of ponies in the dataset.\n\nmlp_data %&gt;% \n  n_pct(type, rows = 4)\n\n    type      n (pct)\n Alicorn    41 (1.4%)\n   Earth 1678 (58.4%)\n Pegasus  487 (17.0%)\n Unicorn  665 (23.2%)\n\n\nLet’s use n_pct() to describe friendship index by type.\n\nmlp_data %&gt;% \n  n_pct(friendship, type, rows = 4)\n\n# A tibble: 4 × 5\n  friendship Alicorn  Earth     Pegasus   Unicorn  \n       &lt;dbl&gt; &lt;chr&gt;    &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;    \n1          1 0 (0.0%) 0 (0.0%)  0 (0.0%)  1 (0.2%) \n2          2 0 (0.0%) 5 (0.3%)  1 (0.2%)  1 (0.2%) \n3          3 0 (0.0%) 14 (0.8%) 6 (1.2%)  13 (2.0%)\n4          4 2 (4.9%) 54 (3.2%) 14 (2.9%) 16 (2.4%)"
+  },
+  {
+    "objectID": "files/practice/key/06-17-summary-practice-KEY.html#graphs-box-plots",
+    "href": "files/practice/key/06-17-summary-practice-KEY.html#graphs-box-plots",
+    "title": "Practice: Point Estimation & Data Visualization",
+    "section": "Graphs: Box Plots",
+    "text": "Graphs: Box Plots\nConstruct a box plot for the tail shimmer of the ponies (tail_shimmer).\n\n\nmlp_data %&gt;% ggplot(aes(x = tail_shimmer)) +\n  geom_boxplot() +\n  labs(x = \"Tail Shimmer\") +\n  theme_bw() +\n  theme(axis.ticks.y = element_blank(),\n        axis.text.y = element_blank())"
+  },
+  {
+    "objectID": "files/practice/key/06-17-summary-practice-KEY.html#graphs-histograms",
+    "href": "files/practice/key/06-17-summary-practice-KEY.html#graphs-histograms",
+    "title": "Practice: Point Estimation & Data Visualization",
+    "section": "Graphs: Histograms",
+    "text": "Graphs: Histograms\nConstruct a histogram for the flying speed of ponies (flying_speed).\n\n\nmlp_data %&gt;% ggplot(aes(x = flying_speed)) +\n  geom_histogram(bins = 15, \n                 color = \"#2E7D32\", \n                 fill = \"#4CAF50\") +\n  labs(x = \"Flying Speed\", \n       y = \"Number of Ponies\") +\n  theme_bw() \n\n\n\n\n\n\n\n\n\nConstruct a histogram for the magical energy of ponies (magical_energy).\n\n\nmlp_data %&gt;% ggplot(aes(x = magical_energy)) +\n  geom_histogram(bins = 15, \n                 color = \"#8B6C42\", \n                 fill = \"#F0E9DD\") +\n  labs(x = \"Magical Energy\",\n       y = \"Number of Ponies\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "files/practice/key/06-17-summary-practice-KEY.html#graphs-bar-graphs",
+    "href": "files/practice/key/06-17-summary-practice-KEY.html#graphs-bar-graphs",
+    "title": "Practice: Point Estimation & Data Visualization",
+    "section": "Graphs: Bar Graphs",
+    "text": "Graphs: Bar Graphs\nConstruct a bar graph for the combined age and sex of ponies.\n\n\nmlp_data %&gt;%\n  count(sex) %&gt;%\n  ggplot(aes(x = sex, y = n)) +\n  geom_col() +\n  labs(x = \"Age and Sex of Pony\",\n       y = \"Number of Ponies\")+\n  theme_bw()\n\n\n\n\n\n\n\n\n\nConstruct a bar graph for the type of pony.\n\n\nmlp_data %&gt;%\n  count(type) %&gt;%\n  ggplot(aes(x = type, y = n)) +\n  geom_col() +\n  labs(x = \"Type of Pony\",\n       y = \"Number of Ponies\")+\n  theme_bw()"
+  },
+  {
+    "objectID": "files/practice/key/06-17-summary-practice-KEY.html#graphs-scatterplots",
+    "href": "files/practice/key/06-17-summary-practice-KEY.html#graphs-scatterplots",
+    "title": "Practice: Point Estimation & Data Visualization",
+    "section": "Graphs: Scatterplots",
+    "text": "Graphs: Scatterplots\nConstruct a scatterplot with magical energy (magical_energy) on the x-axis and tail shimmer (tail_shimmer) on the y-axis.\n\n\nmlp_data %&gt;% ggplot(aes(y = tail_shimmer, x = magical_energy)) +\n  geom_point(size = 2) +\n  labs(x = \"Magical Energy\",\n       y = \"Tail Shimmer\") +\n  theme_bw()\n\n\n\n\n\n\n\n\n\nConstruct a scatterplot with magical energy (magical_energy) on the x-axis and flying speed (flying_speed) on the y-axis.\n\n\nmlp_data %&gt;% ggplot(aes(x = flying_speed, y = tail_shimmer)) +\n  geom_point(size = 2) +\n  labs(y = \"Tail Shimmer\",\n       x = \"Flying Speed (km/h)\") +\n  theme_bw()"
+  },
+  {
+    "objectID": "files/practice/07-22-practice.html",
+    "href": "files/practice/07-22-practice.html",
+    "title": "Practice: 07/22/2025",
+    "section": "",
+    "text": "# use this code chunk to call in all packages the document will need\nlibrary(tidyverse)\nlibrary(ssstats)\n\nTiny Tina, the explosive-loving Bunker Master, is hosting her first-ever Wonderlands Bake-Off. Contestants from across the realm, including goblins, skeletons, and glitter-loving orcs, are competing to craft the most delicious, magical baked treats.\nEach contestant submits one dessert for judging. The judging panel includes:\n\nTiny Tina, who values flair and sugar explosions,\nButt Stallion, who insists on elegance and frosting symmetry, and\nPaladin Mike, who wants practical rations that still taste divine.\n\nYou, as the official Fateweaver Statistician, are tasked with determining what factors predict the panel’s overall satisfaction rating.\nEach contestant records the following: - glitter_level: How much edible glitter was used (grams) - boom_factor: A subjective rating (1–10) of how explosive the dessert was - frosting_thickness: Thickness of frosting layer (mm) - overall_satisfaction: Combined score from all three judges (0–100 scale)\n1. Let’s first summarize the data. Please use the appropriate mean_median() function to summarize the continuous variables in the dataset.\n2a. Create a scatterplot with overall satisfaction (overall_satisfaction) on the y-axis and glitter level (glitter_level) on the x-axis.\n2b. Create a scatterplot with overall satisfaction (overall_satisfaction) on the y-axis and boom factor (boom_factor) on the x-axis.\n2c. Create a scatterplot with overall satisfaction (overall_satisfaction) on the y-axis and frosting thickness (frosting_thickness) on the x-axis.\n3a. Find the pairwise Pearson’s correlation values.\n3b. Find the pairwise Spearman’s correlation values.\n3c. Which correlation should we report? Check the appropriate assumptions, then decide.\n3d. Using the results from the method chosen in Q3c, which variables are significantly correlated with overall satisfaction (overall_satisfaction)? Test at the \\alpha=0.05 level. You do not need to typeset your individual results, but please back up your statements statistically (using results generated).\n3e. Are any results surprising given the graphs found in Q2 and the correlations reported in Q3d?\nReplace with your answer.\n4. Construct a regression model that models overall satisfaction (overall_satisfaction) as a function of glitter level (glitter_level), boom factor (boom_factor), and frosting thickness (frosting_thickness). Remember to state your resulting regression model.\n\n\n\\hat{y} = \\hat{\\beta}_0 + \\hat{\\beta}_1 x_1 +\\ ...\n4. Is this a significant regression line? Test at the \\alpha=0.05 level. Remember to typeset your results.\nInsert your typesetting here.\n5. Which, if any, are signficant predictors of overall satisfaction (overall_satisfaction)? Test at the \\alpha=0.05 level. You do not need to formally write the hypothesis tests, but please provide a statement for each predictor, backed up statistically (using results generated).\n6a. Please provide a formal interpretation for glitter level (glitter_level).\nReplace with your answer.\n6b. Please provide a formal interpretation for boom factor (boom_factor).\nReplace with your answer.\n6c. Please provide a formal interpretation for frosting thickness (frosting_thickness).\nReplace with your answer.\n7. Please write a brief summary paragraph for Tiny Tina. Include information about your summary statistics, slope interpretations (you can be more general here – remember that she is 13 and not a statistician/data scientist), and test results (frame this as what matters most according to the model we constructed).\nReplace with your answer."
+  },
+  {
+    "objectID": "files/practice/06-24-inference-practice.html",
+    "href": "files/practice/06-24-inference-practice.html",
+    "title": "Practice: 06/24/2025",
+    "section": "",
+    "text": "Let’s find a 95% confidence interval for wing-flap rates.\n\n\nThe 95% CI for \\mu is (lower_bound, upper_bound).\n\n\nPerform the appropriate hypothesis test to determine if the wing-flap rate has changed. Test at the \\alpha=0.10 level.\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\n$t_0 = $, $p = $\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; $= $\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 ($p $). There is or is not sufficient evidence to suggest the alternative hypothesis in words (not math)."
+  },
+  {
+    "objectID": "files/practice/06-24-inference-practice.html#one-sample-mean",
+    "href": "files/practice/06-24-inference-practice.html#one-sample-mean",
+    "title": "Practice: 06/24/2025",
+    "section": "",
+    "text": "Let’s find a 95% confidence interval for wing-flap rates.\n\n\nThe 95% CI for \\mu is (lower_bound, upper_bound).\n\n\nPerform the appropriate hypothesis test to determine if the wing-flap rate has changed. Test at the \\alpha=0.10 level.\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\n$t_0 = $, $p = $\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; $= $\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 ($p $). There is or is not sufficient evidence to suggest the alternative hypothesis in words (not math)."
+  },
+  {
+    "objectID": "files/practice/06-24-inference-practice.html#two-independent-means",
+    "href": "files/practice/06-24-inference-practice.html#two-independent-means",
+    "title": "Practice: 06/24/2025",
+    "section": "Two Independent Means",
+    "text": "Two Independent Means\n\nUse the wing-flap data to estimate the difference in apple consumption (apples) betwen those that are above or below the target rate (target). Estimate using a 95% confidence interval.\n\n\nThus, the 95% CI for \\mu_{\\text{above}} - \\mu_{\\text{below}} is (lower_bound, upper_bound).\n\n\nPerform the appropriate hypothesis test to determine if the above target pegasi are eating 5 or more apples than the below target pegasi. Test at the \\alpha=0.05 level.\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\n$t_0 = $, $p = $\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; $= $\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 ($p $). There is or is not sufficient evidence to suggest the alternative hypothesis in words (not math)."
+  },
+  {
+    "objectID": "files/practice/06-24-inference-practice.html#two-dependent-means",
+    "href": "files/practice/06-24-inference-practice.html#two-dependent-means",
+    "title": "Practice: 06/24/2025",
+    "section": "Two Dependent Means",
+    "text": "Two Dependent Means\n\nWe now want to find the 99% CI for the average improvement in wing-flap rate.\n\nHint: improvement can be measured with post - pre.\nHint 2: post measurement: post_training_wfr, pre measurement: pre_training_wfr.\n\n\n\nThe 99% confidence interval for \\mu_d is (lower_bound, upper_bound).\n\n\nWhat happens if we flip the order of col1 and col2?\n\n\nThe 99% confidence interval for \\mu_d is (lower_bound, upper_bound).\n\n\nPerform the appropriate hypothesis test to determine if there is a difference in wing-flap rate pre- and post-training. Test at the \\alpha=0.01 level.\n\n\nHypotheses:\n\nH_0: \\ \nH_1: \\ \n\nTest Statistic and p-Value\n\n$t_0 = $, $p = $\n\nRejection Region\n\nReject H_0 if p &lt; \\alpha; $= $\n\nConclusion and interpretation\n\nReject or Fail to reject H_0 ($p $). There is or is not sufficient evidence to suggest the alternative hypothesis in words (not math)."
+  },
+  {
+    "objectID": "files/get_help.html",
+    "href": "files/get_help.html",
+    "title": "Looking for help?",
+    "section": "",
+    "text": "How do I typeset a hypothesis test?\n\nHere is a basic template for typesetting hypothesis tests in Quarto: template.qmd\nRemember to update subscripts when you are editing existing code.\n\nDo you need help with your assignment?\n\nDouble check the slides for necessary code. Note that the headers of slides often match language used in the assignments.\nHave you googled the error message you saw?\nHave you asked your classmates (& Dr. Seals) on Discord? Truly, others have the same question, I promise! Do not be afraid to share a screenshot of your code and any corresponding output or error message.\n\nWhy did I lose points?\n\nPlease check the rubric; I try to give enough feedback for you to determine how to fix your assignment.\nIf clarification is still needed, please do not hesitate to come see me during office hours.\n\nIs there tutoring?\n\nNo, there is no University-provided tutoring.\nHowever, my research students are great resources. Please reach out to me if you are interested in hiring one of my students for tutoring."
+  }
+]
