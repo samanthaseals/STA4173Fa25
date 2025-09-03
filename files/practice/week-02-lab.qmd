@@ -1,0 +1,119 @@
+---
+title: "Practice: Week 2"
+author: "your name here"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  html:
+    self-contained: true
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+```{r}
+#| echo: false
+## DO NOT EDIT THIS CHUNK ##
+library(tidyverse)
+library(gsheet)
+library(ssstats)
+mlp_data <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1fgkPVXXmif9sXP1Gg7BEeRfKO3tayn1vvb2ep7eQqjs/edit?gid=0#gid=0")
+## DO NOT EDIT THIS CHUNK ##
+```
+
+## Summaries: Continuous Variables
+
+Let's use `mean_median()` to summarize the continuous variables in the MLP dataset.
+
+```{r}
+
+```
+
+Let's use `mean_median()` to summarize the continuous variables in the MLP dataset by pony type.
+
+```{r}
+
+```
+
+## Summaries: Categorical Variables
+
+Let's use `n_pct()` to summarize the types of ponies in the dataset.
+
+```{r}
+
+```
+
+Let's use `n_pct()` to describe friendship index by type.
+
+```{r}
+
+```
+
+## Graphs: Box Plots
+
+Construct a box plot for the tail shimmer of the ponies (*tail_shimmer*).
+
+<center>
+```{r}
+
+```
+</center>
+
+## Graphs: Histograms
+
+Construct a histogram for the flying speed of ponies (*flying_speed*).
+
+<center>
+```{r}
+
+```
+</center>
+
+
+Construct a histogram for the magical energy of ponies (*magical_energy*).
+
+<center>
+```{r}
+
+```
+
+## Graphs: Bar Graphs
+
+Construct a bar graph for the combined age and sex of ponies.
+
+<center>
+```{r}
+
+```
+</center>
+
+Construct a bar graph for the type of pony.
+
+<center>
+```{r}
+
+```
+
+## Graphs: Scatterplots
+
+Construct a scatterplot with magical energy (*magical_energy*) on the *x*-axis and tail shimmer (*tail_shimmer*) on the *y*-axis.
+
+<center>
+```{r}
+
+```
+</center>
+
+Construct a scatterplot with magical energy (*magical_energy*) on the *x*-axis and flying speed (*flying_speed*) on the *y*-axis.
+
+<center>
+```{r}
+
+```
+</center>

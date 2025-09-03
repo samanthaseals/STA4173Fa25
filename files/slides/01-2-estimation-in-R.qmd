@@ -1,0 +1,622 @@
+---
+title: "Introduction to R"
+execute:
+  echo: true
+  warning: false
+  message: false
+format: 
+  revealjs:
+    theme: default
+    css: mlp2.css
+    self-contained: true
+    slide-number: true
+    footer: "STA4173 - Biostatistics - Fall 2025"
+    width: 1600
+    height: 900
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+## Introduction to R
+
+-   In this course, we will review formulas, but we will use R for computational purposes.
+    -   Remember to refer to the lecture notes for specific code needed.
+    -   Code is also available on this course's [GitHub repository](http://github.com/samanthaseals/STA4173Fa25).
+    
+- You can install R and RStudio if you wish; both are free.
+    - [R](https://cran.rstudio.com/) from CRAN.
+    - [RStudio](https://posit.co/download/rstudio-desktop/) from Posit.
+
+- We also have access to the [Posit Workbench](https://rstudio.hmcse.uwf.edu/) ("the server") through HMCSE.
+
+- I know that this is probably the first time you are seeing R (or any sort of programming).
+    - That is why we have "R lab" time built in to our course. 
+    - Remember that I am not looking for perfection, but for competency. 
+    
+## Introduction to R
+
+- Please download today's activity from Canvas and [log into the server](https://rstudio.hmcse.uwf.edu/).
+    - Click on "New session"
+    - Click on "Create session"
+    
+- Upload today's activity to the server:
+    - In the bottom right pane, click on the white square with a golden up arrow
+    - Click on "Choose file"
+    - Navigate to the downloaded file
+    
+- Open today's activity on the server:
+    - In the bottom right pane, scroll to the bottom
+    - Click on the name of the .qmd file for today's activity
+
+## Introduction to R: .R scripts
+    
+- .R scripts:     
+    - Only allows code
+        - Can comment out code using pound sign
+    - Can run code line-by-line  
+    - Can run multiple lines of code at a time
+    - Results output to Console window pane (bottom left)
+    
+- I use .R scripts for my day-to-day analyses    
+
+## Introduction to R: .qmd file
+    
+- .qmd files:    
+    - Allow both text and code
+        - Can comment out text using html code: `<!-- comment here -->`
+        - Can comment out text in code chunk using pound sign: `# comment here`
+    - Uses "code chunks" to evaluate code
+        - Button: run all chunks before
+        - Button: run this chunk
+        - Ctrl+enter / cmd+return: line-by-line
+    - Rendering results in .html file  
+    
+- I use .qmd files to create sharable documents 
+    - Reproducible research forever and always
+
+## Introduction to R: Disclaimer!
+
+- My major disclaimer as a biostatistician: I am a statistician first, programmer second.
+    - My expertise is in statistics, not programming.
+    - I do not know everything about R.
+    - I do not claim to write the most efficient code.
+    - **Our goal is to correctly apply statistics to answer research questions using data.**
+        - R is a *tool* for us to apply statistics.
+    
+- My major disclaimer as a professor: yes, I know this is likely the first time you are seeing R or programming in general.
+    - We have "R lab" time built into the course.
+    - Code you need to answer required questions will <u>always</u> be provided in lecture.
+        - This means you must revisit lecture slides to find the code you need.
+    
+## Introduction to R: Dr. Seals's Expectations
+    
+- I expect students to *try their best*. This includes:
+    - referring back to lectures as needed.
+    - asking when you have a question.
+    - using the resources provided to *learn*.
+    
+- You must know how to answer questions using R.
+
+- You will not be expected to write code beyond what is shown in class.
+    - Note: Sometimes I include <u>bonus</u> questions...
+
+- When grading, I am looking for *competency*.
+    - What is the appropriate analysis for the question at hand?
+    - What are the assumptions of the analysis? Do we meet them?
+    - Are the correct conclusions drawn given the information provided?
+    
+## Functions in R: base R vs. packages
+
+- R functions are like baking recipes. They:
+    - Take input (ingredients, or data),
+    - Does something with it (follow recipe, or perform calculations),
+    - Gives back a result (baked good, or statistics).
+
+- Some functions in R are available as soon as you open RStudio (this is "base R").
+    - e.g., `mean()`, `sd()`
+
+- Other functions are *not* available and must be called in after you start RStudio (these are "packages").
+    - e.g., after I call in `library(tidyverse)`, I can use `summarize(mean(), sd())`
+    - We will always need `library(tidyverse)` because of `%>%` (pipe operator).
+
+## Functions in R: tidyverse
+
+- `library(tidyverse)` is a collection of R packages designed for data science.
+    - All packages share a common philosophy and are meant to work together.
+    - This is ideal for using the "same syntax" - I promise it's better than base R!
+
+- Core `library(tidyverse)` packages we will use:
+    - `library(readr)`: read in data files
+    - `library(dplyr)`: manipulate and summarize data
+    - `library(ggplot2)`: create data visualizations
+
+- If you are interested, there are resources:
+    - `library(tidyverse)` website: [https://www.tidyverse.org/](https://www.tidyverse.org/)
+    - <u>R for Data Science</u> (free textbook): [https://r4ds.hadley.nz/](https://r4ds.hadley.nz/)
+    
+## Functions in R: ssstats
+
+- `library(ssstats)` is the package I have developed for this course.
+    - I have made all of the R syntax consistent across functions.
+    - Everything is also `tidyverse` friendly (ready for `%>%`).
+    - Goal: focus on learning concepts.
+    
+- This is our second semester piloting the package.
+    - There are probably going to be bumps in the road.
+    - Let me know when you encounter issues and I will help you determine if it's user error or package error.
+    
+## Functions in R: Summarizing Continuous Data
+
+- We will use `mean_median()` from `library(ssstats)` to summarize continuous variables.
+    - It will return both the mean (standard deviation) and median (IQR).
+    
+```{r}
+#| echo: false
+library(tidyverse)
+library(ssstats)
+library(gsheet)
+library(DT)
+library(janitor)
+mlp_data <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1fgkPVXXmif9sXP1Gg7BEeRfKO3tayn1vvb2ep7eQqjs/edit?gid=0#gid=0")
+```
+
+```{r, mean_median() syntax}
+#| eval: false
+dataset_name %>% 
+  mean_median(var1, var2, ...)
+```
+
+- We can add `group_by()` from `library(tidyverse)` to split the summaries by categories.
+
+```{r mean_median() group_by()}
+#| eval: false
+dataset_name %>% 
+  group_by(grouping_var1, grouping_var2, ...) %>% 
+  mean_median(var1, var2, ...)
+```
+
+## Functions in R: Summarizing Continuous Data
+
+- Let's use `mean_median()` to summarize the MLP dataset.
+
+```{r}
+#| eval: false
+mlp_data %>% 
+  mean_median(friendship, tail_shimmer, magical_energy)
+```
+
+## Functions in R: Summarizing Continuous Data
+
+- Let's use `mean_median()` to summarize the MLP dataset.
+
+```{r}
+mlp_data %>% 
+  mean_median(friendship, tail_shimmer, magical_energy)
+```
+
+## Functions in R: Summarizing Continuous Data
+
+- Let's use `mean_median()` to summarize the MLP dataset by pony type.
+
+```{r}
+#| eval: false
+mlp_data %>% 
+  group_by(type) %>%
+  mean_median(friendship, tail_shimmer, magical_energy)
+```
+
+## Functions in R: Summarizing Continuous Data
+
+- Let's use `mean_median()` to summarize the MLP dataset by pony type.
+
+```{r}
+mlp_data %>% 
+  group_by(type) %>%
+  mean_median(friendship, tail_shimmer, magical_energy)
+```
+
+
+## Functions in R: Summarizing Categorical Data
+
+- We will use `n_pct()` from `library(ssstats)` to summarize categorical variables.
+
+- For one variable -- this returns $n_i \ (\%_i)$:
+
+```{r n_pct() one var syntax}
+#| eval: false
+dataset_name %>% 
+  n_pct(var1)
+```
+
+- For two variables -- this returns $n_{ij} \ (\%_{\text{col}})$:
+    
+```{r n_pct() two var syntax}
+#| eval: false
+dataset_name %>% 
+  n_pct(var1, var2) 
+```    
+
+## Functions in R: Summarizing Categorical Data
+
+- Let's use `n_pct()` to summarize the MLP dataset.
+
+```{r}
+#| eval: false
+mlp_data %>% 
+  n_pct(type, rows = 4)
+```
+
+## Functions in R: Summarizing Categorical Data
+
+- Let's use `n_pct()` to summarize the MLP dataset.
+
+```{r}
+mlp_data %>% 
+  n_pct(type, rows = 4)
+```
+
+
+## Functions in R: Summarizing Categorical Data
+
+- Let's use `n_pct()` to summarize the MLP dataset.
+
+```{r}
+#| eval: false
+mlp_data %>% 
+  n_pct(friendship, type, rows = 4)
+```
+
+## Functions in R: Summarizing Categorical Data
+
+- Let's use `n_pct()` to summarize the MLP dataset.
+
+```{r}
+mlp_data %>% 
+  n_pct(friendship, type, rows = 4)
+```
+
+## Graphs in R: Using `ggplot()`
+
+- We will construct data visualizations using `library(ggplot2)`, which loads in when we load `library(tidyverse)`.
+
+- This package allows us to create a layered visualization.
+    - `ggplot()` creates the base layer.
+    - `geom_X()` creates the individual pieces.
+        - `geom_point()` creates a scatterplot.
+        - `geom_line()` creates connected lines.
+        - `geom_bar()` creates a bar chart.
+        - `geom_histogram()` creates a histogram.
+
+## Graphs in R: Using `ggplot()`
+
+- We use `ggplot()` because it is *very* flexible - it allows us to customize every part of the graph.
+    - Note that customization is less important in this course, but incredibly important in real life.
+    
+- The [R Graphics Cookbook](https://r-graphics.org/) is a great place to get basic code for graphs.
+
+- Remember that I do not expect you to memorize code. **I** do not have the code memorized.
+    - Things I regularly ask Google for help with:
+        - How to suppress the legend.
+        - How to specify the tickmarks on the axis.
+        - How to change the font size.
+        
+## Graphs in R: The `ggplot()` Layer
+
+- Calling `ggplot()` creates the initial layer the graph lasagna.
+
+<center>
+```{r}
+mlp_data %>% ggplot()
+```
+</center>
+
+## Graphs in R: The `ggplot()` Layer
+
+- We specify the aesthetics through `aes()` in `ggplot()`.
+
+<center>
+```{r}
+mlp_data %>% ggplot(aes(x = tail_shimmer, y = flying_speed))
+```
+</center>
+
+## Graphs in R: Overriding Defaults
+
+- We can override plot defaults using additional layers.
+
+<center>
+```{r}
+#| eval: false
+mlp_data %>% 
+  ggplot(aes(x = tail_shimmer, y = flying_speed)) +
+  labs(x = "Tail Shimmer",
+       y = "Flying Speed") +
+  theme_bw()
+```
+</center>
+
+## Graphs in R: Overriding Defaults
+
+<center>
+```{r}
+mlp_data %>% 
+  ggplot(aes(x = tail_shimmer, y = flying_speed)) +
+  labs(x = "Tail Shimmer",
+       y = "Flying Speed") +
+  theme_bw()
+```
+</center>
+        
+
+
+## Graphs in R: Box Plots        
+
+- Construct a box plot for the tail shimmer of the ponies (*tail_shimmer*).
+
+<center>
+```{r}
+#| eval: false
+mlp_data %>% ggplot(aes(x = tail_shimmer)) +
+  geom_boxplot() +
+  labs(x = "Tail Shimmer") +
+  theme_bw() +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+```
+</center>
+
+## Graphs in R: Box Plots        
+
+- Construct a box plot for the tail shimmer of the ponies (*tail_shimmer*).
+
+<center>
+```{r}
+#| echo: false
+mlp_data %>% ggplot(aes(x = tail_shimmer)) +
+  geom_boxplot() +
+  labs(x = "Tail Shimmer") +
+  theme_bw() +
+  theme(axis.ticks.y = element_blank(),
+        axis.text.y = element_blank())
+```
+</center>
+
+## Graphs in R: Box Plots        
+
+- Construct a box plot for the tail shimmer of the ponies (*tail_shimmer*).
+
+<center>
+```{r}
+#| eval: false
+mlp_data %>% ggplot(aes(y = tail_shimmer)) +
+  geom_boxplot() +
+  labs(y = "Tail Shimmer") +
+  theme_bw() +
+  theme(axis.ticks.x = element_blank(),
+        axis.text.x = element_blank())
+```
+</center>
+
+## Graphs in R: Box Plots        
+
+- Construct a box plot for the tail shimmer of the ponies (*tail_shimmer*).
+
+<center>
+```{r}
+#| echo: false
+mlp_data %>% ggplot(aes(y = tail_shimmer)) +
+  geom_boxplot() +
+  labs(y = "Tail Shimmer") +
+  theme_bw() +
+  theme(axis.ticks.x = element_blank(),
+        axis.text.x = element_blank())
+```
+</center>
+
+## Graphs in R: Histograms
+
+- Construct a histogram for the flying speed of ponies (*flying_speed*).
+
+<center>
+```{r}
+#| eval: false
+mlp_data %>% ggplot(aes(x = flying_speed)) +
+  geom_histogram(bins = 15, 
+                 color = "#2E7D32", 
+                 fill = "#4CAF50") +
+  labs(x = "Flying Speed", 
+       y = "Number of Ponies") +
+  theme_bw() 
+```
+
+## Graphs in R: Histograms
+
+- Describe the histogram of the flying speed of ponies (*flying_speed*):
+
+<center>
+```{r}
+#| echo: false
+mlp_data %>% ggplot(aes(x = flying_speed)) +
+  geom_histogram(bins = 15, 
+                 color = "#2E7D32", 
+                 fill = "#4CAF50") +
+  labs(x = "Flying Speed", 
+       y = "Number of Ponies") +
+  theme_bw() 
+```
+
+## Graphs in R: Histograms
+
+- Construct a histogram for the magical energy of ponies (*magical_energy*).
+
+<center>
+```{r}
+#| eval: false
+mlp_data %>% ggplot(aes(x = magical_energy)) +
+  geom_histogram(bins = 15, 
+                 color = "#8B6C42", 
+                 fill = "#F0E9DD") +
+  labs(x = "Magical Energy",
+       y = "Number of Ponies") +
+  theme_bw() 
+```
+
+## Graphs in R: Histograms
+
+- Describe the histogram of the magical energy of ponies (*magical_energy*):
+
+<center>
+```{r}
+#| echo: false
+mlp_data %>% ggplot(aes(x = magical_energy)) +
+  geom_histogram(bins = 15, 
+                 color = "#8B6C42", 
+                 fill = "#F0E9DD") +
+  labs(x = "Magical Energy",
+       y = "Number of Ponies") +
+  theme_bw() 
+```
+
+
+## Graphs in R: Bar Graphs
+
+- Construct a bar graph for the combined age and sex of ponies.
+
+<center>
+```{r}
+#| eval: false
+mlp_data %>%
+  count(sex) %>%
+  ggplot(aes(x = sex, y = n)) +
+  geom_col() +
+  labs(x = "Age and Sex of Pony",
+       y = "Number of Ponies")+
+  theme_bw()
+```
+</center>
+
+## Graphs in R: Bar Graphs
+
+- Construct a bar graph for the combined age and sex of ponies.
+
+<center>
+```{r}
+#| echo: false
+mlp_data %>%
+  count(sex) %>%
+  ggplot(aes(x = sex, y = n)) +
+  geom_col() +
+  labs(x = "Age and Sex of Pony",
+       y = "Number of Ponies")+
+  theme_bw()
+```
+</center>
+
+## Graphs in R: Bar Graphs
+
+- Construct a bar graph for the type of pony.
+
+<center>
+```{r}
+#| eval: false
+mlp_data %>%
+  count(type) %>%
+  ggplot(aes(x = type, y = n)) +
+  geom_col() +
+  labs(x = "Type of Pony",
+       y = "Number of Ponies")+
+  theme_bw()
+```
+
+## Graphs in R: Bar Graphs
+
+- Construct a bar graph for the type of pony.
+
+<center>
+```{r}
+#| echo: false
+mlp_data %>%
+  count(type) %>%
+  ggplot(aes(x = type, y = n)) +
+  geom_col() +
+  labs(x = "Type of Pony",
+       y = "Number of Ponies")+
+  theme_bw()
+```
+</center>
+
+## Graphs in R: Scatterplots
+
+- Construct a scatterplot with magical energy (*magical_energy*) on the *x*-axis and tail shimmer (*tail_shimmer*) on the *y*-axis.
+
+<center>
+```{r}
+#| eval: false
+mlp_data %>% ggplot(aes(y = tail_shimmer, x = magical_energy)) +
+  geom_point(size = 2) +
+  labs(x = "Magical Energy",
+       y = "Tail Shimmer") +
+  theme_bw()
+```
+</center>
+
+## Graphs in R: Scatterplots
+
+- Construct a scatterplot with magical energy (*magical_energy*) on the *x*-axis and tail shimmer (*tail_shimmer*) on the *y*-axis.
+
+<center>
+```{r}
+#| echo: false
+mlp_data %>% ggplot(aes(y = tail_shimmer, x = magical_energy)) +
+  geom_point(size = 2) +
+  labs(x = "Magical Energy",
+       y = "Tail Shimmer") +
+  theme_bw()
+```
+</center>
+
+## Graphs in R: Scatterplots
+
+- Construct a scatterplot with magical energy (*magical_energy*) on the *x*-axis and flying speed (*flying_speed*) on the *y*-axis.
+
+<center>
+```{r}
+#| eval: false
+mlp_data %>% ggplot(aes(x = magical_energy, y = flying_speed)) +
+  geom_point(size = 2) +
+  labs(y = "Tail Shimmer",
+       x = "Flying Speed (km/h)") +
+  theme_bw()
+```
+</center>
+
+## Graphs in R: Scatterplots
+
+- Construct a scatterplot with magical energy (*magical_energy*) on the *x*-axis and flying speed (*flying_speed*) on the *y*-axis.
+
+<center>
+```{r}
+#| echo: false
+mlp_data %>% ggplot(aes(x = magical_energy, y = flying_speed)) +
+  geom_point(size = 2) +
+  labs(y = "Tail Shimmer",
+       x = "Flying Speed (km/h)") +
+  theme_bw()
+```
+</center>
+
+## Wrap Up
+
+- Always remember that I do not expect you to:
+    - Memorize code.
+    - Produce code in a timed environment.
+    - Automatically know how to do these things.
+- I do expect you to:
+    - Use your resources (lecture slides, GitHub website, Discord).
+    - Try your best.
+
+    
