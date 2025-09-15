@@ -1,0 +1,433 @@
+---
+title: "Two-Sample Medians"
+execute:
+  echo: true
+  warning: false
+  message: false
+format: 
+  revealjs:
+    theme: default
+    css: mlp2.css
+    self-contained: true
+    slide-number: true
+    footer: "STA4173 - Biostatistics - Fall 2025"
+    width: 1600
+    height: 900
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+## Introduction: Topics
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+library(ssstats)
+set.seed(8651)
+wing_flap <- tibble(pony_names = c("Rainbow Dash", "Soarin", "Spitfire", "Cloudchaser", "Fleetfoot", "Lightning Dust", "Windy Whistles", "Stormy Skies", "Gusty Gale", "Zephyr Breeze", "Skydancer", "Aero Ace", "Nimbus Sprint", "Breeze Wing", "Flash Fly", "Twister Tail", "Sirensong", "Aero Wave", "Sky Dancer", "Gale Gust", "Storm Strider", "Cyclone Swift", "Wind Whirl", "Jet Stream", "Flurry Flap"),
+                    wing_flap_rate = round(rnorm(n = length(pony_names), mean = 50, sd = 8),1),
+                    target = dplyr::if_else(wing_flap_rate>=50, "Above", "Below"),
+                    apples = dplyr::if_else(target == "Above", round(rnorm(n = length(pony_names), mean = 25, sd = 2)), round(rnorm(n = length(pony_names), mean = 15, sd = 3))),
+                    pre_training_wfr = round(rnorm(n = length(pony_names), mean = 50, sd = 8),1),
+                    post_training_wfr =round(rnorm(n = length(pony_names), mean = 50, sd = 4),1))
+```
+
+- Last week, we talked about checking the assumptions on *t*-tests.
+    - If we break the variance assumption of the two-sample *t*-test $\to$ use the two-sample *t*-test for unequal variances.
+    - What happens when we break the *normality* assumption?
+    
+- Nonparametric alternatives
+    - Independent medians ($M_1-M_2$)
+    - Dependent medians ($M_d$)
+
+## Introduction: Nonparametrics
+
+- The *t*-tests we have already learned are considered *parametric* methods.
+
+    - There is a distributional assumption on the test.
+    
+- *Nonparametric* methods do not have distributional assumptions.
+
+    - We typically transform the data to their ranks and then perform calculations.
+
+- Why don't we always use nonparametric methods?
+
+    - They are often less efficient: a larger sample size is required to achieve the same probability of a Type I error.
+    
+    - They discard useful information :(
+    
+## Introduction: Two Independent Medians
+
+- The Wilcoxon Rank Sum test is a nonparametric alternative to the two-sample *t*-test.
+
+- Instead of comparing group means, we will now turn to comparing the ranks of the data.
+
+- Let us first consider a simple example, $x: \ 1, 7, 10, 2, 6, 8$
+
+- Our first step is to reorder the data: $x: \ 1, 2, 6, 7, 8, 10$
+
+- Then, we replace with the ranks: $R: \ 1, 2, 3, 4, 5, 6$
+
+## Two Independent Medians: Ranking Data
+
+- What if all data values are not unique? We will assign the <u>average</u> rank for that group.
+
+- For example, $$x: \ 9, 8, 8, 0, 3, 4, 4, 8$$
+
+- Let's reorder:$$x: \ 0, 3, 4, 4, 8, 8, 8, 9$$
+
+- Rank ignoring ties:$$R: \ 1, 2, 3, 4, 5, 6, 7, 8$$
+
+- Now, the final rank:$$R: \ 1, 2, 3.5, 3.5, 6, 6, 6, 8$$
+
+## Hypothesis Testing: Two Independent Medians
+
+- **Hypotheses: Two Tailed**
+    - $H_0: \ M_1-M_2 = M_0$
+    - $H_1: \ M_1-M_2 \ne M_0$
+    
+- **Hypotheses: Left Tailed**    
+    - $H_0: \ M_1-M_2 \ge M_0$
+    - $H_1: \ M_1-M_2 < M_0$
+    
+- **Hypotheses: Right Tailed**    
+    - $H_0: \ M_1-M_2 \le M_0$
+    - $H_1: \ M_1-M_2 > M_0$  
+    
+## Hypothesis Testing: Two Independent Medians
+
+$$
+T_0 = \sum R_{\text{1}} - \frac{n_1(n_1+1)}{2}
+$$
+
+- $T = \sum R_{\text{sample 1}} - \frac{n_1(n_1+1)}{2}$
+
+- where
+    - $\sum R_1$ is the sum of the ranks for the first group
+    - $n_1$ is the sample size of the first group 
+    
+- Note that $p =$ (calculated by R :))    
+
+## Hypothesis Testing: Two Independent Medians (R)
+
+- We will use the `independent_median_HT` function from `library(ssstats)` to perform the necessary calculations for the hypothesis test.
+
+- Generic syntax:
+
+```{r}
+#| eval: false
+dataset_name %>% independent_median_HT(continuous = continuous_variable,
+                                       grouping = grouping_variable,
+                                       alternative = "alternative_direction",
+                                       m = hypothesized difference,
+                                       alpha = specified_alpha)
+```
+
+## Hypothesis Testing: Two Independent Medians
+
+- Recall our example:
+    - Perform the appropriate hypothesis test to determine if the above target pegasi are eating 5 or more apples than the below target pegasi. Test at the $\alpha=0.05$ level.
+
+- How should we change the following code?
+
+```{r}
+#| eval: false
+dataset_name %>% independent_median_HT(continuous = continuous_variable,
+                                       grouping = grouping_variable,
+                                       alternative = "alternative_direction",
+                                       m = hypothesized_difference,
+                                       alpha = specified_alpha)
+```
+
+## Hypothesis Testing: Two Independent Medians
+
+- Recall our example:
+    - Perform the appropriate hypothesis test to determine if the above target pegasi are eating 5 or more apples than the below target pegasi. Test at the $\alpha=0.05$ level.
+
+- Our updated code,
+
+```{r}
+#| eval: false
+wing_flap %>% independent_median_HT(continuous = apples,
+                                    grouping = target,
+                                    alternative = "greater",
+                                    m = 5,
+                                    alpha = 0.05)
+```
+
+## Hypothesis Testing: Two Independent Medians
+
+- Running the code,
+
+```{r}
+wing_flap %>% independent_median_HT(continuous = apples,
+                                    grouping = target,
+                                    alternative = "greater",
+                                    m = 5,
+                                    alpha = 0.05)
+```
+
+## Hypothesis Testing: Two Independent Medians
+
+- **Hypotheses:**
+    - $H_0: \ M_{\text{above}} - M_{\text{below}} \le 5$
+    - $H_1: \ M_{\text{above}} - M_{\text{below}} > 5$
+
+- **Test Statistic and *p*-Value**
+    - $T_0 = 135.5$, $p < 0.001$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha = 0.05$
+    
+- **Conclusion and interpretation**
+    - Reject $H_0$ ($p \text{ vs } \alpha \to p < 0.001 < 0.05$). There is sufficient evidence to suggest that ponies above target eat 5 more apples than those below target.
+    
+## Two Independent Groups: Means vs. Medians
+
+- *t*-test for independent means:
+
+```{r}
+#| eval: false
+#| class: small-code
+wing_flap %>% independent_mean_HT(continuous = apples, 
+                                  grouping = target,
+                                  mu = 5, 
+                                  alternative = "greater", 
+                                  alpha = 0.05)
+```
+
+- Wilcoxon rank sum for independent medians:
+
+```{r}
+#| eval: false
+#| class: small-code
+wing_flap %>% independent_median_HT(continuous = apples,
+                                    grouping = target,
+                                    mu = 5,
+                                    alternative = "greater",
+                                    alpha = 0.05)
+```
+
+## Two Independent Groups: Means vs. Medians
+
+- *t*-test for independent means:
+
+```{r}
+#| echo: false
+#| class: small-code
+wing_flap %>% independent_mean_HT(continuous = apples, 
+                                  grouping = target,
+                                  mu = 5, 
+                                  alternative = "greater", 
+                                  alpha = 0.05)
+```
+
+- Wilcoxon rank sum for independent medians:
+
+```{r}
+#| echo: false
+#| class: small-code
+wing_flap %>% independent_median_HT(continuous = apples,
+                                    grouping = target,
+                                    m = 5,
+                                    alternative = "greater",
+                                    alpha = 0.05)
+```
+
+## Introduction: Two Dependent Medians
+
+- The Wilcoxon Signed Rank test is a nonparametric alternative to the dependent *t*-test.
+
+- Instead of examining the mean of the difference, we will now turn to examining the ranks of the differences.
+
+- Before ranking, we will find the difference between the paired observations and eliminate any 0 differences.
+
+    - Note 1: elimniating 0 differences is the big difference between the other tests! 
+    - Note 2: because we are eliminating 0 differences, this means that our sample size will update to the number of pairs with a non-0 difference.
+    
+## Two Dependent Medians: Ranking Data    
+    
+- When ranking, we the differences are ranked based on the absolute value of the difference.
+
+- Then, ranks can be identified as "positive" or "negative" based on the direction of the difference.
+
+| *X* | *Y* | *D* | \|*D*\| | Rank |
+|-----|-----|-----|---------|------|
+| 5   | 8   | -3  | 3       | $-$ 1.5 |
+| 8   | 5   | 3   | 3       | $+$ 1.5  |
+| 4   | 4   | 0   | 0       | ---------   |
+
+- In this (very basic) example, we started with $n=3$, but reduced to $n=2$ due to the 0 difference of the third observation.
+
+## Hypothesis Testing: Two Dependent Medians
+
+- **Hypotheses: Two Tailed**
+    - $H_0: \ M_d=M_0$
+    - $H_1: \ M_d \ne M_0$
+    
+- **Hypotheses: Left Tailed**    
+    - $H_0: \ M_d \ge M_0$
+    - $H_1: \ M_d < M_0$
+    
+- **Hypotheses: Right Tailed**    
+    - $H_0: \ M_d \le M_0$
+    - $H_1: \ M_d > M_0$  
+    
+- **Note!** $M_d = M_1 - M_2$  
+
+## Hypothesis Testing: Two Dependent Medians
+
+- **Test Statistic**
+
+$$
+T_0 =
+\begin{cases}
+  R_+ = \text{sum of positive ranks} & \text{if left-tailed} \\
+  R_- = \text{sum of negative ranks} & \text{if right-tailed} \\
+  \min(R_+, R_-) & \text{if two-tailed}
+\end{cases}
+$$
+
+- **$p$-Value** is calculated by R.
+
+## Hypothesis Testing: Two Dependent Medians (R)
+
+- We will use the `dependent_median_HT` function from `library(ssstats)` to perform the necessary calculations for the hypothesis test.
+
+- Generic syntax:
+
+```{r}
+#| eval: false
+dataset_name %>% dependent_median_HT(col1 = first_group,
+                                     col2 = second_group,
+                                     alternative = "alternative_direction",
+                                     m = hypothesized_value,
+                                     alpha = specified_alpha)
+```
+
+## Hypothesis Testing: Two Dependent Medians
+
+- Perform the appropriate hypothesis test to determine if there is a difference in wing-flap rate pre- and post-training. Test at the $\alpha=0.01$ level.
+
+- How should we change the following code?
+
+```{r}
+#| eval: false
+dataset_name %>% dependent_median_HT(col1 = first_group,
+                                     col2 = second_group,
+                                     alternative = "alternative_direction",
+                                     m = hypothesized_value,
+                                     alpha = specified_alpha)
+```
+
+## Hypothesis Testing: Two Dependent Medians
+
+- Perform the appropriate hypothesis test to determine if there is a difference in wing-flap rate pre- and post-training. Test at the $\alpha=0.01$ level.
+
+- Our updated code,
+
+```{r}
+#| eval: false
+wing_flap %>% dependent_median_HT(col1 = pre_training_wfr,
+                                  col2 = post_training_wfr,
+                                  alternative = "two",
+                                  m = 0,
+                                  alpha = 0.01)
+```
+
+## Hypothesis Testing: Two Dependent Medians
+
+- Running the code,
+
+```{r}
+wing_flap %>% dependent_median_HT(col1 = pre_training_wfr,
+                                  col2 = post_training_wfr,
+                                  alternative = "two",
+                                  m = 0,
+                                  alpha = 0.01)
+```
+
+## Hypothesis Testing: Two Dependent Medians
+
+- **Hypotheses:**
+    - $H_0: \ M_{\text{d}} = 0$, where $M_{\text{d}} = M_{\text{pre}}-M_{\text{post}}$
+    - $H_1: \ M_{\text{d}} \ne 0$
+
+- **Test Statistic and *p*-Value**
+    - $T_0 = 188$, $p = 0.501$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha = 0.01$
+    
+- **Conclusion and interpretation**
+    - Fail to reject $H_0$ ($p \text{ vs } \alpha \to p = 0.501 > 0.01$). There is not sufficient evidence to suggest that there is a difference in wing-flap rate.
+    
+## Two Dependent Groups: Means vs. Medians
+
+- *t*-test for dependent means:
+
+```{r}
+#| eval: false
+#| class: small-code
+wing_flap %>% dependent_mean_HT(col1 = pre_training_wfr,
+                                col2 = post_training_wfr,
+                                alternative = "two",
+                                m = 0,
+                                alpha = 0.01)
+```
+
+- Wilcoxon signed for dependent medians:
+
+```{r}
+#| eval: false
+#| class: small-code
+wing_flap %>% dependent_median_HT(col1 = pre_training_wfr,
+                                  col2 = post_training_wfr,
+                                  alternative = "two",
+                                  m = 0,
+                                  alpha = 0.01)
+```
+
+## Two Dependent Groups: Means vs. Medians
+
+- *t*-test for independent means:
+
+```{r}
+#| echo: false
+#| class: small-code
+wing_flap %>% independent_mean_HT(continuous = apples, 
+                                  grouping = target,
+                                  mu = 5, 
+                                  alternative = "greater", 
+                                  alpha = 0.05)
+```
+
+- Wilcoxon rank sum for independent medians:
+
+```{r}
+#| echo: false
+#| class: small-code
+wing_flap %>% independent_median_HT(continuous = apples,
+                                    grouping = target,
+                                    m = 5,
+                                    alternative = "greater",
+                                    alpha = 0.05)
+```
+    
+
+## Wrap Up        
+
+- Today's lecture:
+    - Wilcoxon rank sum (nonparametric equivalent to independent *t*)
+    - Wilcoxon signed rank (nonparametric equivalent to dependent *t*)
+    
+- Next class:   
+    - Review of Module 1
+        - Quiz for Module 1!
+    - Project 1 work time
+    
