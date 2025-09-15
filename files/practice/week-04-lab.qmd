@@ -1,0 +1,94 @@
+---
+title: "R Lab: Two Sample Means"
+author: "your name here"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  html:
+    df-print: paged
+    self-contained: true
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+```{r}
+#| echo: false
+# DO NOT EDIT THIS CHUNK
+library(tidyverse)
+library(ssstats)
+set.seed(8651)
+wing_flap <- tibble(pony_names = c("Rainbow Dash", "Soarin", "Spitfire", "Cloudchaser", "Fleetfoot", "Lightning Dust", "Windy Whistles", "Stormy Skies", "Gusty Gale", "Zephyr Breeze", "Skydancer", "Aero Ace", "Nimbus Sprint", "Breeze Wing", "Flash Fly", "Twister Tail", "Sirensong", "Aero Wave", "Sky Dancer", "Gale Gust", "Storm Strider", "Cyclone Swift", "Wind Whirl", "Jet Stream", "Flurry Flap"),
+                    wing_flap_rate = round(rnorm(n = length(pony_names), mean = 50, sd = 8),1),
+                    target = if_else(wing_flap_rate>=50, "Above", "Below"),
+                    apples = if_else(target == "Above", round(rnorm(n = length(pony_names), mean = 25, sd = 2)), round(rnorm(n = length(pony_names), mean = 15, sd = 3))),
+                    pre_training_wfr = round(rnorm(n = length(pony_names), mean = 50, sd = 8),1),
+                    post_training_wfr =round(rnorm(n = length(pony_names), mean = 50, sd = 4),1))
+# DO NOT EDIT THIS CHUNK
+```
+
+## Two Independent Means
+
+1. Use the wing-flap data to estimate the difference in apple consumption (*apples*) betwen those that are above or below the target rate (*target*). Estimate using a 95% confidence interval.
+
+```{r}
+
+```
+
+- Thus, the 95% CI for $\mu_{\text{above}} - \mu_{\text{below}}$ is (lower_bound, upper_bound).
+
+
+2. Perform the appropriate hypothesis test to determine if the above target pegasi are eating 5 or more apples than the below target pegasi. Test at the $\alpha=0.05$ level.
+
+```{r}
+
+```
+
+- **Hypotheses:**
+    - $H_0:$
+    - $H_1:$
+
+- **Test Statistic and *p*-Value**
+    - $t_0 =$, $p =$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha =$
+    
+- **Conclusion and interpretation**
+    - Reject or Fail to reject $H_0$ ($p \text{ vs } \alpha \to$). There is or is not sufficient evidence to suggest the alternative hypothesis in words (not math).
+
+## Two Dependent Means
+
+3. We now want to find the 99% CI for the average improvement in wing-flap rate.
+    - Hint: improvement can be measured with *post* - *pre*.
+    - Hint 2: post measurement: *post_training_wfr*, pre measurement: *pre_training_wfr*.
+
+```{r}
+
+```
+
+- The 99% confidence interval for $\mu_d$ is (lower_bound, upper_bound).
+
+4. Perform the appropriate hypothesis test to determine if there is a difference in wing-flap rate pre- and post-training. Test at the $\alpha=0.01$ level.
+
+```{r}
+
+```
+
+- **Hypotheses:**
+    - $H_0:$
+    - $H_1:$
+
+- **Test Statistic and *p*-Value**
+    - $t_0 =$, $p =$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha = $
+    
+- **Conclusion and interpretation**
+    - Reject or Fail to reject $H_0$ ($p \text{ vs } \alpha \to$). There is or is not sufficient evidence to suggest the alternative hypothesis in words (not math).
