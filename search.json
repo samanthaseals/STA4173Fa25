@@ -2692,7 +2692,7 @@
     "href": "files/slides/05-1-two-sample-medians.html#two-independent-groups-means-vs.-medians",
     "title": "Two-Sample Medians",
     "section": "Two Independent Groups: Means vs. Medians",
-    "text": "Two Independent Groups: Means vs. Medians\n\nt-test for independent means:\n\n\nwing_flap %&gt;% independent_mean_HT(continuous = apples, \n                                  grouping = target,\n                                  mu = 5, \n                                  alternative = \"greater\", \n                                  alpha = 0.05)\n\n\nWilcoxon rank sum for independent medians:\n\n\nwing_flap %&gt;% independent_median_HT(continuous = apples,\n                                    grouping = target,\n                                    mu = 5,\n                                    alternative = \"greater\",\n                                    alpha = 0.05)"
+    "text": "Two Independent Groups: Means vs. Medians\n\nt-test for independent means:\n\n\nwing_flap %&gt;% independent_mean_HT(continuous = apples, \n                                  grouping = target,\n                                  mu = 5, \n                                  alternative = \"greater\", \n                                  alpha = 0.05)\n\n\nWilcoxon rank sum for independent medians:\n\n\nwing_flap %&gt;% independent_median_HT(continuous = apples,\n                                    grouping = target,\n                                    m = 5,\n                                    alternative = \"greater\",\n                                    alpha = 0.05)"
   },
   {
     "objectID": "files/slides/05-1-two-sample-medians.html#two-independent-groups-means-vs.-medians-1",
@@ -2774,13 +2774,6 @@
   {
     "objectID": "files/slides/05-1-two-sample-medians.html#two-dependent-groups-means-vs.-medians-1",
     "href": "files/slides/05-1-two-sample-medians.html#two-dependent-groups-means-vs.-medians-1",
-    "title": "Two-Sample Medians",
-    "section": "Two Dependent Groups: Means vs. Medians",
-    "text": "Two Dependent Groups: Means vs. Medians"
-  },
-  {
-    "objectID": "files/slides/05-1-two-sample-medians.html#two-dependent-groups-means-vs.-medians-2",
-    "href": "files/slides/05-1-two-sample-medians.html#two-dependent-groups-means-vs.-medians-2",
     "title": "Two-Sample Medians",
     "section": "Two Dependent Groups: Means vs. Medians",
     "text": "Two Dependent Groups: Means vs. Medians\n\nt-test for dependent means:\n\n\n\nPaired t-test for the mean of differences:\nNull: H₀: μ_d = 0\nAlternative: H₁: μ_d ≠ 0\nTest statistic: t(24) = 0.859\np-value: p = 0.399\nConclusion: Fail to reject the null hypothesis (p = 0.3991 ≥ α = 0.01)\n\n\n\nWilcoxon signed for dependent medians:\n\n\n\nWilcoxon Signed-Rank Test for the median of differences:\nNull: H₀: M_d = 0\nAlternative: H₁: M_d ≠ 0\nTest statistic: T = 188\np-value: p = 0.501\nConclusion: Fail to reject the null hypothesis (p = 0.5011 ≥ α = 0.01)"
