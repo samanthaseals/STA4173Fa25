@@ -2636,7 +2636,7 @@
     "href": "files/slides/05-1-two-sample-medians.html#two-independent-medians-ranking-data",
     "title": "Two-Sample Medians",
     "section": "Two Independent Medians: Ranking Data",
-    "text": "Two Independent Medians: Ranking Data\n\nWhat if all data values are not unique? We will assign the average rank for that group.\nFor example, x: \\ 9, 8, 8, 0, 3, 4, 4, 8\nLet’s reorder:x: \\ 0, 3, 4, 4, 8, 8, 8, 9\nRank ignoring ties:R: \\ 1, 2, 3, 4, 5, 6, 7, 8\nNow, the final rank:R: \\ 1, 2, 3.5, 3.5, 6, 6, 6, 8"
+    "text": "Two Independent Medians: Ranking Data\n\nWhat if all data values are not unique? We will assign the average rank for that group.\nFor example, x: \\ 9, 8, 8, 0, 3, 4, 4, 8\nLet’s reorder: x: \\ 0, 3, 4, 4, 8, 8, 8, 9\nRank ignoring ties: R: \\ 1, 2, 3, 4, 5, 6, 7, 8\nNow, the final rank: R: \\ 1, 2, 3.5, 3.5, 6, 6, 6, 8"
   },
   {
     "objectID": "files/slides/05-1-two-sample-medians.html#hypothesis-testing-two-independent-medians",
@@ -2769,14 +2769,21 @@
     "href": "files/slides/05-1-two-sample-medians.html#two-dependent-groups-means-vs.-medians",
     "title": "Two-Sample Medians",
     "section": "Two Dependent Groups: Means vs. Medians",
-    "text": "Two Dependent Groups: Means vs. Medians\n\nt-test for dependent means:\n\n\nwing_flap %&gt;% dependent_mean_HT(col1 = pre_training_wfr,\n                                col2 = post_training_wfr,\n                                alternative = \"two\",\n                                m = 0,\n                                alpha = 0.01)\n\n\nWilcoxon signed for dependent medians:\n\n\nwing_flap %&gt;% dependent_median_HT(col1 = pre_training_wfr,\n                                  col2 = post_training_wfr,\n                                  alternative = \"two\",\n                                  m = 0,\n                                  alpha = 0.01)"
+    "text": "Two Dependent Groups: Means vs. Medians\n\nt-test for dependent means:\n\n\nwing_flap %&gt;% dependent_mean_HT(col1 = pre_training_wfr,\n                                col2 = post_training_wfr,\n                                alternative = \"two\",\n                                mu = 0,\n                                alpha = 0.01)\n\n\nWilcoxon signed for dependent medians:\n\n\nwing_flap %&gt;% dependent_median_HT(col1 = pre_training_wfr,\n                                  col2 = post_training_wfr,\n                                  alternative = \"two\",\n                                  m = 0,\n                                  alpha = 0.01)"
   },
   {
     "objectID": "files/slides/05-1-two-sample-medians.html#two-dependent-groups-means-vs.-medians-1",
     "href": "files/slides/05-1-two-sample-medians.html#two-dependent-groups-means-vs.-medians-1",
     "title": "Two-Sample Medians",
     "section": "Two Dependent Groups: Means vs. Medians",
-    "text": "Two Dependent Groups: Means vs. Medians\n\nt-test for independent means:\n\n\n\nTwo-sample t-test for two independent means and equal variance:\nNull: H₀: μ₁ − μ₂ ≤ 5\nAlternative: H₁: μ₁ − μ₂ &gt; 5\nTest statistic: t(23) = 5.445\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)\n\n\n\nWilcoxon rank sum for independent medians:\n\n\n\nWilcoxon Rank Sum Test for two independent medians\nNull: H₀: M₁ - M₂ ≤ 5\nAlternative: H₁: M₁ - M₂ &gt; 5\nTest statistic: T = 135.5\np-value: p &lt; 0.001\nConclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)"
+    "text": "Two Dependent Groups: Means vs. Medians"
+  },
+  {
+    "objectID": "files/slides/05-1-two-sample-medians.html#two-dependent-groups-means-vs.-medians-2",
+    "href": "files/slides/05-1-two-sample-medians.html#two-dependent-groups-means-vs.-medians-2",
+    "title": "Two-Sample Medians",
+    "section": "Two Dependent Groups: Means vs. Medians",
+    "text": "Two Dependent Groups: Means vs. Medians\n\nt-test for dependent means:\n\n\n\nPaired t-test for the mean of differences:\nNull: H₀: μ_d = 0\nAlternative: H₁: μ_d ≠ 0\nTest statistic: t(24) = 0.859\np-value: p = 0.399\nConclusion: Fail to reject the null hypothesis (p = 0.3991 ≥ α = 0.01)\n\n\n\nWilcoxon signed for dependent medians:\n\n\n\nWilcoxon Signed-Rank Test for the median of differences:\nNull: H₀: M_d = 0\nAlternative: H₁: M_d ≠ 0\nTest statistic: T = 188\np-value: p = 0.501\nConclusion: Fail to reject the null hypothesis (p = 0.5011 ≥ α = 0.01)"
   },
   {
     "objectID": "files/slides/05-1-two-sample-medians.html#wrap-up",
