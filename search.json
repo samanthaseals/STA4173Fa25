@@ -2636,7 +2636,7 @@
     "href": "files/slides/05-1-two-sample-medians.html#two-independent-medians-ranking-data",
     "title": "Two-Sample Medians",
     "section": "Two Independent Medians: Ranking Data",
-    "text": "Two Independent Medians: Ranking Data\n\nWhat if all data values are not unique? We will assign the average rank for that group.\nFor example, x: \\ 9, 8, 8, 0, 3, 4, 4, 8\nLet’s reorder: x: \\ 0, 3, 4, 4, 8, 8, 8, 9\nRank ignoring ties: R: \\ 1, 2, 3, 4, 5, 6, 7, 8\nNow, the final rank: R: \\ 1, 2, 3.5, 3.5, 6, 6, 6, 8"
+    "text": "Two Independent Medians: Ranking Data\n\nWhat if all data values are not unique? We will assign the average rank for that group.\nFor example, x: 9, 8, 8, 0, 3, 4, 4, 8\nLet’s reorder: x: 0, 3, 4, 4, 8, 8, 8, 9\nRank ignoring ties: R: 1, 2, 3, 4, 5, 6, 7, 8\nNow, the final rank: R: 1, 2, 3.5, 3.5, 6, 6, 6, 8"
   },
   {
     "objectID": "files/slides/05-1-two-sample-medians.html#hypothesis-testing-two-independent-medians",
