@@ -77,13 +77,13 @@ wing_flap <- tibble(pony_names = c("Rainbow Dash", "Soarin", "Spitfire", "Cloudc
 
 - What if all data values are not unique? We will assign the <u>average</u> rank for that group.
 
-- For example, $$x: \ 9, 8, 8, 0, 3, 4, 4, 8$$
+- For example, $x: 9, 8, 8, 0, 3, 4, 4, 8$
 
-- Let's reorder:$$x: \ 0, 3, 4, 4, 8, 8, 8, 9$$
+- Let's reorder: $x: 0, 3, 4, 4, 8, 8, 8, 9$
 
-- Rank ignoring ties:$$R: \ 1, 2, 3, 4, 5, 6, 7, 8$$
+- Rank ignoring ties: $R: 1, 2, 3, 4, 5, 6, 7, 8$
 
-- Now, the final rank:$$R: \ 1, 2, 3.5, 3.5, 6, 6, 6, 8$$
+- Now, the final rank: $R: 1, 2, 3.5, 3.5, 6, 6, 6, 8$
 
 ## Hypothesis Testing: Two Independent Medians
 
@@ -208,7 +208,7 @@ wing_flap %>% independent_mean_HT(continuous = apples,
 #| class: small-code
 wing_flap %>% independent_median_HT(continuous = apples,
                                     grouping = target,
-                                    mu = 5,
+                                    m = 5,
                                     alternative = "greater",
                                     alpha = 0.05)
 ```
@@ -377,7 +377,7 @@ wing_flap %>% dependent_median_HT(col1 = pre_training_wfr,
 wing_flap %>% dependent_mean_HT(col1 = pre_training_wfr,
                                 col2 = post_training_wfr,
                                 alternative = "two",
-                                m = 0,
+                                mu = 0,
                                 alpha = 0.01)
 ```
 
@@ -395,30 +395,27 @@ wing_flap %>% dependent_median_HT(col1 = pre_training_wfr,
 
 ## Two Dependent Groups: Means vs. Medians
 
-- *t*-test for independent means:
+- *t*-test for dependent means:
 
 ```{r}
 #| echo: false
-#| class: small-code
-wing_flap %>% independent_mean_HT(continuous = apples, 
-                                  grouping = target,
-                                  mu = 5, 
-                                  alternative = "greater", 
-                                  alpha = 0.05)
+wing_flap %>% dependent_mean_HT(col1 = pre_training_wfr,
+                                col2 = post_training_wfr,
+                                alternative = "two",
+                                mu = 0,
+                                alpha = 0.01)
 ```
 
-- Wilcoxon rank sum for independent medians:
+- Wilcoxon signed for dependent medians:
 
 ```{r}
 #| echo: false
-#| class: small-code
-wing_flap %>% independent_median_HT(continuous = apples,
-                                    grouping = target,
-                                    m = 5,
-                                    alternative = "greater",
-                                    alpha = 0.05)
+wing_flap %>% dependent_median_HT(col1 = pre_training_wfr,
+                                  col2 = post_training_wfr,
+                                  alternative = "two",
+                                  m = 0,
+                                  alpha = 0.01)
 ```
-    
 
 ## Wrap Up        
 
@@ -426,7 +423,11 @@ wing_flap %>% independent_median_HT(continuous = apples,
     - Wilcoxon rank sum (nonparametric equivalent to independent *t*)
     - Wilcoxon signed rank (nonparametric equivalent to dependent *t*)
     
-- Next class:   
+- Next class: 
+    - R lab: Wilcoxons
+    - Quiz: Wilcoxons
+  
+- Next week:    
     - Review of Module 1
         - Quiz for Module 1!
     - Project 1 work time

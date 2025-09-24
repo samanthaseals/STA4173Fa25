@@ -1,0 +1,104 @@
+---
+title: "R Lab: Two Sample Medians"
+author: "your name here"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  html:
+    df-print: paged
+    self-contained: true
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+```{r data - do not edit}
+#| echo: false
+# DO NOT EDIT THIS CHUNK #
+library(tidyverse)
+set.seed(1313)
+n <- 24
+scooby_fright <- tibble(id = 1:n) %>%
+  mutate(before = round(pmin(100, pmax(0, rnorm(n, mean = 70, sd = 8) + rlnorm(n, meanlog = log(12), sdlog = 0.3)))),
+         snack_calm = rexp(n, rate = 1/10),
+         noise = rnorm(n, mean = 0, sd = 2),
+         after_raw = before - snack_calm + noise,
+         after = round(pmin(100, pmax(0, after_raw)))) %>%
+  select(id, before, after)
+
+set.seed(673)
+baseline <- tibble(encounter = 1:(2 * n),
+                   base_fright = round(pmin(100,pmax(0, rnorm(2 * n, mean = 70, sd = 8) + rlnorm(2 * n, log(12), 0.3)))))
+assignments <- tibble(encounter = 1:(2 * n),
+                      snack = rep(c("Regular", "Deluxe"), each = n)) %>%
+  mutate(snack = factor(snack, levels = c("Regular", "Deluxe")))
+effects <- tibble(encounter = 1:(2 * n)) %>%
+  left_join(assignments, by = "encounter") %>%
+  mutate(calm_raw = case_when(snack == "Regular" ~ round(rexp(n(), rate = 1/8)),
+                              snack == "Deluxe"  ~ round(rexp(n(), rate = 1/12))),
+         noise = round(rnorm(n(), 0, 1.5)),
+         calming = round(pmax(0, calm_raw + noise)))
+scooby_calm <- baseline %>%
+  left_join(effects, by = "encounter") %>%
+  mutate(after = round(pmax(0, base_fright - calming))) %>%
+  select(encounter, snack, base_fright, after, calming)
+rm(assignments, baseline, effects, n)
+# DO NOT EDIT THIS CHUNK #
+```
+
+**Since the late 1960s, Scooby-Doo has been delighting audiences with a mix of spooky mysteries and goofy comedy. The show follows four friends (Fred, Daphne, Velma, and Shaggy) and their talking Great Dane, Scooby-Doo, as they drive around in the Mystery Machine solving ghostly cases. Each episode usually starts with a creepy setting and some sort of "monster," but by the end, the gang unmasks the villain to reveal it was just someone in disguise. Scooby and Shaggy are always the most scared, but with the promise of Scooby Snacks, they somehow find the courage to help crack the case.**
+
+```{r set up}
+# use this code chunk to call in all packages the document will need
+library(tidyverse)
+library(ssstats)
+```
+
+**1. One foggy night, the Mystery Machine crew arrived at another spooky mansion. Per usual, Scooby and Shaggy trembled with fear before they even made it through the front door. Velma, hoping to calm them down so they can actually help investigate, handed over a fresh stash of Scooby Snacks. The team decides to measure Shaggy and Scooby's fright levels (0–100) both before (*before*) and after (*after*) the snacks during a series of haunted room encounters. Sometimes the snacks help a little and sometimes they help a lot -- unfortunately, the data fail the normality check.**
+
+**Let's now use the appropriate hypothesis test to determine if Scooby Snacks reliably reduce fright, based on our sample from the latest spooky mansion (**<u>scooby_fright</u>**).**
+
+```{r}
+
+```
+
+- **Hypotheses:**
+    - $H_0: \ $
+    - $H_1: \ $
+
+- **Test Statistic and *p*-Value**
+    - $T_0 =$, $p =$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha =$
+    
+- **Conclusion and interpretation**
+    - Reject or Fail to reject $H_0$ ($p \text{ vs } \alpha \to$). <!-- make sure you insert your p-value & alpha after the \to :) --> There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).
+
+
+**2. After making it through the spooky mansion, Velma unveils two snack formulas for the next night's investigation: Regular Scooby Snacks and a new Deluxe Scooby Snacks recipe. To keep things fair, each haunted room encounter is randomly assigned one snack type (*snack*; Regular or Deluxe) and the team records a single outcome per encounter: the calming effect (*calming*; how many points the fright level drops during the encounter). Unfortunately, the calming effects do not appear to follow a normal distribution.**
+
+**Let's now use the appropriate hypothesis test to determine if the Deluxe snacks have an increased calming affect, based on our sample from the latest spooky mansion (**<u>scooby_calm</u>**).**
+
+```{r}
+
+```
+
+- **Hypotheses:**
+    - $H_0: \ $
+    - $H_1: \ $
+
+- **Test Statistic and *p*-Value**
+    - $T_0 =$, $p =$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha =$
+    
+- **Conclusion and interpretation**
+    - Reject or Fail to reject $H_0$ ($p \text{ vs } \alpha \to$). <!-- make sure you insert your p-value & alpha after the \to :) --> There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).
+    
