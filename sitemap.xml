@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/schedule.html</loc>
-    <lastmod>2025-09-24T17:16:08.882Z</lastmod>
+    <lastmod>2025-09-29T17:44:11.505Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/practice/week-02-lab.html</loc>
-    <lastmod>2025-09-03T14:01:57.185Z</lastmod>
+    <lastmod>2025-09-29T14:13:43.860Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/practice/week-04-lab.html</loc>
@@ -25,36 +25,52 @@
     <lastmod>2025-09-03T14:02:23.714Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/05-1-two-sample-medians.html</loc>
-    <lastmod>2025-09-22T20:35:42.559Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/06-2-one-way-ANOVA.html</loc>
-    <lastmod>2025-09-22T15:07:21.999Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/04-2-t-test-assumptions.html</loc>
-    <lastmod>2025-09-15T15:12:23.319Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/index.html</loc>
-    <lastmod>2025-09-15T15:15:08.962Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/hyp_test_template.html</loc>
-    <lastmod>2025-06-04T19:31:52.204Z</lastmod>
-  </url>
-  <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/07-1-Kruskal-Wallis.html</loc>
-    <lastmod>2025-09-22T15:08:19.636Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/03-2-two-sample-means.html</loc>
+    <lastmod>2025-09-15T15:06:03.567Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/13-1-categorical-analysis.html</loc>
     <lastmod>2025-09-18T19:41:50.698Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/03-2-two-sample-means.html</loc>
-    <lastmod>2025-09-15T15:06:03.567Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/07-1-Kruskal-Wallis.html</loc>
+    <lastmod>2025-09-22T15:08:19.636Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/hyp_test_template.html</loc>
+    <lastmod>2025-06-04T19:31:52.204Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/projects/project-1.html</loc>
+    <lastmod>2025-09-29T17:40:13.874Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/index.html</loc>
+    <lastmod>2025-09-15T15:15:08.962Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/projects/solutions/project-1-KEY.html</loc>
+    <lastmod>2025-09-29T14:09:44.708Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/projects/Untitled.html</loc>
+    <lastmod>2025-09-29T14:09:05.407Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/04-2-t-test-assumptions.html</loc>
+    <lastmod>2025-09-15T15:12:23.319Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/06-2-one-way-ANOVA.html</loc>
+    <lastmod>2025-09-22T15:07:21.999Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/05-1-two-sample-medians.html</loc>
+    <lastmod>2025-09-29T17:40:12.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/06-1-mod-1-review.html</loc>
+    <lastmod>2025-09-29T17:40:15.008Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/11-1-multiple-regression.html</loc>
@@ -66,11 +82,11 @@
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/syllabus.html</loc>
-    <lastmod>2025-08-25T03:27:19.950Z</lastmod>
+    <lastmod>2025-09-29T14:12:04.205Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/practice/week-05-lab.html</loc>
-    <lastmod>2025-09-24T17:14:15.944Z</lastmod>
+    <lastmod>2025-09-29T12:42:01.241Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/get_help.html</loc>
