@@ -1,0 +1,168 @@
+---
+title: "Project 1: Fall 2025"
+author: "your name here"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  html:
+    self-contained: true
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+<!-- DO NOT EDIT THE CHUNK BELOW -->
+```{r}
+#| echo: false
+library(tidyverse)
+library(ssstats)
+set.seed(42)
+n <- 50
+interview_data <- tibble(
+  suspect = 1:n,
+  before_evidence = rnorm(n, mean = 6, sd = 1),
+  after_evidence  = rnorm(n, mean = 7, sd = 1)
+) 
+n_09er <- 50
+n_non09er <- 50
+spending_data <- tibble(
+  group = rep(c("09er", "non09er"), times = c(n_09er, n_non09er)),
+  weekly_spending = c(
+    rlnorm(n_09er, meanlog = log(250), sdlog = 0.4),
+    rlnorm(n_non09er, meanlog = log(150), sdlog = 0.3)
+  )
+)
+rm(n, n_09er, n_non09er)
+```
+<!-- DO NOT EDIT THE CHUNK ABOVE -->
+
+
+**1. Life at Neptune High is defined by sharp social divides, and nowhere is this clearer than in the spending habits of the students. The wealthy 09er clique, with their luxury cars and designer clothes, are known for splurging at the Camelot Motel, Java the Hut, or on the latest tech gadgets. In contrast, the non-09ers tend to keep their weekly budgets modest, often spending just what they need on food, gas, or school supplies. Veronica Mars, ever curious about the patterns of her peers, decides to track weekly spending amounts (*weekly_spending*) for both groups (*group*) in the dataset <u>spending_data</u>.**
+
+**1a. Is this independent or dependent data? Explain your reasoning.**
+
+Replace with your answer :)
+
+**1b. Find the appropriate summary statistics for this dataset.**
+
+```{r}
+
+```
+
+<!-- hint: descriptives for independent data - first lab's slides;
+           descriptives for dependent data - lecture for two means -->
+           
+**1c. Find the 95% confidence interval for the average difference in spending between the two groups.**
+
+```{r}
+
+```
+
+Remember to state your resulting interval.
+
+**1d. Perform the appropriate *t*-test to determine if the 09ers spend at least $50 more than the non-09ers every week. Test at the $\alpha=0.05$ level.**
+
+```{r}
+
+```
+
+Remember to typeset your hypothesis test.
+
+**1e. Perform the appropriate nonparametric test to determine if the 09ers spend at least $50 more than the non-09ers every week. Test at the $\alpha=0.05$ level.**
+
+```{r}
+
+```
+
+Remember to typeset your hypothesis test.
+
+**1f. State the assumption(s) you need to check for the *t*-test.**
+
+Replace with your answer :)
+
+**1g. Generate the output used to check the assumption(s) that you listed in 1f.**
+
+```{r}
+
+```
+
+<!-- Note: you do not need to write anything for this answer -- the writing is
+           in the next question -->
+
+**1h. Which test should we report: the *t*-test or the corresponding Wilcoxon? Why? Your answer should incorporate results from 1g.**
+
+Replace with your answer :)
+
+**1i. Write a brief summary paragraph for this analysis. You should touch on information from the descriptives, the confidence interval, and the hypothesis test.**
+
+Replace with your answer :)
+
+
+
+
+
+**2. When Veronica is working a case, she often relies on her sharp instincts and quick thinking in interviews. Her dad, Keith, has noticed something about her detective style: once Veronica uncovers a key piece of evidence, her questioning seems to change. Before evidence, Veronica might ask broad, exploratory questions to feel out the suspect's story. After she has evidence in hand, however, her questions become more pointed, and suspects tend to stumble over their answers. To put this theory to the test, Veronica records a confidence rating (on a scale from 1 to 10) for each suspect she interviews. She asks each suspect to rate how confident they feel in their version of events before she presents evidence (*before_evidence*) and then again after she confronts them with that evidence (*after_evidence*); this data can be found in the <u>interview_data</u> dataset.**
+
+**2a. Is this independent or dependent data? Explain your reasoning.**
+
+Replace with your answer :)
+
+**2b. Find the appropriate summary statistics for this dataset.**
+
+```{r}
+
+```
+
+<!-- hint: descriptives for independent data - first lab's slides;
+           descriptives for dependent data - lecture for two means -->
+           
+**2c. Find the 95% confidence interval for the average difference in suspect confidence before and after recieving evidence.**
+
+```{r}
+
+```
+
+Remember to state your resulting interval.
+
+**2d. Perform the appropriate *t*-test to determine if suspect confidence changes after evidence. Test at the $\alpha=0.05$ level.**
+
+```{r}
+
+```
+
+Remember to typeset your hypothesis test.
+
+**2e. Perform the appropriate nonparametric test to determine if suspect confidence changes after evidence. Test at the $\alpha=0.05$ level.**
+
+```{r}
+
+```
+
+Remember to typeset your hypothesis test.
+
+**2f. State the assumption(s) you need to check for the *t*-test.**
+
+Replace with your answer :)
+
+**2g. Generate the output used to check the assumption(s) that you listed in 2f.**
+
+```{r}
+
+```
+
+<!-- Note: you do not need to write anything for this answer -- the writing is
+           in the next question -->
+
+**2h. Which test should we report: the *t*-test or the corresponding Wilcoxon? Why? Your answer should incorporate results from 2g.**
+
+Replace with your answer :)
+
+**2i. Write a brief summary paragraph for this analysis. You should touch on information from the descriptives, the confidence interval, and the hypothesis test.**
+
+Replace with your answer :)

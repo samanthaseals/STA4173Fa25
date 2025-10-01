@@ -1,0 +1,709 @@
+---
+title: "One-Way ANOVA"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  revealjs:
+    theme: default
+    css: mlp2.css
+    self-contained: true
+    slide-number: true
+    footer: "STA4173 - Biostatistics - Fall 2025"
+    width: 1600
+    height: 900
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+## Introduction: Topics
+
+- Previous: two groups, continuous outcome
+
+- Now: more than two groups, continuous outcome
+
+- One-way ANOVA
+    - posthoc testing
+    - assumptions
+
+- Kruskal-Wallis
+    - posthoc testing
+
+## Introduction: Analysis of Variance
+
+- We have previously discussed testing the difference between two groups.
+
+    - What about when there are three or more groups? 
+
+- We will use a method called **an**alysis **o**f **va**riance (ANOVA).
+
+    - This method partitions the variance of the outcome into variance due to the groups and variance due to "other" factors.
+
+- Fun fact: the two-sample *t*-test is a special case of ANOVA.
+
+    - If you perform ANOVA when comparing two means, you will obtain the same results as the two-sample *t*-test.
+    
+## Introduction: Analysis of Variance {.smaller}
+
+```{r}
+#| echo: false
+library(ssstats)
+library(tidyverse)
+library(ggpubr)
+set.seed(187782)
+set.seed(8651)
+data <- tibble(group = c(rep("A", 50), c(rep("B", 50))),
+               value = if_else(group == "A", rnorm(100, mean = 100, sd = 15), rnorm(100, mean = 100, sd = 15)))
+```
+
+- Fun fact: the two-sample *t*-test is a special case of ANOVA.
+
+- Two-sample *t*-test:
+
+```{r}
+#| echo: false
+data %>% independent_mean_HT(continuous = value,
+                             grouping = group,
+                             alternative = "two",
+                             alpha = 0.05)
+```
+
+- In ANOVA,
+
+```{r}
+#| echo: false
+data %>% one_way_ANOVA(continuous = value, grouping = group)
+```
+
+## One-Way ANOVA
+
+- In one-way ANOVA, we are partitioning the variability in our outcome (SS<sub>Total</sub>) into two pieces:
+    - Variability due to the group (SS<sub>Treatment</sub>),
+    - Variablity due to "other factors" (SS<sub>Error</sub>).
+        - Think of this like a "catch all" for other sources of error -- things we did not adjust for in our model.
+
+## One-Way ANOVA: ANOVA Table
+
+- The computations for ANOVA are more involved than what we've seen before.  
+
+- An ANOVA table will be constructed in order to perform the hypothesis test.
+
+| **Source** | **Sum of Squares** | **df** | **Mean Squares** | ***F*** |
+|-|-|-|-|-|
+Treatment | SS<sub>Trt</sub> | df<sub>Trt</sub> | MS<sub>Trt</sub> | *F*<sub>0</sub>
+Error | SS<sub>E</sub> | df<sub>E</sub> | MS<sub>E</sub> |
+Total | SS<sub>Tot</sub> | df<sub>Tot</sub> | | |
+
+- Once this is put together, we can perform the hypothesis test.
+
+    - Our test statistic is the $F_0$.
+
+## One-Way ANOVA: (Hand) Computations
+
+- Before we begin our computations, it would be helpful if we know
+
+$$\bar{x}, \ \ n_i, \ \ \bar{x}_i, \ \ s_i^2$$ 
+
+- where,
+    - $\bar{x}$ is the overall mean,
+    - $n_i$ is the sample size for group $i$,
+    - $\bar{x}_i$ is the mean for group $i$, and
+    - $s_i^2$ is the variance for group $i$
+
+## One-Way ANOVA: (Hand) Computations
+
+- We begin our computations with the sums of squares: 
+
+$$
+\begin{align*}
+    \text{SS}_{\text{Trt}} &= \sum_{i=1}^k n_i(\bar{x}_i-\bar{x})^2 \\
+    \text{SS}_{\text{E}} &= \sum_{i=1}^k (n_i-1)s_i^2 \\
+    \text{SS}_{\text{Tot}} &= \text{SS}_{\text{Trt}} + \text{SS}_{\text{E}}
+\end{align*} 
+$$ 
+    
+## One-Way ANOVA: (Hand) Computations
+
+- Each sum of squares has degrees of freedom: 
+
+$$
+\begin{align*}
+    \text{df}_{\text{Trt}} &= k-1\\
+    \text{df}_{\text{E}} &= n-k\\
+    \text{df}_{\text{Tot}} &= n-1
+\end{align*} 
+$$ 
+    
+## One-Way ANOVA: (Hand) Computations
+
+- Once we have the sum of squares and corresponding degrees of freedom, we can compute the mean squares.
+
+- In the case of one-way ANOVA,
+$$
+\begin{align*}
+    \text{MS}_{\text{Trt}} &= \frac{\text{SS}_{\text{Trt}}}{\text{df}_{\text{Trt}}} \\
+    \text{MS}_{\text{E}} &= \frac{\text{SS}_{\text{E}}}{\text{df}_{\text{E}}}
+\end{align*}
+$$
+    - Note that there is **no** $\text{MS}_{\text{Tot}}$! 
+    
+## One-Way ANOVA: (Hand) Computations
+
+- A note about mean squares: they are almost always constructed the same way.
+
+$$\text{MS}_X = \frac{\text{SS}_X}{\text{df}_E}$$
+
+- This is important to know for future statistics courses that may have you calculating things by hand. 
+
+## One-Way ANOVA: (Hand) Computations
+
+- Finally, we have the test statistic. 
+
+- Generally, we construct an $F$ for ANOVA by dividing the MS of interest by MS_E_,
+
+$$F_X = \frac{\text{MS}_X}{\text{MS}_{\text{E}}}$$
+
+- In one-way ANOVA, we are only constructing the $F$ for treatment,
+
+$$F_0 = \frac{\text{MS}_{\text{Trt}}}{\text{MS}_{\text{E}}} $$
+
+## One-Way ANOVA: (Hand) Computations
+
+- We are finally done constructing our ANOVA table! As a reminder,
+
+| **Source** | **Sum of Squares** | **df** | **Mean Squares** | ***F*** |
+|-|-|-|-|-|
+Treatment | SS<sub>Trt</sub> | df<sub>Trt</sub> | MS<sub>Trt</sub> | *F*<sub>0</sub>
+Error | SS<sub>E</sub> | df<sub>E</sub> | MS<sub>E</sub> |
+Total | SS<sub>Tot</sub> | df<sub>Tot</sub> | | |    
+
+## One-Way ANOVA: ANOVA Table (R)
+
+- We will use the `one_way_ANOVA_table()` function from `library(ssstats)` to construct the ANOVA table.
+
+```{r}
+#| eval: false
+dataset_name %>% one_way_ANOVA_table(continuous = continuous_variable,
+                                     grouping = grouping_variable)
+```
+
+## One-Way ANOVA: ANOVA Table
+
+- In the magical land of Equestria, ponies come in different types: Unicorns, Pegasi, Earth Ponies, and Alicorns. While each group has unique abilities, some researchers in Twilight Sparkle's lab are curious whether these pony types differ in their overall magic ability scores, a standardized measure that combines magical potential, control, and versatility.
+
+- To investigate this, they collect data (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). The researchers want to know if there is difference in magic ability scores (*ability_score*) among the four pony types. We will test at the $\alpha=0.05$ level.
+
+- Let's first create the ANOVA table. How should we update this code?
+
+```{r}
+#| eval: false
+dataset_name %>% one_way_ANOVA_table(continuous = continuous_variable,
+                                     grouping = grouping_variable)
+```
+
+```{r}
+#| echo: false
+
+library(tidyverse)
+
+set.seed(673560)  # for reproducibility
+
+# Simulate data for each pony type
+magical_studies <- tibble(pony_type = rep(c("Unicorn", "Pegasus", "Earth", "Alicorn"), each = 35),
+                          ability_score = c(rnorm(35, mean = 75, sd = 10),
+                                            rnorm(35, mean = 74, sd = 10),
+                                            rnorm(35, mean = 76, sd = 10),
+                                            rnorm(35, mean = 75, sd = 10)),
+                          coordination_score = c(rnorm(35, mean = 85, sd = 8),
+                                                 rnorm(35, mean = 78, sd = 8), 
+                                                 rnorm(35, mean = 73, sd = 8), 
+                                                 rnorm(35, mean = 88, sd = 8)))
+```
+
+## One-Way ANOVA: ANOVA Table
+
+- In the magical land of Equestria, ponies come in different types: Unicorns, Pegasi, Earth Ponies, and Alicorns. While each group has unique abilities, some researchers in Twilight Sparkle's lab are curious whether these pony types differ in their overall magic ability scores, a standardized measure that combines magical potential, control, and versatility.
+
+- To investigate this, they collect data (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). The researchers want to know if there is difference in magic ability scores (*ability_score*) among the four pony types.
+
+- Let's first create the ANOVA table. Our updated code:
+
+```{r}
+#| eval: false
+magical_studies %>% one_way_ANOVA_table(continuous = ability_score,
+                                        grouping = pony_type)
+```
+
+## One-Way ANOVA: ANOVA Table
+
+- Running the code,
+
+```{r}
+magical_studies %>% one_way_ANOVA_table(continuous = ability_score,
+                                        grouping = pony_type)
+```
+
+
+## Hypothesis Testing: One-Way-ANOVA
+
+- In one-way ANOVA, hypotheses always take the same form:
+
+    - $H_0: \ \mu_1 = \mu_2 = ... = \mu_k$
+    - $H_1:$ at least one is different
+
+- Note: you **must** fill in the "k" when writing hypotheses!
+    - e.g., if there are four means, your hypotheses are
+        - $H_0: \ \mu_1 = \mu_2 = \mu_3 = \mu_4$
+        - $H_1:$ at least one is different
+    - e.g., in our MLP example,
+        - $H_0: \ \mu_{\text{unicorn}} = \mu_{\text{earth}} = \mu_{\text{alicorn}} = \mu_{\text{pegasus}}$
+        - $H_1:$ at least one is different
+
+## Hypothesis Testing: One-Way ANOVA
+
+**Test statistic:**
+
+$$
+F_0 = \frac{\text{MS}_{\text{Trt}}}{\text{MS}_{\text{E}}}
+$$
+
+
+***p*-Value:**
+
+$$
+p = P[F_{k-1,n-k} \ge F_0]
+$$
+
+
+## Hypothesis Testing: One-Way ANOVA (R)
+
+- We will use the `one_way_ANOVA()` function from `library(ssstats)` to construct the corresponding hypothesis test.
+
+```{r}
+#| eval: false
+dataset_name %>% one_way_ANOVA(continuous = continuous_variable,
+                               grouping = grouping_variable,
+                               alpha = specified_alpha)
+```
+
+## Hypothesis Testing: One-Way ANOVA
+
+- In the magical land of Equestria, ponies come in different types: Unicorns, Pegasi, Earth Ponies, and Alicorns. While each group has unique abilities, some researchers in Twilight Sparkle's lab are curious whether these pony types differ in their overall magic ability scores, a standardized measure that combines magical potential, control, and versatility.
+
+- To investigate this, they collect data (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). The researchers want to know if there is difference in magic ability scores (*ability_score*) among the four pony types. We will test at the $\alpha=0.05$ level.
+
+- Let's now formulate the hypothesis test. How should we update this code?
+
+```{r}
+#| eval: false
+dataset_name %>% one_way_ANOVA(continuous = continuous_variable,
+                               grouping = grouping_variable,
+                               alpha = specified_alpha)
+```
+
+## Hypothesis Testing: One-Way ANOVA
+
+- In the magical land of Equestria, ponies come in different types: Unicorns, Pegasi, Earth Ponies, and Alicorns. While each group has unique abilities, some researchers in Twilight Sparkle's lab are curious whether these pony types differ in their overall magic ability scores, a standardized measure that combines magical potential, control, and versatility.
+
+- To investigate this, they collect data (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). The researchers want to know if there is difference in magic ability scores (*ability_score*) among the four pony types. We will test at the $\alpha=0.05$ level.
+
+- Let's now formulate the hypothesis test. Our updated code,
+
+```{r}
+#| eval: false
+magical_studies %>% one_way_ANOVA(continuous = ability_score,
+                                  grouping = pony_type, 
+                                  alpha = 0.05)
+```
+
+## Hypothesis Testing: One-Way ANOVA
+
+- Running the code,
+
+```{r}
+magical_studies %>% one_way_ANOVA(continuous = ability_score,
+                                  grouping = pony_type, 
+                                  alpha = 0.05)
+```
+
+## Hypothesis Testing: One-Way ANOVA
+
+- **Hypotheses**
+    - $H_0: \ \mu_{\text{alicorn}} = \mu_{\text{unicorn}} = \mu_{\text{earth}} = \mu_{\text{pegasus}}$
+    - $H_1:$ at least one $\mu_i$ is different
+  
+- **Test Statistic and *p*-Value**
+    - $F_0 = 1.526$ 
+    - $p = 0.210$
+
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha=0.05$.
+  
+- **Conclusion/Interpretation**
+    - Fail to reject $H_0$ ($p \text{ vs } \alpha \to p = 0.210 > 0.05$). There is not sufficient evidence to suggest that there is a difference in magical ability between the types of ponies.
+    
+## Hypothesis Testing: One-Way ANOVA
+
+- Twilight Sparkle is now leading a study to understand whether ponies from different types specialize in different areas of magical strength. She develops a "magical coordination" score, which reflects how well a pony can use magic to interact with objects in motion (e.g., catching falling books).
+
+- To investigate this, data is collected (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). Twilight Sparkle wants to know if there is difference in magical coordination scores (*coordination_score*) among the four pony types. We will again test at the $\alpha=0.05$ level.
+
+- Let's first create the ANOVA table. How should we update this code? 
+
+```{r}
+#| eval: false
+dataset_name %>% one_way_ANOVA_table(continuous = continuous_variable,
+                                     grouping = grouping_variable)
+```
+
+## Hypothesis Testing: One-Way ANOVA
+
+- Twilight Sparkle is now leading a study to understand whether ponies from different types specialize in different areas of magical strength. She develops a "magical coordination" score, which reflects how well a pony can use magic to interact with objects in motion (e.g., catching falling books).
+
+- To investigate this, data is collected (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). Twilight Sparkle wants to know if there is difference in magical coordination scores (*coordination_score*) among the four pony types. We will again test at the $\alpha=0.05$ level.
+
+- Let's first create the ANOVA table. Our updated code:
+
+```{r}
+#| eval: false
+magical_studies %>% one_way_ANOVA_table(continuous = coordination_score,
+                                        grouping = pony_type)
+```
+
+## Hypothesis Testing: One-Way ANOVA
+
+- Running the code:
+
+```{r}
+magical_studies %>% one_way_ANOVA_table(continuous = coordination_score,
+                                        grouping = pony_type)
+```
+
+## Hypothesis Testing: One-Way ANOVA
+
+- Twilight Sparkle is now leading a study to understand whether ponies from different types specialize in different areas of magical strength. She develops a "magical coordination" score, which reflects how well a pony can use magic to interact with objects in motion (e.g., catching falling books).
+
+- To investigate this, data is collected (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). Twilight Sparkle wants to know if there is difference in magical coordination scores (*coordination_score*) among the four pony types. We will again test at the $\alpha=0.05$ level.
+
+- Let's now formulate the hypothesis test. How should we update this code?
+
+```{r}
+#| eval: false
+dataset_name %>% one_way_ANOVA(continuous = continuous_variable,
+                               grouping = grouping_variable,
+                               alpha = specified_alpha)
+```
+
+## Hypothesis Testing: One-Way ANOVA
+
+- Twilight Sparkle is now leading a study to understand whether ponies from different types specialize in different areas of magical strength. She develops a "magical coordination" score, which reflects how well a pony can use magic to interact with objects in motion (e.g., catching falling books).
+
+- To investigate this, data is collected (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). Twilight Sparkle wants to know if there is difference in magical coordination scores (*coordination_score*) among the four pony types. We will again test at the $\alpha=0.05$ level.
+
+- Let's now formulate the hypothesis test. Our updated code:
+
+```{r}
+#| eval: false
+magical_studies %>% one_way_ANOVA(continuous = coordination_score,
+                                  grouping = pony_type,
+                                  alpha = 0.05)
+```
+
+## Hypothesis Testing: One-Way ANOVA
+
+- Running the code:
+
+```{r}
+magical_studies %>% one_way_ANOVA(continuous = coordination_score,
+                                  grouping = pony_type,
+                                  alpha = 0.05)
+```
+
+## Hypothesis Testing: One-Way ANOVA
+
+- **Hypotheses**
+    - $H_0: \ \mu_{\text{alicorn}} = \mu_{\text{unicorn}} = \mu_{\text{earth}} = \mu_{\text{pegasus}}$
+    - $H_1:$ at least one $\mu_i$ is different
+  
+- **Test Statistic and *p*-Value**
+    - $F_0 = 18.396$ 
+    - $p < 0.001$
+
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha=0.05$.
+  
+- **Conclusion/Interpretation**
+    - Reject $H_0$ ($p \text{ vs } \alpha \to p < 0.001 < 0.05$). There is sufficient evidence to suggest that there is a difference in magical coordination between the types of ponies.
+
+## Introduction: Posthoc Testing
+
+- There's a difference, but what is the difference? 
+
+- Let's look at summary statistics:
+
+```{r}
+magical_studies %>% 
+  group_by(pony_type) %>%
+  mean_median(coordination_score)
+```
+
+- Can we definitively say which groups are different...?
+
+## Introduction: Posthoc Testing
+
+- Recall our hypotheses in one-way ANOVA,
+
+    - $H_0: \mu_1 = \mu_2 = ... = \mu_k$
+    - $H_1:$ at least one $\mu_i$ is different
+    
+- The $F$ test does not tell us *which* mean is different... only that a difference exists.
+
+- In theory, we could perform repeated $t$ tests to determine pairwise differences.
+    - Recall that ANOVA is an extension of the $t$ test... or that the $t$ test is a special case of ANOVA.
+    - However, this will increase the Type I error rate ($\alpha$).
+
+## Introduction: Posthoc Testing
+
+- Recall that the Type I error rate, $\alpha$, is the probability of *incorrectly* rejecting $H_0$.
+
+    - i.e., we are saying there is a difference between the means when there is actually *not* a difference.
+    
+- Suppose we are comparing 5 groups.
+
+    - This is 10 pairwise comparisons!! 
+        
+        - 1-2, 1-3, 1-4, 1-5, 2-3, 2-4, 2-5, 3-4, 3-5, 4-5
+        
+    - If we perform repeated $t$ tests under $\alpha=0.05$, we are inflating the Type I error to 0.40! 😵
+
+## Introduction: Posthoc Testing
+
+- When performing posthoc comparisons, we can choose one of two paths:
+
+    - Control the Type I (familywise) error rate.
+    - Do not control the Type I error rate.
+    
+- Note that controlling the Type I error rate is more conservative than when we do not control it.
+
+    - "Conservative" = more difficult to reject.
+    
+- Generally, statisticians:
+
+    - *do not* control the Type I error rate if examining the results of pilot/preliminary studies that are exploring for general relationships.
+    
+    - *do* control the Type I error rate if examining the results of confirmatory studies and are attempting to confirm relationships observed in pilot/preliminary studies.
+    
+## Introduction: Posthoc Testing
+
+- The posthoc tests we will learn:
+
+    - Tukey's test
+    
+        - Performs all pairwise tests and controls the Type I error rate
+        
+    - Fisher's least significant difference 
+    
+        - Performs all pairwise tests but does not control the Type I error rate
+        
+- **Caution**: we should *only* perform posthoc tests if we have determined that a general difference exists!
+
+    - i.e., when we reject when looking at the $F$ test in ANOVA
+    
+## Posthoc Testing: Tukey's Test
+
+- Tukey's test allows us to do all pairwise comparisons while controlling $\alpha$.
+
+- **Hypotheses**
+    - $H_0: \ \mu_i = \mu_j$ 
+    - $H_1: \ \mu_i \ne \mu_j$
+    
+- **Test Statistic**
+
+$$
+Q = \frac{|\bar{y}_i - \bar{y}_j|}{\sqrt{ \frac{\text{MS}_{\text{E}}}{2} \left( \frac{1}{n_i} + \frac{1}{n_j} \right) }}
+$$
+
+## Posthoc Testing: Tukey's Test (R)
+
+- We will use the `posthoc_tukey()` function from `library(ssstats)` to perform Tukey's posthoc test (resulting $p$ are adjusted for multiple comparisons).
+
+```{r}
+#| eval: false
+dataset_name %>% posthoc_tukey(continuous = continuous_variable,
+                               grouping = grouping_variable)
+```
+
+## Posthoc Testing: Tukey's Test
+
+- Twilight Sparkle is now leading a study to understand whether ponies from different types specialize in different areas of magical strength. She develops a "magical coordination" score, which reflects how well a pony can use magic to interact with objects in motion (e.g., catching falling books).
+
+- To investigate this, data is collected (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). Twilight Sparkle wants to know what differences exist in their magical coordination scores (*coordination_score*). We will again test at the $\alpha=0.05$ level.
+
+- Let's now formulate Tukey's posthoc test. How should we update this code?
+
+```{r}
+#| eval: false
+dataset_name %>% posthoc_tukey(continuous = continuous_variable,
+                               grouping = grouping_variable)
+```
+
+## Posthoc Testing: Tukey's Test
+
+- Twilight Sparkle is now leading a study to understand whether ponies from different types specialize in different areas of magical strength. She develops a "magical coordination" score, which reflects how well a pony can use magic to interact with objects in motion (e.g., catching falling books).
+
+- To investigate this, data is collected (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). Twilight Sparkle wants to know what differences exist in their magical coordination scores (*coordination_score*). We will again test at the $\alpha=0.05$ level.
+
+- Let's now formulate Tukey's posthoc test. Our updated code:
+
+```{r}
+#| eval: false
+magical_studies %>% posthoc_tukey(continuous = coordination_score,
+                                  grouping = pony_type)
+```
+
+## Posthoc Testing: Tukey's Test
+
+- Running the code,
+
+```{r}
+magical_studies %>% posthoc_tukey(continuous = coordination_score,
+                                  grouping = pony_type)
+```
+
+## Posthoc Testing: Tukey's Test
+
+- Restating results,
+    - $\mu_{\text{alicorn}} \ne \mu_{\text{earth}}$ ($\bar{x}_d = 12.63$, $p < 0.001$)
+    - $\mu_{\text{alicorn}} \ne \mu_{\text{pegasus}}$ ($\bar{x}_d = 10.18$, $p < 0.001$)
+    - $\mu_{\text{unicorn}} \ne \mu_{\text{earth}}$ ($\bar{x}_d = 9.83$, $p < 0.001$)
+    - $\mu_{\text{unicorn}} \ne \mu_{\text{pegasus}}$ ($\bar{x}_d = 7.38$, $p = 0.001$)
+    - $\mu_{\text{alicorn}} = \mu_{\text{unicorn}}$ ($\bar{x}_d = 2.80$, $p = 0.487$)
+    - $\mu_{\text{pegasus}} = \mu_{\text{earth}}$ ($\bar{x}_d = 2.44$, $p = 0.602$)
+
+## Posthoc Testing: Fisher's Test
+
+- Fisher's allows us to test all pairwise comparisons but *does not* control the $\alpha$.
+
+- **Hypotheses:**
+    - $H_0: \ \mu_i = \mu_j$
+    - $H_1: \ \mu_i \ne \mu_j$
+
+- **Test Statistic:**
+
+$$
+t = \frac{|\bar{y}_i - \bar{y}_j|}{\sqrt{ \text{MS}_{\text{E}} \left( \frac{1}{n_i} + \frac{1}{n_j} \right) }}
+$$
+
+## Posthoc Testing: Fisher's Test (R)
+
+- We will use the `posthoc_fisher()` function from `library(ssstats)` to perform Tukey's posthoc test (resulting $p$ are *not* adjusted for multiple comparisons).
+
+```{r}
+#| eval: false
+dataset_name %>% posthoc_fisher(continuous = continuous_variable,
+                                grouping = grouping_variable)
+```
+
+## Posthoc Testing: Fisher's Test 
+
+- Twilight Sparkle is now leading a study to understand whether ponies from different types specialize in different areas of magical strength. She develops a "magical coordination" score, which reflects how well a pony can use magic to interact with objects in motion (e.g., catching falling books).
+
+- To investigate this, data is collected (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). Twilight Sparkle wants to know what differences exist in their magical coordination scores (*coordination_score*). We will again test at the $\alpha=0.05$ level.
+
+- Let's now formulate Fisher's posthoc test. How should we update this code?
+
+```{r}
+#| eval: false
+dataset_name %>% posthoc_tukey(continuous = continuous_variable,
+                               grouping = grouping_variable)
+```
+
+## Posthoc Testing: Fisher's Test
+
+- Twilight Sparkle is now leading a study to understand whether ponies from different types specialize in different areas of magical strength. She develops a "magical coordination" score, which reflects how well a pony can use magic to interact with objects in motion (e.g., catching falling books).
+
+- To investigate this, data is collected (***magical_studies***) on a random sample of ponies from each pony type (*pony_type*). Twilight Sparkle wants to know what differences exist in their magical coordination scores (*coordination_score*). We will again test at the $\alpha=0.05$ level.
+
+- Let's now formulate Fisher's posthoc test. Our updated code:
+
+```{r}
+#| eval: false
+magical_studies %>% posthoc_fisher(continuous = coordination_score,
+                                   grouping = pony_type)
+```
+
+## Posthoc Testing: Fisher's Test 
+
+- Running the code,
+
+```{r}
+magical_studies %>% posthoc_fisher(continuous = coordination_score,
+                                   grouping = pony_type)
+```
+
+## Posthoc Testing: Fisher's Test
+
+- Restating results,
+    - $\mu_{\text{alicorn}} \ne \mu_{\text{earth}}$ ($\bar{x}_d = 12.63$, $p < 0.001$)
+    - $\mu_{\text{alicorn}} \ne \mu_{\text{pegasus}}$ ($\bar{x}_d = 10.18$, $p < 0.001$)
+    - $\mu_{\text{unicorn}} \ne \mu_{\text{earth}}$ ($\bar{x}_d = 9.83$, $p < 0.001$)
+    - $\mu_{\text{unicorn}} \ne \mu_{\text{pegasus}}$ ($\bar{x}_d = 7.38$, $p < 0.001$)
+    - $\mu_{\text{alicorn}} = \mu_{\text{unicorn}}$ ($\bar{x}_d = 2.80$, $p = 0.151$)
+    - $\mu_{\text{pegasus}} = \mu_{\text{earth}}$ ($\bar{x}_d = 2.44$, $p = 0.227$)
+
+## Posthoc Testing: Tukey's vs. Fisher's
+
+- We have now learned:
+    - Tukey's test: Performs all pairwise tests and controls the Type I error rate
+    - Fisher's test: Performs all pairwise tests but does not control the Type I error rate
+
+- Sometimes Tukey's and Fisher's will agree with each other.
+    - This is the case in our example
+
+- Other times they do not agree -- by design, Tukey's makes it *harder* to reject.
+    - We may see more rejections when using Fisher's
+
+## Posthoc Testing: Tukey's vs. Fisher's
+
+- Comparing the two side-by-side,
+
+| Pairwise Comparison    | $\bar{x}_d$ | Unadjusted $p$ | Adjusted $p$ |
+|------------------------|-------------:|----------------:|--------------:|
+| Alicorn vs. Earth      | 12.63       | < 0.001       | < 0.001     |
+| Alicorn vs. Pegasus    | 10.18       | < 0.001       | < 0.001     |
+| Unicorn vs. Earth      | 9.83        | < 0.001       | < 0.001     |
+| Unicorn vs. Pegasus    | 7.38        | < 0.001       | 0.001       |
+| Alicorn vs. Unicorn    | 2.80        | 0.151         | 0.487       |
+| Pegasus vs. Earth      | 2.44        | 0.227         | 0.602       |
+
+
+
+## Wrap Up
+
+- Today we have covered one-way ANOVA.
+    - One-way ANOVA table
+    - Test for equality among $k$ means
+    - Posthoc testing (pairwise comparisons)
+        - Tukey's (ANOVA, ajdusted)
+        - Fisher's (ANOVA, unadjusted)
+
+## Wrap Up
+
+- Upcoming:
+    - M/T:
+        - ANOVA assumptions
+        - Nonparametric alternative to one-way ANOVA (Kruskal-Wallis)
+        - Nonparametric alternative to posthoc testing (Dunn's test)
+    - W/R:
+        - Lab: one-way ANOVA and Kruskal-Wallis
+        - Quiz: one-way ANOVA and Kruskal-Wallis
+    
+    
+
+
