@@ -4204,7 +4204,7 @@
     "href": "files/practice/week-06-lab.html",
     "title": "R Lab: One-Way ANOVA and Kruskal-Wallis",
     "section": "",
-    "text": "# use this code chunk to call in all packages the document will need\nlibrary(tidyverse)\nlibrary(ssstats)\n## DO NOT EDIT THIS CHUNK ##\nset.seed(917689)\nsinging_data &lt;- tibble(performer = rep(c(\"Mermaids\", \"Fish\", \"Crustaceans\"), each = 50),\n                       volume_db = c(rnorm(50, mean = 88.5, sd = 4.2),\n                                     rnorm(50, mean = 83.1, sd = 2.1),\n                                     rnorm(50, mean = 91.2, sd = 3.7)))\n\ntrill_data &lt;- tibble(performer = c(rep(\"Mermaids\", 60), \n                                   rep(\"Fish Chorus\", 60),\n                                   rep(\"Crustaceans\", 60)),\n                     trills = c(rnorm(60, mean = 6,  sd = 3),\n                                rnorm(60, mean = 9,  sd = 3),\n                                rnorm(60, mean = 14, sd = 3)))\n## DO NOT EDIT THIS CHUNK ##"
+    "text": "# use this code chunk to call in all packages the document will need\nlibrary(tidyverse)\nlibrary(ssstats)"
   },
   {
     "objectID": "files/practice/week-06-lab.html#part-1",
