@@ -1,0 +1,538 @@
+---
+title: "Module 2 Review"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  revealjs:
+    theme: default
+    css: mlp2.css
+    self-contained: true
+    slide-number: true
+    footer: "STA4173 - Biostatistics - Fall 2025"
+    width: 1600
+    height: 900
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+## Putting It All Together
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(ssstats)
+```
+
+- One-way ANOVA / Kruskal-Wallis:
+    - Continuous outcome.
+    - Only one factor (grouping variable).
+        - More than two groups.
+    
+- Two-way ANOVA:
+    - Continuous outcome.
+    - Two factors (grouping variables), A & B.
+        - More than two groups in each factor.
+    - Interaction between factors A & B.
+
+- ANOVA assumptions:
+    - Normality of residuals.
+    - Equal variances.
+    
+## Example 1
+
+```{r}
+#| echo: false
+set.seed(42561) 
+library(tidyverse)
+means <- tibble(
+  fertilizer = c("Nook's GreenGro", "Leif's Compost Tea", "Brewster's Grounds", "No Fertilizer"),
+  mu         = c(1.8,                2.2,                 2.4,                  1.6),
+  sigma      = 0.30)
+
+n_per_group <- 20
+
+veg <- means %>%
+  group_by(fertilizer) %>%
+  summarize(
+    yield_kg = rnorm(n_per_group, mean = mu, sd = sigma),
+    .groups = "drop_last"
+  ) %>%
+  ungroup() %>%
+  mutate(fertilizer = factor(fertilizer,
+                             levels = c("No Fertilizer","Nook's GreenGro","Leif's Compost Tea","Brewster's Grounds")))
+```
+
+- Leif has started a veggie-gardening club in Animal Crossing. Four popular fertilizer options are being tried on carrot plots:
+    1. Nook's GreenGro
+    2. Leif's Compost Tea
+    3. Brewster's Grounds
+    4. No fertilizer (control)
+
+- Each option is applied to several 1 m^2^ carrot plots (one fertilizer per plot). At harvest, villagers record the carrot yield (kg) from each plot. 
+
+- The research question is, *do mean carrot yields differ among the four fertilizer options*?
+
+## Example 1
+
+- Looking at summary statistics,
+
+```{r}
+#| echo: false
+veg %>% group_by(fertilizer) %>%
+  mean_median(yield_kg)
+```
+
+## Example 1
+
+- Checking the ANOVA assumptions,
+
+```{r}
+#| fig-align: 'center'
+#| echo: false
+veg %>% ANOVA_assumptions(continuous = yield_kg,
+                          group = fertilizer)
+```
+
+- Normality (qq plots) looks okay.
+
+- Variance looks okay. 
+
+## Example 1
+
+- Checking the ANOVA assumptions,
+
+```{r}
+#| fig-align: 'center'
+#| echo: false
+veg %>% variances_HT(continuous = yield_kg,
+                          group = fertilizer)
+```
+
+- Is the variance assumption broken?
+
+## Example 1
+
+- Constructing the one-way ANOVA test,
+
+```{r}
+#| echo: false
+veg %>% one_way_ANOVA(continuous = yield_kg,
+                      group = fertilizer)
+```
+
+- Is there a significant difference between the fertilizers?
+
+## Example 1
+
+- Suppose we want to look at posthoc tests to see which fertilizers differ.
+
+- If we want to adjust, we will use Tukey's,
+
+```{r}
+#| echo: false
+veg %>% posthoc_tukey(continuous = yield_kg,
+                        group = fertilizer)
+```
+
+- Which fertilizers differ significantly?
+
+## Example 1
+
+- Suppose we want to look at posthoc tests to see which fertilizers differ.
+
+- If we want to adjust, we will use Fisher's,
+
+```{r}
+#| echo: false
+veg %>% posthoc_fisher(continuous = yield_kg,
+                        group = fertilizer)
+```
+
+- Which fertilizers differ significantly?
+
+## Example 2
+
+- Leif notices some strange patterns this season. We now are testing our four fertilizer options  on 1 m^2^ tomato plots:
+    1. Nook's GreenGro
+    2. Leif's Compost Tea
+    3. Brewster's Grounds
+    4. No fertilizer (control)
+
+- Each option is applied to several 1 m^2^ tomato plots (one fertilizer per plot). At harvest, villagers record the tomato yield (kg) from each plot. 
+
+- The research question is, *do mean tomato yields differ among the four fertilizer options*?
+
+## Example 2
+
+- Looking at summary statistics, 
+
+```{r}
+#| echo: false
+
+set.seed(777)
+n <- 18
+
+# helper to set lognormal so mean ≈ target_mu
+r_lognorm_mean <- function(n, target_mu, sdlog){
+  meanlog <- log(target_mu) - 0.5*sdlog^2
+  rlnorm(n, meanlog = meanlog, sdlog = sdlog)
+}
+
+veg2 <- bind_rows(
+  tibble(fertilizer = "No Fertilizer",
+         yield_kg   = rnorm(n, mean = 1.6, sd = 0.25)),
+  tibble(fertilizer = "Nook's GreenGro",
+         yield_kg   = rnorm(n, mean = 1.9, sd = 0.30)),
+  tibble(fertilizer = "Leif's Compost Tea",
+         # skew: log-normal with same rough mean as 2.2
+         yield_kg   = r_lognorm_mean(n, target_mu = 2.2, sdlog = 0.35)),
+  tibble(fertilizer = "Brewster's Grounds",
+         # heteroskedastic: much larger variance
+         yield_kg   = rnorm(n, mean = 2.4, sd = 0.60))
+) %>%
+  mutate(fertilizer = factor(fertilizer,
+    levels = c("No Fertilizer","Nook's GreenGro",
+               "Leif's Compost Tea","Brewster's Grounds")))
+
+
+veg2 %>% group_by(fertilizer) %>%
+  mean_median(yield_kg)
+```
+
+## Example 2
+
+- Checking the ANOVA assumptions,
+
+```{r}
+#| fig-align: 'center'
+#| echo: false
+veg2 %>% ANOVA_assumptions(continuous = yield_kg,
+                          group = fertilizer)
+```
+
+- Normality (qq plots) looks okay...?
+
+- Variance is questionable...
+
+## Example 2
+
+- Checking the ANOVA assumptions,
+
+```{r}
+#| fig-align: 'center'
+#| echo: false
+veg2 %>% variances_HT(continuous = yield_kg,
+                          group = fertilizer)
+```
+
+- Is the variance assumption broken?
+
+## Example 2
+
+- Constructing the Kruskal-Wallis test,
+
+```{r}
+#| echo: false
+veg2 %>% kruskal_HT(continuous = yield_kg,
+                      group = fertilizer)
+```
+
+- Is there a significant difference between the fertilizers?
+
+## Example 2
+
+- Suppose we want to look at posthoc tests to see which fertilizers differ.
+
+- If we want to adjust, we will use the adjusted version of Dunn's test,
+
+```{r}
+#| echo: false
+veg2 %>% posthoc_dunn(continuous = yield_kg,
+                        group = fertilizer, 
+                      adjust = TRUE)
+```
+
+- Which fertilizers differ significantly?
+
+## Example 2
+
+- Suppose we want to look at posthoc tests to see which fertilizers differ.
+
+- If we do not want to adjust, we will use the unadjusted version of Dunn's test,
+
+```{r}
+#| echo: false
+veg2 %>% posthoc_dunn(continuous = yield_kg,
+                        group = fertilizer, 
+                      adjust = FALSE)
+```
+
+- Which fertilizers differ significantly?
+
+
+## Example 3
+
+- Leif is now testing the four fertilizer options on both carrot and tomato plots:
+    1. Nook's GreenGro
+    2. Leif's Compost Tea
+    3. Brewster's Grounds
+    4. No fertilizer (control)
+	  
+- The research questions are:
+    1. *Is there an interaction between fertilizer type and crop type on yield?*
+    2. *If no interaction, do mean crop yields differ among the four fertilizer options?*
+    3. *If no interaction, do mean crop yields differ between carrot and tomato plots?*
+    
+## Example 3    
+	  
+- Looking at summary statistics,	  
+
+```{r}
+#| echo: false
+
+set.seed(4242)
+library(tidyverse)
+
+# design parameters
+n <- 15
+fertilizers <- c("No Fertilizer", "Nook's GreenGro",
+                 "Leif's Compost Tea", "Brewster's Grounds")
+crops <- c("Carrot", "Tomato")
+
+# define mean structure (interaction allowed)
+# overall pattern: fertilizers improve yield, slightly more so for tomatoes
+mean_matrix <- tribble(
+  ~fertilizer,          ~Carrot, ~Tomato,
+  "No Fertilizer",       1.6,     1.7,
+  "Nook's GreenGro",     1.8,     1.9,
+  "Leif's Compost Tea",  2.2,     2.3,
+  "Brewster's Grounds",  2.4,     2.5
+)
+
+sigma <- 0.30  # equal SD across all cells
+
+# generate tidy dataset
+veg_norm <- mean_matrix %>%
+  pivot_longer(-fertilizer, names_to="crop", values_to="mu") %>%
+  group_by(fertilizer, crop) %>%
+  summarise(
+    yield_kg = rnorm(n, mean = mu, sd = sigma),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    fertilizer = factor(fertilizer, levels = fertilizers),
+    crop = factor(crop, levels = crops)
+  )
+
+veg_norm %>% group_by(crop, fertilizer) %>%
+  mean_median(yield_kg)
+```
+
+## Example 3
+
+- Checking the two-way ANOVA assumptions,
+
+```{r}
+#| echo: false
+#| fig-align: 'center'
+veg_norm %>% ANOVA2_assumptions(continuous = yield_kg,
+                           A = fertilizer,
+                           B = crop)
+```
+
+## Example 3
+
+- Examining the two-way ANOVA (remember to always check for the interaction first!),
+
+```{r}
+#| echo: false
+veg_norm %>% two_way_ANOVA_table(continuous = yield_kg,
+                           A = fertilizer,
+                           B = crop)
+```
+
+- Is the interaction term significant? 
+
+- Should we keep or remove the interaction term?
+
+## Example 3
+
+- Removing the interaction term,
+
+```{r}
+#| echo: false
+veg_norm %>% two_way_ANOVA_table(continuous = yield_kg,
+                           A = fertilizer,
+                           B = crop,
+                           interaction = FALSE)
+```
+
+- Are there signfiicant main effects?
+
+## Example 3
+
+- Looking at the tests for main effects,
+
+```{r}
+#| echo: false
+veg_norm %>% two_way_ANOVA(continuous = yield_kg,
+                           A = fertilizer,
+                           B = crop,
+                           interaction = FALSE)
+```
+
+- Is fertilizer a significant factor for crop yield?
+
+- Is crop type a significant factor for crop yield?
+
+## Example 3
+
+- Looking at the profile plot,
+
+```{r}
+#| echo: false
+#| fig-align: 'center'
+veg_norm %>% profile_plot(continuous = yield_kg,
+                           xaxis = fertilizer,
+                           lines = crop) + 
+  labs(color = "Crop Type",
+       x = "Fertilizer Type",
+       y = "Average Yield (kg)")
+```
+
+- What statements can we make about this analysis?
+
+## Example 4
+
+- Leif is now testing the four fertilizer options on both pumpkin, wheat, and potato plots:
+    1. Nook's GreenGro
+    2. Leif's Compost Tea
+    3. Brewster's Grounds
+    4. No fertilizer (control)
+
+- The research questions are:
+    1. *Is there an interaction between fertilizer type and crop type on yield?*
+    2. *If no interaction, do mean crop yields differ among the four fertilizer options?*
+    3. *If no interaction, do mean crop yields differ among the three crop types?*
+
+## Example 4
+
+- Looking at summary statistics,	  
+
+```{r}
+#| echo: false
+
+set.seed(810)
+
+n <- 12
+fert_levels <- c("No Fertilizer","Nook's GreenGro","Leif's Compost Tea","Brewster's Grounds")
+crop_levels <- c("Pumpkin","Wheat","Potato")
+sigma <- 0.30
+
+mean_table <- tribble(
+  ~crop,     ~fertilizer,           ~mu,
+  "Pumpkin", "No Fertilizer",        2.0,
+  "Pumpkin", "Nook's GreenGro",      2.2,
+  "Pumpkin", "Leif's Compost Tea",   2.5,
+  "Pumpkin", "Brewster's Grounds",   2.8,
+  "Wheat",   "No Fertilizer",        1.6,
+  "Wheat",   "Nook's GreenGro",      2.0,
+  "Wheat",   "Leif's Compost Tea",   2.4,
+  "Wheat",   "Brewster's Grounds",   2.3,
+  "Potato",  "No Fertilizer",        2.1,
+  "Potato",  "Nook's GreenGro",      2.3,
+  "Potato",  "Leif's Compost Tea",   2.4,
+  "Potato",  "Brewster's Grounds",   2.4
+)
+
+veg_int <- mean_table %>%
+  group_by(crop, fertilizer) %>%
+  summarise(yield_kg = rnorm(n, mean = mu, sd = sigma), .groups="drop") %>%
+  mutate(
+    fertilizer = factor(fertilizer, levels = fert_levels),
+    crop = factor(crop, levels = crop_levels)
+  )
+
+veg_int %>% group_by(crop, fertilizer) %>%
+  mean_median(yield_kg)
+```
+
+## Example 4
+
+- Checking the two-way ANOVA assumptions,
+
+```{r}
+#| echo: false
+#| fig-align: 'center'
+veg_int %>% ANOVA2_assumptions(continuous = yield_kg,
+                           A = fertilizer,
+                           B = crop)
+```
+
+## Example 4
+
+- Examining the two-way ANOVA (remember to always check for the interaction first!),
+
+```{r}
+#| echo: false
+veg_int %>% two_way_ANOVA_table(continuous = yield_kg,
+                           A = fertilizer,
+                           B = crop)
+```
+
+- Is the interaction term significant? 
+
+- Should we keep or remove the interaction term?
+
+## Example 4
+
+- Looking at the test for the interaction,
+
+```{r}
+#| echo: false
+veg_int %>% two_way_ANOVA(continuous = yield_kg,
+                           A = fertilizer,
+                           B = crop,
+                           interaction = TRUE)
+```
+
+- Is there a significant interaction?
+
+## Example 4
+
+- Looking at the profile plot,
+
+```{r}
+#| echo: false
+#| fig-align: 'center'
+veg_int %>% profile_plot(continuous = yield_kg,
+                           xaxis = fertilizer,
+                           lines = crop) + 
+  labs(color = "Crop Type",
+       x = "Fertilizer Type",
+       y = "Average Yield (kg)")
+```
+
+- What statements can we make about this analysis?
+
+
+## Wrap Up        
+
+- Today's review:
+    - One-way ANOVA
+    - Kruskal-Wallis
+    - Posthoc testing
+    - Two-way ANOVA
+    - Interaction terms
+    - Profile plots
+    - ANOVA Assumptions
+    
+- Next class:   
+    - Regression!!!!! 💕

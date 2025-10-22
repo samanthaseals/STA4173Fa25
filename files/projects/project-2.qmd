@@ -1,0 +1,177 @@
+---
+title: "Project 2: Fall 2025"
+author: "your name here"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  html:
+    self-contained: true
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+<!-- DO NOT EDIT THE CHUNK BELOW -->
+```{r}
+#| echo: false
+library(tidyverse)
+library(ssstats)
+library(gsheet)
+
+q1 <- gsheet2tbl("https://docs.google.com/spreadsheets/d/12jceEEpIQxofiGcpqkRXk765JDhqcLRiUUE9OT7WXNo/edit?gid=0#gid=0")
+
+q2 <- gsheet2tbl("https://docs.google.com/spreadsheets/d/12jceEEpIQxofiGcpqkRXk765JDhqcLRiUUE9OT7WXNo/edit?gid=1534127281#gid=1534127281") %>%
+  mutate(depth = factor(depth, levels = c("Surface", "Thermocline", "Deep")),
+         current = factor(current, levels = c("Upwelling", "Downwelling")))
+```
+<!-- DO NOT EDIT THE CHUNK ABOVE -->
+
+**Judy Hopps and Nick Wilde have joined a Zootopia Ocean Observatory project to understand coastal ecosystem health around Sahara Square's outflow and the Rainforest District's reef shelf. The team samples water quality and plankton across habitats (River Mouth, Seagrass Meadow, Coral Patch, Open Shelf) and depths (Surface, Thermocline, Deep) while seasonal currents shift between current regime (Upwelling, Downwelling). You'll use their measurements to answer the following research questions:**
+
+**1. Does dissolved oxygen (mg/L) differ among coastal habitats?**
+
+**2. How do chlorophyll-a (mg/m^3^) levels vary by depth and current regime (patterns of ocean currents)? Does the relationship between chlorophyll-a and depth depend on current regime?**
+
+## Part 1
+
+**Judy Hopps and Nick Wilde are assisting the Zootopia Ocean Observatory to monitor water quality along the coast bordering the Rainforest District and Sahara Square outflow. Coastal habitats vary in vegetation, mixing, and sunlight; these factors can affect oxygen availability for marine life. The team sampled dissolved oxygen (*do_mgL*) at multiple sites within each habitat on the same morning tide. The habitats (*habitat*) examined are River Mouth (urban outflow), Seagrass Meadow (protected cove), Coral Patch (outer reef), and Open Shelf (deeper coastal edge).**
+
+**1. Construct the corresponding one-way ANOVA table for the effect of habitat on dissolved oxygen.**
+
+```{r}
+
+```
+
+**2. Perform the appropriate hypothesis test (using ANOVA) to determine if mean dissolved oxygen levels differ among habitats. Test at the $\alpha=0.05$ level. Remember to typeset your results.**
+
+```{r}
+
+```
+
+- **Hypotheses**
+
+    - $H_0:$
+    - $H_1:$
+    
+- **Test Statistic and $p$-Value**   
+
+    - $F_0 =$
+    - $p =$ 
+    
+- **Rejection Region**
+
+    - Insert your answer here.
+
+- **Conclusion and Interpretation**
+
+    - Insert your answer here.
+    
+**3. Perform the appropriate hypothesis test (using the Kruskal-Wallis) to determine if median dissolved oxygen levels differ among habitats. Test at the $\alpha=0.05$ level. Remember to typeset your results.**
+
+```{r}
+
+```
+
+- **Hypotheses**
+
+    - $H_0:$
+    - $H_1:$
+    
+- **Test Statistic and $p$-Value**   
+
+    - $\chi^2_0 =$
+    - $p =$ 
+    
+- **Rejection Region**
+
+    - Insert your answer here.
+
+- **Conclusion and Interpretation**
+
+    - Insert your answer here.    
+
+**4. Generate the output needed to assess the ANOVA assumptions. You do not need to comment on the output here.**
+
+```{r}
+
+```
+
+**5. Based on the diagnostic plots and tests from Q4, which test should we report: the ANOVA or the Kruskal-Wallis? Why? Your answer should incorporate only the results from Q4.**
+
+Insert your answer here.
+
+**6. Use the appropriate posthoc test to determine which habitats differ in mean/median dissolved oxygen levels. We will treat this as a confirmatory study and adjust for multiple testing.**
+
+```{r}
+
+```
+
+- Pairwise ($p=$)
+- Differences ($p=$)
+- Here ($p=$)
+
+<!-- note: you may need to add or delete lines above as necessary to correctly report on your output. -->
+
+**7. Write a brief summary paragraph for this analysis. You should touch on information from the omnibus ANOVA/Kruskal-Wallis test as well as the posthoc tests.**
+
+Insert your answer here.
+
+## Part 2
+
+**Judy Hopps and Nick Wilde are helping the Zootopia Ocean Observatory monitor primary productivity along the coast bordering the Rainforest District and Sahara Square outflow. Seasonal winds drive the current regime (*current*): alternating Upwelling (nutrient-rich water rising to the surface) and Downwelling (surface water pushed downward). Because light and nutrients change with depth (*depth*), the team suspects that current patterns will modify how chlorophyll-a varies from the Surface through the Thermocline to the Deep layer.**
+
+**8. Construct the corresponding two-way ANOVA table for the effects of depth and current regime on chlorophyll-a levels. Make sure that you include the interaction term.**
+
+```{r}
+
+```
+
+**9. Perform the appropriate hypothesis test to determine if the relationship between chlorophyll-a and depth depends on current regime. Test at the $\alpha=0.05$ level. Remember to typeset your results.**
+
+```{r}
+
+```
+
+- **Hypotheses**
+
+    - $H_0:$
+    - $H_1:$
+    
+- **Test Statistic and $p$-Value**   
+
+    - $F_0 =$
+    - $p =$ 
+    
+- **Rejection Region**
+
+    - Insert your answer here.
+
+- **Conclusion and Interpretation**
+
+    - Insert your answer here.
+    
+**10. Construct the profile plot for this analysis. Let depth be on the x-axis and chlorophyll-a on the y-axis. Use current regime to construct the lines.**
+
+```{r}
+
+```
+    
+**11. Generate the output needed to assess the ANOVA assumptions. You do not need to comment on the output here.**    
+
+```{r}
+
+```
+
+**12. Based on the diagnostic plots from Q10, is this analysis valid? Why or why not? Your answer should incorporate only the results from Q10.**
+
+Insert your answer here.
+
+**13. Write a brief summary paragraph for this analysis. You should touch on information from the ANOVA results and the profile plot.**
+
+Insert your answer here.
