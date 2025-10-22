@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/schedule.html</loc>
-    <lastmod>2025-10-20T14:39:20.567Z</lastmod>
+    <lastmod>2025-10-22T17:23:42.015Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/practice/week-09-lab.html</loc>
@@ -29,24 +29,32 @@
     <lastmod>2025-09-03T14:02:23.714Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/03-2-two-sample-means.html</loc>
-    <lastmod>2025-09-15T15:06:03.567Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/09-2-mod-2-review.html</loc>
+    <lastmod>2025-10-22T17:15:34.501Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/13-1-categorical-analysis.html</loc>
-    <lastmod>2025-09-18T19:41:50.698Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/05-1-two-sample-medians.html</loc>
+    <lastmod>2025-10-07T04:04:53.461Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/07-1-Kruskal-Wallis.html</loc>
-    <lastmod>2025-10-06T06:15:36.915Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/06-2-one-way-ANOVA.html</loc>
+    <lastmod>2025-10-01T13:49:37.696Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/hyp_test_template.html</loc>
-    <lastmod>2025-06-04T19:31:52.204Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/04-2-t-test-assumptions.html</loc>
+    <lastmod>2025-09-15T15:12:23.319Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/projects/project-1.html</loc>
-    <lastmod>2025-09-29T17:40:13.874Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/projects/Untitled.html</loc>
+    <lastmod>2025-09-29T14:09:05.407Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/projects/project-2.html</loc>
+    <lastmod>2025-10-22T04:46:46.031Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/projects/solutions/project-2-KEY.html</loc>
+    <lastmod>2025-10-22T02:21:12.751Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/index.html</loc>
@@ -57,24 +65,28 @@
     <lastmod>2025-09-29T14:09:44.708Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/projects/Untitled.html</loc>
-    <lastmod>2025-09-29T14:09:05.407Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/projects/project-1.html</loc>
+    <lastmod>2025-10-21T23:30:35.688Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/04-2-t-test-assumptions.html</loc>
-    <lastmod>2025-09-15T15:12:23.319Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/hyp_test_template.html</loc>
+    <lastmod>2025-06-04T19:31:52.204Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/06-2-one-way-ANOVA.html</loc>
-    <lastmod>2025-10-01T13:49:37.696Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/07-1-Kruskal-Wallis.html</loc>
+    <lastmod>2025-10-06T06:15:36.915Z</lastmod>
   </url>
   <url>
-    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/05-1-two-sample-medians.html</loc>
-    <lastmod>2025-10-07T04:04:53.461Z</lastmod>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/13-1-categorical-analysis.html</loc>
+    <lastmod>2025-09-18T19:41:50.698Z</lastmod>
+  </url>
+  <url>
+    <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/03-2-two-sample-means.html</loc>
+    <lastmod>2025-09-15T15:06:03.567Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/06-1-mod-1-review.html</loc>
-    <lastmod>2025-09-29T17:40:15.008Z</lastmod>
+    <lastmod>2025-10-22T16:36:03.063Z</lastmod>
   </url>
   <url>
     <loc>https://samanthaseals.github.io/STA4173Fa25/files/slides/11-1-multiple-regression.html</loc>
