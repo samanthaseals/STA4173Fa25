@@ -8,7 +8,7 @@
 
 <meta name="author" content="your name here">
 
-<title>Project 1: Fall 2025 – STA4173 - Biostatistics - Fall 2025</title>
+<title>R Lab: Scatterplots and Correlation – STA4173 - Biostatistics - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -6158,7 +6158,7 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Project 1: Fall 2025</h1>
+<h1 class="title">R Lab: Scatterplots and Correlation</h1>
 </div>
 
 
@@ -6181,118 +6181,30 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
 </header>
 
 
-<!-- DO NOT EDIT THE CHUNK BELOW -->
-<!-- DO NOT EDIT THE CHUNK ABOVE -->
-<p><strong>1. Life at Neptune High is defined by sharp social divides, and nowhere is this clearer than in the spending habits of the students. The wealthy 09er clique, with their luxury cars and designer clothes, are known for splurging at the Camelot Motel, Java the Hut, or on the latest tech gadgets. In contrast, the non-09ers tend to keep their weekly budgets modest, often spending just what they need on food, gas, or school supplies. Veronica Mars, ever curious about the patterns of her peers, decides to track weekly spending amounts (<em>weekly_spending</em>) for both groups (<em>group</em>) in the dataset <u>spending_data</u>.</strong></p>
-<p><strong>1a. Is this independent or dependent data? Explain your reasoning.</strong></p>
-<p>Replace with your answer :)</p>
-<p><strong>1b. Find the appropriate summary statistics for this dataset.</strong></p>
-<!-- hint: descriptives for independent data - first lab's slides;
-           descriptives for dependent data - lecture for two means -->
-<p><strong>1c. Find the 95% confidence interval for the average difference in spending between the two groups.</strong></p>
-<p>Remember to state your resulting interval.</p>
-<p><strong>1d. Perform the appropriate <em>t</em>-test to determine if the 09ers spend at least $50 more than the non-09ers every week. Test at the <span class="math inline">\alpha=0.05</span> level.</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>spending_data <span class="sc">%&gt;%</span> <span class="fu">count</span>(group)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["group"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"09er","2":"50"},{"1":"non09er","2":"50"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># use this code chunk to call in all packages the document will need</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ssstats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>spending_data <span class="sc">%&gt;%</span> <span class="fu">independent_mean_HT</span>(<span class="at">continuous =</span> weekly_spending,</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">grouping =</span> group,</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>,</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">mu =</span> <span class="dv">50</span>,</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                                      <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Two-sample t-test for two independent means and equal variance:
-Null: H₀: μ₁ − μ₂ ≤ 50
-Alternative: H₁: μ₁ − μ₂ &gt; 50
-Test statistic: t(98) = 2.932
-p-value: p = 0.002
-Conclusion: Reject the null hypothesis (p = 0.0021 &lt; α = 0.05)</code></pre>
-</div>
-</div>
-<p>Remember to typeset your hypothesis test.</p>
-<p><strong>1e. Perform the appropriate nonparametric test to determine if the 09ers spend at least $50 more than the non-09ers every week. Test at the <span class="math inline">\alpha=0.05</span> level.</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>spending_data <span class="sc">%&gt;%</span> <span class="fu">independent_median_HT</span>(<span class="at">continuous =</span> weekly_spending,</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">grouping =</span> group,</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>,</span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">m =</span> <span class="dv">50</span>,</span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>                                        <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Wilcoxon Rank Sum Test for two independent medians
-Null: H₀: M₁ - M₂ ≤ 50
-Alternative: H₁: M₁ - M₂ &gt; 50
-Test statistic: T = 1603
-p-value: p = 0.008
-Conclusion: Reject the null hypothesis (p = 0.0075 &lt; α = 0.05)</code></pre>
-</div>
-</div>
-<p>Remember to typeset your hypothesis test.</p>
-<p><strong>1f. State the assumptions you need to check for the <em>t</em>-test.</strong></p>
-<p>Replace with your answer :)</p>
-<p><strong>1g. Generate the output used to check the assumption(s) that you listed in 1f.</strong></p>
-<!-- Note: you do not need to write anything for this answer -- the writing is
-           in the next question -->
-<p><strong>1h. Which test should we report: the <em>t</em>-test or the corresponding Wilcoxon? Why? Your answer should incorporate results from 1g.</strong></p>
-<p>Replace with your answer :)</p>
-<p><strong>1i. Write a brief summary paragraph for this analysis. You should touch on information from the descriptives, the confidence interval, and the hypothesis test.</strong></p>
-<p>Replace with your answer :)</p>
-<p><strong>2. When Veronica is working a case, she often relies on her sharp instincts and quick thinking in interviews. Her dad, Keith, has noticed something about her detective style: once Veronica uncovers a key piece of evidence, her questioning seems to change. Before evidence, Veronica might ask broad, exploratory questions to feel out the suspect’s story. After she has evidence in hand, however, her questions become more pointed, and suspects tend to stumble over their answers. To put this theory to the test, Veronica records a confidence rating (on a scale from 1 to 10) for each suspect she interviews. She asks each suspect to rate how confident they feel in their version of events before she presents evidence (<em>before_evidence</em>) and then again after she confronts them with that evidence (<em>after_evidence</em>); this data can be found in the <u>interview_data</u> dataset.</strong></p>
-<p><strong>2a. Is this independent or dependent data? Explain your reasoning.</strong></p>
-<p>Replace with your answer :)</p>
-<p><strong>2b. Find the appropriate summary statistics for this dataset.</strong></p>
-<!-- hint: descriptives for independent data - first lab's slides;
-           descriptives for dependent data - lecture for two means -->
-<p><strong>2c. Find the 95% confidence interval for the average difference in suspect confidence before and after recieving evidence.</strong></p>
-<p>Remember to state your resulting interval.</p>
-<p><strong>2d. Perform the appropriate <em>t</em>-test to determine if suspect confidence changes after evidence. Test at the <span class="math inline">\alpha=0.05</span> level.</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>interview_data <span class="sc">%&gt;%</span> <span class="fu">dependent_mean_HT</span>(<span class="at">col1 =</span> before_evidence,</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">col2 =</span> after_evidence,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">alternative =</span> <span class="st">&quot;two&quot;</span>,</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">mu =</span> <span class="dv">0</span>,</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Paired t-test for the mean of differences:
-Null: H₀: μ_d = 0
-Alternative: H₁: μ_d ≠ 0
-Test statistic: t(49) = -4.899
-p-value: p &lt; 0.001
-Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></pre>
-</div>
-</div>
-<p>Remember to typeset your hypothesis test.</p>
-<p><strong>2e. Perform the appropriate nonparametric test to determine if suspect confidence changes after evidence. Test at the <span class="math inline">\alpha=0.05</span> level.</strong></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>interview_data <span class="sc">%&gt;%</span> <span class="fu">dependent_median_HT</span>(<span class="at">col1 =</span> before_evidence,</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">col2 =</span> after_evidence,</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">alternative =</span> <span class="st">&quot;two&quot;</span>,</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">m =</span> <span class="dv">0</span>,</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>                                    <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Wilcoxon Signed-Rank Test for the median of differences:
-Null: H₀: M_d = 0
-Alternative: H₁: M_d ≠ 0
-Test statistic: T = 186
-p-value: p &lt; 0.001
-Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></pre>
-</div>
-</div>
-<p>Remember to typeset your hypothesis test.</p>
-<p><strong>2f. State the assumptions you need to check for the <em>t</em>-test.</strong></p>
-<p>Replace with your answer :)</p>
-<p><strong>2g. Generate the output used to check the assumption(s) that you listed in 2f.</strong></p>
-<!-- Note: you do not need to write anything for this answer -- the writing is
-           in the next question -->
-<p><strong>2h. Which test should we report: the <em>t</em>-test or the corresponding Wilcoxon? Why? Your answer should incorporate results from 2g.</strong></p>
-<p>Replace with your answer :)</p>
-<p><strong>2i. Write a brief summary paragraph for this analysis. You should touch on information from the descriptives, the confidence interval, and the hypothesis test.</strong></p>
-<p>Replace with your answer :)</p>
+<p><strong>Tiny Tina, the explosive-loving Bunker Master, is hosting her first-ever Wonderlands Bake-Off. Contestants from across the realm, including goblins, skeletons, and glitter-loving orcs, are competing to craft the most delicious, magical baked treats.</strong></p>
+<p><strong>Each contestant submits one dessert for judging. The judging panel includes:</strong></p>
+<ul>
+<li><strong><a href="https://playwonderlands.2k.com/game-guide/characters/tiny-tina/">Tiny Tina</a>, who values flair and sugar explosions,</strong></li>
+<li><strong><a href="https://playwonderlands.2k.com/game-guide/characters/butt-stallion/">Butt Stallion</a>, who insists on elegance and frosting symmetry, and</strong></li>
+<li><strong><a href="https://playwonderlands.2k.com/game-guide/characters/paladin-mike/">Paladin Mike</a>, who wants practical rations that still taste divine.</strong></li>
+</ul>
+<p><strong>You, as the official Fateweaver Statistician, are tasked with determining what factors predict the panel’s overall satisfaction rating.</strong></p>
+<p><strong>Each contestant records the following:</strong> - <strong><em>glitter_level</em>: How much edible glitter was used (grams)</strong> - <strong><em>boom_factor</em>: A subjective rating (1–10) of how explosive the dessert was</strong> - <strong><em>frosting_thickness</em>: Thickness of frosting layer (mm)</strong> - <strong><em>overall_satisfaction</em>: Combined score from all three judges (0–100 scale)</strong></p>
+<p><strong>1. Let’s first summarize the data. Please use the appropriate <code>mean_median()</code> function to summarize the continuous variables in the dataset.</strong></p>
+<p><strong>2a. Create a scatterplot with overall satisfaction (<em>overall_satisfaction</em>) on the <em>y</em>-axis and glitter level (<em>glitter_level</em>) on the <em>x</em>-axis.</strong></p>
+<p><strong>2b. Create a scatterplot with overall satisfaction (<em>overall_satisfaction</em>) on the <em>y</em>-axis and boom factor (<em>boom_factor</em>) on the <em>x</em>-axis.</strong></p>
+<p><strong>2c. Create a scatterplot with overall satisfaction (<em>overall_satisfaction</em>) on the <em>y</em>-axis and frosting thickness (<em>frosting_thickness</em>) on the <em>x</em>-axis.</strong></p>
+<p><strong>3a. Find the pairwise Pearson’s correlation values.</strong></p>
+<p><strong>3b. Find the pairwise Spearman’s correlation values.</strong></p>
+<p><strong>3c. Which correlation should we report? Check the appropriate assumptions, then decide.</strong></p>
+<p><strong>3d. Using the results from the method chosen in Q3c, which variables are significantly correlated with overall satisfaction (<em>overall_satisfaction</em>)? Test at the <span class="math inline">\alpha=0.05</span> level. You do not need to typeset your individual results, but please back up your statements statistically (using results generated).</strong></p>
+<p><strong>3e. Are any results surprising given the graphs found in Q2 and the correlations reported in Q3d?</strong></p>
+<p>Replace with your answer.</p>
 
 
 

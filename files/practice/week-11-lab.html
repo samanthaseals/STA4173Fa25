@@ -8,7 +8,7 @@
 
 <meta name="author" content="your name here">
 
-<title>R Lab: One-Way ANOVA and Kruskal-Wallis – STA4173 - Biostatistics - Fall 2025</title>
+<title>R Lab: Linear Regression – STA4173 - Biostatistics - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -6158,7 +6158,7 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R Lab: One-Way ANOVA and Kruskal-Wallis</h1>
+<h1 class="title">R Lab: Linear Regression</h1>
 </div>
 
 
@@ -6186,101 +6186,40 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ssstats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>King Triton is concerned that the different sea creatures in Atlantica are not equally loud during musical rehearsals, which might be affecting the harmony of their performances. To investigate, Sebastian conducts a study (<u>singing_data</u>) measuring the average decibel level (volume) of singing during rehearsals from three types of performers: mermaids, fish chorus, and crustaceans.</strong></p>
-<p><strong>Each group (<em>performer</em>) includes 25 randomly selected performers, and their peak singing volumes (<em>volume_db</em>) are recorded during a standard song.</strong></p>
-<p><strong>1a. Use ANOVA to determine if the average peak singing volume (<em>volume_db</em>) differs between performance groups (<em>performer</em>).</strong></p>
+<p><strong>Tiny Tina, the explosive-loving Bunker Master, is hosting her first-ever Wonderlands Bake-Off. Contestants from across the realm, including goblins, skeletons, and glitter-loving orcs, are competing to craft the most delicious, magical baked treats.</strong></p>
+<p><strong>Each contestant submits one dessert for judging. The judging panel includes:</strong></p>
 <ul>
-<li><strong>Hypotheses:</strong>
-<ul>
-<li><span class="math inline">H_0:</span></li>
-<li><span class="math inline">H_1:</span></li>
-</ul></li>
-<li><strong>Test Statistic and <em>p</em>-Value</strong>
-<ul>
-<li><span class="math inline">F_0 =</span>, <span class="math inline">p =</span></li>
-</ul></li>
-<li><strong>Rejection Region</strong>
-<ul>
-<li>Reject <span class="math inline">H_0</span> if <span class="math inline">p &lt; \alpha</span>; <span class="math inline">\alpha =</span></li>
-</ul></li>
-<li><strong>Conclusion and interpretation</strong>
-<ul>
-<li>Reject or Fail to reject <span class="math inline">H_0</span> (<span class="math inline">p \text{ vs } \alpha \to</span>). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).</li>
-</ul></li>
+<li><strong><a href="https://playwonderlands.2k.com/game-guide/characters/tiny-tina/">Tiny Tina</a>, who values flair and sugar explosions,</strong></li>
+<li><strong><a href="https://playwonderlands.2k.com/game-guide/characters/butt-stallion/">Butt Stallion</a>, who insists on elegance and frosting symmetry, and</strong></li>
+<li><strong><a href="https://playwonderlands.2k.com/game-guide/characters/paladin-mike/">Paladin Mike</a>, who wants practical rations that still taste divine.</strong></li>
 </ul>
-<p><strong>1b. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the <span class="math inline">\alpha=0.05</span> level. Assume that this is an exploratory study; do not adjust for <span class="math inline">\alpha</span>.</strong></p>
-<p>Pairwise differences:</p>
-<ul>
-<li>List</li>
-<li>Them</li>
-<li>Here</li>
-</ul>
-<p><strong>1c. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the <span class="math inline">\alpha=0.05</span> level. Assume that this is a confirmatory study; adjust for <span class="math inline">\alpha</span>.</strong></p>
-<p>Pairwise differences:</p>
-<ul>
-<li>List</li>
-<li>Them</li>
-<li>Here</li>
-</ul>
-<p><strong>2a. Use the Kruskal-Wallis to determine if the median peak singing volume (<em>volume_db</em>) differs between performance groups (<em>performer</em>).</strong></p>
-<ul>
-<li><strong>Hypotheses:</strong>
-<ul>
-<li><span class="math inline">H_0:</span></li>
-<li><span class="math inline">H_1:</span></li>
-</ul></li>
-<li><strong>Test Statistic and <em>p</em>-Value</strong>
-<ul>
-<li><span class="math inline">\chi^2_0 =</span>, <span class="math inline">p =</span></li>
-</ul></li>
-<li><strong>Rejection Region</strong>
-<ul>
-<li>Reject <span class="math inline">H_0</span> if <span class="math inline">p &lt; \alpha</span>; <span class="math inline">\alpha =</span></li>
-</ul></li>
-<li><strong>Conclusion and interpretation</strong>
-<ul>
-<li>Reject or Fail to reject <span class="math inline">H_0</span> (<span class="math inline">p \text{ vs } \alpha \to</span>). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).</li>
-</ul></li>
-</ul>
-<p><strong>2b. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the <span class="math inline">\alpha=0.05</span> level. Assume that this is an exploratory study; do not adjust for <span class="math inline">\alpha</span>.</strong></p>
-<p>Pairwise differences:</p>
-<ul>
-<li>List</li>
-<li>Them</li>
-<li>Here</li>
-</ul>
-<p><strong>2c. Perform the appropriate posthoc test to determine what pairwise differences exist. Test at the <span class="math inline">\alpha=0.05</span> level. Assume that this is a confirmatory study; adjust for <span class="math inline">\alpha</span>.</strong></p>
-<p>Pairwise differences:</p>
-<ul>
-<li>List</li>
-<li>Them</li>
-<li>Here</li>
-</ul>
-<p><strong>3a. Construct the graph for assessing ANOVA assumptions.</strong></p>
-<p><strong>3b. Formally test for the variance assumption. Test at the <span class="math inline">\alpha=0.05</span> level.</strong></p>
-<ul>
-<li><strong>Hypotheses:</strong>
-<ul>
-<li>$H_0: $</li>
-<li>$H_1: $</li>
-</ul></li>
-<li><strong>Test Statistic and <em>p</em>-Value</strong>
-<ul>
-<li><span class="math inline">F_0 =</span>, <span class="math inline">p =</span></li>
-</ul></li>
-<li><strong>Rejection Region</strong>
-<ul>
-<li>Reject <span class="math inline">H_0</span> if <span class="math inline">p &lt; \alpha</span>; <span class="math inline">\alpha =</span></li>
-</ul></li>
-<li><strong>Conclusion and interpretation</strong>
-<ul>
-<li>Reject or Fail to reject <span class="math inline">H_0</span> (<span class="math inline">p \text{ vs } \alpha \to</span>). There is or is not sufficient evidence to suggest (the alternative hypothesis in words, not math).</li>
-</ul></li>
-</ul>
-<p><strong>3c. Do we meet the assumptions? Why or why not?</strong></p>
-<p>Replace with your answer</p>
-<p><strong>3d. Which test should we use to look for differences among the performer groups? Why?</strong></p>
-<p>Replace with your answer</p>
+<p><strong>You, as the official Fateweaver Statistician, are tasked with determining what factors predict the panel’s overall satisfaction rating.</strong></p>
+<p><strong>Each contestant records the following:</strong> - <strong><em>glitter_level</em>: How much edible glitter was used (grams)</strong> - <strong><em>boom_factor</em>: A subjective rating (1–10) of how explosive the dessert was</strong> - <strong><em>frosting_thickness</em>: Thickness of frosting layer (mm)</strong> - <strong><em>overall_satisfaction</em>: Combined score from all three judges (0–100 scale)</strong></p>
+<p><strong>1. Let’s first summarize the data. Please use the appropriate <code>mean_median()</code> function to summarize the continuous variables in the dataset.</strong></p>
+<p><strong>2a. Create a scatterplot with overall satisfaction (<em>overall_satisfaction</em>) on the <em>y</em>-axis and glitter level (<em>glitter_level</em>) on the <em>x</em>-axis.</strong></p>
+<p><strong>2b. Create a scatterplot with overall satisfaction (<em>overall_satisfaction</em>) on the <em>y</em>-axis and boom factor (<em>boom_factor</em>) on the <em>x</em>-axis.</strong></p>
+<p><strong>2c. Create a scatterplot with overall satisfaction (<em>overall_satisfaction</em>) on the <em>y</em>-axis and frosting thickness (<em>frosting_thickness</em>) on the <em>x</em>-axis.</strong></p>
+<p><strong>3a. Find the pairwise Pearson’s correlation values.</strong></p>
+<p><strong>3b. Find the pairwise Spearman’s correlation values.</strong></p>
+<p><strong>3c. Which correlation should we report? Check the appropriate assumptions, then decide.</strong></p>
+<p><strong>3d. Using the results from the method chosen in Q3c, which variables are significantly correlated with overall satisfaction (<em>overall_satisfaction</em>)? Test at the <span class="math inline">\alpha=0.05</span> level. You do not need to typeset your individual results, but please back up your statements statistically (using results generated).</strong></p>
+<p><strong>3e. Are any results surprising given the graphs found in Q2 and the correlations reported in Q3d?</strong></p>
+<p>Replace with your answer.</p>
+<p><strong>4. Construct a regression model that models overall satisfaction (<em>overall_satisfaction</em>) as a function of glitter level (<em>glitter_level</em>), boom factor (<em>boom_factor</em>), and frosting thickness (<em>frosting_thickness</em>). Remember to state your resulting regression model.</strong></p>
+<!-- vague set up below -- check my lecture .qmd file for how I typeset the models in class. -->
+<!-- you will be plugging in values for \hat{\beta}_i based on your regression results. -->
+<p><span class="math display">\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x_1 +\ ...</span></p>
+<p><strong>4. Is this a significant regression line? Test at the <span class="math inline">\alpha=0.05</span> level. Remember to typeset your results.</strong></p>
+<p>Insert your typesetting here.</p>
+<p><strong>5. Which, if any, are signficant predictors of overall satisfaction (<em>overall_satisfaction</em>)? Test at the <span class="math inline">\alpha=0.05</span> level. You do not need to formally write the hypothesis tests, but please provide a statement for each predictor, backed up statistically (using results generated).</strong></p>
+<p><strong>6a. Please provide a formal interpretation for glitter level (<em>glitter_level</em>).</strong></p>
+<p>Replace with your answer.</p>
+<p><strong>6b. Please provide a formal interpretation for boom factor (<em>boom_factor</em>).</strong></p>
+<p>Replace with your answer.</p>
+<p><strong>6c. Please provide a formal interpretation for frosting thickness (<em>frosting_thickness</em>).</strong></p>
+<p>Replace with your answer.</p>
+<p><strong>7. Please write a brief summary paragraph for Tiny Tina. Include information about your summary statistics, slope interpretations (you can be more general here – remember that she is 13 and not a statistician/data scientist), and test results (frame this as what matters most according to the model we constructed).</strong></p>
+<p>Replace with your answer.</p>
 
 
 
