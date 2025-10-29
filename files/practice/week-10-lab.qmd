@@ -47,6 +47,7 @@ bakeoff_data <- tibble(glitter_level = round(runif(160, 0, 20)),
 **You, as the official Fateweaver Statistician, are tasked with determining what factors predict the panel's overall satisfaction rating.**
 
 **Each contestant records the following:**
+
 - ***glitter_level*: How much edible glitter was used (grams)**
 - ***boom_factor*: A subjective rating (1–10) of how explosive the dessert was**
 -	***frosting_thickness*: Thickness of frosting layer (mm)**
