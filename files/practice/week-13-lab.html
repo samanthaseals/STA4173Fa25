@@ -8,7 +8,7 @@
 
 <meta name="author" content="your name here">
 
-<title>R Lab: Linear Regression – STA4173 - Biostatistics - Fall 2025</title>
+<title>R Lab: Categorical Analysis – STA4173 - Biostatistics - Fall 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -6158,7 +6158,7 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R Lab: Linear Regression</h1>
+<h1 class="title">R Lab: Categorical Analysis</h1>
 </div>
 
 
@@ -6186,20 +6186,11 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ssstats)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><strong>Tiny Tina, the explosive-loving Bunker Master, is hosting her first-ever Wonderlands Bake-Off. Contestants from across the realm, including goblins, skeletons, and glitter-loving orcs, are competing to craft the most delicious, magical baked treats.</strong></p>
-<p><strong>Each contestant submits one dessert for judging. The judging panel includes:</strong></p>
-<ul>
-<li><strong><a href="https://playwonderlands.2k.com/game-guide/characters/tiny-tina/">Tiny Tina</a>, who values flair and sugar explosions,</strong></li>
-<li><strong><a href="https://playwonderlands.2k.com/game-guide/characters/butt-stallion/">Butt Stallion</a>, who insists on elegance and frosting symmetry, and</strong></li>
-<li><strong><a href="https://playwonderlands.2k.com/game-guide/characters/paladin-mike/">Paladin Mike</a>, who wants practical rations that still taste divine.</strong></li>
-</ul>
-<p><strong>You, as the official Fateweaver Statistician, are tasked with determining what factors predict the panel’s overall satisfaction rating.</strong></p>
-<p><strong>Each contestant records the following:</strong> - <strong><em>glitter_level</em>: How much edible glitter was used (grams)</strong> - <strong><em>boom_factor</em>: A subjective rating (1–10) of how explosive the dessert was</strong> - <strong><em>frosting_thickness</em>: Thickness of frosting layer (mm)</strong> - <strong><em>overall_satisfaction</em>: Combined score from all three judges (0–100 scale)</strong></p>
-<p><strong>1. Construct a regression model that models overall satisfaction (<em>overall_satisfaction</em>) as a function of glitter level (<em>glitter_level</em>), boom factor (<em>boom_factor</em>), and frosting thickness (<em>frosting_thickness</em>). Remember to state your resulting regression model.</strong></p>
-<!-- vague set up below -- check my lecture .qmd file for how I typeset the models in class. -->
-<!-- you will be plugging in values for \hat{\beta}_i based on your regression results. -->
-<p><span class="math display">\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x_1 +\ ...</span></p>
-<p><strong>2. Is this a significant regression line? Test at the <span class="math inline">\alpha=0.05</span> level. Remember to typeset your results.</strong></p>
+<p><strong>1. The Tower of Terror is one of the most thrilling rides at Hollywood Studios, often a guest favorite. Park management believes that at least 80% of riders exit the attraction with a smile on their face. To assess this claim, the park analytics team conducts a quick observation (<u>tower_data</u>), recording whether or not each of 100 randomly selected guests is smiling (<em>smiling</em>) as they exit the attraction.</strong></p>
+<p><strong>1a. Find the appropriate frequency table for this dataset.</strong></p>
+<p><strong>1b. Construct the 95% confidence interval for the true proportion of guests that are smiling as they exit the attraction.</strong></p>
+<p>Remember to state the resulting confidence interval.</p>
+<p><strong>1c. Is there evidence to believe that the true proportion of smiling guests is lower than what management believes? Assume <span class="math inline">\alpha = 0.05</span>.</strong></p>
 <ul>
 <li><strong>Hypotheses</strong>
 <ul>
@@ -6208,7 +6199,7 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
 </ul></li>
 <li><strong>Test Statistic and <em>p</em>-Value</strong>
 <ul>
-<li><span class="math inline">F_0 =</span>; <span class="math inline">p =</span></li>
+<li><span class="math inline">z_0 =</span>; <span class="math inline">p =</span></li>
 </ul></li>
 <li><strong>Rejection Region</strong>
 <ul>
@@ -6220,20 +6211,77 @@ box-shadow: 0 0 0px rgba(0, 0, 0, 0.02);
 <li>Interpretation</li>
 </ul></li>
 </ul>
-<p><strong>3. Which, if any, are signficant predictors of overall satisfaction (<em>overall_satisfaction</em>)? Test at the <span class="math inline">\alpha=0.05</span> level. You do not need to formally write the hypothesis tests (i.e., typeset), but please provide a statement for each predictor, backed up statistically (using results generated).</strong></p>
+<p><strong>2. Hollywood Studios offers two iconic snacks throughout the park: Mickey Bars and fresh popcorn. The snack team lead wonders if age influences snack choice. They collect data from 120 guests (<u>snack_data</u>) asking each guest to identify their age group (<em>age_group</em>) and then choose between a Mickey Bar or popcorn (<em>snack_choice</em>).</strong></p>
+<p><strong>2a. Find the appropriate frequency table for this dataset.</strong></p>
+<p><strong>2b. Construct the 95% confidence interval for the difference between the two age groups in the true proportion of guests that prefer Mickey Bars.</strong></p>
+<p>Remember to state the resulting confidence interval.</p>
+<p><strong>2c. The team wants to test whether younger guests are more likely to choose Mickey Bars as compared to older guests. Could age be a factor in what guests crave at snack time? Assume <span class="math inline">\alpha = 0.05</span>.</strong></p>
 <ul>
-<li><p><strong>glitter_level:</strong> statement here (<em>p</em> =)</p></li>
-<li><p><strong>boom_factor:</strong> statement here (<em>p</em> =)</p></li>
-<li><p><strong>frosting_thickness:</strong> statement here (<em>p</em> =)</p></li>
+<li><strong>Hypotheses</strong>
+<ul>
+<li><span class="math inline">H_0:</span></li>
+<li><span class="math inline">H_1:</span></li>
+</ul></li>
+<li><strong>Test Statistic and <em>p</em>-Value</strong>
+<ul>
+<li><span class="math inline">z_0 =</span>; <span class="math inline">p =</span></li>
+</ul></li>
+<li><strong>Rejection Region</strong>
+<ul>
+<li>Reject <span class="math inline">H_0</span> if <span class="math inline">p&lt;\alpha</span>; <span class="math inline">\alpha=</span></li>
+</ul></li>
+<li><strong>Conclusion and Intepretation</strong>
+<ul>
+<li>Conclusion</li>
+<li>Interpretation</li>
+</ul></li>
 </ul>
-<p><strong>4a. Please provide a formal interpretation for glitter level (<em>glitter_level</em>).</strong> <!-- HINT! Remember to interpret in context of the problem! --> <!-- Go back to lecture -- "for a one-unit increase in x........" --></p>
-<p>Replace with your answer.</p>
-<p><strong>4b. Please provide a formal interpretation for boom factor (<em>boom_factor</em>).</strong> <!-- HINT! Remember to interpret in context of the problem! --> <!-- Go back to lecture -- "for a one-unit increase in x........" --></p>
-<p>Replace with your answer.</p>
-<p><strong>4c. Please provide a formal interpretation for frosting thickness (<em>frosting_thickness</em>).</strong> <!-- HINT! Remember to interpret in context of the problem! --> <!-- Go back to lecture -- "for a one-unit increase in x........" --></p>
-<p>Replace with your answer.</p>
-<p><strong>5. Please write a brief summary paragraph for Tiny Tina. Include information about your summary statistics, slope interpretations (you can be more general here – remember that she is 13 and not a statistician/data scientist), and test results (frame this as what matters most according to the model we constructed).</strong></p>
-<p>Replace with your answer.</p>
+<p><strong>3. Hollywood Studios is home to a variety of live performances. Historically, guest attendance has followed a pattern: 35% prefer Musical shows, 25% prefer Stunt shows, and both Character Meet-and-Greets and Interactive Games attract about 20% of guests. However, a recent marketing campaign may have shifted those preferences. To evaluate this, 200 guests are surveyed (<u>shows_data</u>)about their favorite type of show in the park (<em>favorite_show</em>).</strong></p>
+<p><strong>3a. Find the appropriate frequency table for this dataset.</strong></p>
+<p><strong>3b. Do current guest preferences match the historical expectations, or have things changed? Test at the <span class="math inline">\alpha = 0.05</span> level.</strong></p>
+<ul>
+<li><strong>Hypotheses</strong>
+<ul>
+<li><span class="math inline">H_0:</span></li>
+<li><span class="math inline">H_1:</span></li>
+</ul></li>
+<li><strong>Test Statistic and <em>p</em>-Value</strong>
+<ul>
+<li><span class="math inline">\chi^2_0 =</span>; <span class="math inline">p =</span></li>
+</ul></li>
+<li><strong>Rejection Region</strong>
+<ul>
+<li>Reject <span class="math inline">H_0</span> if <span class="math inline">p&lt;\alpha</span>; <span class="math inline">\alpha=</span></li>
+</ul></li>
+<li><strong>Conclusion and Intepretation</strong>
+<ul>
+<li>Conclusion</li>
+<li>Interpretation</li>
+</ul></li>
+</ul>
+<p><strong>4. Guest behavior at Hollywood Studios may shift throughout the day. The park’s operations team is interested in whether ride type is associated with time of day. Attractions are categorized into three types (<em>ride_type</em>): Thrill, Family, and Dark Rides. Staff record (<u>ride_data</u>) the time of day (<em>time_of_day</em>; Morning, Afternoon, or Evening) at which 300 guests enter their first ride, along with the ride type chosen. The goal is to determine if certain types of rides are more or less popular at different times, helping the team optimize staffing and operations across the day.</strong></p>
+<p><strong>4a. Find the appropriate frequency table for this dataset.</strong></p>
+<p><strong>4b. Are certain types of rides are more or less popular at different times? Test at the <span class="math inline">\alpha = 0.05</span> level.</strong></p>
+<ul>
+<li><strong>Hypotheses</strong>
+<ul>
+<li><span class="math inline">H_0:</span></li>
+<li><span class="math inline">H_1:</span></li>
+</ul></li>
+<li><strong>Test Statistic and <em>p</em>-Value</strong>
+<ul>
+<li><span class="math inline">\chi^2_0 =</span>; <span class="math inline">p =</span></li>
+</ul></li>
+<li><strong>Rejection Region</strong>
+<ul>
+<li>Reject <span class="math inline">H_0</span> if <span class="math inline">p&lt;\alpha</span>; <span class="math inline">\alpha=</span></li>
+</ul></li>
+<li><strong>Conclusion and Intepretation</strong>
+<ul>
+<li>Conclusion</li>
+<li>Interpretation</li>
+</ul></li>
+</ul>
 
 
 
