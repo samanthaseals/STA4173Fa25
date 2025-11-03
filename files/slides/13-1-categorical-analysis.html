@@ -2648,12 +2648,8 @@ window.onload = function() {
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>party_data <span class="sc">%&gt;%</span> <span class="fu">one_prop_CI</span>(<span class="at">binary =</span> preference,</span>
 <span id="cb7-2"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Chocolate&quot;</span>,</span>
 <span id="cb7-3"><a></a>                             <span class="at">confidence =</span> <span class="fl">0.95</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["proportion"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["successes"],"name":[2],"type":["int"],"align":["right"]},{"label":["sample_size"],"name":[3],"type":["int"],"align":["right"]},{"label":["conf_level"],"name":[4],"type":["chr"],"align":["left"]},{"label":["ci_lower"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["ci_upper"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"0.7067","2":"53","3":"75","4":"95%","5":"0.5956","6":"0.7976"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Sample proportion (p̂): 0.7067Number of successes: 53Sample size: 7595% confidence interval for the population proportion: (0.5956, 0.7976)</code></pre>
 </div>
 </div>
 <ul>
@@ -2719,11 +2715,11 @@ z_0 = \frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}
 <li><p>Generic syntax:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">one_prop_HT</span>(<span class="at">binary =</span> binary_variable, </span>
-<span id="cb8-2"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Name of Event&quot;</span></span>
-<span id="cb8-3"><a></a>                             <span class="at">p =</span> hypothesized_value, </span>
-<span id="cb8-4"><a></a>                             <span class="at">alternative =</span> <span class="st">&quot;alternative_direction&quot;</span>, </span>
-<span id="cb8-5"><a></a>                             <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">one_prop_HT</span>(<span class="at">binary =</span> binary_variable, </span>
+<span id="cb9-2"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Name of Event&quot;</span></span>
+<span id="cb9-3"><a></a>                             <span class="at">p =</span> hypothesized_value, </span>
+<span id="cb9-4"><a></a>                             <span class="at">alternative =</span> <span class="st">&quot;alternative_direction&quot;</span>, </span>
+<span id="cb9-5"><a></a>                             <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-one-sample-proportion-3" class="slide level2">
@@ -2734,11 +2730,11 @@ z_0 = \frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}
 <li><p>Let’s now formally test her hypothesis at the <span class="math inline">\alpha = 0.05</span> level. How should we update this code?</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">one_prop_HT</span>(<span class="at">binary =</span> binary_variable, </span>
-<span id="cb9-2"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Name of Event&quot;</span></span>
-<span id="cb9-3"><a></a>                             <span class="at">p =</span> hypothesized_value, </span>
-<span id="cb9-4"><a></a>                             <span class="at">alternative =</span> <span class="st">&quot;alternative_direction&quot;</span>, </span>
-<span id="cb9-5"><a></a>                             <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">one_prop_HT</span>(<span class="at">binary =</span> binary_variable, </span>
+<span id="cb10-2"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Name of Event&quot;</span></span>
+<span id="cb10-3"><a></a>                             <span class="at">p =</span> hypothesized_value, </span>
+<span id="cb10-4"><a></a>                             <span class="at">alternative =</span> <span class="st">&quot;alternative_direction&quot;</span>, </span>
+<span id="cb10-5"><a></a>                             <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-one-sample-proportion-4" class="slide level2">
@@ -2749,11 +2745,11 @@ z_0 = \frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}
 <li><p>Let’s now formally test her hypothesis at the <span class="math inline">\alpha = 0.05</span> level. Our updated code,</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>party_data <span class="sc">%&gt;%</span> <span class="fu">one_prop_HT</span>(<span class="at">binary =</span> preference,</span>
-<span id="cb10-2"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Chocolate&quot;</span>,</span>
-<span id="cb10-3"><a></a>                           <span class="at">p =</span> <span class="fl">0.5</span>, </span>
-<span id="cb10-4"><a></a>                           <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>, </span>
-<span id="cb10-5"><a></a>                           <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>party_data <span class="sc">%&gt;%</span> <span class="fu">one_prop_HT</span>(<span class="at">binary =</span> preference,</span>
+<span id="cb11-2"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Chocolate&quot;</span>,</span>
+<span id="cb11-3"><a></a>                           <span class="at">p =</span> <span class="fl">0.5</span>, </span>
+<span id="cb11-4"><a></a>                           <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>, </span>
+<span id="cb11-5"><a></a>                           <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-one-sample-proportion-5" class="slide level2">
@@ -2762,14 +2758,14 @@ z_0 = \frac{\hat{p}-p_0}{\sqrt{\frac{p_0(1-p_0)}{n}}}
 <li>Running the code,</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>party_data <span class="sc">%&gt;%</span> <span class="fu">one_prop_HT</span>(<span class="at">binary =</span> preference,</span>
-<span id="cb11-2"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Chocolate&quot;</span>,</span>
-<span id="cb11-3"><a></a>                           <span class="at">p =</span> <span class="fl">0.5</span>, </span>
-<span id="cb11-4"><a></a>                           <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>, </span>
-<span id="cb11-5"><a></a>                           <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>party_data <span class="sc">%&gt;%</span> <span class="fu">one_prop_HT</span>(<span class="at">binary =</span> preference,</span>
+<span id="cb12-2"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Chocolate&quot;</span>,</span>
+<span id="cb12-3"><a></a>                           <span class="at">p =</span> <span class="fl">0.5</span>, </span>
+<span id="cb12-4"><a></a>                           <span class="at">alternative =</span> <span class="st">&quot;greater&quot;</span>, </span>
+<span id="cb12-5"><a></a>                           <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>One-sample z-test for the population proportion:
-Null: H0: π = 0.5
+Null: H0: π ≤ 0.5
 Alternative: H1: π &gt; 0.5
 Test statistic: z = 3.58
 p-value: p &lt; 0.001
@@ -2818,18 +2814,18 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></p
 <li><p>Generic syntax:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">two_prop_CI</span>(<span class="at">outcome =</span> binary_variable,</span>
-<span id="cb13-2"><a></a>                             <span class="at">grouping =</span> grouping_variable,</span>
-<span id="cb13-3"><a></a>                             <span class="at">success =</span> <span class="st">&quot;Name of Event&quot;</span>,</span>
-<span id="cb13-4"><a></a>                             <span class="at">confidence =</span> confidence_level)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">two_prop_CI</span>(<span class="at">outcome =</span> binary_variable,</span>
+<span id="cb14-2"><a></a>                             <span class="at">grouping =</span> grouping_variable,</span>
+<span id="cb14-3"><a></a>                             <span class="at">success =</span> <span class="st">&quot;Name of Event&quot;</span>,</span>
+<span id="cb14-4"><a></a>                             <span class="at">confidence =</span> confidence_level)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Reminder! We can use the <code>n_pct()</code> function to create a frequency table.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(<span class="at">row_var =</span> row_variable,</span>
-<span id="cb14-2"><a></a>                       <span class="at">col_var =</span> column_variable,</span>
-<span id="cb14-3"><a></a>                       <span class="at">rows =</span> number_of_rows)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(<span class="at">row_var =</span> row_variable,</span>
+<span id="cb15-2"><a></a>                       <span class="at">col_var =</span> column_variable,</span>
+<span id="cb15-3"><a></a>                       <span class="at">rows =</span> number_of_rows)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="confidence-intervals-two-sample-proportions-1" class="slide level2">
@@ -2839,7 +2835,7 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></p
 <li><p>Let’s first examine a frequency table.</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>candy_data <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(<span class="at">row_var =</span> age_group, <span class="at">col_var =</span> shared_candy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>candy_data <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(<span class="at">row_var =</span> age_group, <span class="at">col_var =</span> shared_candy)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
   age_group No         Yes       
@@ -2856,10 +2852,10 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></p
 <li><p>Let’s now find the 90% confidence interval for <span class="math inline">\pi_1 - \pi_2</span>. How should we update this code?</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">two_prop_CI</span>(<span class="at">binary =</span> binary_variable,</span>
-<span id="cb17-2"><a></a>                             <span class="at">grouping =</span> grouping_variable,</span>
-<span id="cb17-3"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Name of Event&quot;</span>,</span>
-<span id="cb17-4"><a></a>                             <span class="at">confidence =</span> confidence_level)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">two_prop_CI</span>(<span class="at">binary =</span> binary_variable,</span>
+<span id="cb18-2"><a></a>                             <span class="at">grouping =</span> grouping_variable,</span>
+<span id="cb18-3"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Name of Event&quot;</span>,</span>
+<span id="cb18-4"><a></a>                             <span class="at">confidence =</span> confidence_level)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="confidence-intervals-two-sample-proportions-3" class="slide level2">
@@ -2869,10 +2865,10 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></p
 <li><p>Let’s now find the 90% confidence interval for <span class="math inline">\pi_1 - \pi_2</span>. Our updated code,</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>candy_data <span class="sc">%&gt;%</span> <span class="fu">two_prop_CI</span>(<span class="at">binary =</span> shared_candy,</span>
-<span id="cb18-2"><a></a>                           <span class="at">grouping =</span> age_group,</span>
-<span id="cb18-3"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Yes&quot;</span>,</span>
-<span id="cb18-4"><a></a>                           <span class="at">confidence =</span> <span class="fl">0.90</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>candy_data <span class="sc">%&gt;%</span> <span class="fu">two_prop_CI</span>(<span class="at">binary =</span> shared_candy,</span>
+<span id="cb19-2"><a></a>                           <span class="at">grouping =</span> age_group,</span>
+<span id="cb19-3"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Yes&quot;</span>,</span>
+<span id="cb19-4"><a></a>                           <span class="at">confidence =</span> <span class="fl">0.90</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="confidence-intervals-two-sample-proportions-4" class="slide level2">
@@ -2881,16 +2877,12 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></p
 <li>Running the code,</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>candy_data <span class="sc">%&gt;%</span> <span class="fu">two_prop_CI</span>(<span class="at">binary =</span> shared_candy,</span>
-<span id="cb19-2"><a></a>                           <span class="at">grouping =</span> age_group,</span>
-<span id="cb19-3"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Yes&quot;</span>,</span>
-<span id="cb19-4"><a></a>                           <span class="at">confidence =</span> <span class="fl">0.90</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["group1"],"name":[1],"type":["chr"],"align":["left"]},{"label":["group2"],"name":[2],"type":["chr"],"align":["left"]},{"label":["p1"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["p2"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["diff"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["conf_level"],"name":[6],"type":["chr"],"align":["left"]},{"label":["ci_lower"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ci_upper"],"name":[8],"type":["dbl"],"align":["right"]}],"data":[{"1":"Young","2":"Older","3":"0.4167","4":"0.8167","5":"-0.4","6":"90%","7":"-0.5331","8":"-0.2669"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>candy_data <span class="sc">%&gt;%</span> <span class="fu">two_prop_CI</span>(<span class="at">binary =</span> shared_candy,</span>
+<span id="cb20-2"><a></a>                           <span class="at">grouping =</span> age_group,</span>
+<span id="cb20-3"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Yes&quot;</span>,</span>
+<span id="cb20-4"><a></a>                           <span class="at">confidence =</span> <span class="fl">0.90</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Sample proportion (Young): 0.4167Sample proportion (Older): 0.8167Point estimate for the difference in proportions (p̂[Young] − p̂[Older]): -0.490% confidence interval for p[Young] − p[Older]: (-0.5331, -0.2669)</code></pre>
 </div>
 </div>
 <ul>
@@ -2940,12 +2932,12 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></p
 <li><p>Generic syntax:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">two_prop_HT</span>(<span class="at">binary =</span> binary_variable, </span>
-<span id="cb20-2"><a></a>                             <span class="at">grouping =</span> grouping_variable,</span>
-<span id="cb20-3"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Name of Event&quot;</span></span>
-<span id="cb20-4"><a></a>                             <span class="at">p =</span> hypothesized_value, </span>
-<span id="cb20-5"><a></a>                             <span class="at">alternative =</span> <span class="st">&quot;alternative_direction&quot;</span>, </span>
-<span id="cb20-6"><a></a>                             <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">two_prop_HT</span>(<span class="at">binary =</span> binary_variable, </span>
+<span id="cb22-2"><a></a>                             <span class="at">grouping =</span> grouping_variable,</span>
+<span id="cb22-3"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Name of Event&quot;</span></span>
+<span id="cb22-4"><a></a>                             <span class="at">p =</span> hypothesized_value, </span>
+<span id="cb22-5"><a></a>                             <span class="at">alternative =</span> <span class="st">&quot;alternative_direction&quot;</span>, </span>
+<span id="cb22-6"><a></a>                             <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-two-sample-proportions-2" class="slide level2">
@@ -2955,12 +2947,12 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></p
 <li><p>Let’s now test Fluttershy’s hunch at the <span class="math inline">\alpha = 0.10</span> level. How should we update this code?</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">two_prop_HT</span>(<span class="at">binary =</span> binary_variable, </span>
-<span id="cb21-2"><a></a>                             <span class="at">grouping =</span> grouping_variable,</span>
-<span id="cb21-3"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Name of Event&quot;</span></span>
-<span id="cb21-4"><a></a>                             <span class="at">p =</span> hypothesized_value, </span>
-<span id="cb21-5"><a></a>                             <span class="at">alternative =</span> <span class="st">&quot;alternative_direction&quot;</span>, </span>
-<span id="cb21-6"><a></a>                             <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">two_prop_HT</span>(<span class="at">binary =</span> binary_variable, </span>
+<span id="cb23-2"><a></a>                             <span class="at">grouping =</span> grouping_variable,</span>
+<span id="cb23-3"><a></a>                             <span class="at">event =</span> <span class="st">&quot;Name of Event&quot;</span></span>
+<span id="cb23-4"><a></a>                             <span class="at">p =</span> hypothesized_value, </span>
+<span id="cb23-5"><a></a>                             <span class="at">alternative =</span> <span class="st">&quot;alternative_direction&quot;</span>, </span>
+<span id="cb23-6"><a></a>                             <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-two-sample-proportions-3" class="slide level2">
@@ -2970,12 +2962,12 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></p
 <li><p>Let’s now test Fluttershy’s hunch at the <span class="math inline">\alpha = 0.10</span> level. Our updated code,</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>candy_data <span class="sc">%&gt;%</span> <span class="fu">two_prop_HT</span>(<span class="at">binary =</span> shared_candy, </span>
-<span id="cb22-2"><a></a>                           <span class="at">grouping =</span> age_group,</span>
-<span id="cb22-3"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Yes&quot;</span>,</span>
-<span id="cb22-4"><a></a>                           <span class="at">p =</span> <span class="dv">0</span>, </span>
-<span id="cb22-5"><a></a>                           <span class="at">alternative =</span> <span class="st">&quot;less&quot;</span>, </span>
-<span id="cb22-6"><a></a>                           <span class="at">alpha =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>candy_data <span class="sc">%&gt;%</span> <span class="fu">two_prop_HT</span>(<span class="at">binary =</span> shared_candy, </span>
+<span id="cb24-2"><a></a>                           <span class="at">grouping =</span> age_group,</span>
+<span id="cb24-3"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Yes&quot;</span>,</span>
+<span id="cb24-4"><a></a>                           <span class="at">p =</span> <span class="dv">0</span>, </span>
+<span id="cb24-5"><a></a>                           <span class="at">alternative =</span> <span class="st">&quot;less&quot;</span>, </span>
+<span id="cb24-6"><a></a>                           <span class="at">alpha =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-two-sample-proportions-4" class="slide level2">
@@ -2984,18 +2976,18 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></p
 <li>Running the code,</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>candy_data <span class="sc">%&gt;%</span> <span class="fu">two_prop_HT</span>(<span class="at">binary =</span> shared_candy, </span>
-<span id="cb23-2"><a></a>                           <span class="at">grouping =</span> age_group,</span>
-<span id="cb23-3"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Yes&quot;</span>,</span>
-<span id="cb23-4"><a></a>                           <span class="at">p =</span> <span class="dv">0</span>, </span>
-<span id="cb23-5"><a></a>                           <span class="at">alternative =</span> <span class="st">&quot;less&quot;</span>, </span>
-<span id="cb23-6"><a></a>                           <span class="at">alpha =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>candy_data <span class="sc">%&gt;%</span> <span class="fu">two_prop_HT</span>(<span class="at">binary =</span> shared_candy, </span>
+<span id="cb25-2"><a></a>                           <span class="at">grouping =</span> age_group,</span>
+<span id="cb25-3"><a></a>                           <span class="at">event =</span> <span class="st">&quot;Yes&quot;</span>,</span>
+<span id="cb25-4"><a></a>                           <span class="at">p =</span> <span class="dv">0</span>, </span>
+<span id="cb25-5"><a></a>                           <span class="at">alternative =</span> <span class="st">&quot;less&quot;</span>, </span>
+<span id="cb25-6"><a></a>                           <span class="at">alpha =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Two-sample z-test for difference in proportions:
-Group 1: Young, Group 2: Older
-Observed difference: -0.4
-Null: H₀: π₁ - π₂ = 0
-Alternative: H₁: π₁ - π₂ &lt; 0
+Group 1: YoungSample proportion = 0.4167 (25/60)Group 2: OlderSample proportion = 0.8167 (49/60)
+Point estimate for the difference: p̂[Young] − p̂[Older] = -0.4
+Null: H₀: π[Young] − π[Older] ≥ 0
+Alternative: H₁: π[Young] − π[Older] &lt; 0
 Test statistic: z = -4.94
 p-value: p &lt; 0.001
 Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.1)</code></pre>
@@ -3007,8 +2999,8 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.1)</code></pr
 <ul>
 <li><strong>Hypotheses:</strong>
 <ul>
-<li><span class="math inline">H_0: \ \pi_{\text{Young}} - \pi_{\text{Old}} &gt; 0</span></li>
-<li><span class="math inline">H_1: \ \pi_{\text{Young}} - \pi_{\text{Old}} \le 0</span></li>
+<li><span class="math inline">H_0: \ \pi_{\text{Young}} - \pi_{\text{Old}} \ge 0</span></li>
+<li><span class="math inline">H_1: \ \pi_{\text{Young}} - \pi_{\text{Old}} &lt; 0</span></li>
 </ul></li>
 <li><strong>Test Statistic and <em>p</em>-Value</strong>
 <ul>
@@ -3064,8 +3056,8 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.1)</code></pr
 <li><p>Generic syntax (assuming uniform distribution):</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> categorical_variable,</span>
-<span id="cb25-2"><a></a>                                 <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> categorical_variable,</span>
+<span id="cb27-2"><a></a>                                 <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-goodness-of-fit-2" class="slide level2">
@@ -3076,7 +3068,7 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.1)</code></pr
 <li><p>Let’s first look at the frequency table.</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>apple_toss <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(barrel, <span class="at">rows=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>apple_toss <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(barrel, <span class="at">rows=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-goodness-of-fit-3" class="slide level2">
@@ -3085,7 +3077,7 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.1)</code></pr
 <li>Let’s first look at the frequency table.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>apple_toss <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(barrel, <span class="at">rows=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>apple_toss <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(barrel, <span class="at">rows=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   barrel    n (pct)
  Barrel 1 31 (15.5%)
@@ -3104,8 +3096,8 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.1)</code></pr
 <li><p>How should we update the code?</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> categorical_variable,</span>
-<span id="cb29-2"><a></a>                                 <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> categorical_variable,</span>
+<span id="cb31-2"><a></a>                                 <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-goodness-of-fit-5" class="slide level2">
@@ -3116,7 +3108,7 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.1)</code></pr
 <li><p>Our updated code,</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>apple_toss <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> barrel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>apple_toss <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> barrel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-goodness-of-fit-6" class="slide level2">
@@ -3125,14 +3117,14 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.1)</code></pr
 <li>Running the code,</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>apple_toss <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> barrel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>apple_toss <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> barrel)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Chi-square goodness-of-fit test:
 Null: H₀: Observed frequencies match expected proportions
 Alternative: H₁: Observed frequencies do not match expected proportions
 Test statistic: χ²(4) = 17.1
 p-value: p = 0.002
-Conclusion: Reject the null hypothesis (p = 0.0018 &lt; α = 0.05)</code></pre>
+Conclusion: Reject the null hypothesis (p = 0.002 &lt; α = 0.05)</code></pre>
 </div>
 </div>
 </section>
@@ -3141,7 +3133,7 @@ Conclusion: Reject the null hypothesis (p = 0.0018 &lt; α = 0.05)</code></pre>
 <ul>
 <li><strong>Hypotheses</strong>
 <ul>
-<li><span class="math inline">H_0:</span>  _1 = _2 = _3 = _4 = _5 = 0.20.$</li>
+<li><span class="math inline">H_0: \ \pi_1 = \pi_2 = \pi_3 = \pi_4 = \pi_5 = 0.20.</span></li>
 <li><span class="math inline">H_1:</span> At least one <span class="math inline">\pi_i</span> is different.</li>
 </ul></li>
 <li><strong>Test Statistic and <em>p</em>-Value</strong>
@@ -3198,7 +3190,7 @@ Conclusion: Reject the null hypothesis (p = 0.0018 &lt; α = 0.05)</code></pre>
 <li><p>Let’s first look at a frequency table.</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>rarity_orders <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(item_ordered, <span class="at">rows=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a>rarity_orders <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(item_ordered, <span class="at">rows=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-goodness-of-fit-9" class="slide level2">
@@ -3207,7 +3199,7 @@ Conclusion: Reject the null hypothesis (p = 0.0018 &lt; α = 0.05)</code></pre>
 <li>Let’s first look at a frequency table.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>rarity_orders <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(item_ordered, <span class="at">rows=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>rarity_orders <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(item_ordered, <span class="at">rows=</span><span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>     item_ordered    n (pct)
              Cape 45 (22.5%)
@@ -3265,11 +3257,11 @@ Conclusion: Reject the null hypothesis (p = 0.0018 &lt; α = 0.05)</code></pre>
 <li><p>Generic syntax (not assuming uniform distribution):</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> categorical_variable,</span>
-<span id="cb36-2"><a></a>                                 <span class="fu">expected</span>(<span class="at">c =</span> (<span class="st">&quot;Category 1&quot;</span> <span class="ot">=</span> proportion_1,</span>
-<span id="cb36-3"><a></a>                                               <span class="st">&quot;Category 2&quot;</span> <span class="ot">=</span> proportion_2,</span>
-<span id="cb36-4"><a></a>                                               ... etc ...))</span>
-<span id="cb36-5"><a></a>                                 <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> categorical_variable,</span>
+<span id="cb38-2"><a></a>                                 <span class="fu">expected</span>(<span class="at">c =</span> (<span class="st">&quot;Category 1&quot;</span> <span class="ot">=</span> proportion_1,</span>
+<span id="cb38-3"><a></a>                                               <span class="st">&quot;Category 2&quot;</span> <span class="ot">=</span> proportion_2,</span>
+<span id="cb38-4"><a></a>                                               ... etc ...))</span>
+<span id="cb38-5"><a></a>                                 <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-goodness-of-fit-11" class="slide level2">
@@ -3280,11 +3272,11 @@ Conclusion: Reject the null hypothesis (p = 0.0018 &lt; α = 0.05)</code></pre>
 <li><p>How should we update the following code?</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> categorical_variable,</span>
-<span id="cb37-2"><a></a>                                 <span class="fu">expected</span>(<span class="at">c =</span> (<span class="st">&quot;Category 1&quot;</span> <span class="ot">=</span> proportion_1,</span>
-<span id="cb37-3"><a></a>                                               <span class="st">&quot;Category 2&quot;</span> <span class="ot">=</span> proportion_2,</span>
-<span id="cb37-4"><a></a>                                               ... etc ...))</span>
-<span id="cb37-5"><a></a>                                 <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> categorical_variable,</span>
+<span id="cb39-2"><a></a>                                 <span class="fu">expected</span>(<span class="at">c =</span> (<span class="st">&quot;Category 1&quot;</span> <span class="ot">=</span> proportion_1,</span>
+<span id="cb39-3"><a></a>                                               <span class="st">&quot;Category 2&quot;</span> <span class="ot">=</span> proportion_2,</span>
+<span id="cb39-4"><a></a>                                               ... etc ...))</span>
+<span id="cb39-5"><a></a>                                 <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-goodness-of-fit-12" class="slide level2">
@@ -3295,12 +3287,12 @@ Conclusion: Reject the null hypothesis (p = 0.0018 &lt; α = 0.05)</code></pre>
 <li><p>Our updated code,</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>rarity_orders <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> item_ordered,</span>
-<span id="cb38-2"><a></a>                                  <span class="at">expected =</span> <span class="fu">c</span>(<span class="st">&quot;Dress&quot;</span> <span class="ot">=</span> <span class="fl">0.40</span>,</span>
-<span id="cb38-3"><a></a>                                               <span class="st">&quot;Cape&quot;</span> <span class="ot">=</span> <span class="fl">0.25</span>,</span>
-<span id="cb38-4"><a></a>                                               <span class="st">&quot;Hat&quot;</span> <span class="ot">=</span> <span class="fl">0.15</span>,</span>
-<span id="cb38-5"><a></a>                                               <span class="st">&quot;Scarf&quot;</span> <span class="ot">=</span> <span class="fl">0.10</span>,</span>
-<span id="cb38-6"><a></a>                                               <span class="st">&quot;Hoof Accessories&quot;</span> <span class="ot">=</span> <span class="fl">0.10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>rarity_orders <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> item_ordered,</span>
+<span id="cb40-2"><a></a>                                  <span class="at">expected =</span> <span class="fu">c</span>(<span class="st">&quot;Dress&quot;</span> <span class="ot">=</span> <span class="fl">0.40</span>,</span>
+<span id="cb40-3"><a></a>                                               <span class="st">&quot;Cape&quot;</span> <span class="ot">=</span> <span class="fl">0.25</span>,</span>
+<span id="cb40-4"><a></a>                                               <span class="st">&quot;Hat&quot;</span> <span class="ot">=</span> <span class="fl">0.15</span>,</span>
+<span id="cb40-5"><a></a>                                               <span class="st">&quot;Scarf&quot;</span> <span class="ot">=</span> <span class="fl">0.10</span>,</span>
+<span id="cb40-6"><a></a>                                               <span class="st">&quot;Hoof Accessories&quot;</span> <span class="ot">=</span> <span class="fl">0.10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-goodness-of-fit-13" class="slide level2">
@@ -3309,12 +3301,12 @@ Conclusion: Reject the null hypothesis (p = 0.0018 &lt; α = 0.05)</code></pre>
 <li>Running the code,</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>rarity_orders <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> item_ordered,</span>
-<span id="cb39-2"><a></a>                                  <span class="at">expected =</span> <span class="fu">c</span>(<span class="st">&quot;Dress&quot;</span> <span class="ot">=</span> <span class="fl">0.40</span>,</span>
-<span id="cb39-3"><a></a>                                               <span class="st">&quot;Cape&quot;</span> <span class="ot">=</span> <span class="fl">0.25</span>,</span>
-<span id="cb39-4"><a></a>                                               <span class="st">&quot;Hat&quot;</span> <span class="ot">=</span> <span class="fl">0.15</span>,</span>
-<span id="cb39-5"><a></a>                                               <span class="st">&quot;Scarf&quot;</span> <span class="ot">=</span> <span class="fl">0.10</span>,</span>
-<span id="cb39-6"><a></a>                                               <span class="st">&quot;Hoof Accessories&quot;</span> <span class="ot">=</span> <span class="fl">0.10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>rarity_orders <span class="sc">%&gt;%</span> <span class="fu">goodness_of_fit</span>(<span class="at">categorical =</span> item_ordered,</span>
+<span id="cb41-2"><a></a>                                  <span class="at">expected =</span> <span class="fu">c</span>(<span class="st">&quot;Dress&quot;</span> <span class="ot">=</span> <span class="fl">0.40</span>,</span>
+<span id="cb41-3"><a></a>                                               <span class="st">&quot;Cape&quot;</span> <span class="ot">=</span> <span class="fl">0.25</span>,</span>
+<span id="cb41-4"><a></a>                                               <span class="st">&quot;Hat&quot;</span> <span class="ot">=</span> <span class="fl">0.15</span>,</span>
+<span id="cb41-5"><a></a>                                               <span class="st">&quot;Scarf&quot;</span> <span class="ot">=</span> <span class="fl">0.10</span>,</span>
+<span id="cb41-6"><a></a>                                               <span class="st">&quot;Hoof Accessories&quot;</span> <span class="ot">=</span> <span class="fl">0.10</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Chi-square goodness-of-fit test:
 Null: H₀: Observed frequencies match expected proportions
@@ -3392,9 +3384,9 @@ Conclusion: Fail to reject the null hypothesis (p = 0.476 ≥ α = 0.05)</code><
 <li><p>Generic syntax:</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> first_variable,</span>
-<span id="cb41-2"><a></a>                                   <span class="at">var2 =</span> second_variable,</span>
-<span id="cb41-3"><a></a>                                   <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> first_variable,</span>
+<span id="cb43-2"><a></a>                                   <span class="at">var2 =</span> second_variable,</span>
+<span id="cb43-3"><a></a>                                   <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-test-for-independence-2" class="slide level2">
@@ -3406,8 +3398,8 @@ Conclusion: Fail to reject the null hypothesis (p = 0.476 ≥ α = 0.05)</code><
 <li><p>Let’s first construct a contingency table,</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(role, material)</span>
-<span id="cb42-2"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(material, role)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(role, material)</span>
+<span id="cb44-2"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(material, role)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-test-for-independence-3" class="slide level2">
@@ -3416,7 +3408,7 @@ Conclusion: Fail to reject the null hypothesis (p = 0.476 ≥ α = 0.05)</code><
 <li>Looking at the contingency tables,</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(role, material)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(role, material)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   role      Fiction    History    Science    Spells    
@@ -3425,7 +3417,7 @@ Conclusion: Fail to reject the null hypothesis (p = 0.476 ≥ α = 0.05)</code><
 2 Student   9 (19.1%)  10 (21.7%) 13 (43.3%) 28 (49.1%)
 3 Teacher   4 (8.5%)   25 (54.3%) 8 (26.7%)  23 (40.4%)</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(material, role)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">n_pct</span>(material, role)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
   material Community  Student    Teacher   
@@ -3444,25 +3436,26 @@ Conclusion: Fail to reject the null hypothesis (p = 0.476 ≥ α = 0.05)</code><
 <li><p>Twilight wants to test whether the type of material checked out is independent of visitor role, or if certain roles are more likely to favor particular genres. Assume <span class="math inline">\alpha = 0.05</span>. How should we edit the following code?</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> first_variable,</span>
-<span id="cb47-2"><a></a>                                   <span class="at">var2 =</span> second_variable,</span>
-<span id="cb47-3"><a></a>                                   <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>dataset_name <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> first_variable,</span>
+<span id="cb49-2"><a></a>                                   <span class="at">var2 =</span> second_variable,</span>
+<span id="cb49-3"><a></a>                                   <span class="at">alpha =</span> specified_alpha)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-test-for-independence-5" class="slide level2">
 <h2>Hypothesis Testing: Test for Independence</h2>
 <ul>
-<li>Twilight wants to test whether the type of material checked out is independent of visitor role, or if certain roles are more likely to favor particular genres. Assume <span class="math inline">\alpha = 0.05</span>. How should we edit the following code?</li>
+<li><p>Twilight wants to test whether the type of material checked out is independent of visitor role, or if certain roles are more likely to favor particular genres. Assume <span class="math inline">\alpha = 0.05</span>.</p></li>
+<li><p>Our updated code,</p></li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> role,</span>
-<span id="cb48-2"><a></a>                                       <span class="at">var2 =</span> material,</span>
-<span id="cb48-3"><a></a>                                       <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> role,</span>
+<span id="cb50-2"><a></a>                                       <span class="at">var2 =</span> material,</span>
+<span id="cb50-3"><a></a>                                       <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> material,</span>
-<span id="cb49-2"><a></a>                                       <span class="at">var2 =</span> role,</span>
-<span id="cb49-3"><a></a>                                       <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> material,</span>
+<span id="cb51-2"><a></a>                                       <span class="at">var2 =</span> role,</span>
+<span id="cb51-3"><a></a>                                       <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="hypothesis-testing-test-for-independence-6" class="slide level2">
@@ -3471,9 +3464,9 @@ Conclusion: Fail to reject the null hypothesis (p = 0.476 ≥ α = 0.05)</code><
 <li>Running the code,</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> role,</span>
-<span id="cb50-2"><a></a>                                       <span class="at">var2 =</span> material,</span>
-<span id="cb50-3"><a></a>                                       <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> role,</span>
+<span id="cb52-2"><a></a>                                       <span class="at">var2 =</span> material,</span>
+<span id="cb52-3"><a></a>                                       <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Chi-square test for independence:
 Null: H₀: role and material are independent
@@ -3490,9 +3483,9 @@ Conclusion: Reject the null hypothesis (p = &lt; 0.001 &lt; α = 0.05)</code></p
 <li>Running the code &amp; switching the variable order,</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> material,</span>
-<span id="cb52-2"><a></a>                                       <span class="at">var2 =</span> role,</span>
-<span id="cb52-3"><a></a>                                       <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a>twilight_library <span class="sc">%&gt;%</span> <span class="fu">independence_test</span>(<span class="at">var1 =</span> material,</span>
+<span id="cb54-2"><a></a>                                       <span class="at">var2 =</span> role,</span>
+<span id="cb54-3"><a></a>                                       <span class="at">alpha =</span> <span class="fl">0.05</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Chi-square test for independence:
 Null: H₀: material and role are independent
