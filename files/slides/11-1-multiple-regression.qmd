@@ -1,0 +1,780 @@
+---
+title: "Linear Regression"
+execute:
+  echo: true
+  warning: false
+  message: false
+format: 
+  revealjs:
+    theme: default
+    css: mlp2.css
+    self-contained: true
+    slide-number: true
+    footer: "STA4173 - Biostatistics - Fall 2025"
+    width: 1600
+    height: 900
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+## Introduction
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(ssstats)
+set.seed(671967)
+gummy_data <- tibble(
+  chew_time = runif(300, min = 5, max = 60)
+) %>%
+  mutate(
+    snack_crunch = 50 + 0.5 * chew_time + rnorm(300, sd = 5),   # Crunchier with longer chew
+    nap_time = 10 + 0.3 * chew_time + rnorm(300, sd = 4),       # Tired after chewing
+    satisfaction = 20 + 0.9 * chew_time + rnorm(300, sd = 8)    # Original outcome
+  )
+set.seed(1865) 
+angel_data <- tibble(
+  carrot_weight = runif(300, min = 10, max = 100)
+) %>%
+  mutate(
+    happiness = 75 - 0.02 * (carrot_weight - 55)^2 + rnorm(300, sd = 4),
+    happiness = pmax(pmin(happiness, 100), 0),
+    pout_count = round(10 - 0.08 * happiness + rnorm(300, sd = 1)),  # More happy = fewer pouts
+    hop_speed = 60 + 0.1 * abs(carrot_weight - 55) + rnorm(300, sd = 3)  # Deviating from sweet spot
+  )
+```
+
+- We have discussed quantifying the relationship between two continuous variables.
+
+- Recall that the correlation describes the strength and the direction of the relationship.
+
+    - Pearson's correlation: describes the linear relationship; assumes normality of both variables.
+    
+    - Spearman's correlation: describes the monotone relationship; assumes both variables are at least ordinal.
+    
+- Further, recall that correlation is *unitless* and bounded to $[-1, 1]$.
+
+## Linear Regression: Introduction
+    
+- Now we will discuss a different way of representing/quantifying the relationship.
+
+    - We will now construct a line of best fit, called the ordinary least squares (OLS) regression line. 
+
+- Using simple linear regression, we will model *y* (the outcome) as a function of *x* (the predictor).
+
+    - This is called simple linear regression becaause there is only one predictor.
+    
+## Linear Regression: Definition
+
+- **Population regression line**: 
+
+$$ y = \beta_0 + \beta_1 x + \varepsilon $$
+
+- $\beta_0$ is the $y$-intercept.
+
+- $\beta_1$ is the slope describing the relationship between $x$ and $y$.
+    
+- $\varepsilon$ (estimated by $e$) is the error term; remember, from ANOVA (😱): 
+
+$$\varepsilon \overset{\text{iid}}{\sim} N(0, \sigma^2)$$
+    
+## Linear Regression: Definition
+
+- **Population regression line**: 
+
+$$ y = \beta_0 + \beta_1 x + \varepsilon $$
+    
+- **Sample regression line**: 
+
+$$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x + e$$
+
+- $\hat{y}$ estimates $y$.
+
+- $\hat{\beta}_0$ estimates $\beta_0$.
+
+- $\hat{\beta}_1$ estimates $\beta_1$.
+    
+- $e$ estimates $\varepsilon$.
+
+## Linear Regression: Estimation
+
+- We first calculate the slope, $\hat{\beta}_1$
+
+$$ \hat{\beta}_1 = \frac{\sum_{i=1}^n x_i y_i - \frac{\sum_{i=1}^n x_i \sum_{i=1}^n y_i}{n}}{\sum_{i=1}^n x_i^2 - \frac{\left(\sum_{i=1}^n x_i\right)^2}{n}} = r \frac{s_y}{s_x} $$
+
+- $r$ is the Pearson correlation,
+- $s_x$ is the standard deviation of $x$, and
+- $s_y$ is the standard deviation of $y$
+  
+## Linear Regression: Estimation
+
+- Then we can calculate the intercept, $\hat{\beta}_0$ 
+
+$$ \hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}$$ where
+
+  - $\bar{x}$ is the mean of $x$, and
+  - $\bar{y}$ is the mean of $y$. 
+  
+## Linear Regression: Estimation (R)
+
+- We will use the `linear_regression()` function from `library(ssstats)` to construct our regression model. 
+
+- In the case of simple linear regression,
+
+```{r}
+#| eval: false
+dataset_name %>% linear_regression(outcome = outcome_variable,
+                                   function_of = predictor_variable)
+```
+
+- Peek in the future: in the case of multiple linear regression,
+
+```{r}
+#| eval: false
+dataset_name %>% linear_regression(outcome = outcome_variable,
+                                   function_of = pred_1 + pred_2 + ... + pred_k)
+```
+
+## Linear Regression: Estimation
+
+- Pinkie Pie suspects that Gummy enjoys snacks more the longer he chews them.
+
+- Pinkie Pie records both the chew time (*chew_time*) and Gummy's satisfaction level (*satisfaction*) of the last 300 snacks given to Gummy (**gummy_data**).
+
+- Let's now construct the simple linear regression model. How should we update the code?
+
+```{r}
+#| eval: false
+dataset_name %>% linear_regression(outcome = outcome_variable,
+                                   function_of = predictor_variable)
+```
+
+## Linear Regression: Estimation
+
+- Pinkie Pie suspects that Gummy enjoys snacks more the longer he chews them.
+
+- Pinkie Pie records both the chew time (*chew_time*) and Gummy's satisfaction level (*satisfaction*) of the last 300 snacks given to Gummy (**gummy_data**).
+
+- Our updated code,
+
+```{r}
+#| eval: false
+gummy_data %>% linear_regression(outcome = satisfaction,
+                                 function_of = chew_time)
+```
+
+## Linear Regression: Estimation
+
+- Running the code,
+
+```{r}
+#| echo: false
+gummy_data %>% linear_regression(outcome = satisfaction,
+                                 function_of = chew_time)
+```
+
+- The resulting model is
+
+$$\hat{\text{satisfaction}} = 20.92 + 0.90 \text{ chew\_time}$$
+
+## Linear Regression: Interpretations
+
+- **Interpretation of the slope, $\hat{\beta}_1$**
+    - For a [$k$] [units of *x*] increase in [*x*], we expect [*y*] to [increase or decrease] by [$k \times |\hat{\beta}_1|$] [units of *y*].
+
+- **Interpretation of the $y$-intercept, $\hat{\beta}_0$**
+    - When [*x*] is 0, we expect the mean of [*y*] to be [$\hat{\beta}_0$].
+    - Caveat:
+        - It does not always make sense for *x* = 0. In this situation, we do not interpret the *y*-intercept.
+        - Some applications (e.g., psychology) will center the $x$ variable around its mean. 
+            - Then, when *x* = 0, we are interpreting in terms of the "average value of *x*."
+
+## Linear Regression: Interpretations
+
+- Recall the regression line we constructed, 
+
+$$\hat{\text{satisfaction}} = 20.92 + 0.90 \text{ chew\_time}$$
+
+- What is the iterpretation for the slope of time chewed?
+    - For a 1 minute increase in time chewed, the satisfaction Gummy feels increases by 0.9 points.
+
+- What is the interpretation of the *y*-intercept?
+    - Gummy's base level of satisfaction is 20.9.
+    
+## Linear Regression: Multiple Predictors!   
+
+- We have learned simple linear regression, 
+
+$$y = \beta_0 + \beta_1 x + \varepsilon$$
+
+- Now, we expand to multiple regression, which allows us to include multiple predictors, 
+
+$$y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + ... + \beta_k x_k + \varepsilon$$
+
+- Note: simple linear regression is just a special case of multiple regression, where $k=1$.
+
+## Linear Regression: Estimation (R)
+
+- We will use the `linear_regression()` function from `library(ssstats)` to construct our regression model. 
+
+- In the case of multiple linear regression,
+
+```{r}
+#| eval: false
+dataset_name %>% linear_regression(outcome = outcome_variable,
+                                   function_of = pred_1 + pred_2 + ... + pred_k)
+```
+
+## Linear Regression: Estimation
+
+- Pinkie Pie suspects that Gummy enjoys snacks more the longer he chews them. She also suspects that crunch factor plays a role in his satisfaction and now wants to incorporate this into the analysis.
+
+- Pinkie Pie records the chew time (*chew_time*), the crunch factor (*snack_crunch*) and Gummy's satisfaction level (*satisfaction*) of the last 300 snacks given to Gummy (**gummy_data**).
+
+- Let's now construct the corresponding multiple regression model. How should we update the code?
+
+```{r}
+#| eval: false
+dataset_name %>% linear_regression(outcome = outcome_variable,
+                                   function_of = pred_1 + pred_2 + ... + pred_k)
+```
+
+## Linear Regression: Estimation
+
+- Pinkie Pie suspects that Gummy enjoys snacks more the longer he chews them. She also suspects that crunch factor plays a role in his satisfaction and now wants to incorporate this into the analysis.
+
+- Pinkie Pie records the chew time (*chew_time*), the crunch factor (*snack_crunch*) and Gummy's satisfaction level (*satisfaction*) of the last 300 snacks given to Gummy (**gummy_data**).
+
+- Our updated code,
+
+```{r}
+#| eval: false
+gummy_data %>% linear_regression(outcome = satisfaction,
+                                 function_of = chew_time + snack_crunch)
+```
+
+## Linear Regression: Estimation
+
+- Running the code,
+
+```{r}
+#| echo: false
+gummy_data %>% linear_regression(outcome = satisfaction,
+                                 function_of = chew_time + snack_crunch)
+```
+
+- The resulting model is
+
+$$\hat{\text{satisfaction}} = 23.02 + 0.92 \text{ chew\_time} - 0.04 \text{ snack\_crunch}$$    
+
+## Linear Regression: Interpretations
+
+- **Interpretation of the slope, $\hat{\beta}_1$**
+    - For a [$k$] [units of *x*] increase in [*x*], we expect [*y*] to [increase or decrease] by [$k \times |\hat{\beta}_1|$] [units of *y*], after adjusting for all other predictors in the model.
+
+- **Interpretation of the $y$-intercept, $\hat{\beta}_0$**
+    - When all predictors are set to 0, we expect the mean of [*y*] to be [$\hat{\beta}_0$].
+    - Caveat:
+        - It definitely does not always make sense for all *x* = 0. In this situation, we do not interpret the *y*-intercept.
+        - Centering still applies here.
+
+## Linear Regression: Interpretations
+
+- Recall the regression line we constructed, 
+
+$$\hat{\text{satisfaction}} = 23.02 + 0.92 \text{ chew\_time} - 0.04 \text{ snack\_crunch}$$  
+
+- What is the iterpretation for the slope of time chewed?
+    - For a 1 minute increase in time chewed, the satisfaction Gummy feels increases by 0.9 points.
+    
+- What is the iterpretation for the slope of crunch factor?
+    - For a 1 point increase in crunchiness, the satisfaction Gummy feels decreases by 0.4 points.    
+
+- What is the interpretation of the *y*-intercept?
+    - Gummy's base level of satisfaction is 23.0.
+    
+## Estimation: Confidence Interval for $\beta_i$
+
+- Like all statistics, we can put a confidence interval on $\beta_i$.
+    - When reporting regression results, I *always* include the corresponding CI.
+    
+$$\hat{\beta}_i \pm t_{\alpha/2, n-k-1} \text{ SE}_{\hat{\beta}_i}$$
+
+- *This is default output in our `linear_regression()` function.*
+
+## Estimation: Confidence Interval for $\beta_i$
+
+- Looking at our output,
+
+```{r}
+#| echo: false
+gummy_data %>% linear_regression(outcome = satisfaction,
+                                 function_of = chew_time + snack_crunch)
+```
+
+- The 95% CI for $\beta_{\text{time chewed}}$ is $(0.81, 1.02)$.
+
+- The 95% CI for $\beta_{\text{crunch factor}}$ is $(-0.22, 0.14)$.
+
+## Estimation: Confidence Interval for $\beta_i$
+
+- What if we want something other than a 95% CI?
+
+```{r}
+#| eval: false
+gummy_data %>% linear_regression(outcome = satisfaction,
+                                 function_of = chew_time + snack_crunch,
+                                 confidence = 0.99)
+```
+
+## Estimation: Confidence Interval for $\beta_i$
+
+- What if we want something other than a 95% CI?
+
+```{r}
+#| echo: false
+gummy_data %>% linear_regression(outcome = satisfaction,
+                                 function_of = chew_time + snack_crunch,
+                                 confidence = 0.99)
+```
+
+- The 95% CI for $\beta_{\text{time chewed}}$ is $(0.78, 1.06)$.
+
+- The 95% CI for $\beta_{\text{crunch factor}}$ is $(-0.28, 0.20)$.
+
+## Hypothesis Testing: Significance of $\beta_i$
+
+- **Hypotheses**
+
+    - $H_0: \ \beta_i = 0$ 
+    - $H_1: \ \beta_i \ne 0$
+
+- **Test Statistic**
+
+    - $t_0 = \frac{\hat{\beta}_i}{s_{\hat{\beta}_i}} = \frac{\hat{\beta}_i}{\text{SE of }\hat{\beta}_i}$
+
+- ***p*-Value**
+
+    - $p = 2 \times P[t_{n-k-1} \ge |t_0|]$
+    
+- *This is default output in our `linear_regression()` function.*
+    
+## Hypothesis Testing: Significance of $\beta_i$
+
+- Pinkie Pie suspects that Gummy enjoys snacks more the longer he chews them. She also suspects that crunch factor plays a role in his satisfaction and now wants to incorporate this into the analysis.
+
+- Pinkie Pie records the chew time (*chew_time*), the crunch factor (*snack_crunch*) and Gummy's satisfaction level (*satisfaction*) of the last 300 snacks given to Gummy (**gummy_data**).
+
+```{r}
+#| echo: false
+gummy_data %>% linear_regression(outcome = satisfaction,
+                                 function_of = chew_time + snack_crunch)
+```
+
+## Hypothesis Testing: Significance of $\beta_i$
+
+- **Hypotheses**
+    - $H_0: \ \beta_{\text{chew\_time}} = 0$ 
+    - $H_1: \ \beta_{\text{chew\_time}} \ne 0$
+
+- **Test Statistic and *p*-Value**
+    - $t_0 = 17.32$; $p < 0.001$
+
+- **Rejection Region**
+    - Reject $H_0$ if $p<\alpha$; $\alpha=0.05$
+    
+- **Conclusion and Intepretation**
+    - Reject $H_0$. There is sufficient evidence to suggest that the slope of time chewed is non-zero.
+    
+## Hypothesis Testing: Significance of $\beta_i$
+
+- **Hypotheses**
+    - $H_0: \ \beta_{\text{snack\_crunch}} = 0$ 
+    - $H_1: \ \beta_{\text{snack\_crunch}} \ne 0$
+
+- **Test Statistic and *p*-Value**
+    - $t_0 = -0.44$; $p = 0.663$
+
+- **Rejection Region**
+    - Reject $H_0$ if $p<\alpha$; $\alpha=0.05$
+    
+- **Conclusion and Intepretation**
+    - Fail to reject $H_0$. There is not sufficient evidence to suggest that the slope of crunch factor is non-zero.
+
+##  Reporting Linear Regression Results
+
+- How do I report regression models in the real world? 
+
+    - I always give a table of $\hat{\beta}_i$, (95% CI), and $p$-values.
+    
+- In our example,
+
+| Predictor | Estimate (95% CI) | *p*-Value |
+|-|:-:|-:|
+| Time Chewed | 0.92 (0.81, 1.02) | < 0.001 |
+| Crunch Factor | -0.04 (-0.22, 0.14) | 0.663 |
+
+##  Hypothesis Testing: Significant Regression Line
+
+- We can use the likelihood ratio test to test for a "significant regression" line. 
+    - A significant regression line means that there is a non-zero slope among all slopes. 
+
+- **Hypotheses**
+
+    - $H_0: \ \beta_1 = ... = \beta_k = 0$ 
+    - $H_1:$ at least one is different
+
+- **Test Statistic and *p*-Value**
+
+    - $\chi^2_0$ (from R)
+    - $p = \text{P}[\chi^2_{k} \ge \chi^2_0]$
+    
+##  Hypothesis Testing: Significant Regression Line (R)
+
+- We will use the `significant_line()` function from `library(ssstats)` to test for a significant model.
+
+```{r}
+#| eval: false
+dataset_name %>% significant_line(outcome = outcome_variable,
+                                  function_of = pred_1 + pred_2 + ... + pred_k)
+```
+
+##  Hypothesis Testing: Significant Regression Line
+
+- Pinkie Pie suspects that Gummy enjoys snacks more the longer he chews them. She also suspects that crunch factor plays a role in his satisfaction and now wants to incorporate this into the analysis.
+
+- Pinkie Pie records the chew time (*chew_time*), the crunch factor (*snack_crunch*) and Gummy's satisfaction level (*satisfaction*) of the last 300 snacks given to Gummy (**gummy_data**).
+
+- Let's now determine if we have a significant regression line. How should we update the following code?
+
+```{r}
+#| eval: false
+dataset_name %>% significant_line(outcome = outcome_variable,
+                                  function_of = pred_1 + pred_2 + ... + pred_k)
+```
+
+##  Hypothesis Testing: Significant Regression Line
+
+- Pinkie Pie suspects that Gummy enjoys snacks more the longer he chews them. She also suspects that crunch factor plays a role in his satisfaction and now wants to incorporate this into the analysis.
+
+- Pinkie Pie records the chew time (*chew_time*), the crunch factor (*snack_crunch*) and Gummy's satisfaction level (*satisfaction*) of the last 300 snacks given to Gummy (**gummy_data**).
+
+- Let's now determine if we have a significant regression line. Our updated code,
+
+```{r}
+#| eval: false
+gummy_data %>% significant_line(outcome = satisfaction,
+                                function_of = chew_time + snack_crunch)
+```
+
+##  Hypothesis Testing: Significant Regression Line
+
+- Running the code,
+
+```{r}
+gummy_data %>% significant_line(outcome = satisfaction,
+                                function_of = chew_time + snack_crunch)
+```
+
+##  Hypothesis Testing: Significant Regression Line
+
+- **Hypotheses**
+    - $H_0: \ \beta_1 = \beta_2 = 0$ 
+    - $H_1:$ at least one is different
+
+- **Test Statistic and *p*-Value**
+    - $\chi^2_0 = 57158.7$; $p < 0.001$.
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha = 0.05$.
+    
+- **Conclusion and Intepretation**
+    - Reject $H_0$. There is sufficient evidence to suggest that at least one slope is non-zero.
+
+##  Line Fit: $R^2$
+
+- We can assess how well the regression model fits the data using $R^2$. 
+
+$$ R^2 = \frac{\text{SS}_{\text{Reg}}}{\text{SS}_{\text{Tot}}} $$
+
+- Thus, $R^2$ is the *proportion of variation* explained by the model (i.e., predictor set).
+
+- $R^2 \in [0, 1]$
+
+    - $R^2 \to 0$ indicates that the model fits "poorly."
+    
+    - $R^2 \to 1$ indicates that the model fits "well."
+
+    - $R^2 = 1$ indicates that all points fall on the response surface.
+
+##  Line Fit: $R^2$
+
+- Recall that the error term in ANOVA is the "catch all" ...
+
+    - The SS<sub>Tot</sub> is constant for the outcome of interest.
+    
+    - As we add predictors to the model, we are necessarily increasing SS<sub>Reg</sub>
+    
+        - The variance is moving from SS<sub>E</sub> to SS<sub>Reg</sub>
+        
+- We do not want to arbitrarily increase $R^2$, so we will use an adjusted version:
+
+$$ R^2_{\text{adj}} = 1 - \frac{\text{MS}_{\text{E}}}{\text{SS}_{\text{Tot}}/\text{df}_{\text{Tot}}}$$
+
+
+## Line Fit: $R^2$ (R)
+
+- We will use the `r_squared`()` function from `library(ssstats)` to find the $R^2$ value. 
+
+```{r}
+#| eval: false
+dataset_name %>% r_squared(outcome = outcome_variable,
+                           function_of = pred_1 + pred_2 + ... + pred_k)
+```
+
+## Line Fit: $R^2$
+
+- Pinkie Pie suspects that Gummy enjoys snacks more the longer he chews them. She also suspects that crunch factor plays a role in his satisfaction and now wants to incorporate this into the analysis.
+
+- Pinkie Pie records the chew time (*chew_time*), the crunch factor (*snack_crunch*) and Gummy's satisfaction level (*satisfaction*) of the last 300 snacks given to Gummy (**gummy_data**).
+
+- Let's now find the $R^2$ value for the model we constructed earlier. How should we update the following code?
+
+```{r}
+#| eval: false
+dataset_name %>% r_squared(outcome = outcome_variable,
+                           function_of = pred_1 + pred_2 + ... + pred_k)
+```
+
+## Line Fit: $R^2$
+
+- Pinkie Pie suspects that Gummy enjoys snacks more the longer he chews them. She also suspects that crunch factor plays a role in his satisfaction and now wants to incorporate this into the analysis.
+
+- Pinkie Pie records the chew time (*chew_time*), the crunch factor (*snack_crunch*) and Gummy's satisfaction level (*satisfaction*) of the last 300 snacks given to Gummy (**gummy_data**).
+
+- Our updated code,
+
+```{r}
+#| eval: false
+gummy_data %>% r_squared(outcome = satisfaction,
+                         function_of = chew_time + snack_crunch)
+```
+
+## Line Fit: $R^2$
+
+- Pinkie Pie records the chew time (*chew_time*), the crunch factor (*snack_crunch*) and Gummy's satisfaction level (*satisfaction*) of the last 300 snacks given to Gummy (**gummy_data**).
+
+- Running the code,
+
+```{r}
+gummy_data %>% r_squared(outcome = satisfaction,
+                         function_of = chew_time + snack_crunch)
+```
+
+- Time chewed and crunch factor together account for 74.3% of the variability in Gummy's satisfaction.
+
+## Visualizing the Model
+
+- Visualizing the resulting model is difficult with multiple predictors.
+    - *y*-axis: outcome variable
+    - *x*-axis: one predictor variable
+        - We will allow only one predictor variable to vary.
+        - That is, we will plug in for all *x* except one, which will be on the *x*-axis.
+            - My go to for continuous *x*: the median of the *x*.
+
+## Visualizing the Model
+
+- Recall our example,
+
+$$
+\hat{\text{satisfaction}} = 23.02 + 0.92 \text{ chew\_time} - 0.04 \text{ snack\_crunch}
+$$
+
+- Our graph will have:
+    - *satisfaction* on the *y*-axis
+    - **either** *chew_time* or *snack_crunch* on the *x*-axis.
+        - Which ever is *not* on the *x*-axis will be held constant.
+
+```{r}
+#| echo: false
+#| eval: false
+gummy_data %>% linear_regression(outcome = satisfaction,
+                                 function_of = chew_time + snack_crunch)
+```
+
+## Visualizing the Model
+
+- To create predicted values, we are going to *modify* the dataset.
+
+```{r}
+#| eval: false
+dataset_name <- dataset_name %>%
+  mutate(variable_on_x = b_0 + b_1*x_1 + ... + b_k*x_k)
+```
+
+- Note that we will *plug in* for all *x* except one, which will vary & is on the *x*-axis.
+
+- Let's say we have 3 predictors: *x*<sub>1</sub>, *x*<sub>2</sub>, and *x*<sub>3</sub>. 
+
+- If we want *x*<sub>1</sub> on the *x*-axis, then
+
+```{r}
+#| eval: false
+dataset_name <- dataset_name %>%
+  mutate(variable_on_x = b_0 + b_1*x_1 + b_2*median(x_2) + b_3*median(x_3))
+```
+
+
+$$
+\text{variable on } x = \hat{\beta}_0 + \hat{\beta}_1 x_1 + \hat{\beta}_2 \text{median}(x_2) + \hat{\beta}_3 \text{median}(x_3)
+$$
+
+## Visualizing the Model
+
+- For our example, we will create two visualizations: one with *chew_time* on the *x*-axis and one with *snack_crunch* on the *x*-axis.
+
+```{r}
+gummy_data <- gummy_data %>%
+  mutate(chew_on_x = 23.02 + 0.92 * chew_time - 0.04 * median(snack_crunch, na.rm = TRUE),
+         snack_on_x = 23.02 + 0.92 * median(chew_time, na.rm = TRUE) - 0.04 * snack_crunch)
+```
+
+```{r}
+#| echo: false
+gummy_data %>% select(satisfaction, chew_on_x, snack_on_x) %>% head(n=3)
+```
+       
+## Visualizing the Model 
+
+- To visualize our model, we will *overlay* the regression line on a scatter plot of the data.
+
+- Here, we take the scatterplot code from last week and add a `geom_line()` for the regression line.
+
+```{r}
+#| eval: false
+dataset_name %>% ggplot(aes(x = x_variable, y = y_variable)) + # specify x and y
+  geom_point(size = 2.5, color = "gray50") + # plot points
+  geom_line(aes(y = line_variable), size = 1, color = "black") + # plot line
+  labs(x = "x-axis label", # edit x-axis label
+       y = "y-axis label") + # edit y-axis label
+  theme_bw() # change theme of graph
+```
+
+## Visualizing the Model
+
+- For our example, we will create two visualizations: one with *chew_time* on the *x*-axis and one with *snack_crunch* on the *x*-axis.
+
+- The base code for the visualization is:
+
+```{r}
+#| eval: false
+gummy_data %>% ggplot(aes(x = x_variable, y = satisfaction)) + # specify x and y
+  geom_point(size = 2.5, color = "gray50") + # plot points
+  geom_line(aes(y = line_variable), size = 1, color = "black") + # plot line
+  labs(x = "x-axis label", # edit x-axis label
+       y = "Gummy's Satisfaction") + # edit y-axis label
+  theme_bw() # change theme of graph
+```
+
+## Visualizing the Model
+
+- The code for the visualization with *chew_time* on the *x*-axis,
+
+```{r}
+#| eval: false
+gummy_data %>% ggplot(aes(x = chew_time, y = satisfaction)) + # specify x and y
+  geom_point(size = 2.5, color = "gray50") + # plot points
+  geom_line(aes(y = chew_on_x), size = 1, color = "black") + # plot line
+  labs(x = "Time Spent Chewing (min)", # edit x-axis label
+       y = "Gummy's Satisfaction") + # edit y-axis label
+  theme_bw() # change theme of graph
+```
+
+## Visualizing the Model
+
+- The visualization with *chew_time* on the *x*-axis,
+
+```{r}
+#| echo: false
+#| fig-align: 'center'
+gummy_data %>% ggplot(aes(x = chew_time, y = satisfaction)) + # specify x and y
+  geom_point(size = 2.5, color = "gray50") + # plot points
+  geom_line(aes(y = chew_on_x), size = 1, color = "black") + # plot line
+  labs(x = "Time Spent Chewing (min)", # edit x-axis label
+       y = "Gummy's Satisfaction") + # edit y-axis label
+  theme_bw() # change theme of graph
+```
+
+## Visualizing the Model
+
+- The code for the visualization with *snack_crunch* on the *x*-axis,
+
+```{r}
+#| eval: false
+gummy_data %>% ggplot(aes(x = snack_crunch, y = satisfaction)) + # specify x and y
+  geom_point(size = 2.5, color = "gray50") + # plot points
+  geom_line(aes(y = snack_on_x), size = 1, color = "black") + # plot line
+  labs(x = "Crunch Factor of Snack", # edit x-axis label
+       y = "Gummy's Satisfaction") + # edit y-axis label
+  theme_bw() # change theme of graph
+```
+
+## Visualizing the Model
+
+- The visualization with *snack_crunch* on the *x*-axis,
+
+```{r}
+#| echo: false
+#| fig-align: 'center'
+gummy_data %>% ggplot(aes(x = snack_crunch, y = satisfaction)) + # specify x and y
+  geom_point(size = 2.5, color = "gray50") + # plot points
+  geom_line(aes(y = snack_on_x), size = 1, color = "black") + # plot line
+  labs(x = "Crunch Factor of Snack", # edit x-axis label
+       y = "Gummy's Satisfaction") + # edit y-axis label
+  theme_bw() # change theme of graph
+```
+
+## Visualizing the Model
+
+- Whoa! It looks like there is not much of a relationship between crunch factor and satisfaction!
+
+- Remember that regression is looking at the relationship between *y* and *x*<sub>*i*</sub> while **adjusting** for all other predictors in the model.
+
+    - The variability in *satisfaction* explained by *snack_crunch* is being adjusted for *chew_time*.
+    
+    - This is why we saw a non-significant slope for *snack_crunch* earlier.
+    
+    - This means that *chew_time* explains the variance in *satisfaction*, not *snack_crunch*.
+    
+## Visualizing the Model
+
+- Hm... let's look at the correlation:
+
+```{r}
+gummy_data %>% correlation(x = snack_crunch, y = chew_time,
+                           method = "spearman")
+```
+
+- With $r_s = 0.82$, we see that *snack_crunch* and *chew_time* are **highly correlated**.
+
+    - One is predicting the other! We should not include both in the model.
+
+## Wrap Up
+
+- This is just scratching the surface for multiple regression.
+
+- Other statistics courses go deeper into regression topics.
+
+    - Categorical predictors.
+    
+    - Interaction terms.
+    
+    - Regression diagnostics.
+    
+    - How to handle non-continuous outcomes.
+
+    - Advanced data visualization for models.
