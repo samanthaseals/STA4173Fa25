@@ -1,0 +1,371 @@
+---
+title: "Module 3 Review"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  revealjs:
+    theme: default
+    css: mlp2.css
+    self-contained: true
+    slide-number: true
+    footer: "STA4173 - Biostatistics - Fall 2025"
+    width: 1600
+    height: 900
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+## Putting It All Together
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(ssstats)
+```
+
+- Relationships between continuous variables.
+
+- Correlation: 
+    - Unitless measure of linear (Pearson's) or monotonic (Spearman's) <u>pairwise</u> relationships.
+        - Does not *adjust* for other variables.
+    - Quantifies strength and direction of relationship.
+        - Allows us to compare strength of relationships across different pairs of variables.
+        
+- Linear regression:
+    - Models relationship between continuous outcome and one *or more* predictors.
+        - Units are attached, so the relationship can be stated in context.
+    - Provides estimates of association *adjusted* for other variables in the model.
+    - Allows for prediction of outcome based on predictor values.
+    
+```{r}
+#| echo: false
+set.seed(98165)
+library(tidyverse)
+library(broom)
+library(ssstats)
+library(ggpubr)
+
+puzzles <- tibble(
+  # continuous predictors
+  MindPractice    = pmax(0, rnorm(150, mean = 2.8, sd = 1.1)),   # hours
+  SleepHours      = pmin(pmax(rnorm(150, mean = 7.2, sd = 1.2), 3), 10),  # hours, clipped to 3-10
+  FocusMinutes    = pmax(0, rnorm(150, mean = 10, sd = 5)),      # minutes
+  PuzzleComplexity= pmin(pmax(rnorm(150, mean = 6, sd = 2), 1), 10)       # 1-10 scale
+) |>
+  # linear data-generating process: helpful skills reduce time; complexity increases time
+  mutate(
+    SolveTime = 35
+      - 4.0 * MindPractice
+      - 1.3 * SleepHours
+      - 0.05 * FocusMinutes
+      + 2.8 * PuzzleComplexity
+      + rnorm(150, 0, 5.5)
+  ) |>
+  mutate(SolveTime = pmax(SolveTime, 2))  # keep times sensible
+```    
+        
+## Example 
+
+- During a puzzle-heavy session in Ponyville, Twilight wants to understand what helps small teams solve logic puzzles faster. For each puzzle, she records:
+
+    - *MindPractice*: hours of individual "mind" drills the day before.
+    - *SleepHours*: hours slept the night before.
+    - *FocusMinutes*: minutes of calm focus/box-breathing right before starting.
+    - *PuzzleComplexity*: a continuous difficulty score Twilight assigns from 1–10.
+    - *SolveTime* — minutes to solve the puzzle (lower is better).
+
+- Our task is to determine how MindPractice, SleepHours, FocusMinutes, and PuzzleComplexity relate to SolveTime.
+
+## Example 
+
+- Let's first look at pairwise scatterplots.
+
+```{r}
+#| echo: false
+#| fig-align: 'center'
+
+p1 <- puzzles %>% ggplot(aes(y = SolveTime)) +
+  geom_point(aes(x = MindPractice)) +
+  theme_bw() +
+  labs(x = "Mind Practice (hours)", 
+       y = "Solve Time (minutes)")
+
+p2 <- puzzles %>% ggplot(aes(y = SolveTime)) +
+  geom_point(aes(x = SleepHours)) +
+  theme_bw() +
+  labs(x = "Amount of Sleep (hours)", 
+       y = "Solve Time (minutes)")
+
+p3 <- puzzles %>% ggplot(aes(y = SolveTime)) +
+  geom_point(aes(x = FocusMinutes)) +
+  theme_bw() +
+  labs(x = "Focus Time (minutes)", 
+       y = "Solve Time (minutes)")
+
+p4 <- puzzles %>% ggplot(aes(y = SolveTime)) +
+  geom_point(aes(x = PuzzleComplexity)) +
+  theme_bw() +
+  labs(x = "Puzzle Complexity (rating)", 
+       y = "Solve Time (minutes)")
+
+ggarrange(p1, p2, p3, p4, ncol = 2, nrow = 2)
+
+```
+
+## Example 
+
+- Next, let's determine what method of correlation we should use. Checking normality,
+
+```{r}
+#| echo: false
+#| fig-align: 'center'
+p1 <- puzzles %>% correlation_qq(x = SolveTime, y = MindPractice) + labs(x="", title = "Mind Practice")
+p2 <- puzzles %>% correlation_qq(x = SolveTime, y = SleepHours) + labs(x="", y="", title = "Sleep Hours")
+p3 <- puzzles %>% correlation_qq(x = SolveTime, y = FocusMinutes) + labs(title = "Focus Minutes")
+p4 <- puzzles %>% correlation_qq(x = SolveTime, y = PuzzleComplexity) + labs(y="",title = "Puzzle Complexity")
+
+ggarrange(p1, p2, p3, p4, ncol = 2, nrow = 2)
+```
+
+## Example 
+
+- Because we met the normality assumption, we can use Pearson's correlation to quantify pairwise relationships.
+
+```{r}
+#| echo: false
+puzzles %>% correlation() %>% filter(var1 == "SolveTime" | var2 == "SolveTime") 
+```
+
+## Example 
+
+- Because we met the normality assumption, we can use Pearson's correlation to quantify pairwise relationships.
+
+```{r}
+#| echo: false
+puzzles %>% correlation(x = SolveTime, y = MindPractice) 
+```
+
+- Mind practice is significantly correlated with solve time ($p < 0.001$).
+    - The correlation is negative and modest ($r \approx -0.42$), indicating that increased mind practice is associated with decreased solve times (i.e., they are faster to solve).
+
+## Example 
+
+- Because we met the normality assumption, we can use Pearson's correlation to quantify pairwise relationships.
+
+```{r}
+#| echo: false
+puzzles %>% correlation(x = SolveTime, y = SleepHours) 
+```
+
+- Sleep duration is significantly correlated with solve time ($p < 0.001$).
+    - The correlation is negative and weak ($r \approx -0.27$), indicating that increased sleep duration is associated with decreased solve times (i.e., they are faster to solve).
+    
+## Example 
+
+- Because we met the normality assumption, we can use Pearson's correlation to quantify pairwise relationships.
+
+```{r}
+#| echo: false
+puzzles %>% correlation(x = SolveTime, y = FocusMinutes) 
+```
+
+- Focus is not significantly correlated with solve time ($p = 0.219$).
+    - The correlation is negative and weak ($r \approx -0.10$), indicating that increased focus is associated with decreased solve times (i.e., they are faster to solve).  
+    
+## Example 
+
+- Because we met the normality assumption, we can use Pearson's correlation to quantify pairwise relationships.
+
+```{r}
+#| echo: false
+puzzles %>% correlation(x = SolveTime, y = PuzzleComplexity) 
+```
+
+- Puzzle complexity is significantly correlated with solve time ($p < 0.001$).
+    - The correlation is positive and modest ($r \approx 0.64$), indicating that increased complexity is associated with increased solve times (i.e., they are slower to solve).    
+
+## Example 
+
+- Let's now examine the multiple regression model,
+
+```{r}
+#| echo: false
+puzzles %>% linear_regression(outcome = SolveTime,
+                           function_of = MindPractice + SleepHours + FocusMinutes + PuzzleComplexity)
+```
+
+- This gives the regression model,
+
+$$
+\hat{\text{solve time}} = 37.54 - 4.12 \text{ practice} - 1.82 \text{ sleep} - 0.02 \text{ focus} + 3.10 \text{ complexity}
+$$
+
+## Example 
+
+- If I were reporting the table of results, I would submit
+
+| Predictor         | Estimate (95% CI)            | p-value |
+|:------------------|:----------------------------:|--------:|
+| Mind Practice     | -4.12 (-5.02, -3.22)        | <0.001  |
+| Sleep Hours      | -1.82 (-2.58, -1.06)        | <0.001  |
+| Focus Minutes     | -0.02 (-0.21, 0.17)       | 0.857   |
+| Puzzle Complexity | 3.10 (2.63, 3.57)          | <0.001  |
+
+## Example 
+
+- Before we make inference on each predictor, let's examine the significance of the regression model.
+
+```{r}
+#| echo: false
+puzzles %>% significant_line(outcome = SolveTime,
+                           function_of = MindPractice + SleepHours + FocusMinutes + PuzzleComplexity)
+```
+
+## Example 
+
+- **Hypotheses**
+    - $H_0: \beta_{\text{mind}} = \beta_{\text{sleep}} = \beta_{\text{focus}} = \beta_{\text{complex}} = 0$ 
+    - $H_1:$ at least one $\beta_i \ne 0$
+
+- **Test Statistic and *p*-Value**
+    - $\chi^2_0 = 8661.51$; $p < 0.001$
+
+- **Rejection Region**
+    - Reject $H_0$ if $p<\alpha$; $\alpha=0.05$
+    
+- **Conclusion and Intepretation**
+    - Reject $H_0$. There is sufficient evidence to conclude that at least one of the predictors is significantly associated with solve time, after adjusting for the other predictors.
+
+## Example 
+
+- Now, let's provide some interpretations and comment on significance.
+
+| Predictor         | Estimate (95% CI)            | p-value |
+|:------------------|:----------------------------:|--------:|
+| Mind Practice     | -4.12 (-5.02, -3.22)        | <0.001  |
+| Sleep Hours      | -1.82 (-2.58, -1.06)        | <0.001  |
+| Focus Minutes     | -0.02 (-0.21, 0.17)       | 0.857   |
+| Puzzle Complexity | 3.10 (2.63, 3.57)          | <0.001  |
+
+- Mind practice is significantly associated with solve time ($p < 0.001$). After adjusting for sleep, focus, and complexity, each additional hour of mind practice is associated with a decrease in solve time of approximately 4.12 minutes (95% CI: -5.02, -3.22).
+
+## Example 
+
+- Now, let's provide some interpretations and comment on significance.
+
+| Predictor         | Estimate (95% CI)            | p-value |
+|:------------------|:----------------------------:|--------:|
+| Mind Practice     | -4.12 (-5.02, -3.22)        | <0.001  |
+| Sleep Hours      | -1.82 (-2.58, -1.06)        | <0.001  |
+| Focus Minutes     | -0.02 (-0.21, 0.17)       | 0.857   |
+| Puzzle Complexity | 3.10 (2.63, 3.57)          | <0.001  |
+
+- Sleep hours is significantly associated with solve time ($p < 0.001$). After adjusting for mind practice, focus, and complexity, each additional hour of sleep is associated with a decrease in solve time of approximately 1.82 minutes (95% CI: -2.58, -1.06).
+
+## Example 
+
+- Now, let's provide some interpretations and comment on significance.
+
+| Predictor         | Estimate (95% CI)            | p-value |
+|:------------------|:----------------------------:|--------:|
+| Mind Practice     | -4.12 (-5.02, -3.22)        | <0.001  |
+| Sleep Hours      | -1.82 (-2.58, -1.06)        | <0.001  |
+| Focus Minutes     | -0.02 (-0.21, 0.17)       | 0.857   |
+| Puzzle Complexity | 3.10 (2.63, 3.57)          | <0.001  |
+
+- Focus minutes is not significantly associated with solve time ($p = 0.857$). After adjusting for mind practice, sleep, and complexity, each additional minute of focus is associated with a decrease in solve time of approximately 0.02 minutes (95% CI: -0.21, 0.17).
+
+## Example 
+
+- Now, let's provide some interpretations and comment on significance.
+
+| Predictor         | Estimate (95% CI)            | p-value |
+|:------------------|:----------------------------:|--------:|
+| Mind Practice     | -4.12 (-5.02, -3.22)        | <0.001  |
+| Sleep Hours      | -1.82 (-2.58, -1.06)        | <0.001  |
+| Focus Minutes     | -0.02 (-0.21, 0.17)       | 0.857   |
+| Puzzle Complexity | 3.10 (2.63, 3.57)          | <0.001  |
+
+- Puzzle complexity is significantly associated with solve time ($p < 0.001$). After adjusting for mind practice, sleep, and focus, each additional unit increase in puzzle complexity is associated with an increase in solve time of approximately 3.10 minutes (95% CI: 2.63, 3.57).
+
+## Example 
+
+- Let's create a visualization of the model.
+    
+    - We know that solve time will be on the *y*-axis.
+    - We can choose one predictor to put on the *x*-axis -- let's choose sleep duration.
+    - The other predictors will be set to their median values.
+    
+```{r}
+#| echo: false
+puzzles %>% mean_median(everything())
+```
+
+## Example 
+
+- Our first step is to create predicted values using the found regression model.
+    - Let sleep duration vary.
+    - Plug in medians for other predictors.
+    
+$$
+\hat{\text{solve time}} = 37.54 - 4.12 \text{ practice} - 1.82 \text{ sleep} - 0.02 \text{ focus} + 3.10 \text{ complexity}
+$$    
+
+```{r}
+puzzles <- puzzles %>%
+  mutate(predicted = 37.54 - 4.12 * median(MindPractice)
+                           - 1.82 * SleepHours
+                           - 0.02 * median(FocusMinutes)
+                           + 3.10 * median(PuzzleComplexity))
+```
+
+## Example 
+
+- Then we can graph.
+    - Scatterplot: *x* = SleepHours, *y* = SolveTime
+    - Line: *x* = SleepHours, *y* = predicted
+
+```{r}
+#| eval: false
+puzzles %>% ggplot(aes(x = SleepHours, y = SolveTime)) + # specify x and y
+  geom_point(size = 2.5, color = "gray50") + # plot points
+  geom_line(aes(y = predicted), linewidth = 1, color = "black") + # plot line
+  labs(x = "Sleep Duration (hours)", # edit x-axis label
+       y = "Time to Complete Puzzle (min)") + # edit y-axis label
+  theme_bw() # change theme of graph
+```
+
+## Example 
+
+- The resulting graph,
+
+```{r}
+#| echo: false
+#| fig-align: 'center'
+puzzles %>% ggplot(aes(x = SleepHours, y = SolveTime)) + # specify x and y
+  geom_point(size = 2.5, color = "gray50") + # plot points
+  geom_line(aes(y = predicted), linewidth = 1, color = "black") + # plot line
+  labs(x = "Sleep Duration (hours)", # edit x-axis label
+       y = "Time to Complete Puzzle (min)") + # edit y-axis label
+  theme_bw() # change theme of graph
+```
+
+## Wrap Up
+
+- This module covers the basics of linear regression.
+
+- As a reminder, this is just the beginning. There are many more advanced topics to explore, including:
+
+    - Interaction terms
+    - Nonlinear relationships
+    - Model selection
+    - Diagnostics and remedial measures
+    
+- STA4231 - Statistics for Data Science II dives deeper into regression topics.

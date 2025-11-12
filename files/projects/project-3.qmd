@@ -1,0 +1,163 @@
+---
+title: "Project 3: Fall 2025"
+author: "your name here"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  html:
+    self-contained: true
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+<!-- DO NOT EDIT THE CHUNK BELOW -->
+```{r}
+#| echo: false
+library(tidyverse)
+library(ssstats)
+library(gsheet)
+
+stranger_things <- gsheet2tbl("https://docs.google.com/spreadsheets/d/1IkOCBldkawXEClcLbIedHI1WNGoOXCoNeImFjOFKjwU/edit?usp=sharing")
+```
+<!-- DO NOT EDIT THE CHUNK ABOVE -->
+
+**In collaboration with researchers from Hawkins National Laboratory, you've been given access to anonymized data from a study investigating the impact of exposure to the Upside Down on cognitive performance.**
+
+**Over several months, scientists monitored participants who had varying levels of exposure to supernatural environments, psychic strain, and chronic sleep debt. The goal of the study was to understand which factors most strongly predict declines in cognitive functioning, an increasingly common concern in the Hawkins community.**
+
+**Each record represents one participant. Variables include:**
+
+- ***CognitiveScore* — standardized cognitive performance score (0–100 scale; higher = better performance).**
+- ***UpsideDownExposure* — average number of hours per week the participant spent in the Upside Down.**
+- ***PsychicStrain* — a composite index (10–90 scale) representing psychic stress or power exertion; higher values indicate greater strain.**
+- ***SleepDebt* — cumulative weekly sleep debt (in hours) over the study period.**
+
+**Researchers suspect that higher exposure, strain, and sleep debt all contribute to cognitive decline, but the relative importance and combined effects of these factors are not yet clear.**
+
+**1. Find the appropriate summary statistics for this dataset.**
+
+<!-- HINT! You should go back to the Introduction to R lecture for the mean_median() function -->
+
+```{r}
+
+```
+
+**2. Let's explore pairwise relationships. First, create the following scatterplots:**
+
+**2a. Cognitive Score (*y*-axis) and Upside Down Exposure (*x*-axis)**
+
+```{r}
+
+```
+
+**2b. Cognitive Score (*y*-axis) and Psychic Strain (*x*-axis)**
+
+```{r}
+
+```
+
+**2c. Cognitive Score (*y*-axis) and Sleep Debt (*x*-axis)**
+
+```{r}
+
+```
+
+**3. Let's explore pairwise relationships. Now, find the following Spearman's correlations:**
+
+**3a. Cognitive Score and Upside Down Exposure**
+
+```{r}
+
+```
+
+**3b. Cognitive Score and Psychic Strain**
+
+```{r}
+
+```
+
+**3c. Cognitive Score and Sleep Debt**
+
+```{r}
+
+```
+
+**4. Using the outputs in questions 2 and 3, comment on the following pairwise relationships/correlations:**
+
+**4a. Cognitive Score and Upside Down Exposure**
+
+i. **Direction:**
+    
+ii. **Strength:**
+    
+iii. **Significance:**
+
+**4b. Cognitive Score and Psychic Strain**
+
+i. **Direction:**
+    
+ii. **Strength:**
+    
+iii. **Significance:**
+
+**4c. Cognitive Score and Sleep Debt**
+
+i. **Direction:**
+    
+ii. **Strength:**
+    
+iii. **Significance:**
+
+**5. Construct a regression model that models cognitive score (*CognitiveScore*) as a function of upside down exposure (*UpsideDownExposure*), psychic strain (*PsychicStrain*), and sleep debt (*SleepDebt*). Remember to state your resulting regression model.**
+
+```{r}
+
+```
+
+<!-- vague set up below -- check my lecture .qmd file for how I typeset the models in class. -->
+<!-- you will be plugging in values for \hat{\beta}_i based on your regression results. -->
+
+$$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x_1 +\ ...$$
+**6. Is this a significant regression line? Test at the $\alpha=0.05$ level. Remember to typeset your results.**
+
+```{r}
+
+```
+
+- **Hypotheses**
+    - $H_0:$ 
+    - $H_1:$
+
+- **Test Statistic and *p*-Value**
+    - $\chi^2_0 =$; $p =$
+
+- **Rejection Region**
+    - Reject $H_0$ if $p<\alpha$; $\alpha=$
+    
+- **Conclusion and Intepretation**
+    - Conclusion
+    - Interpretation
+    
+**7. Provide interpretations, including significance of predictor, for all predictors.**    
+
+- **Upside Down Exposure:** interpretation here (*p* =)
+
+- **Psychic Strain:** interpretation here (*p* =)
+
+- **Sleep Debt:** interpretation here (*p* =)
+
+**8. Construct a data visualization for the regression model above that includes the following:**
+
+- **Scatterplot of observed cognitive scores vs. sleep debt**
+- **Regression line for the predicted cognitive scores of those with median psychic strain (52) and median upside down exposure (8).**
+
+```{r}
+
+```
