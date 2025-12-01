@@ -1,0 +1,289 @@
+---
+title: "Project 4: Fall 2025"
+author: "your name here"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  html:
+    self-contained: true
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+
+```{r}
+#| echo: false
+# DO NOT EDIT THIS CHUNK #
+library(tidyverse)
+library(ssstats)
+# problem 1
+set.seed(1996)
+tours96 <- tibble(band_id = paste0("B", 1:200),
+                  label_type = sample(c("Major", "Indie"), 
+                                      size = 200, 
+                                      replace = TRUE, 
+                                      prob = c(0.6, 0.4))) %>%
+  mutate(toured = case_when(label_type == "Major" ~ rbinom(n(), 1, 0.85),
+                            label_type == "Indie" ~ rbinom(n(), 1, 0.60)),
+         toured = if_else(toured == 1, "Yes", "No"))
+
+
+
+# problem 2
+set.seed(1996)
+regions96 <- tibble(band_id = paste0("B", 1:200),
+                  label_type = sample(c("Major", "Indie"), 
+                                      size = 200, 
+                                      replace = TRUE, 
+                                      prob = c(0.6, 0.4)),
+                  toured = case_when(label_type == "Major" ~ rbinom(200, 1, 0.85),
+                                     label_type == "Indie" ~ rbinom(200, 1, 0.60)),
+                  region = case_when(label_type == "Major" ~ sample(c("West", "Midwest", "South", "Northeast"),
+                                                                    size = 200, 
+                                                                    replace = TRUE,
+                                                                    prob = c(0.25, 0.25, 0.30, 0.20)),
+                                     label_type == "Indie" ~ sample(c("West", "Midwest", "South", "Northeast"),
+                                                                    size = 200, 
+                                                                    replace = TRUE,
+                                                                    prob = c(0.35, 0.20, 0.15, 0.30)))) %>%
+  filter(toured == 1) %>%  
+  select(band_id, label_type, region)
+
+# problem 3
+indie96 <- regions96 %>% filter(label_type == "Indie")
+
+# problem 4
+
+set.seed(2001)
+respondents <- tibble(respondent_id = paste0("R", 1:200),
+                      upset = c(rep("Yes", 54), rep("No", 200 - 54))) %>%
+  slice_sample(prop = 1)  # shuffle the order
+
+# DO NOT EDIT THIS CHUNK
+```
+
+**1. In the mid-1990s alternative music scene, some bands were signed to major record labels with expansive marketing budgets, while others remained independent ("indie") and relied more on grassroots promotion. One key promotional strategy was touring; this allowed bands to build a fanbase and support album sales.**
+
+**We now want to determine if touring decisions are different between the label types. That is, were indie bands and major-label bands equally likely to tour following an album release?**
+
+<!-- 
+dataset: tours96
+variable: label_type -- if the music label is a major label or an indie label
+variable: toured -- if the band toured immediately after releasing an album
+-->
+
+**1a. What analysis method do you think is appropriate? Why?**
+
+State the method and explain your rationale.
+
+<!-- hint: there are actually multiple ways to approach ansering the research 
+           question do not overthink your response here -- just pick an 
+           appropriate approach based on what we learned during the categorical lecture -->
+           
+<!-- note! the following pieces will be graded according to your response to 1a -->
+
+**1b. Construct the appropriate frequency table (using `n_pct()`) associated with the analysis you would like to perform.**
+
+```{r}
+
+```
+
+**1c. Construct the 95% confidence interval associated with your chosen analysis method. If we did not learn a corresponding confidence interval, state that.**
+
+```{r}
+
+```
+
+Remember to state the resulting confidence interval.
+(Or that you did not need to construct one.)
+
+**1d. Use the appropriate hypothesis test to answer the posed research question. Test at the $\alpha = 0.05$ level. Remember to typeset your results.**
+
+```{r}
+
+```
+
+- **Hypotheses**
+    - $H_0:$ 
+    - $H_1:$
+
+- **Test Statistic and *p*-Value**
+    - $\chi^2_0, z_0=$; $p =$
+
+- **Rejection Region**
+    - Reject $H_0$ if $p<\alpha$; $\alpha=$
+    
+- **Conclusion and Intepretation**
+    - Conclusion
+    - Interpretation
+
+**2. After finding that label type is associated with whether a band tours at all, you decide to explore where these bands are touring. Among bands that did tour, you determined the primary region where each band played the most shows during the album promotion cycle.**
+
+**We now want to determine if there is a relationship between a band's label type and the region they tour most heavily.**
+
+<!-- 
+dataset: regions96
+variable: label_type -- if the music label is a major label or an indie label
+variable: region -- the primary region of their tour
+-->
+
+**2a. What analysis method do you think is appropriate? Why?**
+
+State the method and explain your rationale.
+
+<!-- note! the following pieces will be graded according to your response to 2a -->
+
+**2b. Construct the appropriate frequency table (using `n_pct()`) associated with the analysis you would like to perform.**
+
+```{r}
+
+```
+
+**2c. Construct the 95% confidence interval associated with your chosen analysis method. If we did not learn a corresponding confidence interval, state that.**
+
+```{r}
+
+```
+
+Remember to state the resulting confidence interval.
+(Or that you did not need to construct one.)
+
+<!-- i.e., do not leave this response as is, please -->
+
+**2d. Use the appropriate hypothesis test to answer the posed research question. Test at the $\alpha = 0.05$ level. Remember to typeset your results.**
+
+```{r}
+
+```
+
+- **Hypotheses**
+    - $H_0:$ 
+    - $H_1:$
+
+- **Test Statistic and *p*-Value**
+    - $\chi^2_0, z_0=$; $p =$
+
+- **Rejection Region**
+    - Reject $H_0$ if $p<\alpha$; $\alpha=$
+    
+- **Conclusion and Intepretation**
+    - Conclusion
+    - Interpretation
+
+
+**3. After analyzing where major and indie bands toured, you find industry reports from 1995 that estimate the expected share of U.S. tour stops based on population, venue availability, and historical demand:**
+
+- **West: 30%**
+- **Midwest: 25%**
+- **South: 25%**
+- **Northeast: 20%**
+
+**Do tour patterns for indie bands in our sample match the expected distribution of tour stops?**
+
+<!-- 
+dataset: indie96
+variable: label_type -- if the music label is a major label or an indie label
+variable: region -- the primary region of their tour
+-->
+
+**3a. What analysis method do you think is appropriate? Why?**
+
+State the method and explain your rationale.
+
+<!-- note! the following pieces will be graded according to your response to 3a -->
+
+**3b. Construct the appropriate frequency table (using `n_pct()`) associated with the analysis you would like to perform.**
+
+```{r}
+
+```
+
+**3c. Construct the 95% confidence interval associated with your chosen analysis method. If we did not learn a corresponding confidence interval, state that.**
+
+```{r}
+
+```
+
+Remember to state the resulting confidence interval.
+(Or that you did not need to construct one.)
+
+<!-- i.e., do not leave this response as is, please -->
+
+**3d. Use the appropriate hypothesis test to answer the posed research question. Test at the $\alpha = 0.05$ level. Remember to typeset your results.**
+
+```{r}
+
+```
+
+- **Hypotheses**
+    - $H_0:$ 
+    - $H_1:$
+
+- **Test Statistic and *p*-Value**
+    - $\chi^2_0, z_0=$; $p =$
+
+- **Rejection Region**
+    - Reject $H_0$ if $p<\alpha$; $\alpha=$
+    
+- **Conclusion and Intepretation**
+    - Conclusion
+    - Interpretation
+
+**4. At the 2001 MTV Video Music Awards, Britney Spears performed her hit "I'm a Slave 4 U" with a live albino Burmese python draped across her shoulders. The moment was instantly iconic... but also controversial. Animal rights groups and some viewers expressed outrage over the use of a live snake on stage.**
+
+**A 1990s/2000s pop culture survey in which a random sample of respondents were asked if they felt uncomfortable or upset watching the 2001 VMA snake performance. An entertainment reporter claims that no more than 20% of viewers were genuinely upset, but we're not sure. Thus, we want to test whether the proportion of upset viewers exceeds 20%.**
+
+<!--
+dataset: respondents
+variable: upset -- if the person was upset or not
+-->
+
+**4a. What analysis method do you think is appropriate? Why?**
+
+State the method and explain your rationale.
+
+<!-- note! the following pieces will be graded according to your response to 4a -->
+
+**4b. Construct the appropriate frequency table (using `n_pct()`) associated with the analysis you would like to perform.**
+
+```{r}
+
+```
+
+**4c. Construct the 95% confidence interval associated with your chosen analysis method. If we did not learn a corresponding confidence interval, state that.**
+
+```{r}
+
+```
+
+Remember to state the resulting confidence interval.
+(Or that you did not need to construct one.)
+
+<!-- i.e., do not leave this response as is, please -->
+
+**4d. Use the appropriate hypothesis test to answer the posed research question. Test at the $\alpha = 0.05$ level. Remember to typeset your results.**
+
+```{r}
+
+```
+
+- **Hypotheses**
+    - $H_0:$ 
+    - $H_1:$
+
+- **Test Statistic and *p*-Value**
+    - $\chi^2_0, z_0=$; $p =$
+
+- **Rejection Region**
+    - Reject $H_0$ if $p<\alpha$; $\alpha=$
+    
+- **Conclusion and Intepretation**
+    - Conclusion
+    - Interpretation

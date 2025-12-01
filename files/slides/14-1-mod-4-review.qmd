@@ -1,0 +1,417 @@
+---
+title: "Module 4 Review"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: true
+format: 
+  revealjs:
+    theme: default
+    css: mlp2.css
+    self-contained: true
+    slide-number: true
+    footer: "STA4173 - Biostatistics - Fall 2025"
+    width: 1600
+    height: 900
+    df-print: paged
+    html-math-method: katex
+    code-fold: false
+    code-tools: false
+    incremental: false
+editor: source
+---
+
+## Putting It All Together
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(ssstats)
+```
+
+- Relationships between categorical variables.
+
+- One-sample proportion.
+- Two-sample proportions.
+- Test for goodness-of-fit.
+    - Uniform distribution.
+    - Historical distribution.
+- Test for Independence.    
+
+## Example 1: One-Sample Proportions
+
+- Rudolph surveys elves in the North Pole Workshop to see if they think his nose is "bright enough for foggy nights." He believes at least 90% of elves think so, and he wants to test that claim.
+    
+```{r}
+#| echo: false
+library(tidyverse)
+library(ssstats)
+
+set.seed(1225)
+
+# true underlying proportion (you can tweak this)
+true_p <- 0.85   # a bit less than 0.90, so we may reject H0
+n_elves <- 120
+
+rudolph <- data.frame(
+  elf_id = 1:n_elves,
+  nose_bright = rbinom(n_elves, size = 1, prob = true_p)
+)
+
+# make it pretty for students (Yes/No)
+rudolph <- rudolph |>
+  dplyr::mutate(
+    nose_bright = ifelse(nose_bright == 1, "Yes", "No")
+  )
+```
+
+```{r}
+rudolph %>% n_pct(nose_bright)
+```
+        
+## Example 1: One-Sample Proportions
+
+- Rudolph surveys elves in the North Pole Workshop to see if they think his nose is "bright enough for foggy nights." He believes at least 80% of elves think so, and he wants to test that claim.
+
+- Let's first look at the 95% confidence interval for $\pi$, the proportion of elves who think Rudolph's nose is bright enough.
+
+```{r}
+rudolph %>% one_prop_CI(binary = nose_bright,
+                        event = "Yes")
+```
+
+- Thus, the 95% CI for $\pi$, the true proportion of elves who think Rudolph's nose is bright enough for foggy nights, is (0.80, 0.92).
+
+## Example 1: One-Sample Proportions
+
+- Rudolph surveys elves in the North Pole Workshop to see if they think his nose is "bright enough for foggy nights." He believes at least 90% of elves think so, and he wants to test that claim.
+
+- Now, let's test the hypothesis -- do at least 85% of elves think Rudolph's nose is bright enough? Test at the $\alpha=0.05$ level.
+
+```{r}
+rudolph %>% one_prop_HT(binary = nose_bright,
+                        event = "Yes",
+                        p = 0.8,
+                        alternative = "greater")
+```
+
+## Example 1: One Sample Proportions
+
+- **Hypotheses:**
+    - $H_0: \ \pi \le 0.80$
+    - $H_1: \ \pi > 0.80$
+
+- **Test Statistic and *p*-Value**
+    - $z_0 = 2.05$, $p = 0.020$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha = 0.05$
+    
+- **Conclusion and interpretation**
+    - Reject $H_0$ ($0.02 < 0.05$). There is sufficient evidence to suggest that at least 80% of elves believe Rudolph's nose is bright enough for foggy nights.
+    
+## Example 2: Two Sample Proportions
+
+- Rudolph proposes backup LED antlers for safety. He surveys female and male reindeer about whether they support the LED plan. Rudolph wants to test whether support is higher among female reindeer than male reindeer.
+
+```{r}
+#| echo: false
+set.seed(1226)
+
+n_female <- 40
+n_male   <- 50
+
+# true underlying support probabilities
+p_female <- 0.75
+p_male   <- 0.55
+
+rudolph <- dplyr::tibble(
+  reindeer_id = 1:(n_female + n_male),
+  sex = c(rep("Female", n_female), rep("Male", n_male)),
+  support_led = c(
+    rbinom(n_female, size = 1, prob = p_female),
+    rbinom(n_male,   size = 1, prob = p_male)
+  )
+) |>
+  dplyr::mutate(
+    support_led = ifelse(support_led == 1, "Support", "Do not support")
+  )
+
+```
+
+```{r}
+rudolph %>% n_pct(support_led, sex)
+```
+
+## Example 2: Two Sample Proportions
+
+- Rudolph proposes backup LED antlers for safety. He surveys female and male reindeer about whether they support the LED plan. Rudolph wants to test whether support is higher among female reindeer than male reindeer.
+
+- Let's find the 90% CI for $\pi_{\text{F}}-\pi_{\text{M}}$.
+
+```{r}
+rudolph %>% two_prop_CI(binary = support_led,
+                        grouping = sex,
+                        event = "Support",
+                        confidence = 0.90)
+```
+
+## Example 2: Two Sample Proportions
+
+- Rudolph proposes backup LED antlers for safety. He surveys female and male reindeer about whether they support the LED plan. Rudolph wants to test whether support is higher among female reindeer than male reindeer.
+
+- Let's now determine if support is indeed higher among female reindeer. Test at the $\alpha=0.10$ level.
+
+```{r}
+#| eval: false
+rudolph %>% two_prop_HT(binary = support_led,
+                        grouping = sex,
+                        event = "Support",
+                        alternative = "greater",
+                        alpha = 0.1)
+```
+
+## Example 2: Two Sample Proportions
+
+```{r}
+rudolph %>% two_prop_HT(binary = support_led,
+                        grouping = sex,
+                        event = "Support",
+                        alternative = "greater",
+                        alpha = 0.1)
+```
+
+## Example 2: Two Sample Proportions
+
+- **Hypotheses:**
+    - $H_0: \ \pi_{\text{F}} \le \pi_{\text{M}}$
+    - $H_1: \ \pi_{\text{F}} > \pi_{\text{M}}$
+
+- **Test Statistic and *p*-Value**
+    - $z_0 = 1.43$, $p = 0.076$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha = 0.10$
+    
+- **Conclusion and interpretation**
+    - Reject $H_0$ ($0.07 < 0.10$). There is sufficient evidence to suggest that support for LED antlers is higher among female reindeer than male reindeer.
+    
+## Example 3: Goodness of Fit (Uniform)   
+
+- In the North Pole Wrapping Department, Rudolph wonders whether children are equally likely to request each of six magical gift wrap colors: red, green, blue, yellow, pink, or gold.
+
+```{r}
+#| echo: false
+
+set.seed(1230)
+
+# Number of gift requests
+n_kids <- 300
+
+wrap_colors <- c("Red", "Green", "Blue", "Yellow", "Pink", "Gold")
+
+# TRUE underlying probabilities (slightly non-uniform)
+# You can switch this to rep(1/6, 6) if you want perfectly uniform data
+true_probs <- c(0.15, 0.18, 0.17, 0.16, 0.18, 0.16)
+
+# Simulate the dataset
+rudolph <- tibble(
+  kid_id = 1:n_kids,
+  wrap_color = sample(wrap_colors, size = n_kids, replace = TRUE, prob = true_probs)
+)
+```
+
+```{r}
+rudolph %>% n_pct(wrap_color, rows = 6)
+```
+
+## Example 3: Goodness of Fit (Uniform)   
+
+- In the North Pole Wrapping Department, Rudolph wonders whether children are equally likely to request each of six magical gift wrap colors: red, green, blue, yellow, pink, or gold. Let's test at the $\alpha=0.05$ level.
+
+```{r}
+rudolph %>% goodness_of_fit(categorical = wrap_color,
+                           alpha = 0.05)
+```
+
+## Example 3: Goodness of Fit (Uniform)   
+
+- **Hypotheses:**
+    - $H_0:$ $\pi_{\text{R}} = pi_{\text{Gr}} = \pi_{\text{B}} = \pi_{\text{Y}} = \pi_{\text{P}} = \pi_{\text{Go}} = \frac{1}{6}$
+    - $H_1:$ At least one $\pi_i \ne \frac{1}{6}$.
+
+- **Test Statistic and *p*-Value**
+    - $\chi^2_0 = 2.08$, $p = 0.838$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha = 0.05$
+    
+- **Conclusion and interpretation**
+    - Reject $H_0$ ($0.838 > 0.05$). There is not sufficient evidence to suggest that the proportions of gift wrap color are unequal.
+
+## Example 4: Goodness of Fit (Historical Distribution)
+
+- Santa's forecasting model predicts the distribution of toy requests:
+
+    - Trains: 30%
+    - Dolls: 25%
+    - Teddy Bears: 20%
+    - Games: 25%
+
+- Rudolph samples 400 letters to Santa and records the most requested toy per letter in order to determine if the observed distribution matches Santa's forecast.
+
+```{r}
+#| echo: false
+
+set.seed(18671)
+
+n_letters <- 400
+toy_types <- c("Trains", "Dolls", "Teddy Bears", "Games")
+
+# true probabilities (can match or deviate from Santa's model)
+true_probs <- c(0.28, 0.27, 0.18, 0.27)   # slightly off from model
+
+rudolph <- dplyr::tibble(
+  letter_id = 1:n_letters,
+  toy_request = sample(toy_types, size = n_letters, replace = TRUE, prob = true_probs)
+)
+```
+
+```{r}
+rudolph %>% n_pct(toy_request, rows = 4)
+```
+
+## Example 4: Goodness of Fit (Historical Distribution)
+
+- Santa's forecasting model predicts the distribution of toy requests:
+
+    - Trains: 30%
+    - Dolls: 25%
+    - Teddy Bears: 20%
+    - Games: 25%
+
+- Rudolph samples 400 letters to Santa and records the most requested toy per letter in order to determine if the observed distribution matches Santa's forecast. Because we want to be super sure, we will test at the $\alpha=0.01$ level.
+
+```{r}
+#| eval: false
+rudolph %>% goodness_of_fit(categorical = toy_request,
+                           expected = c("Trains" = 0.30, 
+                                        "Dolls" = 0.25, 
+                                        "Teddy Bears" = 0.20, 
+                                        "Games" = 0.25),
+                           alpha = 0.01)
+```
+
+## Example 4: Goodness of Fit (Historical Distribution)
+
+```{r}
+rudolph %>% goodness_of_fit(categorical = toy_request,
+                           expected = c("Trains" = 0.30, 
+                                        "Dolls" = 0.25, 
+                                        "Teddy Bears" = 0.20, 
+                                        "Games" = 0.25),
+                           alpha = 0.01)
+```
+
+## Example 4: Goodness of Fit (Historical Distribution)
+
+- **Hypotheses:**
+    - $H_0:$ The proportions do not differ from Santa's expected distribution.
+    - $H_1:$ The proportions differ from Santa's expected distribution.
+
+- **Test Statistic and *p*-Value**
+    - $\chi^2_0 = 18.19$, $p < 0.001$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha = 0.01$
+    
+- **Conclusion and interpretation**
+    - Reject $H_0$ ($(<0.001) < 0.10$). There is sufficient evidence to suggest that the distribution of toy requests differs from Santa's expected distribution.
+
+## Example 5: Test for Independence
+
+```{r}
+#| echo: false
+set.seed(964568)
+
+n_reindeer <- 120
+
+team_levels <- c("Lead", "Middle", "Back")
+
+# Probability of being in each team position (just for simulation)
+team_probs <- c(0.2, 0.5, 0.3)
+
+reindeer_team <- sample(team_levels, size = n_reindeer, replace = TRUE, prob = team_probs)
+
+misfit_levels <- c("Jack-in-the-Box", "Elephant with Polka Dots", "Charlie-in-the-Box")
+
+# Conditional probabilities for toy preference given team
+# Each row corresponds to a team, each column to a Misfit Toy
+toy_prob_matrix <- rbind(
+  Lead   = c(0.50, 0.30, 0.20),  # Leads like Jack more
+  Middle = c(0.30, 0.40, 0.30),
+  Back   = c(0.20, 0.30, 0.50)   # Backs like Charlie more
+)
+
+get_toy_pref <- function(team) {
+  probs <- toy_prob_matrix[team, ]
+  sample(misfit_levels, size = 1, prob = probs)
+}
+
+misfit_pref <- sapply(reindeer_team, get_toy_pref)
+
+rudolph <- dplyr::tibble(
+  reindeer_id = 1:n_reindeer,
+  team = factor(reindeer_team, levels = team_levels),
+  misfit_toy = factor(misfit_pref, levels = misfit_levels)
+)
+```
+
+- Rudolph suspects that a reindeer's team position (lead, middle, back) might be associated with which Misfit Toy they identify with most: Jack-in-the-Box, Elephant with Polka Dots, or Charlie-in-the-Box. 
+
+- After surveying 120 reindeer, Rudolph wants to test if favorite Misfit Toy depends on team position.
+
+```{r}
+rudolph %>% n_pct(misfit_toy, team)
+```
+
+## Example 5: Test for Independence
+
+- Rudolph suspects that a reindeer's team position (lead, middle, back) might be associated with which Misfit Toy they identify with most: Jack-in-the-Box, Elephant with Polka Dots, or Charlie-in-the-Box. 
+
+- After surveying 120 reindeer, Rudolph wants to test if favorite Misfit Toy depends on team position. Test at the $\alpha=0.05$ level.
+
+```{r}
+rudolph %>% independence_test(var1 = misfit_toy,
+                              var2 = team,
+                              alpha = 0.05)
+```
+
+## Example 5: Test for Independence 
+
+- **Hypotheses:**
+    - $H_0:$ A reindeer's favorite misfit toy does not depend on team position.
+    - $H_1:$ A reindeer's favorite misfit toy depends on team position.
+
+- **Test Statistic and *p*-Value**
+    - $\chi^2_0 = 15.85$, $p = 0.003$
+    
+- **Rejection Region**
+    - Reject $H_0$ if $p < \alpha$; $\alpha = 0.05$
+    
+- **Conclusion and interpretation**
+    - Reject $H_0$ ($0.003 < 0.05$). There is sufficient evidence to suggest that a reindeer's favorite misfit toy depends on team position.
+
+## Wrap Up
+
+- This module covers the basics of categorical analysis.
+
+- Key topics include:
+    - One-sample proportion inference.
+    - Two-sample proportion inference.
+    - Chi-square tests for goodness-of-fit (uniform and historical).
+    - Chi-square test for independence.
+    
+- Note that we could extend what we know about regression (using continuous outcomes) to categorical outcomes.
+    - i.e., we are not limited by the methods in this module.
